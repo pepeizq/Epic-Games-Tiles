@@ -1,4 +1,6 @@
-﻿''' <summary>
+﻿Imports Windows.ApplicationModel.Core
+Imports Windows.System
+''' <summary>
 ''' Proporciona un comportamiento específico de la aplicación para complementar la clase Application predeterminada.
 ''' </summary>
 NotInheritable Class App
@@ -10,35 +12,63 @@ NotInheritable Class App
     ''' resultados de la búsqueda, etc.
     ''' </summary>
     ''' <param name="e">Información detallada acerca de la solicitud y el proceso de inicio.</param>
-    Protected Overrides Sub OnLaunched(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
-        Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
-
-        ' No repetir la inicialización de la aplicación si la ventana tiene contenido todavía,
-        ' solo asegurarse de que la ventana está activa.
-
-        If rootFrame Is Nothing Then
-            ' Crear un marco para que actúe como contexto de navegación y navegar a la primera página.
-            rootFrame = New Frame()
-
-            AddHandler rootFrame.NavigationFailed, AddressOf OnNavigationFailed
-
-            If e.PreviousExecutionState = ApplicationExecutionState.Terminated Then
-                ' TODO: Cargar el estado de la aplicación suspendida previamente
-            End If
-            ' Poner el marco en la ventana actual.
-            Window.Current.Content = rootFrame
+    Protected Overrides Async Sub OnLaunched(e As LaunchActivatedEventArgs)
+#If DEBUG Then
+        ' Show graphics profiling information while debugging.
+        If Debugger.IsAttached Then
+            ' Display the current frame rate counters
+            Me.DebugSettings.EnableFrameRateCounter = True
         End If
+#End If
 
-        If e.PrelaunchActivated = False Then
+        Dim boolIniciarApp As Boolean = False
+        Dim arguments As String = e.Arguments
+
+        Try
+            boolIniciarApp = Await Launcher.LaunchUriAsync(New Uri(arguments))
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            If boolIniciarApp = False Then
+                boolIniciarApp = Await Launcher.LaunchFileAsync(New Uri(arguments))
+            End If
+        Catch ex As Exception
+
+        End Try
+
+        If boolIniciarApp = False Then
+            Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
+
+            If rootFrame Is Nothing Then
+                rootFrame = New Frame()
+
+                AddHandler rootFrame.NavigationFailed, AddressOf OnNavigationFailed
+
+                If e.PreviousExecutionState = ApplicationExecutionState.Terminated Then
+                    ' TODO: Load state from previously suspended application
+                End If
+
+                Window.Current.Content = rootFrame
+            End If
             If rootFrame.Content Is Nothing Then
-                ' Cuando no se restaura la pila de navegación, navegar a la primera página,
-                ' configurando la nueva página pasándole la información requerida como
-                'parámetro de navegación
                 rootFrame.Navigate(GetType(MainPage), e.Arguments)
             End If
 
-            ' Asegurarse de que la ventana actual está activa.
             Window.Current.Activate()
+        Else
+            Try
+                CoreApplication.Exit()
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                Application.Current.Exit()
+            Catch ex As Exception
+
+            End Try
         End If
     End Sub
 
