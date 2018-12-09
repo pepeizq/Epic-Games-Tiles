@@ -1,0 +1,877 @@
+﻿<Page
+    x:Class="Epic_Games_Tiles.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+    xmlns:fa="using:FontAwesome.UWP"
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="{StaticResource ColorGridPrincipal}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="gridTitulo" Grid.Row="0" Background="{StaticResource GridTituloBackground}">
+            <TextBlock x:Name="tbTitulo" Margin="15,0,0,0" FontSize="13" Foreground="White" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid x:Name="gridTilePequeñaGenerar" Background="{StaticResource BrushSecundario}" Width="71" Height="71" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.Clip>
+                <RectangleGeometry Rect="0,0,71,71"/>
+            </Grid.Clip>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <controls:ImageEx x:Name="imagenTilePequeñaGenerar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None"/>
+        </Grid>
+
+        <Grid x:Name="gridTileMedianaGenerar" Background="{StaticResource BrushSecundario}" Width="150" Height="150" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.Clip>
+                <RectangleGeometry Rect="0,0,150,150"/>
+            </Grid.Clip>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <controls:ImageEx x:Name="imagenTileMedianaGenerar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid x:Name="gridTileAnchaGenerar" Background="{StaticResource BrushSecundario}" Width="310" Height="150" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.Clip>
+                <RectangleGeometry Rect="0,0,310,150"/>
+            </Grid.Clip>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <controls:ImageEx x:Name="imagenTileAnchaGenerar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
+        </Grid>
+
+        <Grid x:Name="gridTileGrandeGenerar" Background="{StaticResource BrushSecundario}" Width="310" Height="310" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.Clip>
+                <RectangleGeometry Rect="0,0,310,310"/>
+            </Grid.Clip>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <controls:ImageEx x:Name="imagenTileGrandeGenerar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <NavigationView x:Name="nvPrincipal" Grid.Row="1" Loaded="Nv_Loaded" ItemInvoked="Nv_ItemInvoked"
+                        AlwaysShowHeader="False" IsSettingsVisible="False" PaneDisplayMode="Top" IsBackButtonVisible="Collapsed">
+            <NavigationView.PaneFooter>
+                <StackPanel Orientation="Vertical">
+                    <NavigationViewItem x:Name="itemMasCosas" Tapped="Nv_ItemFlyout" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                        <FlyoutBase.AttachedFlyout>
+                            <MenuFlyout x:Name="botonMasCosasMenu"/>
+                        </FlyoutBase.AttachedFlyout>
+                    </NavigationViewItem>
+                </StackPanel>
+            </NavigationView.PaneFooter>
+
+            <Grid>
+                <Grid.Transitions>
+                    <TransitionCollection>
+                        <EdgeUIThemeTransition Edge="Bottom"/>
+                    </TransitionCollection>
+                </Grid.Transitions>
+
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FFE4E4E4" Offset="0.5" />
+                        <GradientStop Color="#FFBFBFBF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid x:Name="gridTiles" Visibility="Collapsed" Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid x:Name="gridSeleccionarJuego" Grid.Row="0" Visibility="Collapsed">
+                        <Grid.ChildrenTransitions>
+                            <TransitionCollection>
+                                <PaneThemeTransition Edge="Top"/>
+                            </TransitionCollection>
+                        </Grid.ChildrenTransitions>
+
+                        <Grid Padding="10" Background="IndianRed" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
+                            <TextBlock x:Uid="SelectGame" TextWrapping="Wrap" Foreground="White"/>
+                        </Grid>
+                    </Grid>
+
+                    <controls:AdaptiveGridView x:Name="gridViewTiles" Grid.Row="1" Margin="0,20,0,0"
+                                       IsItemClickEnabled="True" DesiredWidth="430" ItemHeight="250"
+                                       animations:ReorderGridAnimation.Duration="250">
+                    </controls:AdaptiveGridView>
+
+                    <Grid x:Name="panelAvisoNoJuegos" Grid.Row="1" Padding="10" Background="IndianRed"
+                               HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+                        <TextBlock x:Uid="NoGamesDetected" TextWrapping="Wrap" Foreground="White"/>
+                    </Grid>
+
+                    <ProgressRing x:Name="prTiles" Grid.Row="1" IsActive="True" Width="64" Height="64" Foreground="{StaticResource BrushSecundario}" Visibility="Collapsed"/>
+                </Grid>
+
+                <Grid x:Name="gridAñadirTile" Visibility="Collapsed">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1">
+                            <StackPanel.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#FFE4E4E4" Offset="0.5" />
+                                    <GradientStop Color="#FFBFBFBF" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </StackPanel.Background>
+
+                            <StackPanel Orientation="Horizontal" Padding="20,15">
+                                <Border BorderThickness="1" BorderBrush="{StaticResource BrushSecundario}" Width="108" Height="60" VerticalAlignment="Center">
+                                    <controls:ImageEx x:Name="imagenJuegoSeleccionado" Stretch="UniformToFill" IsCacheEnabled="True"/>
+                                </Border>
+
+                                <TextBlock x:Name="tbJuegoSeleccionado" VerticalAlignment="Center" Margin="10,0" TextWrapping="Wrap"/>
+                            </StackPanel>
+
+                            <Grid Padding="20,10" Background="{StaticResource BrushCuarto}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button x:Name="botonAñadirTile" Grid.Column="0" Padding="15,10" Background="{StaticResource BrushSecundario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                    <StackPanel Orientation="Horizontal">
+                                        <fa:FontAwesome Icon="ThumbTack" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                        <TextBlock x:Uid="AddTile" Foreground="White"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button x:Name="botonPersonalizarTiles" Grid.Column="1" Padding="15,10" Background="{StaticResource BrushSecundario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                    <StackPanel Orientation="Horizontal">
+                                        <fa:FontAwesome Icon="PaintBrush" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                        <TextBlock x:Uid="TilesPersonalization" Foreground="White"/>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+
+                            <StackPanel Orientation="Horizontal" Padding="20">
+                                <Grid x:Name="gridTilePequeñaEnseñar" Background="{StaticResource BrushSecundario}" Width="71" Height="71" VerticalAlignment="Top">
+                                    <Grid.Clip>
+                                        <RectangleGeometry Rect="0,0,71,71"/>
+                                    </Grid.Clip>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <controls:ImageEx x:Name="imagenTilePequeñaEnseñar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None"/>
+                                </Grid>
+
+                                <Grid Margin="10,0"/>
+
+                                <Grid x:Name="gridTileMedianaEnseñar" Background="{StaticResource BrushSecundario}" Width="150" Height="150" VerticalAlignment="Top">
+                                    <Grid.Clip>
+                                        <RectangleGeometry Rect="0,0,150,150"/>
+                                    </Grid.Clip>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <controls:ImageEx x:Name="imagenTileMedianaEnseñar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <controls:ImageEx x:Name="imagenDRMTileMedianaEnseñar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Height="16" Width="16"/>
+                                </Grid>
+
+                                <Grid Margin="10,0"/>
+
+                                <Grid x:Name="gridTileAnchaEnseñar" Background="{StaticResource BrushSecundario}" Width="310" Height="150" VerticalAlignment="Top">
+                                    <Grid.Clip>
+                                        <RectangleGeometry Rect="0,0,310,150"/>
+                                    </Grid.Clip>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <controls:ImageEx x:Name="imagenTileAnchaEnseñar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
+                                    <controls:ImageEx x:Name="imagenDRMTileAnchaEnseñar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Height="16" Width="16"/>
+                                    <TextBlock x:Name="tituloTileAnchaEnseñar" Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Light" Padding="10,5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                                </Grid>
+
+                                <Grid Margin="10,0"/>
+
+                                <Grid x:Name="gridTileGrandeEnseñar" Background="{StaticResource BrushSecundario}" Width="310" Height="310" VerticalAlignment="Top">
+                                    <Grid.Clip>
+                                        <RectangleGeometry Rect="0,0,310,310"/>
+                                    </Grid.Clip>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <controls:ImageEx x:Name="imagenTileGrandeEnseñar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <controls:ImageEx x:Name="imagenDRMTileGrandeEnseñar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Height="16" Width="16"/>
+                                    <TextBlock x:Name="tituloTileGrandeEnseñar" Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Light" Padding="10,5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+
+                <Grid x:Name="gridPersonalizarTiles" Visibility="Collapsed">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" Margin="20">
+                            <Grid.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#FFE4E4E4" Offset="0.5" />
+                                    <GradientStop Color="#FFBFBFBF" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Grid.Background>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0" Background="{StaticResource BrushCuarto}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button x:Name="botonVolverPersonalizacion" Grid.Column="0" Padding="15,10" Margin="20" Background="{StaticResource BrushSecundario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                    <StackPanel Orientation="Horizontal">
+                                        <fa:FontAwesome Icon="ArrowLeft" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                        <TextBlock x:Uid="Back" Foreground="White"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0">
+                                    <fa:FontAwesome Icon="InfoCircle" Foreground="{StaticResource BrushSecundario}"/>
+                                    <TextBlock x:Uid="Preview" VerticalAlignment="Center" Margin="10,0,15,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <CheckBox x:Name="cbConfigTilePequeña" MinWidth="0" Margin="10,0" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                            <CheckBox.Content>
+                                                <TextBlock x:Uid="TileSmall"/>
+                                            </CheckBox.Content>
+                                        </CheckBox>
+                                        <CheckBox x:Name="cbConfigTileMediana" MinWidth="0" Margin="10,0" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                            <CheckBox.Content>
+                                                <TextBlock x:Uid="TileMedium"/>
+                                            </CheckBox.Content>
+                                        </CheckBox>
+                                        <CheckBox x:Name="cbConfigTileAncha" MinWidth="0" Margin="10,0" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                            <CheckBox.Content>
+                                                <TextBlock x:Uid="TileWide"/>
+                                            </CheckBox.Content>
+                                        </CheckBox>
+                                        <CheckBox x:Name="cbConfigTileGrande" MinWidth="0" Margin="10,0" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                            <CheckBox.Content>
+                                                <TextBlock x:Uid="TileLarge"/>
+                                            </CheckBox.Content>
+                                        </CheckBox>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <Button x:Name="botonResetearPersonalizacion" Grid.Column="2" Padding="15,10" Margin="20" Background="{StaticResource BrushSecundario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                    <StackPanel Orientation="Horizontal">
+                                        <fa:FontAwesome Icon="Eraser" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                        <TextBlock x:Uid="Reset" Foreground="White"/>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Padding="20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0,0,15,0">
+                                    <Button x:Name="botonConfigTilesDRM" Background="{StaticResource BrushSecundario}" Padding="10" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                        <Button.Content>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock x:Uid="ConfigTilesDRM" Grid.Column="0" Foreground="White" HorizontalAlignment="Center" Margin="10,0"/>
+                                                <fa:FontAwesome x:Name="iconoConfigTilesDRM" Grid.Column="1" Icon="CaretDown" Foreground="White"/>
+                                            </Grid>
+                                        </Button.Content>
+                                    </Button>
+                                    <Grid x:Name="gridConfigTilesDRM" Background="{StaticResource BrushCuarto}" Padding="20" BorderThickness="1" BorderBrush="{StaticResource BrushSecundario}" Visibility="Collapsed">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <TextBlock x:Uid="Icon" Margin="15,0,5,0" VerticalAlignment="Center"/>
+                                            <ComboBox x:Name="cbConfigTilesDRMIcono" VerticalAlignment="Center" Width="40" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" BorderThickness="0" Background="Transparent">
+                                                <ComboBox.ItemContainerStyle>
+                                                    <Style TargetType="ComboBoxItem">
+                                                        <Setter Property="Width" Value="50"/>
+                                                        <Setter Property="Margin" Value="0"/>
+                                                    </Style>
+                                                </ComboBox.ItemContainerStyle>
+
+                                                <controls:ImageEx Source="Assets/epic_logo_mini1.png" Width="16" Height="16" IsCacheEnabled="True"/>
+                                                <controls:ImageEx Source="Assets/epic_logo_mini2.png" Width="16" Height="16" IsCacheEnabled="True"/>
+                                            </ComboBox>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <TextBlock x:Uid="Position" Margin="15,0,5,0" VerticalAlignment="Center"/>
+                                            <ComboBox x:Name="cbConfigTilesDRMPosicion" VerticalAlignment="Center" Width="40" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" BorderThickness="0" Background="Transparent">
+                                                <ComboBox.ItemContainerStyle>
+                                                    <Style TargetType="ComboBoxItem">
+                                                        <Setter Property="Width" Value="50"/>
+                                                        <Setter Property="Margin" Value="0"/>
+                                                    </Style>
+                                                </ComboBox.ItemContainerStyle>
+
+                                                <fa:FontAwesome Icon="ArrowLeft"/>
+                                                <fa:FontAwesome Icon="ArrowRight"/>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </Grid>
+
+                                    <Button x:Name="botonConfigTilesColor" Background="{StaticResource BrushSecundario}" Margin="0,20,0,0" Padding="10" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                        <Button.Content>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock x:Uid="ConfigTilesColor" Grid.Column="0" Foreground="White" HorizontalAlignment="Center" Margin="10,0"/>
+                                                <fa:FontAwesome x:Name="iconoConfigTilesColor" Grid.Column="1" Icon="CaretDown" Foreground="White"/>
+                                            </Grid>
+                                        </Button.Content>
+                                    </Button>
+                                    <StackPanel x:Name="spConfigTilesColor" Orientation="Vertical" Background="{StaticResource BrushCuarto}" Padding="20" Margin="0,0,0,10" BorderThickness="1" BorderBrush="{StaticResource BrushSecundario}" Visibility="Collapsed">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock x:Uid="ColorTitle" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                                            <ComboBox x:Name="cbConfigTileTituloColor" Width="85" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" BorderThickness="0" Background="Transparent">
+                                                <Grid BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" Background="White" Width="40" Height="20"/>
+                                                <Grid BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" Background="Black" Width="40" Height="20"/>
+                                            </ComboBox>
+                                        </StackPanel>
+
+                                        <TextBlock x:Uid="ColorBackground" Margin="0,20,0,10"/>
+                                        <ColorPicker x:Name="colorPickerFondoTiles" IsMoreButtonVisible="True" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Top">
+                                    <StackPanel x:Name="spConfigTilePequeña" Orientation="Vertical" Background="{StaticResource BrushCuarto}" Width="350" Padding="20" Margin="0,0,20,0" BorderThickness="1" BorderBrush="{StaticResource BrushSecundario}" Visibility="Collapsed">
+                                        <Grid x:Name="gridTilePequeñaPersonalizar" Background="{StaticResource BrushSecundario}" Width="71" Height="71">
+                                            <Grid.Clip>
+                                                <RectangleGeometry Rect="0,0,71,71"/>
+                                            </Grid.Clip>
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <controls:ImageEx x:Name="imagenTilePequeñaPersonalizar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None"/>
+                                        </Grid>
+
+                                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                                            <TextBlock Text="71x71" Margin="0,0,20,0" VerticalAlignment="Center"/>
+
+                                            <Button x:Name="botonConfigTilePequeñaBuscarImagen" Background="{StaticResource BrushSecundario}" Padding="10,5" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:FontAwesome Icon="Search" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                                    <TextBlock x:Uid="ChangeImage" Foreground="White"/>
+                                                </StackPanel>
+                                            </Button>
+                                        </StackPanel>
+
+                                        <StackPanel Margin="0,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="0,1,0,0"/>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageStretch" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                                            <ComboBox x:Name="cbConfigTilePequeñaImagenEstiramiento" Grid.Column="1" Width="180" VerticalAlignment="Center" HorizontalContentAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" BorderThickness="0" Background="Transparent">
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchNone"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchUniform"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchUniformFill"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchFill"/>
+                                            </ComboBox>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageMargin" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTilePequeñaImagenMargen" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="0" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageAxisX" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTilePequeñaImagenCoordenadasX" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="-100" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageAxisY" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTilePequeñaImagenCoordenadasY" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="-100" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageZoom" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTilePequeñaImagenZoom" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="0" Maximum="100"/>
+                                        </Grid>
+                                    </StackPanel>
+
+                                    <StackPanel x:Name="spConfigTileMediana" Orientation="Vertical" Background="{StaticResource BrushCuarto}" Width="350" Padding="20" Margin="0,0,20,0" BorderThickness="1" BorderBrush="{StaticResource BrushSecundario}" Visibility="Collapsed">
+                                        <Grid x:Name="gridTileMedianaPersonalizar" Background="{StaticResource BrushSecundario}" Width="150" Height="150">
+                                            <Grid.Clip>
+                                                <RectangleGeometry Rect="0,0,150,150"/>
+                                            </Grid.Clip>
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <controls:ImageEx x:Name="imagenTileMedianaPersonalizar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <controls:ImageEx x:Name="imagenDRMTileMedianaPersonalizar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Height="16" Width="16"/>
+                                        </Grid>
+
+                                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                                            <TextBlock Text="150x150" Margin="0,0,20,0" VerticalAlignment="Center"/>
+
+                                            <Button x:Name="botonConfigTileMedianaBuscarImagen" Background="{StaticResource BrushSecundario}" Padding="10,5" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:FontAwesome Icon="Search" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                                    <TextBlock x:Uid="ChangeImage" Foreground="White"/>
+                                                </StackPanel>
+                                            </Button>
+                                        </StackPanel>
+
+                                        <StackPanel Margin="0,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="0,1,0,0"/>
+
+                                        <CheckBox x:Name="cbConfigTileMedianaDRM" HorizontalAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                            <CheckBox.Content>
+                                                <TextBlock x:Uid="ConfigTileShowDRM"/>
+                                            </CheckBox.Content>
+                                        </CheckBox>
+
+                                        <StackPanel Margin="0,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="0,1,0,0"/>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageStretch" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                                            <ComboBox x:Name="cbConfigTileMedianaImagenEstiramiento" Grid.Column="1" Width="180" VerticalAlignment="Center" HorizontalContentAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" BorderThickness="0" Background="Transparent">
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchNone"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchUniform"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchUniformFill"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchFill"/>
+                                            </ComboBox>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageMargin" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileMedianaImagenMargen" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="0" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageAxisX" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileMedianaImagenCoordenadasX" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="-100" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageAxisY" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileMedianaImagenCoordenadasY" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="-100" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageZoom" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileMedianaImagenZoom" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="0" Maximum="100"/>
+                                        </Grid>
+                                    </StackPanel>
+
+                                    <StackPanel x:Name="spConfigTileAncha" Orientation="Vertical" Background="{StaticResource BrushCuarto}" Padding="20" Margin="0,0,20,0" BorderThickness="1" BorderBrush="{StaticResource BrushSecundario}" Visibility="Collapsed">
+                                        <Grid x:Name="gridTileAnchaPersonalizar" Background="{StaticResource BrushSecundario}" Width="310" Height="150">
+                                            <Grid.Clip>
+                                                <RectangleGeometry Rect="0,0,310,150"/>
+                                            </Grid.Clip>
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <controls:ImageEx x:Name="imagenTileAnchaPersonalizar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
+                                            <controls:ImageEx x:Name="imagenDRMTileAnchaPersonalizar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Height="16" Width="16"/>
+                                            <TextBlock x:Name="tituloTileAnchaPersonalizar" Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Light" Padding="10,5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                                        </Grid>
+
+                                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                                            <TextBlock Text="310x150" Margin="0,0,20,0" VerticalAlignment="Center"/>
+
+                                            <Button x:Name="botonConfigTileAnchaBuscarImagen" Background="{StaticResource BrushSecundario}" Padding="10,5" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:FontAwesome Icon="Search" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                                    <TextBlock x:Uid="ChangeImage" Foreground="White"/>
+                                                </StackPanel>
+                                            </Button>
+                                        </StackPanel>
+
+                                        <StackPanel Margin="0,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="0,1,0,0"/>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <CheckBox x:Name="cbConfigTileAnchaTitulo" Grid.Column="0" HorizontalAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                                <CheckBox.Content>
+                                                    <TextBlock x:Uid="ConfigTileShowTitle"/>
+                                                </CheckBox.Content>
+                                            </CheckBox>
+                                            <CheckBox x:Name="cbConfigTileAnchaDRM" Grid.Column="1" HorizontalAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                                <CheckBox.Content>
+                                                    <TextBlock x:Uid="ConfigTileShowDRM"/>
+                                                </CheckBox.Content>
+                                            </CheckBox>
+                                        </Grid>
+
+                                        <StackPanel Margin="0,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="0,1,0,0"/>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageStretch" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                                            <ComboBox x:Name="cbConfigTileAnchaImagenEstiramiento" Grid.Column="1" MinWidth="180" VerticalAlignment="Center" HorizontalContentAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" BorderThickness="0" Background="Transparent">
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchNone"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchUniform"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchUniformFill"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchFill"/>
+                                            </ComboBox>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageMargin" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileAnchaImagenMargen" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="0" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageAxisX" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileAnchaImagenCoordenadasX" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="-100" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageAxisY" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileAnchaImagenCoordenadasY" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="-100" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageZoom" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileAnchaImagenZoom" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="0" Maximum="100"/>
+                                        </Grid>
+                                    </StackPanel>
+
+                                    <StackPanel x:Name="spConfigTileGrande" Orientation="Vertical" Background="{StaticResource BrushCuarto}" Padding="20" BorderThickness="1" BorderBrush="{StaticResource BrushSecundario}" Visibility="Collapsed">
+                                        <Grid x:Name="gridTileGrandePersonalizar" Background="{StaticResource BrushSecundario}" Width="310" Height="310">
+                                            <Grid.Clip>
+                                                <RectangleGeometry Rect="0,0,310,310"/>
+                                            </Grid.Clip>
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <controls:ImageEx x:Name="imagenTileGrandePersonalizar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <controls:ImageEx x:Name="imagenDRMTileGrandePersonalizar" Grid.Row="0" Grid.Column="0" IsCacheEnabled="True" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Height="16" Width="16"/>
+                                            <TextBlock x:Name="tituloTileGrandePersonalizar" Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Light" Padding="10,5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                                        </Grid>
+
+                                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                                            <TextBlock Text="310x310" Margin="0,0,20,0" VerticalAlignment="Center"/>
+
+                                            <Button x:Name="botonConfigTileGrandeBuscarImagen" Background="{StaticResource BrushSecundario}" Padding="10,5" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:FontAwesome Icon="Search" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                                    <TextBlock x:Uid="ChangeImage" Foreground="White"/>
+                                                </StackPanel>
+                                            </Button>
+                                        </StackPanel>
+
+                                        <StackPanel Margin="0,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="0,1,0,0"/>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <CheckBox x:Name="cbConfigTileGrandeTitulo" Grid.Column="0" HorizontalAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                                <CheckBox.Content>
+                                                    <TextBlock x:Uid="ConfigTileShowTitle"/>
+                                                </CheckBox.Content>
+                                            </CheckBox>
+                                            <CheckBox x:Name="cbConfigTileGrandeDRM" Grid.Column="1" HorizontalAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                                <CheckBox.Content>
+                                                    <TextBlock x:Uid="ConfigTileShowDRM"/>
+                                                </CheckBox.Content>
+                                            </CheckBox>
+                                        </Grid>
+
+                                        <StackPanel Margin="0,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="0,1,0,0"/>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageStretch" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                                            <ComboBox x:Name="cbConfigTileGrandeImagenEstiramiento" Grid.Column="1" Width="180" VerticalAlignment="Center" HorizontalContentAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" BorderThickness="0" Background="Transparent">
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchNone"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchUniform"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchUniformFill"/>
+                                                <ComboBoxItem x:Uid="ConfigTileImageStretchFill"/>
+                                            </ComboBox>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageMargin" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileGrandeImagenMargen" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="0" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageAxisX" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileGrandeImagenCoordenadasX" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="-100" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageAxisY" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileGrandeImagenCoordenadasY" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="-100" Maximum="100"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:Uid="ConfigTileImageZoom" Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                            <Slider x:Name="sliderConfigTileGrandeImagenZoom" Grid.Column="1" VerticalAlignment="Center" Width="180" Height="35" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton" Minimum="0" Maximum="100"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+
+                <Grid x:Name="gridConfig" Visibility="Collapsed">
+                    <ScrollViewer>
+                        <StackPanel Orientation="Vertical" Width="700" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <StackPanel Orientation="Vertical" Margin="40,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1">
+                                <StackPanel.Background>
+                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                        <GradientStop Color="#FFE4E4E4" Offset="0.5" />
+                                        <GradientStop Color="#FFBFBFBF" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </StackPanel.Background>
+
+                                <Grid x:Name="gridConfigTiles" HorizontalAlignment="Stretch" Padding="10" Background="{StaticResource GridTituloBackground}">
+                                    <TextBlock Text="Tiles" FontSize="16" Foreground="White" Margin="5,0,0,0"/>
+                                </Grid>
+
+                                <StackPanel Orientation="Vertical" Padding="15">
+                                    <TextBlock x:Uid="ConfigFolderMessage" TextWrapping="Wrap"/>
+
+                                    <Button x:Name="botonAñadirCarpeta" Padding="10" Margin="0,10" Background="{StaticResource BrushSecundario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                        <StackPanel Orientation="Horizontal">
+                                            <fa:FontAwesome Icon="Folder" Margin="0,0,10,0" VerticalAlignment="Center" Foreground="White"/>
+                                            <TextBlock x:Name="botonAñadirCarpetaTexto" x:Uid="ConfigAddFolder" Foreground="White"/>
+                                        </StackPanel>
+                                    </Button>
+
+                                    <TextBlock x:Name="tbConfigCarpeta" VerticalAlignment="Center"/>
+                                </StackPanel>
+
+                                <Grid Padding="15" Background="IndianRed">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <fa:FontAwesome Grid.Column="0" Icon="Exclamation" Margin="5,0" VerticalAlignment="Center" Foreground="White"/>
+                                    <TextBlock x:Uid="ConfigFolderWarning" Grid.Column="1" Margin="10,0" TextWrapping="Wrap" Foreground="White"/>
+                                    <Button x:Name="botonComoAñadirCarpeta" Grid.Column="2" x:Uid="ConfigFolderHowAdd" Foreground="White" Padding="8" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
+                                </Grid>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </NavigationView>
+    </Grid>
+</Page>
