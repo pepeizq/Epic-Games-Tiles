@@ -7,7 +7,7 @@ Module Decompiladores
         Dim cliente As New HttpClient()
         Dim httpFinal As String = Nothing
 
-        cliente.DefaultRequestHeaders.Add("user-agent", "Chrome/45.0.2454.93")
+        cliente.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0")
 
         Try
             Dim respuesta As New HttpResponseMessage
@@ -21,6 +21,14 @@ Module Decompiladores
 
         cliente.Dispose()
         Return httpFinal
+    End Function
+
+    Public Async Function HttpClient2(url As Uri) As Task(Of String)
+
+        Dim cliente As New Net.Http.HttpClient
+        Dim html As String = Await cliente.GetStringAsync(url.ToString)
+
+        Return html
     End Function
 
 End Module

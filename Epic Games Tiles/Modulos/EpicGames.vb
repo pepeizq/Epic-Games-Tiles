@@ -1,10 +1,8 @@
-﻿Imports Microsoft.Toolkit.Uwp.UI.Animations
-Imports Microsoft.Toolkit.Uwp.UI.Controls
+﻿Imports Microsoft.Toolkit.Uwp.UI.Controls
 Imports Newtonsoft.Json
 Imports Windows.Storage
 Imports Windows.Storage.AccessCache
 Imports Windows.Storage.Pickers
-Imports Windows.Storage.Streams
 Imports Windows.UI
 Imports Windows.UI.Core
 Imports Windows.UI.Xaml.Media.Animation
@@ -49,7 +47,30 @@ Module EpicGames
         Dim listaJuegos As New List(Of Tile)
 
         If Not carpeta Is Nothing Then
+            Dim listaInstalado As New List(Of String)
+
+            Dim ficheroBBDD As StorageFile = Await StorageFile.GetFileFromApplicationUriAsync(New Uri("ms-appx:///Assets/BBDD.txt"))
+            Dim datosBBDD As String = Await FileIO.ReadTextAsync(ficheroBBDD)
+            Dim bbdd As EpicGamesBBDD = JsonConvert.DeserializeObject(Of EpicGamesBBDD)(datosBBDD)
+
             Dim subcarpetas1 As IReadOnlyList(Of StorageFolder) = Await carpeta.GetFoldersAsync()
+
+            For Each subcarpeta1 As StorageFolder In subcarpetas1
+                If subcarpeta1.DisplayName.ToLower = "unrealenginelauncher" Then
+                    Dim ficheros As IReadOnlyList(Of StorageFile) = Await subcarpeta1.GetFilesAsync()
+
+                    For Each fichero As StorageFile In ficheros
+                        If fichero.Name.ToLower = "launcherinstalled.dat" Then
+                            Dim datosTexto As String = Await FileIO.ReadTextAsync(fichero)
+                            Dim juegos As EpicGamesInstalado = JsonConvert.DeserializeObject(Of EpicGamesInstalado)(datosTexto)
+
+                            For Each juego In juegos.Lista
+                                listaInstalado.Add(juego.Juego)
+                            Next
+                        End If
+                    Next
+                End If
+            Next
 
             For Each subcarpeta1 As StorageFolder In subcarpetas1
                 If subcarpeta1.DisplayName.ToLower = "epicgameslauncher" Then
@@ -68,83 +89,81 @@ Module EpicGames
                                             Dim ficheros As IReadOnlyList(Of StorageFile) = Await subcarpeta4.GetFilesAsync()
 
                                             For Each fichero As StorageFile In ficheros
-                                                If fichero.DisplayType.ToLower.Contains("v7product") Then
+                                                If fichero.DisplayType.ToLower.Contains("v2product") Then
                                                     Dim datosTexto As String = Await FileIO.ReadTextAsync(fichero)
                                                     Dim datos As EpicGamesDatos = JsonConvert.DeserializeObject(Of EpicGamesDatos)(datosTexto)
 
                                                     If Not datos Is Nothing Then
                                                         Dim titulo As String = datos.Titulo
-                                                        Dim id As String = String.Empty
+                                                        Dim idEjecutable As String = String.Empty
+                                                        Dim idBBDD As String = datos.ID
 
                                                         If Not datos.Apps Is Nothing Then
                                                             If datos.Apps.Count > 0 Then
                                                                 For Each app In datos.Apps
-                                                                    If app.Tipo.ToLower = "game" Then
-                                                                        If Not app.ClientID = Nothing Then
-                                                                            id = app.ID
-                                                                            Exit For
+                                                                    For Each juegoInstalado In listaInstalado
+                                                                        If juegoInstalado = app.Nombre Then
+                                                                            idEjecutable = app.Nombre
                                                                         End If
-                                                                    End If
+                                                                    Next
                                                                 Next
                                                             End If
                                                         End If
 
-                                                        Dim tituloBool As Boolean = False
+                                                        Dim añadirBool As Boolean = False
                                                         Dim i As Integer = 0
                                                         While i < listaJuegos.Count
                                                             If listaJuegos(i).Titulo = titulo Then
-                                                                tituloBool = True
+                                                                añadirBool = True
                                                             End If
                                                             i += 1
                                                         End While
 
-                                                        If id = String.Empty Then
-                                                            tituloBool = True
+                                                        If idEjecutable = String.Empty Then
+                                                            añadirBool = True
                                                         End If
 
-                                                        If datos.ImagenFondo = Nothing Then
-                                                            tituloBool = True
-                                                        End If
-
-                                                        If tituloBool = False Then
+                                                        If añadirBool = False Then
                                                             Dim gridImagen As New Grid With {
                                                                 .Width = 430,
                                                                 .Height = 250
                                                             }
 
-                                                            Dim ficheroFondo As StorageFile = Await subcarpeta4.GetFileAsync(datos.ImagenFondo)
-                                                            Using streamFondo = Await ficheroFondo.OpenAsync(FileAccessMode.Read)
-                                                                Dim bitmapFondo As New BitmapImage
-                                                                bitmapFondo.SetSource(streamFondo)
+                                                            Dim urlImagenFondo As String = String.Empty
 
-                                                                Dim imagenFondo As New ImageEx With {
-                                                                    .Source = bitmapFondo,
-                                                                    .IsCacheEnabled = True,
-                                                                    .Stretch = Stretch.UniformToFill
-                                                                }
+                                                            For Each juego In bbdd.Tienda.Juegos
+                                                                If juego.Atributos.ID = idBBDD Then
+                                                                    If Not juego.Imagenes.ImagenFondo Is Nothing Then
+                                                                        Dim imagenFondo As New ImageEx With {
+                                                                            .Source = juego.Imagenes.ImagenFondo(0),
+                                                                            .IsCacheEnabled = True,
+                                                                            .Stretch = Stretch.UniformToFill
+                                                                        }
 
-                                                                gridImagen.Children.Add(imagenFondo)
-                                                            End Using
+                                                                        gridImagen.Children.Add(imagenFondo)
+                                                                        urlImagenFondo = juego.Imagenes.ImagenFondo(0)
+                                                                    End If
 
-                                                            Dim ficheroLogo As StorageFile = Await subcarpeta4.GetFileAsync(datos.ImagenLogo)
-                                                            Using streamLogo = Await ficheroLogo.OpenAsync(FileAccessMode.Read)
-                                                                Dim bitmapLogo As New BitmapImage
-                                                                bitmapLogo.SetSource(streamLogo)
+                                                                    If Not juego.Imagenes.ImagenLogo Is Nothing Then
+                                                                        Dim imagenLogo As New ImageEx With {
+                                                                            .Source = juego.Imagenes.ImagenLogo(0),
+                                                                            .IsCacheEnabled = True,
+                                                                            .Stretch = Stretch.Uniform,
+                                                                            .VerticalAlignment = VerticalAlignment.Center,
+                                                                            .HorizontalAlignment = HorizontalAlignment.Center,
+                                                                            .Margin = New Thickness(30)
+                                                                        }
 
-                                                                Dim imagenLogo As New ImageEx With {
-                                                                    .Source = bitmapLogo,
-                                                                    .IsCacheEnabled = True,
-                                                                    .Stretch = Stretch.None,
-                                                                    .VerticalAlignment = VerticalAlignment.Center,
-                                                                    .HorizontalAlignment = HorizontalAlignment.Center
-                                                                }
+                                                                        gridImagen.Children.Add(imagenLogo)
+                                                                    End If
+                                                                End If
+                                                            Next
 
-                                                                gridImagen.Children.Add(imagenLogo)
-                                                            End Using
-
-                                                            Dim juego As New Tile(titulo, id, "com.epicgames.launcher://apps/" + id + "?action=launch&silent=true",
-                                                                                  gridImagen, gridImagen, gridImagen, gridImagen)
-                                                            listaJuegos.Add(juego)
+                                                            If gridImagen.Children.Count > 0 Then
+                                                                Dim juego As New Tile(titulo, idEjecutable, "com.epicgames.launcher://apps/" + idEjecutable + "?action=launch&silent=true",
+                                                                                      urlImagenFondo, urlImagenFondo, gridImagen, urlImagenFondo)
+                                                                listaJuegos.Add(juego)
+                                                            End If
                                                         End If
                                                     End If
                                                 End If
@@ -183,7 +202,7 @@ Module EpicGames
             For Each juego In listaJuegos
                 Dim boton As New Button With {
                     .Tag = juego,
-                    .Content = juego.ImagenMediana,
+                    .Content = juego.ImagenAncha,
                     .Padding = New Thickness(0, 0, 0, 0),
                     .BorderThickness = New Thickness(1, 1, 1, 1),
                     .BorderBrush = New SolidColorBrush(Colors.Black),
@@ -229,7 +248,7 @@ Module EpicGames
         botonAñadirTile.Tag = juego
 
         Dim resultado As New RenderTargetBitmap()
-        Await resultado.RenderAsync(juego.ImagenPequeña)
+        Await resultado.RenderAsync(juego.ImagenAncha)
 
         Dim imagenJuegoSeleccionado As ImageEx = pagina.FindName("imagenJuegoSeleccionado")
         imagenJuegoSeleccionado.Source = resultado
@@ -270,9 +289,9 @@ Module EpicGames
             Dim imagenPequeña2 As ImageEx = pagina.FindName("imagenTilePequeñaGenerar")
             Dim imagenPequeña3 As ImageEx = pagina.FindName("imagenTilePequeñaPersonalizar")
 
-            imagenPequeña1.Source = resultado
-            imagenPequeña2.Source = resultado
-            imagenPequeña3.Source = resultado
+            imagenPequeña1.Source = juego.ImagenPequeña
+            imagenPequeña2.Source = juego.ImagenPequeña
+            imagenPequeña3.Source = juego.ImagenPequeña
 
             imagenPequeña1.Tag = juego.ImagenPequeña
             imagenPequeña2.Tag = juego.ImagenPequeña
@@ -284,9 +303,9 @@ Module EpicGames
             Dim imagenMediana2 As ImageEx = pagina.FindName("imagenTileMedianaGenerar")
             Dim imagenMediana3 As ImageEx = pagina.FindName("imagenTileMedianaPersonalizar")
 
-            imagenMediana1.Source = resultado
-            imagenMediana2.Source = resultado
-            imagenMediana3.Source = resultado
+            imagenMediana1.Source = juego.ImagenMediana
+            imagenMediana2.Source = juego.ImagenMediana
+            imagenMediana3.Source = juego.ImagenMediana
 
             imagenMediana1.Tag = juego.ImagenMediana
             imagenMediana2.Tag = juego.ImagenMediana
@@ -312,9 +331,9 @@ Module EpicGames
             Dim imagenGrande2 As ImageEx = pagina.FindName("imagenTileGrandeGenerar")
             Dim imagenGrande3 As ImageEx = pagina.FindName("imagenTileGrandePersonalizar")
 
-            imagenGrande1.Source = resultado
-            imagenGrande2.Source = resultado
-            imagenGrande3.Source = resultado
+            imagenGrande1.Source = juego.ImagenGrande
+            imagenGrande2.Source = juego.ImagenGrande
+            imagenGrande3.Source = juego.ImagenGrande
 
             imagenGrande1.Tag = juego.ImagenGrande
             imagenGrande2.Tag = juego.ImagenGrande
@@ -337,16 +356,72 @@ Module EpicGames
 
 End Module
 
+Public Class EpicGamesBBDD
+
+    <JsonProperty("store")>
+    Public Tienda As EpicGamesBBDD2
+
+End Class
+
+Public Class EpicGamesBBDD2
+
+    <JsonProperty("storeItems")>
+    Public Juegos As List(Of EpicGamesBBDDJuego)
+
+End Class
+
+Public Class EpicGamesBBDDJuego
+
+    <JsonProperty("customAttributes")>
+    Public Atributos As EpicGamesBBDDJuegoAtributos
+
+    <JsonProperty("keyImages")>
+    Public Imagenes As EpicGamesBBDDJuegoImagenes
+
+End Class
+
+Public Class EpicGamesBBDDJuegoAtributos
+
+    <JsonProperty("com.epicgames.app.offerNs")>
+    Public ID As String
+
+End Class
+
+Public Class EpicGamesBBDDJuegoImagenes
+
+    <JsonProperty("DieselGameBoxLogo")>
+    Public ImagenLogo As List(Of String)
+
+    <JsonProperty("DieselStoreFrontWide")>
+    Public ImagenFondo As List(Of String)
+
+End Class
+
+'---------------------------------------------------
+
+Public Class EpicGamesInstalado
+
+    <JsonProperty("InstallationList")>
+    Public Lista As List(Of EpicGamesInstaladoJuego)
+
+End Class
+
+Public Class EpicGamesInstaladoJuego
+
+    <JsonProperty("AppName")>
+    Public Juego As String
+
+End Class
+
+'---------------------------------------------------
+
 Public Class EpicGamesDatos
 
     <JsonProperty("DisplayName")>
     Public Titulo As String
 
-    <JsonProperty("LibraryImage")>
-    Public ImagenFondo As String
-
-    <JsonProperty("LibraryLogo")>
-    Public ImagenLogo As String
+    <JsonProperty("CatalogNamespace")>
+    Public ID As String
 
     <JsonProperty("Apps")>
     Public Apps As List(Of EpicGamesDatosApps)
@@ -359,9 +434,9 @@ Public Class EpicGamesDatosApps
     Public Tipo As String
 
     <JsonProperty("Name")>
-    Public ID As String
+    Public Nombre As String
 
-    <JsonProperty("ClientId")>
-    Public ClientID As String
+    <JsonProperty("OfferId")>
+    Public OfferID As String
 
 End Class
