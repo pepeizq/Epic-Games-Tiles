@@ -18,6 +18,12 @@
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <PackageCertificateKeyFile>Epic Games Tiles_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>F5EA47CB4827B2F4461752D1294553CC4FD40082</PackageCertificateThumbprint>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -256,7 +262,7 @@
       <Version>4.7.0.9</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.2</Version>
+      <Version>6.1.9</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Services.Store.SDK">
       <Version>10.1705.16001</Version>
