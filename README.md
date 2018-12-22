@@ -1,6 +1,6 @@
 # Epic Games Tiles
 
-App for Windows 10 written in Visual Basic compatible for Universal Windows Platform (UWP).
+App for Windows 10 written in Visual Basic for Universal Windows Platform (UWP).
 
 ### What does the app do?
 
