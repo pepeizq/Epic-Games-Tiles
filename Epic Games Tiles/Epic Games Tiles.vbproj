@@ -160,7 +160,6 @@
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\BBDD.txt" />
     <Content Include="Assets\epic_logo.png" />
     <Content Include="Assets\epic_logo_mini1.png" />
     <Content Include="Assets\epic_logo_mini2.png" />

@@ -49,10 +49,6 @@ Module EpicGames
         If Not carpeta Is Nothing Then
             Dim listaInstalado As New List(Of String)
 
-            Dim ficheroBBDD As StorageFile = Await StorageFile.GetFileFromApplicationUriAsync(New Uri("ms-appx:///Assets/BBDD.txt"))
-            Dim datosBBDD As String = Await FileIO.ReadTextAsync(ficheroBBDD)
-            Dim bbdd As EpicGamesBBDD = JsonConvert.DeserializeObject(Of EpicGamesBBDD)(datosBBDD)
-
             Dim subcarpetas1 As IReadOnlyList(Of StorageFolder) = Await carpeta.GetFoldersAsync()
 
             For Each subcarpeta1 As StorageFolder In subcarpetas1
@@ -131,22 +127,53 @@ Module EpicGames
 
                                                             Dim urlImagenFondo As String = String.Empty
 
-                                                            For Each juego In bbdd.Tienda.Juegos
-                                                                If juego.Atributos.ID = idBBDD Then
-                                                                    If Not juego.Imagenes.ImagenFondo Is Nothing Then
-                                                                        Dim imagenFondo As New ImageEx With {
-                                                                            .Source = juego.Imagenes.ImagenFondo(0),
-                                                                            .IsCacheEnabled = True,
-                                                                            .Stretch = Stretch.UniformToFill
-                                                                        }
+                                                            Dim html As String = Await Decompiladores.HttpClient(New Uri("https://www.epicgames.com/store/en-US/store-search?q=" + titulo))
 
-                                                                        gridImagen.Children.Add(imagenFondo)
-                                                                        urlImagenFondo = juego.Imagenes.ImagenFondo(0)
-                                                                    End If
+                                                            If Not html = Nothing Then
+                                                                Dim temp, temp2 As String
+                                                                Dim int, int2 As Integer
 
-                                                                    If Not juego.Imagenes.ImagenLogo Is Nothing Then
+                                                                If html.Contains("<img alt=" + ChrW(34) + titulo + ChrW(34)) Then
+                                                                    int = html.IndexOf("<img alt=" + ChrW(34) + titulo + ChrW(34))
+                                                                    temp = html.Remove(0, int)
+                                                                ElseIf html.Contains("<img alt=" + ChrW(34) + titulo) Then
+                                                                    int = html.IndexOf("<img alt=" + ChrW(34) + titulo)
+                                                                    temp = html.Remove(0, int)
+                                                                Else
+                                                                    temp = Nothing
+                                                                End If
+
+                                                                If Not temp = Nothing Then
+                                                                    int = temp.IndexOf("src=")
+                                                                    temp = temp.Remove(0, int + 5)
+
+                                                                    int2 = temp.IndexOf(ChrW(34))
+                                                                    temp2 = temp.Remove(int2, temp.Length - int2)
+
+                                                                    Dim imagenFondo As New ImageEx With {
+                                                                        .Source = temp2.Trim,
+                                                                        .IsCacheEnabled = True,
+                                                                        .Stretch = Stretch.UniformToFill
+                                                                    }
+
+                                                                    gridImagen.Children.Add(imagenFondo)
+                                                                    urlImagenFondo = temp2.Trim
+
+                                                                    If temp.Contains("<img class=" + ChrW(34) + "DynamicLogo") Then
+                                                                        Dim temp3, temp4 As String
+                                                                        Dim int3, int4 As Integer
+
+                                                                        int3 = temp.IndexOf("<img class=" + ChrW(34) + "DynamicLogo")
+                                                                        temp3 = temp.Remove(0, int3)
+
+                                                                        int3 = temp3.IndexOf("src=")
+                                                                        temp3 = temp3.Remove(0, int3 + 5)
+
+                                                                        int4 = temp3.IndexOf(ChrW(34))
+                                                                        temp4 = temp3.Remove(int4, temp3.Length - int4)
+
                                                                         Dim imagenLogo As New ImageEx With {
-                                                                            .Source = juego.Imagenes.ImagenLogo(0),
+                                                                            .Source = temp4.Trim,
                                                                             .IsCacheEnabled = True,
                                                                             .Stretch = Stretch.Uniform,
                                                                             .VerticalAlignment = VerticalAlignment.Center,
@@ -157,7 +184,7 @@ Module EpicGames
                                                                         gridImagen.Children.Add(imagenLogo)
                                                                     End If
                                                                 End If
-                                                            Next
+                                                            End If
 
                                                             If gridImagen.Children.Count > 0 Then
                                                                 Dim juego As New Tile(titulo, idEjecutable, "com.epicgames.launcher://apps/" + idEjecutable + "?action=launch&silent=true",
@@ -355,47 +382,6 @@ Module EpicGames
     End Sub
 
 End Module
-
-Public Class EpicGamesBBDD
-
-    <JsonProperty("store")>
-    Public Tienda As EpicGamesBBDD2
-
-End Class
-
-Public Class EpicGamesBBDD2
-
-    <JsonProperty("storeItems")>
-    Public Juegos As List(Of EpicGamesBBDDJuego)
-
-End Class
-
-Public Class EpicGamesBBDDJuego
-
-    <JsonProperty("customAttributes")>
-    Public Atributos As EpicGamesBBDDJuegoAtributos
-
-    <JsonProperty("keyImages")>
-    Public Imagenes As EpicGamesBBDDJuegoImagenes
-
-End Class
-
-Public Class EpicGamesBBDDJuegoAtributos
-
-    <JsonProperty("com.epicgames.app.offerNs")>
-    Public ID As String
-
-End Class
-
-Public Class EpicGamesBBDDJuegoImagenes
-
-    <JsonProperty("DieselGameBoxLogo")>
-    Public ImagenLogo As List(Of String)
-
-    <JsonProperty("DieselStoreFrontWide")>
-    Public ImagenFondo As List(Of String)
-
-End Class
 
 '---------------------------------------------------
 
