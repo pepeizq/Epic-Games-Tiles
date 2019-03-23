@@ -144,6 +144,7 @@
     <Compile Include="Modulos\Configuracion.vb" />
     <Compile Include="Modulos\Decompiladores.vb" />
     <Compile Include="Modulos\EpicGames.vb" />
+    <Compile Include="Modulos\EpicGamesBBDD.vb" />
     <Compile Include="Modulos\MasCosas.vb" />
     <Compile Include="Modulos\NavigationViewItems.vb" />
     <Compile Include="Modulos\Notificaciones.vb" />
