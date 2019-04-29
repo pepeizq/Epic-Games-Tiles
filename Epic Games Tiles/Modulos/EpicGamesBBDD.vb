@@ -4,6 +4,7 @@
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
             New EpicGamesBBDDEntrada("Afterparty", "adenium"),
             New EpicGamesBBDDEntrada("Ancestors: The Humankind Odyssey", "amaranth"),
+            New EpicGamesBBDDEntrada("Anno 1800", "anno-1800"),
             New EpicGamesBBDDEntrada("Ashen", "wren"),
             New EpicGamesBBDDEntrada("Axiom Verge", "puffin"),
             New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender"),
@@ -29,6 +30,7 @@
             New EpicGamesBBDDEntrada("Maneater", "maneater"),
             New EpicGamesBBDDEntrada("Metro Exodus", "snapdragon"),
             New EpicGamesBBDDEntrada("My Time At Portia", "cobra"),
+            New EpicGamesBBDDEntrada("Observation", "allium"),
             New EpicGamesBBDDEntrada("Operencia", "lily"),
             New EpicGamesBBDDEntrada("Outer Wilds", "Outerwilds"),
             New EpicGamesBBDDEntrada("Outward", "viola"),
@@ -56,15 +58,21 @@
             New EpicGamesBBDDEntrada("The Jackbox Party Pack 5", "geranium"),
             New EpicGamesBBDDEntrada("The Outer Worlds", "rosemallow"),
             New EpicGamesBBDDEntrada("The Sinking City", "middlemist"),
+            New EpicGamesBBDDEntrada("The Walking Dead: Season One", "bloodroot"),
+            New EpicGamesBBDDEntrada("The Walking Dead: Season Two", "buttercup"),
+            New EpicGamesBBDDEntrada("The Walking Dead: A New Frontier", "begonia"),
+            New EpicGamesBBDDEntrada("The Walking Dead: Final Season", "walking-dead-final-season"),
+            New EpicGamesBBDDEntrada("The Walking Dead: Michonne", "fennel"),
             New EpicGamesBBDDEntrada("The Witness", "magnolia"),
             New EpicGamesBBDDEntrada("Thimbleweed Park", "tulip"),
+            New EpicGamesBBDDEntrada("Transistor", "dill"),
             New EpicGamesBBDDEntrada("Trover Saves the Universe", "sweetpea"),
             New EpicGamesBBDDEntrada("Unreal Tournament", "UnrealTournamentDev"),
             New EpicGamesBBDDEntrada("Vampire: The Masquerade - Bloodlines 2", "nemesia"),
             New EpicGamesBBDDEntrada("Vampyr", "Nautilus"),
-            New EpicGamesBBDDEntrada("Walking Dead Final Season", "walking-dead-final-season"),
             New EpicGamesBBDDEntrada("Watch Dogs 2", "angelonia"),
             New EpicGamesBBDDEntrada("What Remains of Edith Finch", "badger"),
+            New EpicGamesBBDDEntrada("World of Goo", "anemone"),
             New EpicGamesBBDDEntrada("World War Z", "world-war-z")
         }
 
