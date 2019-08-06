@@ -1,100 +1,119 @@
-﻿Module EpicGamesBBDD
+﻿Imports Newtonsoft.Json
+
+Module EpicGamesBBDD
+
+    'https://www.epicgames.com/store/es-ES/api/content/products/ + nameurl
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
-            New EpicGamesBBDDEntrada("7 Billion Humans", "holly"),
-            New EpicGamesBBDDEntrada("Afterparty", "adenium"),
-            New EpicGamesBBDDEntrada("Ancestors: The Humankind Odyssey", "amaranth"),
-            New EpicGamesBBDDEntrada("Anno 1800", "oregano"),
-            New EpicGamesBBDDEntrada("Ashen", "wren"),
-            New EpicGamesBBDDEntrada("Axiom Verge", "puffin"),
-            New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender"),
-            New EpicGamesBBDDEntrada("City of Brass", "arrowroot"),
-            New EpicGamesBBDDEntrada("Close To The Sun", "silene"),
-            New EpicGamesBBDDEntrada("Control", "calluna"),
-            New EpicGamesBBDDEntrada("Cyberpunk 2077", "ginger"),
-            New EpicGamesBBDDEntrada("Dangerous Driving", "tansy"),
-            New EpicGamesBBDDEntrada("Darksiders III", "springbok"),
-            New EpicGamesBBDDEntrada("Dauntless", "dauntless"),
-            New EpicGamesBBDDEntrada("Detroit: Become Human", "columbine"),
-            New EpicGamesBBDDEntrada("Donut County", "kestrel"),
-            New EpicGamesBBDDEntrada("Drawful 2", "daisy"),
-            New EpicGamesBBDDEntrada("Enter the Gungeon", "garlic"),
-            New EpicGamesBBDDEntrada("Falcon Age", "parrot"),
-            New EpicGamesBBDDEntrada("Far Cry Primal", "larkspur"),
-            New EpicGamesBBDDEntrada("Flower", "yarrow"),
-            New EpicGamesBBDDEntrada("Fortnite", "fortnite"),
-            New EpicGamesBBDDEntrada("Genesis Alpha One", "puma"),
-            New EpicGamesBBDDEntrada("Gorogoa", "meerkat"),
-            New EpicGamesBBDDEntrada("Hades", "min"),
-            New EpicGamesBBDDEntrada("Heavy Rain", "aster"),
-            New EpicGamesBBDDEntrada("Hello Neighbor Hide & Seek", "morpho"),
-            New EpicGamesBBDDEntrada("Human Resource Machine", "basil"),
-            New EpicGamesBBDDEntrada("Industries of Titan", "protea"),
-            New EpicGamesBBDDEntrada("John Wick Hex", "vanilla"),
-            New EpicGamesBBDDEntrada("Journey", "journey"),
-            New EpicGamesBBDDEntrada("Journey to the Savage Planet", "lemur"),
-            New EpicGamesBBDDEntrada("Kine", "rose"),
-            New EpicGamesBBDDEntrada("Kingdom New Lands", "cacao"),
-            New EpicGamesBBDDEntrada("Little Inferno", "clover"),
-            New EpicGamesBBDDEntrada("Maneater", "maneater"),
-            New EpicGamesBBDDEntrada("Metro Exodus", "snapdragon"),
-            New EpicGamesBBDDEntrada("Metro: Last Light Redux", "speedwell"),
-            New EpicGamesBBDDEntrada("My Time At Portia", "cobra"),
-            New EpicGamesBBDDEntrada("Observation", "allium"),
-            New EpicGamesBBDDEntrada("Omen Of Sorrow", "daffodil"),
-            New EpicGamesBBDDEntrada("Operencia", "lily"),
-            New EpicGamesBBDDEntrada("Outer Wilds", "Outerwilds"),
-            New EpicGamesBBDDEntrada("Outward", "viola"),
-            New EpicGamesBBDDEntrada("Overcooked", "sage"),
-            New EpicGamesBBDDEntrada("Oxenfree", "hibiscus"),
-            New EpicGamesBBDDEntrada("Oxygen Not Included", "lotus"),
-            New EpicGamesBBDDEntrada("Phoenix Point", "iris"),
-            New EpicGamesBBDDEntrada("Rebel Galaxy", "weaver"),
-            New EpicGamesBBDDEntrada("Rebel Galaxy Outlaw", "rgo"),
-            New EpicGamesBBDDEntrada("RiME", "hydrangea"),
-            New EpicGamesBBDDEntrada("RollerCoaster Tycoon Adventures", "canna"),
-            New EpicGamesBBDDEntrada("Satisfactory", "crab"),
-            New EpicGamesBBDDEntrada("Shadow Complex", "shadow-complex"),
-            New EpicGamesBBDDEntrada("Shakedown - Hawaii", "plumeria"),
-            New EpicGamesBBDDEntrada("Shenmue 3", "pepper"),
-            New EpicGamesBBDDEntrada("Slime Rancher", "corydalis"),
-            New EpicGamesBBDDEntrada("Spellbreak", "newt"),
-            New EpicGamesBBDDEntrada("Stories Untold", "stories-untold"),
-            New EpicGamesBBDDEntrada("Subnautica", "jaguar"),
-            New EpicGamesBBDDEntrada("Subnautica Below Zero", "foxglove"),
-            New EpicGamesBBDDEntrada("Super Meat Boy", "buffalo"),
-            New EpicGamesBBDDEntrada("Super Meat Boy Forever", "smbf"),
-            New EpicGamesBBDDEntrada("Tom Clancy's Ghost Recon Breakpoint", "saffron"),
-            New EpicGamesBBDDEntrada("Tom Clancy's Ghost Recon Wildlands", "hyacinth"),
-            New EpicGamesBBDDEntrada("The Cycle", "thecycle"),
-            New EpicGamesBBDDEntrada("The Division 2", "tctd2"),
-            New EpicGamesBBDDEntrada("The Jackbox Party Pack", "feverfew"),
-            New EpicGamesBBDDEntrada("The Jackbox Party Pack 2", "lilac"),
-            New EpicGamesBBDDEntrada("The Jackbox Party Pack 3", "orchid"),
-            New EpicGamesBBDDEntrada("The Jackbox Party Pack 4", "snowdrop"),
-            New EpicGamesBBDDEntrada("The Jackbox Party Pack 5", "geranium"),
-            New EpicGamesBBDDEntrada("The Outer Worlds", "rosemallow"),
-            New EpicGamesBBDDEntrada("The Sinking City", "middlemist"),
-            New EpicGamesBBDDEntrada("The Sojourn", "shallots"),
-            New EpicGamesBBDDEntrada("The Walking Dead: Season One", "bloodroot"),
-            New EpicGamesBBDDEntrada("The Walking Dead: Season Two", "buttercup"),
-            New EpicGamesBBDDEntrada("The Walking Dead: A New Frontier", "begonia"),
-            New EpicGamesBBDDEntrada("The Walking Dead: Final Season", "ocelot"),
-            New EpicGamesBBDDEntrada("The Walking Dead: Michonne", "fennel"),
-            New EpicGamesBBDDEntrada("The Witness", "magnolia"),
-            New EpicGamesBBDDEntrada("Thimbleweed Park", "tulip"),
-            New EpicGamesBBDDEntrada("Torchlight", "terragon"),
-            New EpicGamesBBDDEntrada("Transistor", "dill"),
-            New EpicGamesBBDDEntrada("Trover Saves the Universe", "sweetpea"),
-            New EpicGamesBBDDEntrada("Unreal Tournament", "UnrealTournamentDev"),
-            New EpicGamesBBDDEntrada("Vampire: The Masquerade - Bloodlines 2", "nemesia"),
-            New EpicGamesBBDDEntrada("Vampyr", "Nautilus"),
-            New EpicGamesBBDDEntrada("Watch Dogs 2", "angelonia"),
-            New EpicGamesBBDDEntrada("Watch Dogs Legion", "hawk"),
-            New EpicGamesBBDDEntrada("What Remains of Edith Finch", "badger"),
-            New EpicGamesBBDDEntrada("World of Goo", "anemone"),
-            New EpicGamesBBDDEntrada("World War Z", "wombat")
+            New EpicGamesBBDDEntrada("7 Billion Humans", "holly", "7-billion-humans"),
+            New EpicGamesBBDDEntrada("Afterparty", "adenium", "afterparty"),
+            New EpicGamesBBDDEntrada("Alan Wake", "heron", "alan-wake"),
+            New EpicGamesBBDDEntrada("Ancestors: The Humankind Odyssey", "amaranth", "ancestors"),
+            New EpicGamesBBDDEntrada("Anno 1800", "oregano", "anno-1800"),
+            New EpicGamesBBDDEntrada("Ashen", "wren", "ashen"),
+            New EpicGamesBBDDEntrada("Auto Chess", "owl", "auto-chess"),
+            New EpicGamesBBDDEntrada("Axiom Verge", "puffin", "axiom-verge"),
+            New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender", "beyond-two-souls"),
+            New EpicGamesBBDDEntrada("Borderlands 3", "catnip", "borderlands-3"),
+            New EpicGamesBBDDEntrada("City of Brass", "arrowroot", "city-of-brass"),
+            New EpicGamesBBDDEntrada("Close To The Sun", "silene", "close-to-the-sun"),
+            New EpicGamesBBDDEntrada("Control", "calluna", "control"),
+            New EpicGamesBBDDEntrada("Cyberpunk 2077", "ginger", "cyberpunk-2077"),
+            New EpicGamesBBDDEntrada("Dangerous Driving", "tansy", "dangerous-driving"),
+            New EpicGamesBBDDEntrada("Darksiders III", "springbok", "darksiders3"),
+            New EpicGamesBBDDEntrada("Dauntless", "jackal", "dauntless"),
+            New EpicGamesBBDDEntrada("Detroit: Become Human", "columbine", "detroit-become-human"),
+            New EpicGamesBBDDEntrada("Donut County", "kestrel", "donut-county"),
+            New EpicGamesBBDDEntrada("Drawful 2", "daisy", "drawful-2"),
+            New EpicGamesBBDDEntrada("Enter the Gungeon", "garlic", "enter-the-gungeon"),
+            New EpicGamesBBDDEntrada("Falcon Age", "parrot", "falcon-age"),
+            New EpicGamesBBDDEntrada("Far Cry Primal", "larkspur", "far-cry-primal"),
+            New EpicGamesBBDDEntrada("Flower", "yarrow", "flower"),
+            New EpicGamesBBDDEntrada("For Honor", "sundrop", "for-honor"),
+            New EpicGamesBBDDEntrada("Fortnite", "fn", "fortnite"),
+            New EpicGamesBBDDEntrada("Genesis Alpha One", "puma", "genesis-alpha-one"),
+            New EpicGamesBBDDEntrada("Ghostbusters: The Video Game Remastered", "mint", "ghostbusters-the-video-game-remastered"),
+            New EpicGamesBBDDEntrada("GNOG", "penguin", "gnog"),
+            New EpicGamesBBDDEntrada("Gods and Monsters", "pheasant", "gods-and-monsters"),
+            New EpicGamesBBDDEntrada("Gorogoa", "meerkat", "gorogoa"),
+            New EpicGamesBBDDEntrada("Griftlands", "phlox", "griftlands"),
+            New EpicGamesBBDDEntrada("Hades", "min", "hades"),
+            New EpicGamesBBDDEntrada("Heavy Rain", "aster", "heavy-rain"),
+            New EpicGamesBBDDEntrada("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek"),
+            New EpicGamesBBDDEntrada("Human Resource Machine", "basil", "human-resource-machine"),
+            New EpicGamesBBDDEntrada("Industries of Titan", "protea", "industries-of-titan"),
+            New EpicGamesBBDDEntrada("John Wick Hex", "vanilla", "johnwickhex"),
+            New EpicGamesBBDDEntrada("Journey", "lemur", "journey"),
+            New EpicGamesBBDDEntrada("Journey to the Savage Planet", "oleander", "journey-to-the-savage-planet"),
+            New EpicGamesBBDDEntrada("Kine", "rose", "kine"),
+            New EpicGamesBBDDEntrada("Kingdom New Lands", "cacao", "kingdom-new-lands"),
+            New EpicGamesBBDDEntrada("Last Day of June", "pumpkin", "last-day-of-june"),
+            New EpicGamesBBDDEntrada("Limbo", "hazelnut", "limbo"),
+            New EpicGamesBBDDEntrada("Little Inferno", "clover", "little-inferno"),
+            New EpicGamesBBDDEntrada("Maneater", "turtle", "maneater"),
+            New EpicGamesBBDDEntrada("Metro Exodus", "snapdragon", "metro-exodus"),
+            New EpicGamesBBDDEntrada("Metro: Last Light Redux", "speedwell", "metro-last-light-redux"),
+            New EpicGamesBBDDEntrada("Moonlighter", "eagle", "moonlighter"),
+            New EpicGamesBBDDEntrada("My Time At Portia", "cobra", "my-time-at-portia"),
+            New EpicGamesBBDDEntrada("Observation", "allium", "observation"),
+            New EpicGamesBBDDEntrada("Omen Of Sorrow", "daffodil", "omen-of-sorrow"),
+            New EpicGamesBBDDEntrada("Operencia", "lily", "operencia"),
+            New EpicGamesBBDDEntrada("Outer Wilds", "starfish", "outerwilds"),
+            New EpicGamesBBDDEntrada("Outward", "viola", "outward"),
+            New EpicGamesBBDDEntrada("Overcooked", "sage", "overcooked"),
+            New EpicGamesBBDDEntrada("Oxenfree", "hibiscus", "oxenfree"),
+            New EpicGamesBBDDEntrada("Oxygen Not Included", "lotus", "oxygen-not-included"),
+            New EpicGamesBBDDEntrada("Phoenix Point", "iris", "phoenix-point"),
+            New EpicGamesBBDDEntrada("Rebel Galaxy", "weaver", "rebel-galaxy"),
+            New EpicGamesBBDDEntrada("Rebel Galaxy Outlaw", "rgo", "rebel-galaxy-outlaw"),
+            New EpicGamesBBDDEntrada("RiME", "hydrangea", "rime"),
+            New EpicGamesBBDDEntrada("RollerCoaster Tycoon Adventures", "canna", "rollercoaster-tycoon-adventures"),
+            New EpicGamesBBDDEntrada("Rune 2", "cosmos", "rune-2"),
+            New EpicGamesBBDDEntrada("Satisfactory", "crab", "satisfactory"),
+            New EpicGamesBBDDEntrada("Shadow Complex", "vpr", "shadow-complex"),
+            New EpicGamesBBDDEntrada("Shakedown - Hawaii", "plumeria", "shakedown-hawaii"),
+            New EpicGamesBBDDEntrada("Shenmue 3", "pepper", "shenmue-3"),
+            New EpicGamesBBDDEntrada("Sherlock Holmes The Devil's Daughter", "cinnamon", "sherlock-holmes-the-devils-daughter"),
+            New EpicGamesBBDDEntrada("Slime Rancher", "corydalis", "slime-rancher"),
+            New EpicGamesBBDDEntrada("Spellbreak", "newt", "spellbreak"),
+            New EpicGamesBBDDEntrada("Stories Untold", "parsley", "stories-untold"),
+            New EpicGamesBBDDEntrada("Subnautica", "jaguar", "subnautica"),
+            New EpicGamesBBDDEntrada("Subnautica Below Zero", "foxglove", "subnautica-below-zero"),
+            New EpicGamesBBDDEntrada("Super Meat Boy", "buffalo", "super-meat-boy"),
+            New EpicGamesBBDDEntrada("Super Meat Boy Forever", "moose", "super-meat-boy-forever"),
+            New EpicGamesBBDDEntrada("Tetris Effect", "kiwi", "tetris-effect"),
+            New EpicGamesBBDDEntrada("Tom Clancy's Ghost Recon Breakpoint", "saffron", "ghost-recon-breakpoint"),
+            New EpicGamesBBDDEntrada("Tom Clancy's Ghost Recon Wildlands", "hyacinth", "ghost-recon-wildlands"),
+            New EpicGamesBBDDEntrada("Tom Clancy's The Division 2", "impala", "the-division-2"),
+            New EpicGamesBBDDEntrada("The Cycle", "azalea", "thecycle"),
+            New EpicGamesBBDDEntrada("The Jackbox Party Pack", "feverfew", "jackbox-party-pack-1"),
+            New EpicGamesBBDDEntrada("The Jackbox Party Pack 2", "lilac", "jackbox-party-pack-2"),
+            New EpicGamesBBDDEntrada("The Jackbox Party Pack 3", "orchid", "jackbox-party-pack-3"),
+            New EpicGamesBBDDEntrada("The Jackbox Party Pack 4", "snowdrop", "jackbox-party-pack-4"),
+            New EpicGamesBBDDEntrada("The Jackbox Party Pack 5", "geranium", "jackbox-party-pack-5"),
+            New EpicGamesBBDDEntrada("The Outer Worlds", "rosemallow", "the-outer-worlds"),
+            New EpicGamesBBDDEntrada("The Sinking City", "middlemist", "the-sinking-city"),
+            New EpicGamesBBDDEntrada("The Sojourn", "shallots", "the-sojourn"),
+            New EpicGamesBBDDEntrada("The Walking Dead: Season One", "bloodroot", "walking-dead-season-one"),
+            New EpicGamesBBDDEntrada("The Walking Dead: Season Two", "buttercup", "walking-dead-season-two"),
+            New EpicGamesBBDDEntrada("The Walking Dead: A New Frontier", "begonia", "walking-dead-a-new-frontier"),
+            New EpicGamesBBDDEntrada("The Walking Dead: Final Season", "ocelot", "walking-dead-final-season"),
+            New EpicGamesBBDDEntrada("The Walking Dead: Michonne", "fennel", "walking-dead-michonne"),
+            New EpicGamesBBDDEntrada("The Witness", "magnolia", "the-witness"),
+            New EpicGamesBBDDEntrada("This War of Mine", "cardinal", "this-war-of-mine"),
+            New EpicGamesBBDDEntrada("Thimbleweed Park", "tulip", "thimbleweed-park"),
+            New EpicGamesBBDDEntrada("Torchlight", "terragon", "torchlight"),
+            New EpicGamesBBDDEntrada("Transistor", "dill", "transistor"),
+            New EpicGamesBBDDEntrada("Trover Saves the Universe", "sweetpea", "trover-saves-the-universe"),
+            New EpicGamesBBDDEntrada("Unreal Tournament", "ut", "unreal-tournament"),
+            New EpicGamesBBDDEntrada("Vampire: The Masquerade - Bloodlines 2", "nemesia", "vampire-the-masquerade-bloodlines-2"),
+            New EpicGamesBBDDEntrada("Vampyr", "Nautilus", "vampyr"),
+            New EpicGamesBBDDEntrada("Watch Dogs 2", "angelonia", "watch-dogs-2"),
+            New EpicGamesBBDDEntrada("Watch Dogs Legion", "hawk", "watch-dogs-legion"),
+            New EpicGamesBBDDEntrada("What Remains of Edith Finch", "badger", "what-remains-of-edith-finch"),
+            New EpicGamesBBDDEntrada("World of Goo", "anemone", "world-of-goo"),
+            New EpicGamesBBDDEntrada("World War Z", "wombat", "world-war-z")
         }
 
         Return lista
@@ -106,10 +125,71 @@ Public Class EpicGamesBBDDEntrada
 
     Public Titulo As String
     Public ID As String
+    Public Enlace As String
 
-    Public Sub New(ByVal titulo As String, ByVal id As String)
+    Public Sub New(ByVal titulo As String, ByVal id As String, ByVal enlace As String)
         Me.Titulo = titulo
         Me.ID = id
+        Me.Enlace = enlace
     End Sub
+
+End Class
+
+'-------------------------------------------------------------------
+
+Public Class EpicGamesJuego
+
+    <JsonProperty("productName")>
+    Public Titulo As String
+
+    <JsonProperty("pages")>
+    Public Paginas As List(Of EpicGamesJuegoPagina)
+
+End Class
+
+Public Class EpicGamesJuegoPagina
+
+    <JsonProperty("item")>
+    Public Clave As EpicGamesJuegoClave
+
+    <JsonProperty("data")>
+    Public Datos As EpicGamesJuegoDatos
+
+End Class
+
+Public Class EpicGamesJuegoClave
+
+    <JsonProperty("appName")>
+    Public App As String
+
+    <JsonProperty("namespace")>
+    Public Space As String
+
+End Class
+
+Public Class EpicGamesJuegoDatos
+
+    <JsonProperty("hero")>
+    Public Imagenes As EpicGamesJuegoImagenes
+
+End Class
+
+Public Class EpicGamesJuegoImagenes
+
+    <JsonProperty("logoImage")>
+    Public Logo As EpicGamesJuegoImagenesLogo
+
+    <JsonProperty("portraitBackgroundImageUrl")>
+    Public FondoVertical As String
+
+    <JsonProperty("backgroundImageUrl")>
+    Public FondoHorizontal As String
+
+End Class
+
+Public Class EpicGamesJuegoImagenesLogo
+
+    <JsonProperty("src")>
+    Public Url As String
 
 End Class

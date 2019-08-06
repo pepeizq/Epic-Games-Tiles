@@ -73,148 +73,48 @@ Module EpicGames
             For Each juegoBBDD In listaBBDD
                 For Each juegoInstalado In listaInstalado
                     If juegoInstalado.ToLower = juegoBBDD.ID.ToLower Then
-                        Dim titulo As String = juegoBBDD.Titulo
-
-                        Dim gridImagen As New Grid With {
-                            .Width = 430,
-                            .Height = 250
-                        }
-
-                        Dim urlImagenFondo As String = String.Empty
-
-                        Dim html As String = Await Decompiladores.HttpClient(New Uri("https://www.epicgames.com/store/en-US/store-search?q=" + titulo))
+                        Dim html As String = Await Decompiladores.HttpClient(New Uri("https://www.epicgames.com/store/en-US/api/content/products/" + juegoBBDD.Enlace))
 
                         If Not html = Nothing Then
-                            Dim temp, temp2 As String
-                            Dim int, int2 As Integer
+                            Dim juegoEpic As EpicGamesJuego = JsonConvert.DeserializeObject(Of EpicGamesJuego)(html)
 
-                            If html.Contains("<img alt=" + ChrW(34) + titulo + ChrW(34)) Then
-                                int = html.IndexOf("<img alt=" + ChrW(34) + titulo + ChrW(34))
-                                temp = html.Remove(0, int)
-                            ElseIf html.Contains("<img alt=" + ChrW(34) + titulo) Then
-                                int = html.IndexOf("<img alt=" + ChrW(34) + titulo)
-                                temp = html.Remove(0, int)
-                            Else
-                                temp = Nothing
+                            Dim titulo As String = juegoEpic.Titulo
+
+                            Dim gridImagen As New Grid With {
+                                .Width = 430,
+                                .Height = 250
+                            }
+
+                            Dim urlImagenFondo As String = juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal
+
+                            Dim imagenFondo As New ImageEx With {
+                                .Source = urlImagenFondo,
+                                .IsCacheEnabled = True,
+                                .Stretch = Stretch.UniformToFill
+                            }
+
+                            gridImagen.Children.Add(imagenFondo)
+
+                            Dim imagenLogo As New ImageEx With {
+                                .Source = juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url,
+                                .IsCacheEnabled = True,
+                                .Stretch = Stretch.Uniform,
+                                .VerticalAlignment = VerticalAlignment.Center,
+                                .HorizontalAlignment = HorizontalAlignment.Center,
+                                .Margin = New Thickness(60)
+                            }
+
+                            gridImagen.Children.Add(imagenLogo)
+
+                            If gridImagen.Children.Count > 0 Then
+                                Dim juego As New Tile(titulo, juegoBBDD.ID, "com.epicgames.launcher://apps/" + juegoBBDD.ID + "?action=launch&silent=true",
+                                                      urlImagenFondo, urlImagenFondo, gridImagen, urlImagenFondo)
+                                listaJuegos.Add(juego)
                             End If
-
-                            If Not temp = Nothing Then
-                                int = temp.IndexOf("src=")
-                                temp = temp.Remove(0, int + 5)
-
-                                int2 = temp.IndexOf(ChrW(34))
-                                temp2 = temp.Remove(int2, temp.Length - int2)
-
-                                Dim imagenFondo As New ImageEx With {
-                                    .Source = temp2.Trim,
-                                    .IsCacheEnabled = True,
-                                    .Stretch = Stretch.UniformToFill
-                                }
-
-                                gridImagen.Children.Add(imagenFondo)
-                                urlImagenFondo = temp2.Trim
-
-                                If temp.Contains("<img class=" + ChrW(34) + "DynamicLogo") Then
-                                    Dim temp3, temp4 As String
-                                    Dim int3, int4 As Integer
-
-                                    int3 = temp.IndexOf("<img class=" + ChrW(34) + "DynamicLogo")
-                                    temp3 = temp.Remove(0, int3)
-
-                                    int3 = temp3.IndexOf("src=")
-                                    temp3 = temp3.Remove(0, int3 + 5)
-
-                                    int4 = temp3.IndexOf(ChrW(34))
-                                    temp4 = temp3.Remove(int4, temp3.Length - int4)
-
-                                    Dim imagenLogo As New ImageEx With {
-                                        .Source = temp4.Trim,
-                                        .IsCacheEnabled = True,
-                                        .Stretch = Stretch.Uniform,
-                                        .VerticalAlignment = VerticalAlignment.Center,
-                                        .HorizontalAlignment = HorizontalAlignment.Center,
-                                        .Margin = New Thickness(30)
-                                    }
-
-                                    gridImagen.Children.Add(imagenLogo)
-                                End If
-                            End If
-                        End If
-
-                        If gridImagen.Children.Count > 0 Then
-                            Dim juego As New Tile(titulo, juegoBBDD.ID, "com.epicgames.launcher://apps/" + juegoBBDD.ID + "?action=launch&silent=true",
-                                                  urlImagenFondo, urlImagenFondo, gridImagen, urlImagenFondo)
-                            listaJuegos.Add(juego)
                         End If
                     End If
                 Next
             Next
-
-            'For Each subcarpeta1 As StorageFolder In subcarpetas1
-            '    If subcarpeta1.DisplayName.ToLower = "epicgameslauncher" Then
-            '        Dim subcarpetas2 As IReadOnlyList(Of StorageFolder) = Await subcarpeta1.GetFoldersAsync()
-
-            '        For Each subcarpeta2 As StorageFolder In subcarpetas2
-            '            If subcarpeta2.DisplayName.ToLower = "data" Then
-            '                Dim subcarpetas3 As IReadOnlyList(Of StorageFolder) = Await subcarpeta2.GetFoldersAsync()
-
-            '                For Each subcarpeta3 As StorageFolder In subcarpetas3
-            '                    If subcarpeta3.DisplayName.ToLower = "ems" Then
-            '                        Dim subcarpetas4 As IReadOnlyList(Of StorageFolder) = Await subcarpeta3.GetFoldersAsync()
-
-            '                        For Each subcarpeta4 As StorageFolder In subcarpetas4
-            '                            If subcarpeta4.DisplayName.ToLower = "epicgameslauncher" Then
-            '                                Dim ficheros As IReadOnlyList(Of StorageFile) = Await subcarpeta4.GetFilesAsync()
-
-            '                                For Each fichero As StorageFile In ficheros
-            '                                    If fichero.DisplayType.ToLower.Contains("v2product") Then
-            '                                        Dim datosTexto As String = Await FileIO.ReadTextAsync(fichero)
-            '                                        Dim datos As EpicGamesDatos = JsonConvert.DeserializeObject(Of EpicGamesDatos)(datosTexto)
-
-            '                                        If Not datos Is Nothing Then
-            '                                            Dim titulo As String = datos.Titulo
-            '                                            Dim idEjecutable As String = String.Empty
-            '                                            Dim idBBDD As String = datos.ID
-
-            '                                            If Not datos.Apps Is Nothing Then
-            '                                                If datos.Apps.Count > 0 Then
-            '                                                    For Each app In datos.Apps
-            '                                                        For Each juegoInstalado In listaInstalado
-            '                                                            If juegoInstalado = app.Nombre Then
-            '                                                                idEjecutable = app.Nombre
-            '                                                            End If
-            '                                                        Next
-            '                                                    Next
-            '                                                End If
-            '                                            End If
-
-            '                                            Dim añadirBool As Boolean = False
-            '                                            Dim i As Integer = 0
-            '                                            While i < listaJuegos.Count
-            '                                                If listaJuegos(i).Titulo = titulo Then
-            '                                                    añadirBool = True
-            '                                                End If
-            '                                                i += 1
-            '                                            End While
-
-            '                                            If idEjecutable = String.Empty Then
-            '                                                añadirBool = True
-            '                                            End If
-
-            '                                            If añadirBool = False Then
-
-            '                                            End If
-            '                                        End If
-            '                                    End If
-            '                                Next
-            '                            End If
-            '                        Next
-            '                    End If
-            '                Next
-            '            End If
-            '        Next
-            '    End If
-            'Next
 
             If listaJuegos.Count > 0 Then
                 StorageApplicationPermissions.FutureAccessList.AddOrReplace("EpicGamesCarpeta", carpeta)
