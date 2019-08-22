@@ -2,6 +2,7 @@
 
 Module EpicGamesBBDD
 
+    'https://www.epicgames.com/store/es-ES/api/content/store
     'https://www.epicgames.com/store/es-ES/api/content/products/ + nameurl
 
     Public Function Listado()
@@ -17,6 +18,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender", "beyond-two-souls"),
             New EpicGamesBBDDEntrada("Borderlands 3", "catnip", "borderlands-3"),
             New EpicGamesBBDDEntrada("Castle Storm 2", "dove", "castlestorm2"),
+            New EpicGamesBBDDEntrada("Celeste", "salt", "celeste"),
             New EpicGamesBBDDEntrada("Chivalry 2", "peppermint", "chivalry-2"),
             New EpicGamesBBDDEntrada("City of Brass", "arrowroot", "city-of-brass"),
             New EpicGamesBBDDEntrada("Close To The Sun", "silene", "close-to-the-sun"),
@@ -31,6 +33,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Enter the Gungeon", "garlic", "enter-the-gungeon"),
             New EpicGamesBBDDEntrada("Falcon Age", "parrot", "falcon-age"),
             New EpicGamesBBDDEntrada("Far Cry Primal", "larkspur", "far-cry-primal"),
+            New EpicGamesBBDDEntrada("Fez", "bluebird", "fez"),
             New EpicGamesBBDDEntrada("Flower", "yarrow", "flower"),
             New EpicGamesBBDDEntrada("For Honor", "sundrop", "for-honor"),
             New EpicGamesBBDDEntrada("Fortnite", "fn", "fortnite"),
@@ -46,6 +49,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Human Resource Machine", "basil", "human-resource-machine"),
             New EpicGamesBBDDEntrada("Hyper Light Drifter", "parakeet", "hyper-light-drifter"),
             New EpicGamesBBDDEntrada("Industries of Titan", "protea", "industries-of-titan"),
+            New EpicGamesBBDDEntrada("Inside", "marigold", "inside"),
             New EpicGamesBBDDEntrada("John Wick Hex", "vanilla", "johnwickhex"),
             New EpicGamesBBDDEntrada("Journey", "lemur", "journey"),
             New EpicGamesBBDDEntrada("Journey to the Savage Planet", "oleander", "journey-to-the-savage-planet"),
@@ -54,6 +58,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Last Day of June", "pumpkin", "last-day-of-june"),
             New EpicGamesBBDDEntrada("Limbo", "hazelnut", "limbo"),
             New EpicGamesBBDDEntrada("Little Inferno", "clover", "little-inferno"),
+            New EpicGamesBBDDEntrada("Magic The Gathering Arena", "stargazer", "mtg-arena"),
             New EpicGamesBBDDEntrada("Maneater", "turtle", "maneater"),
             New EpicGamesBBDDEntrada("Mechwarrior 5", "hoopoe", "mechwarrior-5"),
             New EpicGamesBBDDEntrada("Metro Exodus", "snapdragon", "metro-exodus"),
@@ -71,6 +76,8 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Oxygen Not Included", "lotus", "oxygen-not-included"),
             New EpicGamesBBDDEntrada("Phantom Brigade", "chili", "phantom-brigade"),
             New EpicGamesBBDDEntrada("Phoenix Point", "iris", "phoenix-point"),
+            New EpicGamesBBDDEntrada("Rainbow Six Siege", "carnation", "rainbow-six-siege"),
+            New EpicGamesBBDDEntrada("ReadySet Heroes", "peacock", "readyset-heroes"),
             New EpicGamesBBDDEntrada("Rebel Galaxy", "weaver", "rebel-galaxy"),
             New EpicGamesBBDDEntrada("Rebel Galaxy Outlaw", "rgo", "rebel-galaxy-outlaw"),
             New EpicGamesBBDDEntrada("RiME", "hydrangea", "rime"),
@@ -100,6 +107,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("The Jackbox Party Pack 5", "geranium", "jackbox-party-pack-5"),
             New EpicGamesBBDDEntrada("The Outer Worlds", "rosemallow", "the-outer-worlds"),
             New EpicGamesBBDDEntrada("The Pathless", "geum", "the-pathless"),
+            New EpicGamesBBDDEntrada("The Settlers", "magpie", "the-settlers"),
             New EpicGamesBBDDEntrada("The Sinking City", "middlemist", "the-sinking-city"),
             New EpicGamesBBDDEntrada("The Sojourn", "shallots", "the-sojourn"),
             New EpicGamesBBDDEntrada("The Walking Dead: Season One", "bloodroot", "walking-dead-season-one"),

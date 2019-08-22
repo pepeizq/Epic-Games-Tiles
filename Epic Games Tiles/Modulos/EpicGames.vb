@@ -101,7 +101,7 @@ Module EpicGames
                                 .Stretch = Stretch.Uniform,
                                 .VerticalAlignment = VerticalAlignment.Center,
                                 .HorizontalAlignment = HorizontalAlignment.Center,
-                                .Margin = New Thickness(60)
+                                .MaxWidth = 250
                             }
 
                             gridImagen.Children.Add(imagenLogo)
