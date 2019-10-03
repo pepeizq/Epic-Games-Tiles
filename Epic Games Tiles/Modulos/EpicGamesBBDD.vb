@@ -5,12 +5,14 @@ Module EpicGamesBBDD
     'https://www.epicgames.com/store/es-ES/api/content/store
     'https://www.epicgames.com/store/es-ES/api/content/products/ + nameurl
 
+    'pendientes: arise-a-simple-story
+
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
             New EpicGamesBBDDEntrada("7 Billion Humans", "holly", "7-billion-humans"),
             New EpicGamesBBDDEntrada("ABZU", "curry", "abzu"),
             New EpicGamesBBDDEntrada("Afterparty", "adenium", "afterparty"),
-            New EpicGamesBBDDEntrada("Airborne Kingdom", "adenium", "airborne-kingdom"),
+            New EpicGamesBBDDEntrada("Airborne Kingdom", "macaw", "airborne-kingdom"),
             New EpicGamesBBDDEntrada("Alan Wake", "heron", "alan-wake"),
             New EpicGamesBBDDEntrada("Ancestors: The Humankind Odyssey", "amaranth", "ancestors"),
             New EpicGamesBBDDEntrada("Anno 1800", "oregano", "anno-1800"),
@@ -23,6 +25,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Batman Arkham Knight", "cowbird", "batman-arkham-knight"),
             New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender", "beyond-two-souls"),
             New EpicGamesBBDDEntrada("Borderlands 3", "catnip", "borderlands-3"),
+            New EpicGamesBBDDEntrada("Cardpocalypse", "duck", "cardpocalypse"),
             New EpicGamesBBDDEntrada("Castle Storm 2", "dove", "castlestorm2"),
             New EpicGamesBBDDEntrada("Celeste", "salt", "celeste"),
             New EpicGamesBBDDEntrada("Chivalry 2", "peppermint", "chivalry-2"),
@@ -77,6 +80,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Metro Exodus", "snapdragon", "metro-exodus"),
             New EpicGamesBBDDEntrada("Metro: Last Light Redux", "speedwell", "metro-last-light-redux"),
             New EpicGamesBBDDEntrada("Moonlighter", "eagle", "moonlighter"),
+            New EpicGamesBBDDEntrada("Minit", "petrel", "minit"),
             New EpicGamesBBDDEntrada("Mutant Year Zero", "falcon", "mutant-year-zero"),
             New EpicGamesBBDDEntrada("My Time At Portia", "cobra", "my-time-at-portia"),
             New EpicGamesBBDDEntrada("No Straight Roads", "raven", "no-straight-roads"),
@@ -89,6 +93,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Overcooked", "sage", "overcooked"),
             New EpicGamesBBDDEntrada("Oxenfree", "hibiscus", "oxenfree"),
             New EpicGamesBBDDEntrada("Oxygen Not Included", "lotus", "oxygen-not-included"),
+            New EpicGamesBBDDEntrada("Paranoia: Happiness is Mandatory", "flamingo", "paranoia"),
             New EpicGamesBBDDEntrada("Phantom Brigade", "chili", "phantom-brigade"),
             New EpicGamesBBDDEntrada("Phoenix Point", "iris", "phoenix-point"),
             New EpicGamesBBDDEntrada("Rainbow Six Siege", "carnation", "rainbow-six-siege"),
@@ -101,7 +106,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Rune 2", "cosmos", "rune-2"),
             New EpicGamesBBDDEntrada("Satisfactory", "crab", "satisfactory"),
             New EpicGamesBBDDEntrada("Shadow Complex", "vpr", "shadow-complex"),
-            New EpicGamesBBDDEntrada("Shakedown - Hawaii", "plumeria", "shakedown-hawaii"),
+            New EpicGamesBBDDEntrada("Shakedown Hawaii", "plumeria", "shakedown-hawaii"),
             New EpicGamesBBDDEntrada("Shenmue 3", "pepper", "shenmue-3"),
             New EpicGamesBBDDEntrada("Sherlock Holmes The Devil's Daughter", "cinnamon", "sherlock-holmes-the-devils-daughter"),
             New EpicGamesBBDDEntrada("Slime Rancher", "corydalis", "slime-rancher"),
@@ -112,6 +117,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Super Meat Boy", "buffalo", "super-meat-boy"),
             New EpicGamesBBDDEntrada("Super Meat Boy Forever", "moose", "super-meat-boy-forever"),
             New EpicGamesBBDDEntrada("Superliminal", "wigeon", "superliminal"),
+            New EpicGamesBBDDEntrada("Surviving Mars", "ovenbird", "surviving-mars"),
             New EpicGamesBBDDEntrada("Tetris Effect", "kiwi", "tetris-effect"),
             New EpicGamesBBDDEntrada("Tom Clancy's Ghost Recon Breakpoint", "saffron", "ghost-recon-breakpoint"),
             New EpicGamesBBDDEntrada("Tom Clancy's Ghost Recon Wildlands", "hyacinth", "ghost-recon-wildlands"),
@@ -154,6 +160,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("World of Goo", "anemone", "world-of-goo"),
             New EpicGamesBBDDEntrada("World War Z", "wombat", "world-war-z"),
             New EpicGamesBBDDEntrada("WRC 8", "woodpecker", "wrc-8"),
+            New EpicGamesBBDDEntrada("Yaga", "robin", "yaga"),
             New EpicGamesBBDDEntrada("Zombie Army 4: Dead War", "sparrow", "zombie-army-4-dead-war")
         }
 
@@ -196,6 +203,9 @@ Public Class EpicGamesJuegoPagina
     <JsonProperty("data")>
     Public Datos As EpicGamesJuegoDatos
 
+    <JsonProperty("_images_")>
+    Public Capturas As List(Of String)
+
 End Class
 
 Public Class EpicGamesJuegoClave
@@ -218,7 +228,7 @@ End Class
 Public Class EpicGamesJuegoImagenes
 
     <JsonProperty("logoImage")>
-    Public Logo As EpicGamesJuegoImagenesLogo
+    Public Logo As EpicGamesJuegoImagenesFuente
 
     <JsonProperty("portraitBackgroundImageUrl")>
     Public FondoVertical As String
@@ -228,7 +238,7 @@ Public Class EpicGamesJuegoImagenes
 
 End Class
 
-Public Class EpicGamesJuegoImagenesLogo
+Public Class EpicGamesJuegoImagenesFuente
 
     <JsonProperty("src")>
     Public Url As String

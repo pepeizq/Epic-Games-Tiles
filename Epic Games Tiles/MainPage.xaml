@@ -130,7 +130,7 @@
                     </Grid>
 
                     <controls:AdaptiveGridView x:Name="gridViewTiles" Grid.Row="1" Margin="0,20,0,0"
-                                       IsItemClickEnabled="True" DesiredWidth="430" ItemHeight="250"
+                                       IsItemClickEnabled="True" DesiredWidth="322" ItemHeight="187"
                                        animations:ReorderGridAnimation.Duration="250">
                     </controls:AdaptiveGridView>
 
@@ -830,20 +830,25 @@
 
                 <Grid x:Name="gridConfig" Visibility="Collapsed">
                     <ScrollViewer>
-                        <StackPanel Orientation="Vertical" Width="700" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <StackPanel Orientation="Vertical" Margin="40,20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1">
-                                <StackPanel.Background>
-                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                        <GradientStop Color="#FFE4E4E4" Offset="0.5" />
-                                        <GradientStop Color="#FFBFBFBF" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </StackPanel.Background>
+                        <StackPanel Orientation="Vertical" Width="700" Margin="40" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <StackPanel.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#FFE4E4E4" Offset="0.5" />
+                                    <GradientStop Color="#FFBFBFBF" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </StackPanel.Background>
 
-                                <Grid x:Name="gridConfigTiles" HorizontalAlignment="Stretch" Padding="10" Background="{StaticResource GridTituloBackground}">
-                                    <TextBlock Text="Tiles" FontSize="16" Foreground="White" Margin="5,0,0,0"/>
-                                </Grid>
+                            <Grid x:Name="gridConfigTiles" HorizontalAlignment="Stretch" Padding="20,10" Background="{StaticResource GridTituloBackground}">
+                                <TextBlock Text="Tiles" FontSize="16" Foreground="White"/>
+                            </Grid>
 
-                                <StackPanel Orientation="Vertical" Padding="15">
+                            <StackPanel Orientation="Vertical" Padding="20">
+                                <ComboBox x:Name="cbConfigModosTiles">
+                                    <ComboBoxItem x:Uid="ConfigTileMode1"/>
+                                    <ComboBoxItem x:Uid="ConfigTileMode2"/>
+                                </ComboBox>
+
+                                <StackPanel x:Name="spModoTile1" Margin="0,10,0,20" Visibility="Collapsed">
                                     <TextBlock x:Uid="ConfigFolderMessage" TextWrapping="Wrap"/>
 
                                     <Button x:Name="botonAñadirCarpeta" Padding="10" Margin="0,10" Background="{StaticResource BrushSecundario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
@@ -854,19 +859,30 @@
                                     </Button>
 
                                     <TextBlock x:Name="tbConfigCarpeta" VerticalAlignment="Center"/>
+
+                                    <Grid Padding="15" Background="IndianRed" Margin="0,10,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <fa:FontAwesome Grid.Column="0" Icon="Exclamation" Margin="5,0" VerticalAlignment="Center" Foreground="White"/>
+                                        <TextBlock x:Uid="ConfigFolderWarning" Grid.Column="1" Margin="10,0" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White"/>
+                                        <Button x:Name="botonComoAñadirCarpeta" Grid.Column="2" x:Uid="ConfigFolderHowAdd" Foreground="White" Padding="8" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
+                                    </Grid>
                                 </StackPanel>
 
-                                <Grid Padding="15" Background="IndianRed">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                                    <Button x:Name="botonConfigLimpiarCache" Background="{StaticResource BrushSecundario}" Padding="10" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                        <StackPanel Orientation="Horizontal">
+                                            <fa:FontAwesome Icon="Trash" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                            <TextBlock x:Uid="ConfigCleanCache" Foreground="White"/>
+                                        </StackPanel>
+                                    </Button>
 
-                                    <fa:FontAwesome Grid.Column="0" Icon="Exclamation" Margin="5,0" VerticalAlignment="Center" Foreground="White"/>
-                                    <TextBlock x:Uid="ConfigFolderWarning" Grid.Column="1" Margin="10,0" TextWrapping="Wrap" Foreground="White"/>
-                                    <Button x:Name="botonComoAñadirCarpeta" Grid.Column="2" x:Uid="ConfigFolderHowAdd" Foreground="White" Padding="8" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
-                                </Grid>
+                                    <ProgressRing x:Name="prConfigLimpiarCache" Margin="10,0,0,0" IsActive="True" Width="25" Height="25" Foreground="{StaticResource BrushSecundario}" Visibility="Collapsed"/>
+                                </StackPanel>
                             </StackPanel>
                         </StackPanel>
                     </ScrollViewer>

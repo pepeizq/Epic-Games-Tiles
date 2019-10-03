@@ -169,7 +169,7 @@
     <value>Añade Tiles para tus juegos de la aplicación de Epic Games Store en el menú de Inicio de Windows 10.</value>
   </data>
   <data name="StoreTags" xml:space="preserve">
-    <value>Epic;Tiles;Juegos</value>
+    <value>Epic;Tiles;Juegos;Fortnite</value>
   </data>
   <data name="GameSelectedTiles.Text" xml:space="preserve">
     <value>Imágenes para incluir en la Tile de este juego:</value>
@@ -263,5 +263,14 @@
   </data>
   <data name="ConfigFolderWarning.Text" xml:space="preserve">
     <value>Dependiendo de la configuración de Windows la carpeta puede estar oculta</value>
+  </data>
+  <data name="ConfigTileMode1.Content" xml:space="preserve">
+    <value>Enseñar los Juegos Instalados</value>
+  </data>
+  <data name="ConfigTileMode2.Content" xml:space="preserve">
+    <value>Enseñar Todos los Juegos</value>
+  </data>
+  <data name="ConfigCleanCache.Text" xml:space="preserve">
+    <value>Limpiar Cache</value>
   </data>
 </root>

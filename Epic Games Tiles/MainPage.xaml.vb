@@ -1,4 +1,5 @@
 ﻿Imports FontAwesome.UWP
+Imports Windows.Storage
 Imports Windows.System
 Imports Windows.UI
 Imports Windows.UI.Core
@@ -50,7 +51,6 @@ Public NotInheritable Class MainPage
         GridVisibilidad(gridTiles, recursos.GetString("Tiles"))
         nvPrincipal.IsPaneOpen = False
 
-        EpicGames.Generar(False)
         Configuracion.Iniciar()
 
         '--------------------------------------------------------
@@ -106,34 +106,6 @@ Public NotInheritable Class MainPage
     Private Sub UsuarioSaleBoton(sender As Object, e As PointerRoutedEventArgs)
 
         Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Arrow, 1)
-
-    End Sub
-
-    Private Sub UsuarioEntraBoton2(sender As Object, e As PointerRoutedEventArgs)
-
-        Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Hand, 1)
-
-        Dim boton As Button = sender
-        Dim grid As Grid = boton.Content
-        Dim icono As FontAwesome.UWP.FontAwesome = grid.Children(1)
-
-        If icono.Visibility = Visibility.Visible Then
-            icono.Foreground = New SolidColorBrush(Colors.White)
-        End If
-
-    End Sub
-
-    Private Sub UsuarioSaleBoton2(sender As Object, e As PointerRoutedEventArgs)
-
-        Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Arrow, 1)
-
-        Dim boton As Button = sender
-        Dim grid As Grid = boton.Content
-        Dim icono As FontAwesome.UWP.FontAwesome = grid.Children(1)
-
-        If icono.Visibility = Visibility.Visible Then
-            icono.Foreground = New SolidColorBrush(App.Current.Resources("ColorSecundario"))
-        End If
 
     End Sub
 
@@ -492,15 +464,27 @@ Public NotInheritable Class MainPage
 
     'CONFIG-----------------------------------------------------------------------------
 
+    Private Sub CbConfigModosTiles_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles cbConfigModosTiles.SelectionChanged
+
+        Configuracion.ModoTiles(cbConfigModosTiles.SelectedIndex, False)
+
+    End Sub
+
     Private Sub BotonAñadirCarpeta_Click(sender As Object, e As RoutedEventArgs) Handles botonAñadirCarpeta.Click
 
-        EpicGames.Generar(True)
+        EpicGames.Generar(ApplicationData.Current.LocalSettings.Values("modo_tiles"), True)
 
     End Sub
 
     Private Async Sub BotonComoAñadirCarpeta_Click(sender As Object, e As RoutedEventArgs) Handles botonComoAñadirCarpeta.Click
 
         Await Launcher.LaunchUriAsync(New Uri("https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files"))
+
+    End Sub
+
+    Private Sub BotonConfigLimpiarCache_Click(sender As Object, e As RoutedEventArgs) Handles botonConfigLimpiarCache.Click
+
+        Cache.Limpiar()
 
     End Sub
 

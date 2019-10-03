@@ -175,7 +175,7 @@
     <value>More Things</value>
   </data>
   <data name="StoreTags" xml:space="preserve">
-    <value>Epic;Tiles;Games</value>
+    <value>Epic;Tiles;Games;Fortnite</value>
   </data>
   <data name="Back.Text" xml:space="preserve">
     <value>Back</value>
@@ -263,5 +263,14 @@
   </data>
   <data name="ConfigFolderWarning.Text" xml:space="preserve">
     <value>Depending on the Windows configuration the folder may be hidden</value>
+  </data>
+  <data name="ConfigTileMode1.Content" xml:space="preserve">
+    <value>Show Installed Games</value>
+  </data>
+  <data name="ConfigTileMode2.Content" xml:space="preserve">
+    <value>Show All Games</value>
+  </data>
+  <data name="ConfigCleanCache.Text" xml:space="preserve">
+    <value>Clear Cache</value>
   </data>
 </root>
