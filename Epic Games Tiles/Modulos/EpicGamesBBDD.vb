@@ -10,6 +10,7 @@ Module EpicGamesBBDD
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
             New EpicGamesBBDDEntrada("7 Billion Humans", "holly", "7-billion-humans"),
+            New EpicGamesBBDDEntrada("A Knights Quest", "cockatoo", "a-knights-quest"),
             New EpicGamesBBDDEntrada("ABZU", "curry", "abzu"),
             New EpicGamesBBDDEntrada("Afterparty", "adenium", "afterparty"),
             New EpicGamesBBDDEntrada("Airborne Kingdom", "macaw", "airborne-kingdom"),

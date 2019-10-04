@@ -151,13 +151,29 @@ Module EpicGames
 
                         Dim titulo As String = juegoEpic.Titulo
 
-                        Dim urlImagenFondo As String = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondo")
+                        Dim urlImagenFondo As String = String.Empty
+
+                        Try
+                            urlImagenFondo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondo")
+                        Catch ex As Exception
+
+                        End Try
 
                         If urlImagenFondo = Nothing Then
-                            urlImagenFondo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Capturas(1), juegoBBDD.ID, "fondo")
+                            Try
+                                urlImagenFondo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Capturas(1), juegoBBDD.ID, "fondo")
+                            Catch ex As Exception
+
+                            End Try
                         End If
 
-                        Dim urlImagenLogo As String = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
+                        Dim urlImagenLogo As String = String.Empty
+
+                        Try
+                            urlImagenLogo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
+                        Catch ex As Exception
+
+                        End Try
 
                         If Not urlImagenFondo = Nothing Or Not urlImagenLogo = Nothing Then
                             Dim juego As New Tile(titulo, juegoBBDD.ID, "com.epicgames.launcher://apps/" + juegoBBDD.ID + "?action=launch&silent=true",
