@@ -232,7 +232,7 @@ Module Configuracion
             Dim cbTiles As ComboBox = pagina.FindName("cbConfigModosTiles")
             cbTiles.SelectedIndex = modo
         Else
-            EpicGames.Generar(ApplicationData.Current.LocalSettings.Values("modo_tiles"), False)
+            EpicGames.Generar(False)
         End If
 
         Dim sp1 As StackPanel = pagina.FindName("spModoTile1")

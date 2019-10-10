@@ -9,12 +9,14 @@ Module EpicGamesBBDD
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
+            New EpicGamesBBDDEntrada(">observer_", "tumeric", "observer"),
             New EpicGamesBBDDEntrada("7 Billion Humans", "holly", "7-billion-humans"),
             New EpicGamesBBDDEntrada("A Knights Quest", "cockatoo", "a-knights-quest"),
             New EpicGamesBBDDEntrada("ABZU", "curry", "abzu"),
             New EpicGamesBBDDEntrada("Afterparty", "adenium", "afterparty"),
             New EpicGamesBBDDEntrada("Airborne Kingdom", "macaw", "airborne-kingdom"),
             New EpicGamesBBDDEntrada("Alan Wake", "heron", "alan-wake"),
+            New EpicGamesBBDDEntrada("Alan Wake: American Nightmare", "condor", "alan-wake-american-nightmare"),
             New EpicGamesBBDDEntrada("Ancestors: The Humankind Odyssey", "amaranth", "ancestors"),
             New EpicGamesBBDDEntrada("Anno 1800", "oregano", "anno-1800"),
             New EpicGamesBBDDEntrada("Ashen", "wren", "ashen"),

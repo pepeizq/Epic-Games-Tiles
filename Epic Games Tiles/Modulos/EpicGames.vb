@@ -10,7 +10,9 @@ Imports Windows.UI.Xaml.Media.Animation
 
 Module EpicGames
 
-    Public Async Sub Generar(modo As Integer, boolBuscarCarpeta As Boolean)
+    Public Async Sub Generar(boolBuscarCarpeta As Boolean)
+
+        Dim modo As Integer = ApplicationData.Current.LocalSettings.Values("modo_tiles")
 
         Dim helper As New LocalObjectStorageHelper
 
@@ -19,8 +21,11 @@ Module EpicGames
         Dim frame As Frame = Window.Current.Content
         Dim pagina As Page = frame.Content
 
-        Dim pr As ProgressRing = pagina.FindName("prTiles")
-        pr.Visibility = Visibility.Visible
+        Dim spProgreso As StackPanel = pagina.FindName("spProgreso")
+        spProgreso.Visibility = Visibility.Visible
+
+        Dim tbProgreso As TextBlock = pagina.FindName("tbProgreso")
+        tbProgreso.Text = String.Empty
 
         Dim cbTiles As ComboBox = pagina.FindName("cbConfigModosTiles")
         cbTiles.IsEnabled = False
@@ -40,7 +45,7 @@ Module EpicGames
             listaJuegos = Await helper.ReadFileAsync(Of List(Of Tile))("juegos" + modo.ToString)
         End If
 
-        If ApplicationData.Current.LocalSettings.Values("modo_tiles") = 0 Then
+        If modo = 0 Then
             Dim botonAñadirCarpetaTexto As TextBlock = pagina.FindName("botonAñadirCarpetaTexto")
             Dim botonCarpetaTexto As TextBlock = pagina.FindName("tbConfigCarpeta")
 
@@ -85,6 +90,7 @@ Module EpicGames
 
                 Dim listaBBDD As List(Of EpicGamesBBDDEntrada) = EpicGamesBBDD.Listado
 
+                Dim i As Integer = 0
                 For Each juegoBBDD In listaBBDD
                     Dim añadir As Boolean = True
 
@@ -119,6 +125,9 @@ Module EpicGames
                                     End If
                                 End If
                             End If
+
+                            tbProgreso.Text = i.ToString + "/" + listaInstalado.Count.ToString
+                            i += 1
                         Next
                     End If
                 Next
@@ -129,9 +138,10 @@ Module EpicGames
                     botonAñadirCarpetaTexto.Text = recursos.GetString("Change")
                 End If
             End If
-        ElseIf ApplicationData.Current.LocalSettings.Values("modo_tiles") = 1 Then
+        ElseIf modo = 1 Then
             Dim listaBBDD As List(Of EpicGamesBBDDEntrada) = EpicGamesBBDD.Listado
 
+            Dim i As Integer = 0
             For Each juegoBBDD In listaBBDD
                 Dim añadir As Boolean = True
 
@@ -182,12 +192,15 @@ Module EpicGames
                         End If
                     End If
                 End If
+
+                tbProgreso.Text = i.ToString + "/" + listaBBDD.Count.ToString
+                i += 1
             Next
         End If
 
         Await helper.SaveFileAsync(Of List(Of Tile))("juegos" + modo.ToString, listaJuegos)
 
-        pr.Visibility = Visibility.Collapsed
+        spProgreso.Visibility = Visibility.Collapsed
 
         Dim panelNoJuegos As Grid = pagina.FindName("panelAvisoNoJuegos")
         Dim gridSeleccionar As Grid = pagina.FindName("gridSeleccionarJuego")

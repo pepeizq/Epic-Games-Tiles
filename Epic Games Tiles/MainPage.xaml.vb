@@ -472,7 +472,7 @@ Public NotInheritable Class MainPage
 
     Private Sub BotonAñadirCarpeta_Click(sender As Object, e As RoutedEventArgs) Handles botonAñadirCarpeta.Click
 
-        EpicGames.Generar(ApplicationData.Current.LocalSettings.Values("modo_tiles"), True)
+        EpicGames.Generar(True)
 
     End Sub
 
