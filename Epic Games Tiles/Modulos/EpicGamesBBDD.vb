@@ -146,6 +146,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("The Cycle", "azalea", "thecycle"),
             New EpicGamesBBDDEntrada("The End is Nigh", "statice", "the-end-is-nigh"),
             New EpicGamesBBDDEntrada("The Eternal Cylinder", "oriole", "the-eternal-cylinder"),
+            New EpicGamesBBDDEntrada("The Messenger", "jay", "the-messenger"),
             New EpicGamesBBDDEntrada("The Outer Worlds", "rosemallow", "the-outer-worlds"),
             New EpicGamesBBDDEntrada("The Pathless", "geum", "the-pathless"),
             New EpicGamesBBDDEntrada("The Settlers", "magpie", "the-settlers"),
