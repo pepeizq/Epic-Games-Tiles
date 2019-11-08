@@ -44,6 +44,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Dangerous Driving", "tansy", "dangerous-driving"),
             New EpicGamesBBDDEntrada("Darksiders III", "springbok", "darksiders3"),
             New EpicGamesBBDDEntrada("Dauntless", "jackal", "dauntless"),
+            New EpicGamesBBDDEntrada("Death Stranding", "boga", "death-stranding"),
             New EpicGamesBBDDEntrada("Detroit: Become Human", "columbine", "detroit-become-human"),
             New EpicGamesBBDDEntrada("Donut County", "kestrel", "donut-county"),
             New EpicGamesBBDDEntrada("Drawful 2", "daisy", "drawful-2"),
