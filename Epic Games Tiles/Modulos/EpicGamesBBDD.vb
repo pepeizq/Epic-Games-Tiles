@@ -5,7 +5,7 @@ Module EpicGamesBBDD
     'https://www.epicgames.com/store/es-ES/api/content/store
     'https://www.epicgames.com/store/es-ES/api/content/products/ + nameurl
 
-    'pendientes: arise-a-simple-story 
+    'pendientes: arise-a-simple-story , before-we-leave , totally-reliable-delivery-service
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
@@ -33,6 +33,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Battle Breakers", "wex", "battle-breakers"),
             New EpicGamesBBDDEntrada("Bee Simulator", "spoonbill", "bee-simulator"),
             New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender", "beyond-two-souls"),
+            New EpicGamesBBDDEntrada("Bloodroots", "pochard", "bloodroots"),
             New EpicGamesBBDDEntrada("Borderlands 3", "catnip", "borderlands-3"),
             New EpicGamesBBDDEntrada("Cardpocalypse", "duck", "cardpocalypse"),
             New EpicGamesBBDDEntrada("Castle Storm 2", "dove", "castlestorm2"),
@@ -58,6 +59,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Fez", "bluebird", "fez"),
             New EpicGamesBBDDEntrada("Flower", "yarrow", "flower"),
             New EpicGamesBBDDEntrada("For Honor", "sundrop", "for-honor"),
+            New EpicGamesBBDDEntrada("Foregone", "dab", "foregone"),
             New EpicGamesBBDDEntrada("Fortnite", "fn", "fortnite"),
             New EpicGamesBBDDEntrada("Genesis Alpha One", "puma", "genesis-alpha-one"),
             New EpicGamesBBDDEntrada("Ghostbusters: The Video Game Remastered", "mint", "ghostbusters-the-video-game-remastered"),
@@ -116,6 +118,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Paranoia: Happiness is Mandatory", "flamingo", "paranoia"),
             New EpicGamesBBDDEntrada("Phantom Brigade", "chili", "phantom-brigade"),
             New EpicGamesBBDDEntrada("Phoenix Point", "iris", "phoenix-point"),
+            New EpicGamesBBDDEntrada("Predator: Hunting Grounds", "boxfish", "predator-hunting-grounds"),
             New EpicGamesBBDDEntrada("Q.U.B.E. 2", "auk", "q-u-b-e-2"),
             New EpicGamesBBDDEntrada("Rainbow Six Quarantine", "trogon", "rainbow-six-quarantine"),
             New EpicGamesBBDDEntrada("Rainbow Six Siege", "carnation", "rainbow-six-siege"),
@@ -144,6 +147,8 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Super Meat Boy", "buffalo", "super-meat-boy"),
             New EpicGamesBBDDEntrada("Super Meat Boy Forever", "moose", "super-meat-boy-forever"),
             New EpicGamesBBDDEntrada("Superliminal", "wigeon", "superliminal"),
+            New EpicGamesBBDDEntrada("SuperMash", "nutmeg", "supermash"),
+            New EpicGamesBBDDEntrada("Surgeon Simulator 2", "tanager", "surgeon-simulator-2"),
             New EpicGamesBBDDEntrada("Surviving Mars", "ovenbird", "surviving-mars"),
             New EpicGamesBBDDEntrada("Surviving the Aftermath", "muscovy", "surviving-the-aftermath"),
             New EpicGamesBBDDEntrada("Tetris Effect", "kiwi", "tetris-effect"),
@@ -152,10 +157,12 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Tom Clancy's The Division 2", "impala", "the-division-2"),
             New EpicGamesBBDDEntrada("The Cycle", "azalea", "thecycle"),
             New EpicGamesBBDDEntrada("The End is Nigh", "statice", "the-end-is-nigh"),
+            New EpicGamesBBDDEntrada("The Escapists", "peony", "the-escapists"),
             New EpicGamesBBDDEntrada("The Eternal Cylinder", "oriole", "the-eternal-cylinder"),
             New EpicGamesBBDDEntrada("The Messenger", "jay", "the-messenger"),
             New EpicGamesBBDDEntrada("The Outer Worlds", "rosemallow", "the-outer-worlds"),
             New EpicGamesBBDDEntrada("The Pathless", "geum", "the-pathless"),
+            New EpicGamesBBDDEntrada("The Red Lantern", "guillemot", "the-red-lantern"),
             New EpicGamesBBDDEntrada("The Settlers", "magpie", "the-settlers"),
             New EpicGamesBBDDEntrada("The Sinking City", "middlemist", "the-sinking-city"),
             New EpicGamesBBDDEntrada("The Sojourn", "shallots", "the-sojourn"),
@@ -166,6 +173,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("The Walking Dead: Michonne", "fennel", "walking-dead-michonne"),
             New EpicGamesBBDDEntrada("The Walking Dead: The Telltale Definitive Series", "cuckoo", "walking-dead-definitive-series"),
             New EpicGamesBBDDEntrada("The Witness", "magnolia", "the-witness"),
+            New EpicGamesBBDDEntrada("The Wolf Among Us", "cobbler", "the-wolf-among-us"),
             New EpicGamesBBDDEntrada("This War of Mine", "cardinal", "this-war-of-mine"),
             New EpicGamesBBDDEntrada("Thimbleweed Park", "tulip", "thimbleweed-park"),
             New EpicGamesBBDDEntrada("Torchlight", "terragon", "torchlight"),
