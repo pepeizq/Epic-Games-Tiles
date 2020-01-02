@@ -108,7 +108,7 @@ Module EpicGames
                                 If Not html = Nothing Then
                                     Dim juegoEpic As EpicGamesJuego = JsonConvert.DeserializeObject(Of EpicGamesJuego)(html)
 
-                                    Dim titulo As String = juegoEpic.Titulo
+                                    Dim titulo As String = juegoEpic.Titulo.Trim
 
                                     Dim urlImagenFondo As String = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondo")
 
@@ -159,7 +159,7 @@ Module EpicGames
                     If Not html = Nothing Then
                         Dim juegoEpic As EpicGamesJuego = JsonConvert.DeserializeObject(Of EpicGamesJuego)(html)
 
-                        Dim titulo As String = juegoEpic.Titulo
+                        Dim titulo As String = juegoEpic.Titulo.Trim
 
                         Dim urlImagenFondo As String = String.Empty
 
@@ -179,11 +179,13 @@ Module EpicGames
 
                         Dim urlImagenLogo As String = String.Empty
 
-                        Try
-                            urlImagenLogo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
-                        Catch ex As Exception
+                        If juegoBBDD.Logo = True Then
+                            Try
+                                urlImagenLogo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
+                            Catch ex As Exception
 
-                        End Try
+                            End Try
+                        End If
 
                         If Not urlImagenFondo = Nothing Or Not urlImagenLogo = Nothing Then
                             Dim juego As New Tile(titulo, juegoBBDD.ID, "com.epicgames.launcher://apps/" + juegoBBDD.ID + "?action=launch&silent=true",
@@ -229,17 +231,19 @@ Module EpicGames
 
                 gridImagen.Children.Add(imagenFondo)
 
-                Dim imagenLogo As New ImageEx With {
-                    .Source = juego.ImagenLogo,
-                    .IsCacheEnabled = True,
-                    .Stretch = Stretch.Uniform,
-                    .VerticalAlignment = VerticalAlignment.Center,
-                    .HorizontalAlignment = HorizontalAlignment.Center,
-                    .MaxWidth = 180,
-                    .MaxHeight = 110
-                }
+                If Not juego.ImagenLogo = Nothing Then
+                    Dim imagenLogo As New ImageEx With {
+                        .Source = juego.ImagenLogo,
+                        .IsCacheEnabled = True,
+                        .Stretch = Stretch.Uniform,
+                        .VerticalAlignment = VerticalAlignment.Center,
+                        .HorizontalAlignment = HorizontalAlignment.Center,
+                        .MaxWidth = 180,
+                        .MaxHeight = 110
+                    }
 
-                gridImagen.Children.Add(imagenLogo)
+                    gridImagen.Children.Add(imagenLogo)
+                End If
 
                 Dim boton As New Button With {
                     .Tag = juego,
