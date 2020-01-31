@@ -6,7 +6,7 @@ Module EpicGamesBBDD
     'https://www.epicgames.com/store/es-ES/api/content/store
     'https://www.epicgames.com/store/es-ES/api/content/products/ + nameurl
 
-    'pendientes: arise-a-simple-story , before-we-leave , totally-reliable-delivery-service , the-crew-2 , hello-neighbor , shadow-tactics
+    'pendientes: arise-a-simple-story , before-we-leave , totally-reliable-delivery-service , the-crew-2 , hello-neighbor , shadow-tactics , horace , the-bridge , ticket-to-ride , carcassonne
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
@@ -60,6 +60,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Everything", "pelican", "everything", True),
             New EpicGamesBBDDEntrada("Falcon Age", "parrot", "falcon-age", True),
             New EpicGamesBBDDEntrada("Far Cry Primal", "larkspur", "far-cry-primal", True),
+            New EpicGamesBBDDEntrada("Farming Simulator 19", "stellula", "farming-simulator-19", False),
             New EpicGamesBBDDEntrada("Faster Than Light", "blowfish", "faster-than-light", True),
             New EpicGamesBBDDEntrada("Fez", "bluebird", "fez", True),
             New EpicGamesBBDDEntrada("Flower", "yarrow", "flower", True),
@@ -120,13 +121,15 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Outer Wilds", "starfish", "outerwilds", True),
             New EpicGamesBBDDEntrada("Outward", "viola", "outward", True),
             New EpicGamesBBDDEntrada("Overcooked", "sage", "overcooked", True),
+            New EpicGamesBBDDEntrada("Overpass", "sandpiper", "overpass", False),
             New EpicGamesBBDDEntrada("Oxenfree", "hibiscus", "oxenfree", True),
             New EpicGamesBBDDEntrada("Oxygen Not Included", "lotus", "oxygen-not-included", True),
+            New EpicGamesBBDDEntrada("Pandemic", "thrasher", "pandemic", True),
             New EpicGamesBBDDEntrada("Paranoia: Happiness is Mandatory", "flamingo", "paranoia", True),
             New EpicGamesBBDDEntrada("Phantom Brigade", "chili", "phantom-brigade", True),
             New EpicGamesBBDDEntrada("Phoenix Point", "iris", "phoenix-point", True),
             New EpicGamesBBDDEntrada("Predator: Hunting Grounds", "boxfish", "predator-hunting-grounds", False),
-            New EpicGamesBBDDEntrada("Q.U.B.E. 2", "auk", "q-u-b-e-2", True),
+            New EpicGamesBBDDEntrada("Q.U.B.E. 2", "auk", "q-u-b-e-2", False),
             New EpicGamesBBDDEntrada("Rainbow Six Quarantine", "trogon", "rainbow-six-quarantine", True),
             New EpicGamesBBDDEntrada("Rainbow Six Siege", "carnation", "rainbow-six-siege", True),
             New EpicGamesBBDDEntrada("Rayman Legends", "anchovy", "rayman-legends", True),
@@ -152,11 +155,12 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Stories Untold", "parsley", "stories-untold", True),
             New EpicGamesBBDDEntrada("Subnautica", "jaguar", "subnautica", True),
             New EpicGamesBBDDEntrada("Subnautica Below Zero", "foxglove", "subnautica-below-zero", True),
+            New EpicGamesBBDDEntrada("Sundered Eldritch Edition", "moa", "sundered-eldritch-edition", False),
             New EpicGamesBBDDEntrada("Super Meat Boy", "buffalo", "super-meat-boy", True),
             New EpicGamesBBDDEntrada("Super Meat Boy Forever", "moose", "super-meat-boy-forever", True),
             New EpicGamesBBDDEntrada("Superliminal", "wigeon", "superliminal", True),
             New EpicGamesBBDDEntrada("SuperMash", "nutmeg", "supermash", True),
-            New EpicGamesBBDDEntrada("Surgeon Simulator 2", "tanager", "surgeon-simulator-2", True),
+            New EpicGamesBBDDEntrada("Surgeon Simulator 2", "tanager", "surgeon-simulator-2", False),
             New EpicGamesBBDDEntrada("Surviving Mars", "ovenbird", "surviving-mars", True),
             New EpicGamesBBDDEntrada("Surviving the Aftermath", "muscovy", "surviving-the-aftermath", True),
             New EpicGamesBBDDEntrada("Tetris Effect", "kiwi", "tetris-effect", True),
