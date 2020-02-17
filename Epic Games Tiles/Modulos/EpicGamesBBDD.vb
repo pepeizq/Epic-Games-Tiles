@@ -5,8 +5,9 @@ Module EpicGamesBBDD
     'https://epicdata.info/New
     'https://www.epicgames.com/store/es-ES/api/content/store
     'https://www.epicgames.com/store/es-ES/api/content/products/ + nameurl
+    'https://www.epicgames.com/store/api/content/productmapping
 
-    'pendientes: arise-a-simple-story , before-we-leave , totally-reliable-delivery-service , the-crew-2 , hello-neighbor , shadow-tactics , horace , the-bridge , ticket-to-ride , carcassonne
+    'pendientes: arise-a-simple-story , before-we-leave , totally-reliable-delivery-service , the-crew-2 , shadow-tactics , horace , the-bridge , ticket-to-ride , carcassonne , assassins-creed-syndicate
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
@@ -28,6 +29,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Atomicrops", "swan", "atomicrops", True),
             New EpicGamesBBDDEntrada("Auto Chess", "owl", "auto-chess", True),
             New EpicGamesBBDDEntrada("Axiom Verge", "puffin", "axiom-verge", True),
+            New EpicGamesBBDDEntrada("Aztez", "grunt", "aztez", False),
             New EpicGamesBBDDEntrada("Bad North", "chives", "bad-north", True),
             New EpicGamesBBDDEntrada("Batman Arkham Asylum", "godwit", "batman-arkham-asylum", True),
             New EpicGamesBBDDEntrada("Batman Arkham City", "egret", "batman-arkham-city", True),
@@ -45,6 +47,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Close To The Sun", "silene", "close-to-the-sun", True),
             New EpicGamesBBDDEntrada("Conarium", "canary", "conarium", True),
             New EpicGamesBBDDEntrada("Control", "calluna", "control", True),
+            New EpicGamesBBDDEntrada("Corruption 2029", "betta", "corruption-2029", False),
             New EpicGamesBBDDEntrada("Costume Quest", "violetear", "costume-quest", True),
             New EpicGamesBBDDEntrada("Cyberpunk 2077", "ginger", "cyberpunk-2077", True),
             New EpicGamesBBDDEntrada("Dangerous Driving", "tansy", "dangerous-driving", True),
@@ -76,6 +79,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Griftlands", "phlox", "griftlands", True),
             New EpicGamesBBDDEntrada("Hades", "min", "hades", True),
             New EpicGamesBBDDEntrada("Heavy Rain", "aster", "heavy-rain", True),
+            New EpicGamesBBDDEntrada("Hello Neighbor", "ursus", "hello-neighbor", True),
             New EpicGamesBBDDEntrada("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek", True),
             New EpicGamesBBDDEntrada("Human Resource Machine", "basil", "human-resource-machine", True),
             New EpicGamesBBDDEntrada("Hyper Light Drifter", "parakeet", "hyper-light-drifter", True),
@@ -93,6 +97,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Journey", "lemur", "journey", True),
             New EpicGamesBBDDEntrada("Journey to the Savage Planet", "oleander", "journey-to-the-savage-planet", True),
             New EpicGamesBBDDEntrada("Kine", "rose", "kine", True),
+            New EpicGamesBBDDEntrada("Kingdom Come: Deliverance", "eel", "kingdom-come-deliverance", False),
             New EpicGamesBBDDEntrada("Kingdom New Lands", "cacao", "kingdom-new-lands", True),
             New EpicGamesBBDDEntrada("Last Day of June", "pumpkin", "last-day-of-june", True),
             New EpicGamesBBDDEntrada("Layers of Fear", "cilantro", "layers-of-fear", True),
@@ -148,6 +153,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Shenmue 3", "pepper", "shenmue-3", True),
             New EpicGamesBBDDEntrada("Sherlock Holmes The Devil's Daughter", "cinnamon", "sherlock-holmes-the-devils-daughter", True),
             New EpicGamesBBDDEntrada("Slime Rancher", "corydalis", "slime-rancher", True),
+            New EpicGamesBBDDEntrada("Snowrunner", "mayflower", "snowrunner", False),
             New EpicGamesBBDDEntrada("Spellbreak", "newt", "spellbreak", True),
             New EpicGamesBBDDEntrada("SOMA", "emu", "soma", True),
             New EpicGamesBBDDEntrada("Star Wars Jedi Fallen Order", "shoebill", "star-wars-jedi-fallen-order", False),
