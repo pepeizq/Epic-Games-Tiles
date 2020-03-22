@@ -4,11 +4,12 @@ Imports Newtonsoft.Json
 Imports Windows.Storage
 Imports Windows.Storage.AccessCache
 Imports Windows.Storage.Pickers
-Imports Windows.UI
 Imports Windows.UI.Core
 Imports Windows.UI.Xaml.Media.Animation
 
 Module EpicGames
+
+    Public anchoColumna As Integer = 350
 
     Public Async Sub Generar(boolBuscarCarpeta As Boolean)
 
@@ -24,6 +25,9 @@ Module EpicGames
         Dim spProgreso As StackPanel = pagina.FindName("spProgreso")
         spProgreso.Visibility = Visibility.Visible
 
+        Dim pbProgreso As ProgressBar = pagina.FindName("pbProgreso")
+        pbProgreso.Value = 0
+
         Dim tbProgreso As TextBlock = pagina.FindName("tbProgreso")
         tbProgreso.Text = String.Empty
 
@@ -36,7 +40,10 @@ Module EpicGames
         Dim botonCache As Button = pagina.FindName("botonConfigLimpiarCache")
         botonCache.IsEnabled = False
 
-        Dim gv As GridView = pagina.FindName("gridViewTiles")
+        Dim gridSeleccionarJuego As Grid = pagina.FindName("gridSeleccionarJuego")
+        gridSeleccionarJuego.Visibility = Visibility.Collapsed
+
+        Dim gv As GridView = pagina.FindName("gvTiles")
         gv.Items.Clear()
 
         Dim listaJuegos As New List(Of Tile)
@@ -110,22 +117,25 @@ Module EpicGames
 
                                     Dim titulo As String = juegoEpic.Titulo.Trim
 
-                                    Dim urlImagenFondo As String = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondo")
+                                    Dim urlImagenFondoHorizontal As String = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondoH")
 
-                                    If urlImagenFondo = Nothing Then
-                                        urlImagenFondo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Capturas(1), juegoBBDD.ID, "fondo")
+                                    If urlImagenFondoHorizontal = Nothing Then
+                                        urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoVertical, juegoBBDD.ID, "fondoH")
                                     End If
+
+                                    Dim urlImagenFondoVertical As String = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoVertical, juegoBBDD.ID, "fondoV")
 
                                     Dim urlImagenLogo As String = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
 
-                                    If Not urlImagenFondo = Nothing Or Not urlImagenLogo = Nothing Then
+                                    If Not urlImagenFondoHorizontal = Nothing Or Not urlImagenLogo = Nothing Then
                                         Dim juego As New Tile(titulo, juegoBBDD.ID, "com.epicgames.launcher://apps/" + juegoBBDD.ID + "?action=launch&silent=true",
-                                                 urlImagenFondo, urlImagenLogo)
+                                                              urlImagenFondoHorizontal, urlImagenFondoVertical, urlImagenLogo)
                                         listaJuegos.Add(juego)
                                     End If
                                 End If
                             End If
 
+                            pbProgreso.Value = CInt((100 / listaInstalado.Count) * i)
                             tbProgreso.Text = i.ToString + "/" + listaInstalado.Count.ToString
                             i += 1
                         Next
@@ -154,24 +164,32 @@ Module EpicGames
                 End If
 
                 If añadir = True Then
-                    Dim html As String = Await Decompiladores.HttpClient(New Uri("https://www.epicgames.com/store/en-US/api/content/products/" + juegoBBDD.Enlace))
+                    Dim html As String = Await Decompiladores.HttpClient(New Uri("https://store-content.ak.epicgames.com/api/en-US/content/products/" + juegoBBDD.Enlace))
 
                     If Not html = Nothing Then
                         Dim juegoEpic As EpicGamesJuego = JsonConvert.DeserializeObject(Of EpicGamesJuego)(html)
 
                         Dim titulo As String = juegoEpic.Titulo.Trim
 
-                        Dim urlImagenFondo As String = String.Empty
+                        Dim urlImagenFondoHorizontal As String = String.Empty
 
                         Try
-                            urlImagenFondo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondo")
+                            urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondoH")
                         Catch ex As Exception
 
                         End Try
 
-                        If urlImagenFondo = Nothing Then
+                        Dim urlImagenFondoVertical As String = String.Empty
+
+                        Try
+                            urlImagenFondoVertical = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoVertical, juegoBBDD.ID, "fondoV")
+                        Catch ex As Exception
+
+                        End Try
+
+                        If urlImagenFondoHorizontal = Nothing Then
                             Try
-                                urlImagenFondo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Capturas(1), juegoBBDD.ID, "fondo")
+                                urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Capturas(1), juegoBBDD.ID, "fondoH")
                             Catch ex As Exception
 
                             End Try
@@ -187,14 +205,15 @@ Module EpicGames
                             End Try
                         End If
 
-                        If Not urlImagenFondo = Nothing Or Not urlImagenLogo = Nothing Then
+                        If Not urlImagenFondoHorizontal = Nothing Or Not urlImagenLogo = Nothing Then
                             Dim juego As New Tile(titulo, juegoBBDD.ID, "com.epicgames.launcher://apps/" + juegoBBDD.ID + "?action=launch&silent=true",
-                                                 urlImagenFondo, urlImagenLogo)
+                                                  urlImagenFondoHorizontal, urlImagenFondoVertical, urlImagenLogo)
                             listaJuegos.Add(juego)
                         End If
                     End If
                 End If
 
+                pbProgreso.Value = CInt((100 / listaBBDD.Count) * i)
                 tbProgreso.Text = i.ToString + "/" + listaBBDD.Count.ToString
                 i += 1
             Next
@@ -204,14 +223,13 @@ Module EpicGames
 
         spProgreso.Visibility = Visibility.Collapsed
 
-        Dim panelNoJuegos As Grid = pagina.FindName("panelAvisoNoJuegos")
-        Dim gridSeleccionar As Grid = pagina.FindName("gridSeleccionarJuego")
+        Dim gridTiles As Grid = pagina.FindName("gridTiles")
+        Dim gridAvisoNoJuegos As Grid = pagina.FindName("gridAvisoNoJuegos")
 
         If listaJuegos.Count > 0 Then
-            panelNoJuegos.Visibility = Visibility.Collapsed
-            gridSeleccionar.Visibility = Visibility.Visible
-
-            gv.Visibility = Visibility.Visible
+            gridTiles.Visibility = Visibility.Visible
+            gridAvisoNoJuegos.Visibility = Visibility.Collapsed
+            gridSeleccionarJuego.Visibility = Visibility.Visible
 
             listaJuegos.Sort(Function(x, y) x.Titulo.CompareTo(y.Titulo))
 
@@ -224,7 +242,7 @@ Module EpicGames
                 }
 
                 Dim imagenFondo As New ImageEx With {
-                    .Source = juego.ImagenFondo,
+                    .Source = juego.ImagenFondoHorizontal,
                     .IsCacheEnabled = True,
                     .Stretch = Stretch.UniformToFill
                 }
@@ -245,14 +263,19 @@ Module EpicGames
                     gridImagen.Children.Add(imagenLogo)
                 End If
 
+                Dim panel As New DropShadowPanel With {
+                    .Margin = New Thickness(5, 5, 5, 5),
+                    .ShadowOpacity = 0.9,
+                    .BlurRadius = 5
+                }
+
                 Dim boton As New Button With {
                     .Tag = juego,
                     .Content = gridImagen,
-                    .Padding = New Thickness(0, 0, 0, 0),
-                    .BorderThickness = New Thickness(1, 1, 1, 1),
-                    .BorderBrush = New SolidColorBrush(Colors.Black),
-                    .Background = New SolidColorBrush(Colors.Transparent)
+                    .Padding = New Thickness(0, 0, 0, 0)
                 }
+
+                panel.Content = boton
 
                 Dim tbToolTip As TextBlock = New TextBlock With {
                     .Text = juego.Titulo,
@@ -266,17 +289,16 @@ Module EpicGames
                 AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
                 AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
 
-                gv.Items.Add(boton)
+                gv.Items.Add(panel)
             Next
 
             If boolBuscarCarpeta = True Then
                 Toast(listaJuegos.Count.ToString + " " + recursos.GetString("GamesDetected"), Nothing)
             End If
         Else
-            panelNoJuegos.Visibility = Visibility.Visible
-            gridSeleccionar.Visibility = Visibility.Collapsed
-
-            gv.Visibility = Visibility.Collapsed
+            gridTiles.Visibility = Visibility.Collapsed
+            gridAvisoNoJuegos.Visibility = Visibility.Visible
+            gridSeleccionarJuego.Visibility = Visibility.Collapsed
         End If
 
         cbTiles.IsEnabled = True
@@ -305,6 +327,18 @@ Module EpicGames
         Dim tbJuegoSeleccionado As TextBlock = pagina.FindName("tbJuegoSeleccionado")
         tbJuegoSeleccionado.Text = juego.Titulo
 
+        Dim gridSeleccionarJuego As Grid = pagina.FindName("gridSeleccionarJuego")
+        gridSeleccionarJuego.Visibility = Visibility.Collapsed
+
+        Dim gvTiles As GridView = pagina.FindName("gvTiles")
+
+        If gvTiles.ActualWidth > anchoColumna Then
+            ApplicationData.Current.LocalSettings.Values("ancho_grid_tiles") = gvTiles.ActualWidth
+        End If
+
+        gvTiles.Width = anchoColumna
+        gvTiles.Padding = New Thickness(0, 0, 15, 0)
+
         Dim gridAñadir As Grid = pagina.FindName("gridAñadirTile")
         gridAñadir.Visibility = Visibility.Visible
 
@@ -321,66 +355,49 @@ Module EpicGames
 
         '---------------------------------------------
 
-        Dim titulo1 As TextBlock = pagina.FindName("tituloTileAnchaEnseñar")
-        Dim titulo2 As TextBlock = pagina.FindName("tituloTileAnchaPersonalizar")
+        Dim imagenPequeña As ImageEx = pagina.FindName("imagenTilePequeña")
+        imagenPequeña.Source = Nothing
 
-        Dim titulo3 As TextBlock = pagina.FindName("tituloTileGrandeEnseñar")
-        Dim titulo4 As TextBlock = pagina.FindName("tituloTileGrandePersonalizar")
+        If Not juego.ImagenLogo = Nothing Then
+            imagenPequeña.Source = juego.ImagenLogo
+            imagenPequeña.Tag = juego.ImagenLogo
+        End If
 
-        titulo1.Text = juego.Titulo
-        titulo2.Text = juego.Titulo
+        Dim imagenMediana As ImageEx = pagina.FindName("imagenTileMediana")
+        imagenMediana.Source = Nothing
 
-        titulo3.Text = juego.Titulo
-        titulo4.Text = juego.Titulo
+        Dim imagenAncha As ImageEx = pagina.FindName("imagenTileAncha")
+        imagenAncha.Source = Nothing
 
-        If Not juego.ImagenFondo Is Nothing Then
-            Dim imagenPequeña1 As ImageEx = pagina.FindName("imagenTilePequeñaEnseñar")
-            Dim imagenPequeña2 As ImageEx = pagina.FindName("imagenTilePequeñaGenerar")
-            Dim imagenPequeña3 As ImageEx = pagina.FindName("imagenTilePequeñaPersonalizar")
+        Dim imagenAnchaLogo As ImageEx = pagina.FindName("imagenTileAnchaLogo")
+        imagenAnchaLogo.Source = Nothing
 
-            imagenPequeña1.Source = juego.ImagenFondo
-            imagenPequeña2.Source = juego.ImagenFondo
-            imagenPequeña3.Source = juego.ImagenFondo
+        If Not juego.ImagenFondoHorizontal = Nothing Then
+            If Not juego.ImagenLogo = Nothing Then
+                imagenMediana.Source = juego.ImagenLogo
+                imagenMediana.Tag = juego.ImagenLogo
+            Else
+                imagenMediana.Source = juego.ImagenFondoHorizontal
+                imagenMediana.Tag = juego.ImagenFondoHorizontal
+            End If
 
-            imagenPequeña1.Tag = juego.ImagenFondo
-            imagenPequeña2.Tag = juego.ImagenFondo
-            imagenPequeña3.Tag = juego.ImagenFondo
+            imagenAncha.Source = juego.ImagenFondoHorizontal
+            imagenAncha.Tag = juego.ImagenFondoHorizontal
 
-            Dim imagenMediana1 As ImageEx = pagina.FindName("imagenTileMedianaEnseñar")
-            Dim imagenMediana2 As ImageEx = pagina.FindName("imagenTileMedianaGenerar")
-            Dim imagenMediana3 As ImageEx = pagina.FindName("imagenTileMedianaPersonalizar")
+            imagenAnchaLogo.Source = juego.ImagenLogo
+            imagenAnchaLogo.Tag = juego.ImagenLogo
+        End If
 
-            imagenMediana1.Source = juego.ImagenFondo
-            imagenMediana2.Source = juego.ImagenFondo
-            imagenMediana3.Source = juego.ImagenFondo
+        Dim imagenGrande As ImageEx = pagina.FindName("imagenTileGrande")
+        imagenGrande.Source = Nothing
 
-            imagenMediana1.Tag = juego.ImagenFondo
-            imagenMediana2.Tag = juego.ImagenFondo
-            imagenMediana3.Tag = juego.ImagenFondo
+        If Not juego.ImagenFondoVertical = Nothing Then
+            imagenGrande.Source = juego.ImagenFondoVertical
+            imagenGrande.Tag = juego.ImagenFondoVertical
 
-            Dim imagenAncha1 As ImageEx = pagina.FindName("imagenTileAnchaEnseñar")
-            Dim imagenAncha2 As ImageEx = pagina.FindName("imagenTileAnchaGenerar")
-            Dim imagenAncha3 As ImageEx = pagina.FindName("imagenTileAnchaPersonalizar")
-
-            imagenAncha1.Source = resultado
-            imagenAncha2.Source = resultado
-            imagenAncha3.Source = resultado
-
-            imagenAncha1.Tag = juego.ImagenFondo
-            imagenAncha2.Tag = juego.ImagenFondo
-            imagenAncha3.Tag = juego.ImagenFondo
-
-            Dim imagenGrande1 As ImageEx = pagina.FindName("imagenTileGrandeEnseñar")
-            Dim imagenGrande2 As ImageEx = pagina.FindName("imagenTileGrandeGenerar")
-            Dim imagenGrande3 As ImageEx = pagina.FindName("imagenTileGrandePersonalizar")
-
-            imagenGrande1.Source = juego.ImagenFondo
-            imagenGrande2.Source = juego.ImagenFondo
-            imagenGrande3.Source = juego.ImagenFondo
-
-            imagenGrande1.Tag = juego.ImagenFondo
-            imagenGrande2.Tag = juego.ImagenFondo
-            imagenGrande3.Tag = juego.ImagenFondo
+            Dim imagenGrandeLogo As ImageEx = pagina.FindName("imagenTileGrandeLogo")
+            imagenGrandeLogo.Source = juego.ImagenLogo
+            imagenGrandeLogo.Tag = juego.ImagenLogo
         End If
 
     End Sub
