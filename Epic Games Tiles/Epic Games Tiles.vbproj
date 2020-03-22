@@ -164,13 +164,16 @@
     </AppxManifest>
     <None Include="Epic Games Tiles_StoreKey.pfx" />
     <None Include="Epic Games Tiles_TemporaryKey.pfx" />
-    <PRIResource Include="Strings\es-ES\Resources.resw" />
+    <PRIResource Include="Strings\es-ES\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\epic_logo.png" />
-    <Content Include="Assets\epic_logo_mini1.png" />
-    <Content Include="Assets\epic_logo_mini2.png" />
+    <Content Include="Assets\Iconos\1.png" />
+    <Content Include="Assets\Iconos\2.png" />
+    <Content Include="Assets\Iconos\3.png" />
     <Content Include="Assets\Logos\BadgeLogo.scale-100.png" />
     <Content Include="Assets\Logos\BadgeLogo.scale-125.png" />
     <Content Include="Assets\Logos\BadgeLogo.scale-150.png" />
@@ -295,6 +298,7 @@
       <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

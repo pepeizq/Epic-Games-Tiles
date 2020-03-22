@@ -273,4 +273,91 @@
   <data name="ConfigCleanCache.Text" xml:space="preserve">
     <value>Limpiar Cache</value>
   </data>
+  <data name="Options.Text" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="OptionsSource.Text" xml:space="preserve">
+    <value>Fuente</value>
+  </data>
+  <data name="OptionsSourceComputer.Text" xml:space="preserve">
+    <value>Busca en tu Ordenador</value>
+  </data>
+  <data name="OptionsSourceInfo.Text" xml:space="preserve">
+    <value>Cambia la imagen con una en tu ordenador o una de Internet:</value>
+  </data>
+  <data name="OptionsSourceUbication.Text" xml:space="preserve">
+    <value>Ubicación de la Imagen:</value>
+  </data>
+  <data name="OptionsSourceUbication1.Content" xml:space="preserve">
+    <value>Caja Interior</value>
+  </data>
+  <data name="OptionsSourceUbication2.Content" xml:space="preserve">
+    <value>Caja Exterior</value>
+  </data>
+  <data name="OptionsSourceInternet.Text" xml:space="preserve">
+    <value>Añade la dirección de la imagen:</value>
+  </data>
+  <data name="OptionsBackground.Text" xml:space="preserve">
+    <value>Fondo</value>
+  </data>
+  <data name="OptionsSourceStretch.Text" xml:space="preserve">
+    <value>Estiramiento de la imagen:</value>
+  </data>
+  <data name="OptionsSourceStretch1.Content" xml:space="preserve">
+    <value>Uniforme y Rellenar</value>
+  </data>
+  <data name="OptionsSourceStretch2.Content" xml:space="preserve">
+    <value>Uniforme</value>
+  </data>
+  <data name="OptionsSourceStretch3.Content" xml:space="preserve">
+    <value>Rellenar</value>
+  </data>
+  <data name="OptionsSourceStretch4.Content" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="OptionsDetails.Text" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="OptionsMargin.Text" xml:space="preserve">
+    <value>Margen</value>
+  </data>
+  <data name="OptionsTitle.Content" xml:space="preserve">
+    <value>Mostrar Título del Juego</value>
+  </data>
+  <data name="OptionsTitleInfo.Text" xml:space="preserve">
+    <value>El título se mostrará en la Tile abajo a la izquierda</value>
+  </data>
+  <data name="OptionsMove.Text" xml:space="preserve">
+    <value>Mover la Imagen</value>
+  </data>
+  <data name="OptionsPlatform.Text" xml:space="preserve">
+    <value>Plataforma</value>
+  </data>
+  <data name="OptionsPlatformIcon.Content" xml:space="preserve">
+    <value>Enseñar Icono de la Plataforma</value>
+  </data>
+  <data name="OptionsPlatformPosition.Text" xml:space="preserve">
+    <value>Posición:</value>
+  </data>
+  <data name="OptionsPlatformPosition1.Content" xml:space="preserve">
+    <value>Arriba Izquierda</value>
+  </data>
+  <data name="OptionsPlatformPosition2.Content" xml:space="preserve">
+    <value>Arriba Derecha</value>
+  </data>
+  <data name="OptionsPlatformPosition3.Content" xml:space="preserve">
+    <value>Abajo Izquierda</value>
+  </data>
+  <data name="OptionsPlatformPosition4.Content" xml:space="preserve">
+    <value>Abajo Derecha</value>
+  </data>
+  <data name="GamePersonalizationInfo.Text" xml:space="preserve">
+    <value>Clickea en la imagen para personalizarla antes de añadir la Tile</value>
+  </data>
+  <data name="OptionsLogoEpic.Content" xml:space="preserve">
+    <value>Enseñar Logo del Juego</value>
+  </data>
+  <data name="OptionsLogoEpicInfo.Text" xml:space="preserve">
+    <value>Este logo es asignado por Epic a determinados juegos y aparece encima de la imagen de la Tile (no se puede personalizar el logo)</value>
+  </data>
 </root>

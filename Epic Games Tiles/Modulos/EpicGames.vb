@@ -391,13 +391,23 @@ Module EpicGames
         Dim imagenGrande As ImageEx = pagina.FindName("imagenTileGrande")
         imagenGrande.Source = Nothing
 
+        Dim imagenGrandeLogo As ImageEx = pagina.FindName("imagenTileGrandeLogo")
+        imagenGrandeLogo.Source = Nothing
+
         If Not juego.ImagenFondoVertical = Nothing Then
             imagenGrande.Source = juego.ImagenFondoVertical
             imagenGrande.Tag = juego.ImagenFondoVertical
 
-            Dim imagenGrandeLogo As ImageEx = pagina.FindName("imagenTileGrandeLogo")
             imagenGrandeLogo.Source = juego.ImagenLogo
             imagenGrandeLogo.Tag = juego.ImagenLogo
+        End If
+
+        Dim gridPersonalizacionImagenLogoEpic As Grid = pagina.FindName("gridPersonalizacionImagenLogoEpic")
+
+        If imagenAnchaLogo.Source = Nothing And imagenGrandeLogo.Source = Nothing Then
+            gridPersonalizacionImagenLogoEpic.Visibility = Visibility.Collapsed
+        Else
+            gridPersonalizacionImagenLogoEpic.Visibility = Visibility.Visible
         End If
 
     End Sub

@@ -409,6 +409,23 @@
                                                     </ToolTipService.ToolTip>
                                                 </fa:FontAwesome>
                                             </Grid>
+                                            
+                                            <Grid x:Name="gridPersonalizacionImagenLogoEpic" HorizontalAlignment="Center" Margin="0,20,0,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <CheckBox x:Name="cbPersonalizacionImagenLogoEpic" Grid.Column="0" x:Uid="OptionsLogoEpic" VerticalAlignment="Center" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
+
+                                                <fa:FontAwesome Icon="InfoCircle" Grid.Column="1" Margin="15,0,0,0" Foreground="{StaticResource BrushPrimario}">
+                                                    <ToolTipService.ToolTip>
+                                                        <Grid MaxWidth="300">
+                                                            <TextBlock x:Uid="OptionsLogoEpicInfo" TextWrapping="Wrap" FontSize="15"/>
+                                                        </Grid>
+                                                    </ToolTipService.ToolTip>
+                                                </fa:FontAwesome>
+                                            </Grid>
                                         </StackPanel>
                                     </controls:TabViewItem>
                                     <controls:TabViewItem>

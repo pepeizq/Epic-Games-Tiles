@@ -10,7 +10,7 @@ Namespace Tiles
     Module Personalizacion
 
         ReadOnly listaIconos As New List(Of String) From {
-            "1", "2", "3", "4", "5", "6", "7"
+            "1", "2", "3"
         }
 
         Public Async Sub Cargar(grid As Grid, tipo As Integer, fuente As String)
@@ -216,6 +216,19 @@ Namespace Tiles
                 End If
             End If
 
+            Dim cbImagenLogoEpic As CheckBox = pagina.FindName("cbPersonalizacionImagenLogoEpic")
+
+            If Not cbImagenLogoEpic Is Nothing Then
+                cbImagenLogoEpic.IsChecked = True
+                cbImagenLogoEpic.Tag = tipo
+
+                RemoveHandler cbImagenLogoEpic.Checked, AddressOf CambiarImagenLogoEpic_Checked
+                AddHandler cbImagenLogoEpic.Checked, AddressOf CambiarImagenLogoEpic_Checked
+
+                RemoveHandler cbImagenLogoEpic.Unchecked, AddressOf CambiarImagenLogoEpic_Unchecked
+                AddHandler cbImagenLogoEpic.Unchecked, AddressOf CambiarImagenLogoEpic_Unchecked
+            End If
+
             '-------------------------------------------
 
             Dim colorFondo As ColorPicker = pagina.FindName("colorPickerPersonalizacionFondo")
@@ -326,14 +339,22 @@ Namespace Tiles
             gridInterior.BorderThickness = New Thickness(0, 0, 0, 0)
 
             If gridInterior.Children.Count > 0 Then
-                Await Tiles.Imagen.Generar(gridInterior, "personalizacion" + id.ToString + ".png", ancho, alto)
+                Try
+                    Await Tiles.Imagen.Generar(gridInterior, "personalizacion" + id.ToString + ".png", ancho, alto)
+                Catch ex As Exception
+
+                End Try
             End If
 
             Dim gridExterior As Grid = pagina.FindName("gridPersonalizacionExterior")
             gridExterior.BorderThickness = New Thickness(0, 0, 0, 0)
 
             If gridExterior.Children.Count > 0 Then
-                Await Tiles.Imagen.Generar(gridExterior, "personalizacion" + id.ToString + ".png", ancho, alto)
+                Try
+                    Await Tiles.Imagen.Generar(gridExterior, "personalizacion" + id.ToString + ".png", ancho, alto)
+                Catch ex As Exception
+
+                End Try
             End If
 
             Dim imagen As New ImageEx With {
@@ -694,6 +715,42 @@ Namespace Tiles
                 ApplicationData.Current.LocalSettings.Values("tile_ancha_titulo") = False
             ElseIf tipo = 3 Then
                 ApplicationData.Current.LocalSettings.Values("tile_grande_titulo") = False
+            End If
+
+        End Sub
+
+        Private Sub CambiarImagenLogoEpic_Checked(sender As Object, e As RoutedEventArgs)
+
+            Dim cb As CheckBox = sender
+            Dim tipo As Integer = cb.Tag
+
+            Dim frame As Frame = Window.Current.Content
+            Dim pagina As Page = frame.Content
+
+            If tipo = 2 Then
+                Dim imagenAnchaLogo As ImageEx = pagina.FindName("imagenTileAnchaLogo")
+                imagenAnchaLogo.Visibility = Visibility.Visible
+            ElseIf tipo = 3 Then
+                Dim imagenGrandeLogo As ImageEx = pagina.FindName("imagenTileGrandeLogo")
+                imagenGrandeLogo.Visibility = Visibility.Visible
+            End If
+
+        End Sub
+
+        Private Sub CambiarImagenLogoEpic_Unchecked(sender As Object, e As RoutedEventArgs)
+
+            Dim cb As CheckBox = sender
+            Dim tipo As Integer = cb.Tag
+
+            Dim frame As Frame = Window.Current.Content
+            Dim pagina As Page = frame.Content
+
+            If tipo = 2 Then
+                Dim imagenAnchaLogo As ImageEx = pagina.FindName("imagenTileAnchaLogo")
+                imagenAnchaLogo.Visibility = Visibility.Collapsed
+            ElseIf tipo = 3 Then
+                Dim imagenGrandeLogo As ImageEx = pagina.FindName("imagenTileGrandeLogo")
+                imagenGrandeLogo.Visibility = Visibility.Collapsed
             End If
 
         End Sub
