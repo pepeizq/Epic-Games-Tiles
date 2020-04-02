@@ -6,7 +6,7 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'pendientes: arise-a-simple-story , before-we-leave , totally-reliable-delivery-service , the-crew-2 , south-park-the-stick-of-truth , south-park-the-fractured-but-whole , mount-and-blade-2 , sludge-life , diabotical , state-of-decay-2-juggernaut-edition , uno , monopoly-plus , tormentor-x-punisher , figment , levelhead
+    'pendientes: arise-a-simple-story , before-we-leave , the-crew-2 , south-park-the-stick-of-truth , south-park-the-fractured-but-whole , mount-and-blade-2 , sludge-life , diabotical , state-of-decay-2-juggernaut-edition , uno , monopoly-plus , figment , levelhead , gone-home
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
@@ -57,7 +57,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Darksiders II Deathinitive Edition", "hoki", "darksiders2", False),
             New EpicGamesBBDDEntrada("Darksiders III", "springbok", "darksiders3", True),
             New EpicGamesBBDDEntrada("Darksiders Warmastered Edition", "hake", "darksiders", False),
-            New EpicGamesBBDDEntrada("Dauntless", "jackal", "dauntless", True),
+            New EpicGamesBBDDEntrada("Dauntless", "jackal", "dauntless", False),
             New EpicGamesBBDDEntrada("Death Stranding", "boga", "death-stranding", False),
             New EpicGamesBBDDEntrada("Detroit: Become Human", "columbine", "detroit-become-human", True),
             New EpicGamesBBDDEntrada("Donut County", "kestrel", "donut-county", True),
@@ -72,12 +72,13 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Farming Simulator 19", "stellula", "farming-simulator-19", False),
             New EpicGamesBBDDEntrada("Faster Than Light", "blowfish", "faster-than-light", True),
             New EpicGamesBBDDEntrada("Fez", "bluebird", "fez", True),
+            New EpicGamesBBDDEntrada("Figment", "ed5e8d42b2ac461eb6f9176d163b9515", "figment", False),
             New EpicGamesBBDDEntrada("Flower", "yarrow", "flower", True),
             New EpicGamesBBDDEntrada("For Honor", "sundrop", "for-honor", True),
             New EpicGamesBBDDEntrada("For The King", "discus", "for-the-king", True),
-            New EpicGamesBBDDEntrada("Foregone", "dab", "foregone", True),
+            New EpicGamesBBDDEntrada("Foregone", "dab", "foregone", False),
             New EpicGamesBBDDEntrada("Fortnite", "fn", "fortnite", True),
-            New EpicGamesBBDDEntrada("Genesis Alpha One", "puma", "genesis-alpha-one", True),
+            New EpicGamesBBDDEntrada("Genesis Alpha One", "puma", "genesis-alpha-one", False),
             New EpicGamesBBDDEntrada("Ghostbusters: The Video Game Remastered", "mint", "ghostbusters-the-video-game-remastered", True),
             New EpicGamesBBDDEntrada("GNOG", "penguin", "gnog", True),
             New EpicGamesBBDDEntrada("Gods and Monsters", "pheasant", "gods-and-monsters", True),
@@ -87,6 +88,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Heavy Rain", "aster", "heavy-rain", True),
             New EpicGamesBBDDEntrada("Hello Neighbor", "ursus", "hello-neighbor", True),
             New EpicGamesBBDDEntrada("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek", True),
+            New EpicGamesBBDDEntrada("Hob", "lyrebird", "hob", False),
             New EpicGamesBBDDEntrada("Horace", "palila", "horace", False),
             New EpicGamesBBDDEntrada("Human Resource Machine", "basil", "human-resource-machine", True),
             New EpicGamesBBDDEntrada("Hyper Light Drifter", "parakeet", "hyper-light-drifter", True),
@@ -210,7 +212,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Thimbleweed Park", "tulip", "thimbleweed-park", True),
             New EpicGamesBBDDEntrada("Ticket to Ride", "towhee", "ticket-to-ride", True),
             New EpicGamesBBDDEntrada("Torchlight", "terragon", "torchlight", True),
+            New EpicGamesBBDDEntrada("Tormentor X Punisher", "goby", "tormentor-x-punisher", True),
             New EpicGamesBBDDEntrada("Totally Accurate Battle Simulator", "driftfish", "totally-accurate-battle-simulator", True),
+            New EpicGamesBBDDEntrada("Totally Reliable Delivery Service", "hoatzin", "totally-reliable-delivery-service", False),
             New EpicGamesBBDDEntrada("TowerFall Ascension", "bichir", "towerfall-ascension", False),
             New EpicGamesBBDDEntrada("Transistor", "dill", "transistor", True),
             New EpicGamesBBDDEntrada("Trials Rising", "argyle", "trials-rising", True),
