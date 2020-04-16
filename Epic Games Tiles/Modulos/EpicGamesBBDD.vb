@@ -6,7 +6,7 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'pendientes: arise-a-simple-story , before-we-leave , the-crew-2 , south-park-the-stick-of-truth , south-park-the-fractured-but-whole , mount-and-blade-2 , sludge-life , diabotical , state-of-decay-2-juggernaut-edition , uno , monopoly-plus , figment , levelhead , gone-home
+    'pendientes: arise-a-simple-story , before-we-leave , the-crew-2 , south-park-the-stick-of-truth , south-park-the-fractured-but-whole , mount-and-blade-2 , sludge-life , diabotical , state-of-decay-2-juggernaut-edition , uno , monopoly-plus , levelhead , saturnalia , trackmania-turbo , wheels-of-aurelia , old-world
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
@@ -82,6 +82,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Ghostbusters: The Video Game Remastered", "mint", "ghostbusters-the-video-game-remastered", True),
             New EpicGamesBBDDEntrada("GNOG", "penguin", "gnog", True),
             New EpicGamesBBDDEntrada("Gods and Monsters", "pheasant", "gods-and-monsters", True),
+            New EpicGamesBBDDEntrada("Gone Home", "flier", "gone-home", False),
             New EpicGamesBBDDEntrada("Gorogoa", "meerkat", "gorogoa", True),
             New EpicGamesBBDDEntrada("Griftlands", "phlox", "griftlands", True),
             New EpicGamesBBDDEntrada("Hades", "min", "hades", True),
@@ -105,6 +106,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Jotun Valhalla Edition", "grouse", "jotun", False),
             New EpicGamesBBDDEntrada("Journey", "lemur", "journey", True),
             New EpicGamesBBDDEntrada("Journey to the Savage Planet", "oleander", "journey-to-the-savage-planet", True),
+            New EpicGamesBBDDEntrada("Just Cause 4 Reloaded", "kakopo", "just-cause-4", True),
             New EpicGamesBBDDEntrada("Kine", "rose", "kine", True),
             New EpicGamesBBDDEntrada("Kingdom Come: Deliverance", "eel", "kingdom-come-deliverance", False),
             New EpicGamesBBDDEntrada("Kingdom New Lands", "cacao", "kingdom-new-lands", True),
@@ -159,11 +161,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("RollerCoaster Tycoon Adventures", "canna", "rollercoaster-tycoon-adventures", True),
             New EpicGamesBBDDEntrada("RUINER", "laridae", "ruiner", True),
             New EpicGamesBBDDEntrada("Rune 2", "cosmos", "rune-2", True),
+            New EpicGamesBBDDEntrada("Saint's Row The Third Remastered", "loon", "saints-row-the-third-remastered", False),
+            New EpicGamesBBDDEntrada("SAMURAI SHODOWN", "1c78abcd467643f9ad58cc3a7d161983", "samurai-shodown-reboot", False),
             New EpicGamesBBDDEntrada("Satisfactory", "crab", "satisfactory", True),
             New EpicGamesBBDDEntrada("Shadow Complex", "vpr", "shadow-complex", True),
             New EpicGamesBBDDEntrada("Shadow Tactics: Blades of the Shogun", "fangtooth", "shadow-tactics", False),
             New EpicGamesBBDDEntrada("Shakedown Hawaii", "plumeria", "shakedown-hawaii", True),
             New EpicGamesBBDDEntrada("Shenmue 3", "pepper", "shenmue-3", True),
+            New EpicGamesBBDDEntrada("Sherlock Holmes Crimes and Punishments", "0afb9d54dd3743a582b48b506466d3f8", "sherlock-holmes-crimes-and-punishments", False),
             New EpicGamesBBDDEntrada("Sherlock Holmes The Devil's Daughter", "cinnamon", "sherlock-holmes-the-devils-daughter", True),
             New EpicGamesBBDDEntrada("Slime Rancher", "corydalis", "slime-rancher", True),
             New EpicGamesBBDDEntrada("Snowrunner", "mayflower", "snowrunner", False),
@@ -229,6 +234,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Wattam", "lupine", "wattam", True),
             New EpicGamesBBDDEntrada("What Remains of Edith Finch", "badger", "what-remains-of-edith-finch", True),
             New EpicGamesBBDDEntrada("What the Golf?", "stork", "what-the-golf", True),
+            New EpicGamesBBDDEntrada("Wheels of Aurelia", "escolar", "wheels-of-aurelia", False),
             New EpicGamesBBDDEntrada("World of Goo", "anemone", "world-of-goo", True),
             New EpicGamesBBDDEntrada("World War Z", "wombat", "world-war-z", True),
             New EpicGamesBBDDEntrada("WRC 8", "woodpecker", "wrc-8", True),

@@ -164,6 +164,7 @@
     </AppxManifest>
     <None Include="Epic Games Tiles_StoreKey.pfx" />
     <None Include="Epic Games Tiles_TemporaryKey.pfx" />
+    <PRIResource Include="Strings\pt\Resources.resw" />
     <PRIResource Include="Strings\es-ES\Resources.resw">
       <SubType>Designer</SubType>
     </PRIResource>
