@@ -6,7 +6,27 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'pendientes: arise-a-simple-story , before-we-leave , the-crew-2 , south-park-the-stick-of-truth , south-park-the-fractured-but-whole , mount-and-blade-2 , sludge-life , diabotical , state-of-decay-2-juggernaut-edition , uno , monopoly-plus , levelhead , saturnalia , trackmania-turbo , wheels-of-aurelia , old-world
+    'pendientes: arise-a-simple-story 
+    '            assassins-creed-rogue
+    '            assassins-creed-valhalla
+    '            before-we-leave 
+    '            chorus
+    '            diabotical
+    '            huntdown
+    '            levelhead       
+    '            monopoly-plus
+    '            mount-and-blade-2
+    '            old-world
+    '            saturnalia
+    '            sludge-life
+    '            south-park-the-fractured-but-whole 
+    '            south-park-the-stick-of-truth
+    '            state-of-decay-2-juggernaut-edition
+    '            the-crew-2
+    '            the-witcher-3-wild-hunt
+    '            tony-hawks-pro-skater-1-and-2
+    '            trackmania-turbo
+    '            uno
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
@@ -19,6 +39,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Airborne Kingdom", "macaw", "airborne-kingdom", True),
             New EpicGamesBBDDEntrada("Alan Wake", "heron", "alan-wake", True),
             New EpicGamesBBDDEntrada("Alan Wake: American Nightmare", "condor", "alan-wake-american-nightmare", True),
+            New EpicGamesBBDDEntrada("Amnesia: The Dark Descent", "ece4c58603d04bcb97454be9a7492fa6", "amnesia-the-dark-descent", True),
             New EpicGamesBBDDEntrada("Ancestors: The Humankind Odyssey", "amaranth", "ancestors", True),
             New EpicGamesBBDDEntrada("Anno 1800", "oregano", "anno-1800", True),
             New EpicGamesBBDDEntrada("Anodyne 2: Return to Dust", "tanzanite", "anodyne-2-return-to-dust", False),
@@ -52,12 +73,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Control", "calluna", "control", True),
             New EpicGamesBBDDEntrada("Corruption 2029", "betta", "corruption-2029", False),
             New EpicGamesBBDDEntrada("Costume Quest", "violetear", "costume-quest", True),
+            New EpicGamesBBDDEntrada("Crashlands", "afdf59e3dc8f40ec8fd887b5d3fcef23", "crashlands", False),
             New EpicGamesBBDDEntrada("Cyberpunk 2077", "ginger", "cyberpunk-2077", True),
             New EpicGamesBBDDEntrada("Dangerous Driving", "tansy", "dangerous-driving", True),
             New EpicGamesBBDDEntrada("Darksiders II Deathinitive Edition", "hoki", "darksiders2", False),
             New EpicGamesBBDDEntrada("Darksiders III", "springbok", "darksiders3", True),
             New EpicGamesBBDDEntrada("Darksiders Warmastered Edition", "hake", "darksiders", False),
             New EpicGamesBBDDEntrada("Dauntless", "jackal", "dauntless", False),
+            New EpicGamesBBDDEntrada("Death Coming", "2333810845fd49a286baf29f9b58f9ae", "death-coming", False),
             New EpicGamesBBDDEntrada("Death Stranding", "boga", "death-stranding", False),
             New EpicGamesBBDDEntrada("Detroit: Become Human", "columbine", "detroit-become-human", True),
             New EpicGamesBBDDEntrada("Donut County", "kestrel", "donut-county", True),
@@ -84,6 +107,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Gods and Monsters", "pheasant", "gods-and-monsters", True),
             New EpicGamesBBDDEntrada("Gone Home", "flier", "gone-home", False),
             New EpicGamesBBDDEntrada("Gorogoa", "meerkat", "gorogoa", True),
+            New EpicGamesBBDDEntrada("Grand Theft Auto V", "9d2d0eb64d5c44529cece33fe2a46482", "grand-theft-auto-v", False),
             New EpicGamesBBDDEntrada("Griftlands", "phlox", "griftlands", True),
             New EpicGamesBBDDEntrada("Hades", "min", "hades", True),
             New EpicGamesBBDDEntrada("Heavy Rain", "aster", "heavy-rain", True),
@@ -124,8 +148,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Metro: 2033 Redux", "petunia", "metro-2033-redux", True),
             New EpicGamesBBDDEntrada("Metro Exodus", "snapdragon", "metro-exodus", True),
             New EpicGamesBBDDEntrada("Metro: Last Light Redux", "speedwell", "metro-last-light-redux", True),
-            New EpicGamesBBDDEntrada("Moonlighter", "eagle", "moonlighter", True),
+            New EpicGamesBBDDEntrada("Might & Magic Chess Royale", "b141e42965ff431aa0e23bf3d5635942", "might-and-magic-chess-royale", False),
             New EpicGamesBBDDEntrada("Minit", "petrel", "minit", False),
+            New EpicGamesBBDDEntrada("Moonlighter", "eagle", "moonlighter", True),
             New EpicGamesBBDDEntrada("Mutant Year Zero", "falcon", "mutant-year-zero", True),
             New EpicGamesBBDDEntrada("Mutazione", "1fe19232c0f7476a8e99fd8752e800c2", "mutazione", False),
             New EpicGamesBBDDEntrada("My Time At Portia", "cobra", "my-time-at-portia", True),
@@ -171,6 +196,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Sherlock Holmes Crimes and Punishments", "0afb9d54dd3743a582b48b506466d3f8", "sherlock-holmes-crimes-and-punishments", False),
             New EpicGamesBBDDEntrada("Sherlock Holmes The Devil's Daughter", "cinnamon", "sherlock-holmes-the-devils-daughter", True),
             New EpicGamesBBDDEntrada("Slime Rancher", "corydalis", "slime-rancher", True),
+            New EpicGamesBBDDEntrada("SMITE", "greenbul", "smite", False),
             New EpicGamesBBDDEntrada("Snowrunner", "mayflower", "snowrunner", False),
             New EpicGamesBBDDEntrada("Spellbreak", "newt", "spellbreak", True),
             New EpicGamesBBDDEntrada("SOMA", "emu", "soma", True),
