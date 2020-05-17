@@ -252,7 +252,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Trover Saves the Universe", "sweetpea", "trover-saves-the-universe", True),
             New EpicGamesBBDDEntrada("Unreal Tournament", "ut", "unreal-tournament", True),
             New EpicGamesBBDDEntrada("Untitled Goose Game", "flour", "untitled-goose-game", True),
-            New EpicGamesBBDDEntrada("Vampire: The Masquerade - Bloodlines 2", "nemesia", "vampire-the-masquerade-bloodlines-2", True),
+            New EpicGamesBBDDEntrada("Vampire: The Masquerade - Bloodlines 2", "nemesia", "vampire-the-masquerade-bloodlines-2", False),
             New EpicGamesBBDDEntrada("Vampyr", "Nautilus", "vampyr", True),
             New EpicGamesBBDDEntrada("Watch Dogs", "jasper", "watch-dogs", False),
             New EpicGamesBBDDEntrada("Watch Dogs 2", "angelonia", "watch-dogs-2", True),
@@ -262,7 +262,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("What the Golf?", "stork", "what-the-golf", True),
             New EpicGamesBBDDEntrada("Wheels of Aurelia", "escolar", "wheels-of-aurelia", False),
             New EpicGamesBBDDEntrada("World of Goo", "anemone", "world-of-goo", True),
-            New EpicGamesBBDDEntrada("World War Z", "wombat", "world-war-z", True),
+            New EpicGamesBBDDEntrada("World War Z", "wombat", "world-war-z", False),
             New EpicGamesBBDDEntrada("WRC 8", "woodpecker", "wrc-8", True),
             New EpicGamesBBDDEntrada("Yaga", "robin", "yaga", True),
             New EpicGamesBBDDEntrada("Yooka-Laylee and the Impossible Lair", "duckbill", "yooka-laylee-and-the-impossible-lair", True),
@@ -299,6 +299,9 @@ Public Class EpicGamesJuego
 
     <JsonProperty("pages")>
     Public Paginas As List(Of EpicGamesJuegoPagina)
+
+    <JsonProperty("reviewOptOut")>
+    Public ReviewNo As Boolean
 
 End Class
 

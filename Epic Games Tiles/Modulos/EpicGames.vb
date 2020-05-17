@@ -127,6 +127,10 @@ Module EpicGames
 
                                     Dim urlImagenLogo As String = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
 
+                                    'If juegoEpic.ReviewNo = True Then
+                                    '    Notificaciones.Toast(juegoEpic.Titulo, Nothing)
+                                    'End If
+
                                     If Not urlImagenFondoHorizontal = Nothing Or Not urlImagenLogo = Nothing Then
                                         Dim juego As New Tile(titulo, juegoBBDD.ID, "com.epicgames.launcher://apps/" + juegoBBDD.ID + "?action=launch&silent=true",
                                                               urlImagenFondoHorizontal, urlImagenFondoVertical, urlImagenLogo)
