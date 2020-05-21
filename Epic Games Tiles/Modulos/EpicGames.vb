@@ -230,74 +230,80 @@ Module EpicGames
         Dim gridTiles As Grid = pagina.FindName("gridTiles")
         Dim gridAvisoNoJuegos As Grid = pagina.FindName("gridAvisoNoJuegos")
 
-        If listaJuegos.Count > 0 Then
-            gridTiles.Visibility = Visibility.Visible
-            gridAvisoNoJuegos.Visibility = Visibility.Collapsed
-            gridSeleccionarJuego.Visibility = Visibility.Visible
+        If Not listaJuegos Is Nothing Then
+            If listaJuegos.Count > 0 Then
+                gridTiles.Visibility = Visibility.Visible
+                gridAvisoNoJuegos.Visibility = Visibility.Collapsed
+                gridSeleccionarJuego.Visibility = Visibility.Visible
 
-            listaJuegos.Sort(Function(x, y) x.Titulo.CompareTo(y.Titulo))
+                listaJuegos.Sort(Function(x, y) x.Titulo.CompareTo(y.Titulo))
 
-            gv.Items.Clear()
+                gv.Items.Clear()
 
-            For Each juego In listaJuegos
-                Dim gridImagen As New Grid With {
-                    .Width = 322,
-                    .Height = 187
-                }
-
-                Dim imagenFondo As New ImageEx With {
-                    .Source = juego.ImagenFondoHorizontal,
-                    .IsCacheEnabled = True,
-                    .Stretch = Stretch.UniformToFill
-                }
-
-                gridImagen.Children.Add(imagenFondo)
-
-                If Not juego.ImagenLogo = Nothing Then
-                    Dim imagenLogo As New ImageEx With {
-                        .Source = juego.ImagenLogo,
-                        .IsCacheEnabled = True,
-                        .Stretch = Stretch.Uniform,
-                        .VerticalAlignment = VerticalAlignment.Center,
-                        .HorizontalAlignment = HorizontalAlignment.Center,
-                        .MaxWidth = 180,
-                        .MaxHeight = 110
+                For Each juego In listaJuegos
+                    Dim gridImagen As New Grid With {
+                        .Width = 322,
+                        .Height = 187
                     }
 
-                    gridImagen.Children.Add(imagenLogo)
+                    Dim imagenFondo As New ImageEx With {
+                        .Source = juego.ImagenFondoHorizontal,
+                        .IsCacheEnabled = True,
+                        .Stretch = Stretch.UniformToFill
+                    }
+
+                    gridImagen.Children.Add(imagenFondo)
+
+                    If Not juego.ImagenLogo = Nothing Then
+                        Dim imagenLogo As New ImageEx With {
+                            .Source = juego.ImagenLogo,
+                            .IsCacheEnabled = True,
+                            .Stretch = Stretch.Uniform,
+                            .VerticalAlignment = VerticalAlignment.Center,
+                            .HorizontalAlignment = HorizontalAlignment.Center,
+                            .MaxWidth = 180,
+                            .MaxHeight = 110
+                        }
+
+                        gridImagen.Children.Add(imagenLogo)
+                    End If
+
+                    Dim panel As New DropShadowPanel With {
+                        .Margin = New Thickness(5, 5, 5, 5),
+                        .ShadowOpacity = 0.9,
+                        .BlurRadius = 5
+                    }
+
+                    Dim boton As New Button With {
+                        .Tag = juego,
+                        .Content = gridImagen,
+                        .Padding = New Thickness(0, 0, 0, 0)
+                    }
+
+                    panel.Content = boton
+
+                    Dim tbToolTip As TextBlock = New TextBlock With {
+                        .Text = juego.Titulo,
+                        .FontSize = 16
+                    }
+
+                    ToolTipService.SetToolTip(boton, tbToolTip)
+                    ToolTipService.SetPlacement(boton, PlacementMode.Mouse)
+
+                    AddHandler boton.Click, AddressOf BotonTile_Click
+                    AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
+                    AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
+
+                    gv.Items.Add(panel)
+                Next
+
+                If boolBuscarCarpeta = True Then
+                    Toast(listaJuegos.Count.ToString + " " + recursos.GetString("GamesDetected"), Nothing)
                 End If
-
-                Dim panel As New DropShadowPanel With {
-                    .Margin = New Thickness(5, 5, 5, 5),
-                    .ShadowOpacity = 0.9,
-                    .BlurRadius = 5
-                }
-
-                Dim boton As New Button With {
-                    .Tag = juego,
-                    .Content = gridImagen,
-                    .Padding = New Thickness(0, 0, 0, 0)
-                }
-
-                panel.Content = boton
-
-                Dim tbToolTip As TextBlock = New TextBlock With {
-                    .Text = juego.Titulo,
-                    .FontSize = 16
-                }
-
-                ToolTipService.SetToolTip(boton, tbToolTip)
-                ToolTipService.SetPlacement(boton, PlacementMode.Mouse)
-
-                AddHandler boton.Click, AddressOf BotonTile_Click
-                AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
-                AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
-
-                gv.Items.Add(panel)
-            Next
-
-            If boolBuscarCarpeta = True Then
-                Toast(listaJuegos.Count.ToString + " " + recursos.GetString("GamesDetected"), Nothing)
+            Else
+                gridTiles.Visibility = Visibility.Collapsed
+                gridAvisoNoJuegos.Visibility = Visibility.Visible
+                gridSeleccionarJuego.Visibility = Visibility.Collapsed
             End If
         Else
             gridTiles.Visibility = Visibility.Collapsed
