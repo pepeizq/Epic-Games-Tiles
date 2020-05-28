@@ -13,18 +13,22 @@ Module EpicGamesBBDD
     '            chorus
     '            diabotical
     '            huntdown
-    '            levelhead       
+    '            levelhead      
+    '            missile-command-recharged
     '            monopoly-plus
     '            mount-and-blade-2
     '            old-world
+    '            poly-bridge-2
+    '            primordials-of-amyrion
     '            saturnalia
-    '            sludge-life
+    '            sherlock-holmes-chapter-one
     '            south-park-the-fractured-but-whole 
     '            south-park-the-stick-of-truth
     '            state-of-decay-2-juggernaut-edition
     '            the-crew-2
     '            the-witcher-3-wild-hunt
     '            tony-hawks-pro-skater-1-and-2
+    '            trackmania
     '            trackmania-turbo
     '            uno
 
@@ -61,7 +65,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Bee Simulator", "spoonbill", "bee-simulator", True),
             New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender", "beyond-two-souls", True),
             New EpicGamesBBDDEntrada("Bloodroots", "pochard", "bloodroots", True),
+            New EpicGamesBBDDEntrada("Borderlands 2", "dodo", "borderlands-2", False),
             New EpicGamesBBDDEntrada("Borderlands 3", "catnip", "borderlands-3", True),
+            New EpicGamesBBDDEntrada("Borderlands: The Pre-Sequel", "turkey", "borderlands-the-pre-sequel", False),
             New EpicGamesBBDDEntrada("Carcassonne", "thrush", "carcassonne", False),
             New EpicGamesBBDDEntrada("Cardpocalypse", "duck", "cardpocalypse", True),
             New EpicGamesBBDDEntrada("Castle Storm 2", "dove", "castlestorm2", True),
@@ -200,6 +206,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Sherlock Holmes The Devil's Daughter", "cinnamon", "sherlock-holmes-the-devils-daughter", True),
             New EpicGamesBBDDEntrada("Sid Meier’s Civilization VI", "kinglet", "sid-meiers-civilization-vi", False),
             New EpicGamesBBDDEntrada("Slime Rancher", "corydalis", "slime-rancher", True),
+            New EpicGamesBBDDEntrada("Sludge Life", "morganite", "sludge-life", False),
             New EpicGamesBBDDEntrada("SMITE", "greenbul", "smite", False),
             New EpicGamesBBDDEntrada("Snowrunner", "mayflower", "snowrunner", False),
             New EpicGamesBBDDEntrada("Spellbreak", "newt", "spellbreak", True),
@@ -319,6 +326,9 @@ Public Class EpicGamesJuegoPagina
 
     <JsonProperty("_images_")>
     Public Capturas As List(Of String)
+
+    <JsonProperty("_urlPattern")>
+    Public Patron As String
 
 End Class
 

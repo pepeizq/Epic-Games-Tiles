@@ -176,37 +176,69 @@ Module EpicGames
                         Dim titulo As String = juegoEpic.Titulo.Trim
 
                         Dim urlImagenFondoHorizontal As String = String.Empty
-
-                        Try
-                            urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondoH")
-                        Catch ex As Exception
-
-                        End Try
-
                         Dim urlImagenFondoVertical As String = String.Empty
-
-                        Try
-                            urlImagenFondoVertical = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoVertical, juegoBBDD.ID, "fondoV")
-                        Catch ex As Exception
-
-                        End Try
-
-                        If urlImagenFondoHorizontal = Nothing Then
-                            Try
-                                urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Capturas(1), juegoBBDD.ID, "fondoH")
-                            Catch ex As Exception
-
-                            End Try
-                        End If
-
                         Dim urlImagenLogo As String = String.Empty
 
-                        If juegoBBDD.Logo = True Then
+                        If juegoEpic.Paginas.Count = 1 Then
                             Try
-                                urlImagenLogo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
+                                urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondoH")
                             Catch ex As Exception
 
                             End Try
+
+                            Try
+                                urlImagenFondoVertical = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.FondoVertical, juegoBBDD.ID, "fondoV")
+                            Catch ex As Exception
+
+                            End Try
+
+                            If urlImagenFondoHorizontal = Nothing Then
+                                Try
+                                    urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Capturas(1), juegoBBDD.ID, "fondoH")
+                                Catch ex As Exception
+
+                                End Try
+                            End If
+
+                            If juegoBBDD.Logo = True Then
+                                Try
+                                    urlImagenLogo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
+                                Catch ex As Exception
+
+                                End Try
+                            End If
+                        ElseIf juegoEpic.Paginas.Count > 1 Then
+                            For Each paginaEpic In juegoEpic.Paginas
+                                If paginaEpic.Patron.Contains(juegoBBDD.Enlace + "/home") Then
+                                    Try
+                                        urlImagenFondoHorizontal = Await Cache.DescargarImagen(paginaEpic.Datos.Imagenes.FondoHorizontal, juegoBBDD.ID, "fondoH")
+                                    Catch ex As Exception
+
+                                    End Try
+
+                                    Try
+                                        urlImagenFondoVertical = Await Cache.DescargarImagen(paginaEpic.Datos.Imagenes.FondoVertical, juegoBBDD.ID, "fondoV")
+                                    Catch ex As Exception
+
+                                    End Try
+
+                                    If urlImagenFondoHorizontal = Nothing Then
+                                        Try
+                                            urlImagenFondoHorizontal = Await Cache.DescargarImagen(paginaEpic.Capturas(1), juegoBBDD.ID, "fondoH")
+                                        Catch ex As Exception
+
+                                        End Try
+                                    End If
+
+                                    If juegoBBDD.Logo = True Then
+                                        Try
+                                            urlImagenLogo = Await Cache.DescargarImagen(paginaEpic.Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
+                                        Catch ex As Exception
+
+                                        End Try
+                                    End If
+                                End If
+                            Next
                         End If
 
                         If Not urlImagenFondoHorizontal = Nothing Or Not urlImagenLogo = Nothing Then
