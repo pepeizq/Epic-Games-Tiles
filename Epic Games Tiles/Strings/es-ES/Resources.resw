@@ -147,7 +147,7 @@
   <data name="MoreThings_ReportBug" xml:space="preserve">
     <value>Informa de un Fallo</value>
   </data>
-  <data name="SelectGame.Text" xml:space="preserve">
+  <data name="SelectGame0" xml:space="preserve">
     <value>Selecciona un juego</value>
   </data>
   <data name="MoreThings_SourceCode" xml:space="preserve">
@@ -284,5 +284,20 @@
   </data>
   <data name="OptionsLogoEpicInfo.Text" xml:space="preserve">
     <value>Este logo es asignado por Epic a determinados juegos y aparece encima de la imagen de la Tile (no se puede personalizar el logo)</value>
+  </data>
+  <data name="Contact.Text" xml:space="preserve">
+    <value>Contactar</value>
+  </data>
+  <data name="ContactAddGames.Text" xml:space="preserve">
+    <value>Antes de contactar conmigo necesito saber la id del juego que falta, para ello basta con que hagáis un acceso directo del juego al escritorio desde Epic Games Store y que me mandéis la linea de texto que os indico en la foto.</value>
+  </data>
+  <data name="SelectGame1" xml:space="preserve">
+    <value>Selecciona un juego (debes tener el juego en Epic Games Store)</value>
+  </data>
+  <data name="SelectGameContact.Text" xml:space="preserve">
+    <value>Si falta algun juego, contacta conmigo con la siguiente información</value>
+  </data>
+  <data name="SelectGameContact2.Text" xml:space="preserve">
+    <value>Abrir</value>
   </data>
 </root>

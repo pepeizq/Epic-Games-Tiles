@@ -1,9 +1,4 @@
-﻿Imports FontAwesome.UWP
-Imports Microsoft.Toolkit.Uwp.UI.Controls
-Imports Windows.Storage
-Imports Windows.Storage.Pickers
-Imports Windows.Storage.Streams
-Imports Windows.UI
+﻿Imports Windows.Storage
 
 Module Configuracion
 
@@ -27,6 +22,8 @@ Module Configuracion
 
     Public Sub ModoTiles(modo As Integer, arranque As Boolean)
 
+        Dim recursos As New Resources.ResourceLoader()
+
         Dim frame As Frame = Window.Current.Content
         Dim pagina As Page = frame.Content
 
@@ -40,11 +37,14 @@ Module Configuracion
         End If
 
         Dim sp1 As StackPanel = pagina.FindName("spModoTile1")
+        Dim tbSeleccionar As TextBlock = pagina.FindName("tbSeleccionarJuego")
 
         If modo = 0 Then
             sp1.Visibility = Visibility.Visible
+            tbSeleccionar.Text = recursos.GetString("SelectGame0")
         Else
             sp1.Visibility = Visibility.Collapsed
+            tbSeleccionar.Text = recursos.GetString("SelectGame1")
         End If
 
     End Sub

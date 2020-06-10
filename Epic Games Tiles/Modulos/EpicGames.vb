@@ -273,60 +273,7 @@ Module EpicGames
                 gv.Items.Clear()
 
                 For Each juego In listaJuegos
-                    Dim gridImagen As New Grid With {
-                        .Width = 322,
-                        .Height = 187
-                    }
-
-                    Dim imagenFondo As New ImageEx With {
-                        .Source = juego.ImagenFondoHorizontal,
-                        .IsCacheEnabled = True,
-                        .Stretch = Stretch.UniformToFill
-                    }
-
-                    gridImagen.Children.Add(imagenFondo)
-
-                    If Not juego.ImagenLogo = Nothing Then
-                        Dim imagenLogo As New ImageEx With {
-                            .Source = juego.ImagenLogo,
-                            .IsCacheEnabled = True,
-                            .Stretch = Stretch.Uniform,
-                            .VerticalAlignment = VerticalAlignment.Center,
-                            .HorizontalAlignment = HorizontalAlignment.Center,
-                            .MaxWidth = 180,
-                            .MaxHeight = 110
-                        }
-
-                        gridImagen.Children.Add(imagenLogo)
-                    End If
-
-                    Dim panel As New DropShadowPanel With {
-                        .Margin = New Thickness(5, 5, 5, 5),
-                        .ShadowOpacity = 0.9,
-                        .BlurRadius = 5
-                    }
-
-                    Dim boton As New Button With {
-                        .Tag = juego,
-                        .Content = gridImagen,
-                        .Padding = New Thickness(0, 0, 0, 0)
-                    }
-
-                    panel.Content = boton
-
-                    Dim tbToolTip As TextBlock = New TextBlock With {
-                        .Text = juego.Titulo,
-                        .FontSize = 16
-                    }
-
-                    ToolTipService.SetToolTip(boton, tbToolTip)
-                    ToolTipService.SetPlacement(boton, PlacementMode.Mouse)
-
-                    AddHandler boton.Click, AddressOf BotonTile_Click
-                    AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
-                    AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
-
-                    gv.Items.Add(panel)
+                    BotonEstilo(juego, gv)
                 Next
 
                 If boolBuscarCarpeta = True Then
@@ -346,6 +293,63 @@ Module EpicGames
         cbTiles.IsEnabled = True
         sp1.IsHitTestVisible = True
         botonCache.IsEnabled = True
+
+    End Sub
+
+    Public Sub BotonEstilo(juego As Tile, gv As GridView)
+
+        Dim gridImagen As New Grid
+
+        Dim imagenFondo As New ImageEx With {
+            .Source = juego.ImagenFondoHorizontal,
+            .IsCacheEnabled = True,
+            .Stretch = Stretch.UniformToFill
+        }
+
+        gridImagen.Children.Add(imagenFondo)
+
+        If Not juego.ImagenLogo = Nothing Then
+            Dim imagenLogo As New ImageEx With {
+                .Source = juego.ImagenLogo,
+                .IsCacheEnabled = True,
+                .Stretch = Stretch.Uniform,
+                .VerticalAlignment = VerticalAlignment.Center,
+                .HorizontalAlignment = HorizontalAlignment.Center,
+                .MaxWidth = 180,
+                .MaxHeight = 110
+            }
+
+            gridImagen.Children.Add(imagenLogo)
+        End If
+
+        Dim panel As New DropShadowPanel With {
+            .Margin = New Thickness(5, 5, 5, 5),
+            .ShadowOpacity = 0.9,
+            .BlurRadius = 5,
+            .MaxWidth = anchoColumna + 10
+        }
+
+        Dim boton As New Button With {
+            .Tag = juego,
+            .Content = gridImagen,
+            .Padding = New Thickness(0, 0, 0, 0)
+        }
+
+        panel.Content = boton
+
+        Dim tbToolTip As TextBlock = New TextBlock With {
+            .Text = juego.Titulo,
+            .FontSize = 16
+        }
+
+        ToolTipService.SetToolTip(boton, tbToolTip)
+        ToolTipService.SetPlacement(boton, PlacementMode.Mouse)
+
+        AddHandler boton.Click, AddressOf BotonTile_Click
+        AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
+        AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
+
+        gv.Items.Add(panel)
 
     End Sub
 
