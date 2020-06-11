@@ -339,7 +339,8 @@ Module EpicGames
 
         Dim tbToolTip As TextBlock = New TextBlock With {
             .Text = juego.Titulo,
-            .FontSize = 16
+            .FontSize = 16,
+            .TextWrapping = TextWrapping.Wrap
         }
 
         ToolTipService.SetToolTip(boton, tbToolTip)

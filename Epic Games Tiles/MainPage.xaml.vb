@@ -36,7 +36,9 @@ Public NotInheritable Class MainPage
                     gridSeleccionarJuego.Visibility = Visibility.Collapsed
                 End If
 
-                gridSeleccionarJuego.Visibility = Visibility.Visible
+                If gvTiles.Items.Count > 0 Then
+                    gridSeleccionarJuego.Visibility = Visibility.Visible
+                End If
 
                 If Not ApplicationData.Current.LocalSettings.Values("ancho_grid_tiles") = 0 Then
                     gvTiles.Width = ApplicationData.Current.LocalSettings.Values("ancho_grid_tiles")
