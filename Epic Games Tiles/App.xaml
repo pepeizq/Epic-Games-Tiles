@@ -2,7 +2,8 @@
     x:Class="Epic_Games_Tiles.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Epic_Games_Tiles">
+    xmlns:local="using:Epic_Games_Tiles"
+    RequestedTheme="Light">
 
     <Application.Resources>
         <Style x:Key="EllipsisButton" TargetType="Button">

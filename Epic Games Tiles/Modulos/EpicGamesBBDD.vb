@@ -11,14 +11,21 @@ Module EpicGamesBBDD
     '            assassins-creed-rogue
     '            assassins-creed-valhalla
     '            before-we-leave 
+    '            bugsnax
     '            child-of-light
     '            chorus
+    '            desperados-3
     '            diabotical
     '            disco-elysium
     '            huntdown
+    '            iron-harvest
+    '            jett-the-far-shore
+    '            kena-bridge-of-spirits
     '            levelhead      
+    '            milky-way-prince-the-vampire-star
     '            missile-command-recharged
     '            monopoly-plus
+    '            mortal-shell
     '            mount-and-blade-2
     '            old-world
     '            poly-bridge-2
@@ -28,15 +35,21 @@ Module EpicGamesBBDD
     '            sherlock-holmes-chapter-one
     '            south-park-the-fractured-but-whole 
     '            south-park-the-stick-of-truth
+    '            star-wars-squadrons
     '            state-of-decay-2-juggernaut-edition
     '            the-crew-2
+    '            the-last-campfire
+    '            the-outlast-trials
     '            the-witcher-3-wild-hunt
     '            tony-hawks-pro-skater-1-and-2
     '            trackmania
     '            trackmania-turbo
+    '            twin-mirror
+    '            unexplored-2
     '            uno
     '            valiant-hearts
     '            werewolf-the-apocalypse-earthblood
+    '            windbound
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
@@ -186,6 +199,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Paladins", "antbird", "paladins", False),
             New EpicGamesBBDDEntrada("Pandemic", "thrasher", "pandemic", True),
             New EpicGamesBBDDEntrada("Paranoia: Happiness is Mandatory", "flamingo", "paranoia", True),
+            New EpicGamesBBDDEntrada("Pathway", "8fceb562623c430db9bb6abf0549c43e", "pathway", False),
             New EpicGamesBBDDEntrada("Phantom Brigade", "chili", "phantom-brigade", True),
             New EpicGamesBBDDEntrada("Phoenix Point", "iris", "phoenix-point", True),
             New EpicGamesBBDDEntrada("Predator: Hunting Grounds", "boxfish", "predator-hunting-grounds", False),
