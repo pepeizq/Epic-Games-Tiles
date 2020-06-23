@@ -7,47 +7,26 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
     'pendientes: a-total-war-saga-troy
-    '            arise-a-simple-story 
-    '            assassins-creed-rogue
-    '            assassins-creed-valhalla
-    '            before-we-leave 
     '            bugsnax
-    '            child-of-light
     '            chorus
-    '            desperados-3
-    '            diabotical
-    '            disco-elysium
-    '            huntdown
+    '            godfall
     '            iron-harvest
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
     '            levelhead      
     '            milky-way-prince-the-vampire-star
     '            missile-command-recharged
-    '            monopoly-plus
     '            mortal-shell
-    '            mount-and-blade-2
-    '            old-world
-    '            poly-bridge-2
     '            primordials-of-amyrion
-    '            rimworld
     '            saturnalia
     '            sherlock-holmes-chapter-one
-    '            south-park-the-fractured-but-whole 
-    '            south-park-the-stick-of-truth
     '            star-wars-squadrons
-    '            state-of-decay-2-juggernaut-edition
-    '            the-crew-2
     '            the-last-campfire
     '            the-outlast-trials
-    '            the-witcher-3-wild-hunt
     '            tony-hawks-pro-skater-1-and-2
     '            trackmania
-    '            trackmania-turbo
     '            twin-mirror
     '            unexplored-2
-    '            uno
-    '            valiant-hearts
     '            werewolf-the-apocalypse-earthblood
     '            windbound
 
@@ -58,8 +37,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("A Knights Quest", "cockatoo", "a-knights-quest", True),
             New EpicGamesBBDDEntrada("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "a-short-hike", False),
             New EpicGamesBBDDEntrada("ABZU", "curry", "abzu", True),
+            New EpicGamesBBDDEntrada("AER Memories of Old", "26b63c46de9e4dcc856b3c6b106b6777", "aer-memories-of-old", False),
             New EpicGamesBBDDEntrada("Afterparty", "adenium", "afterparty", True),
-            New EpicGamesBBDDEntrada("Airborne Kingdom", "macaw", "airborne-kingdom", True),
+            New EpicGamesBBDDEntrada("Airborne Kingdom", "macaw", "airborne-kingdom", False),
             New EpicGamesBBDDEntrada("Alan Wake", "heron", "alan-wake", True),
             New EpicGamesBBDDEntrada("Alan Wake: American Nightmare", "condor", "alan-wake-american-nightmare", True),
             New EpicGamesBBDDEntrada("Amnesia: The Dark Descent", "ece4c58603d04bcb97454be9a7492fa6", "amnesia-the-dark-descent", True),
@@ -67,12 +47,15 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Anno 1800", "oregano", "anno-1800", True),
             New EpicGamesBBDDEntrada("Anodyne 2: Return to Dust", "tanzanite", "anodyne-2-return-to-dust", False),
             New EpicGamesBBDDEntrada("Ape Out", "coley", "ape-out", True),
+            New EpicGamesBBDDEntrada("Arise: A Simple Story", "rail", "arise-a-simple-story", True),
             New EpicGamesBBDDEntrada("ARK: Survival Evolved", "aafc587fbf654758802c8e41e4fb3255", "ark", False),
             New EpicGamesBBDDEntrada("Ashen", "wren", "ashen", True),
             New EpicGamesBBDDEntrada("Assassin's Creed III: Remastered", "anise", "assassins-creed-3", True),
             New EpicGamesBBDDEntrada("Assassin's Creed Odyssey", "clary", "assassins-creed-odyssey", False),
             New EpicGamesBBDDEntrada("Assassin's Creed Origins", "camellia", "assassins-creed-origins", True),
+            New EpicGamesBBDDEntrada("Assassin's Creed Rogue", "wolffish", "assassins-creed-rogue", False),
             New EpicGamesBBDDEntrada("Assassin's Creed Syndicate", "albacore", "assassins-creed-syndicate", False),
+            New EpicGamesBBDDEntrada("Assassin's Creed Valhalla", "965ccf8b2eba4f9381ef43183c08e205", "assassins-creed-valhalla", False),
             New EpicGamesBBDDEntrada("Atomicrops", "swan", "atomicrops", False),
             New EpicGamesBBDDEntrada("Auto Chess", "owl", "auto-chess", True),
             New EpicGamesBBDDEntrada("Axiom Verge", "puffin", "axiom-verge", True),
@@ -83,6 +66,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Batman Arkham Knight", "cowbird", "batman-arkham-knight", True),
             New EpicGamesBBDDEntrada("Battle Breakers", "wex", "battle-breakers", True),
             New EpicGamesBBDDEntrada("Bee Simulator", "spoonbill", "bee-simulator", True),
+            New EpicGamesBBDDEntrada("Before We Leave", "salmon", "before-we-leave", True),
             New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender", "beyond-two-souls", True),
             New EpicGamesBBDDEntrada("Bloodroots", "pochard", "bloodroots", True),
             New EpicGamesBBDDEntrada("Borderlands 2", "dodo", "borderlands-2", False),
@@ -90,8 +74,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Borderlands: The Pre-Sequel", "turkey", "borderlands-the-pre-sequel", False),
             New EpicGamesBBDDEntrada("Carcassonne", "thrush", "carcassonne", False),
             New EpicGamesBBDDEntrada("Cardpocalypse", "duck", "cardpocalypse", True),
-            New EpicGamesBBDDEntrada("Castle Storm 2", "dove", "castlestorm2", True),
+            New EpicGamesBBDDEntrada("Castle Storm 2", "dove", "castlestorm2", False),
             New EpicGamesBBDDEntrada("Celeste", "salt", "celeste", True),
+            New EpicGamesBBDDEntrada("Child of Light: Ultimate Edition", "3b8f18e6780547d9b2ee25fbfa29c913", "child-of-light", False),
             New EpicGamesBBDDEntrada("Chivalry 2", "peppermint", "chivalry-2", True),
             New EpicGamesBBDDEntrada("City of Brass", "arrowroot", "city-of-brass", True),
             New EpicGamesBBDDEntrada("Close To The Sun", "silene", "close-to-the-sun", False),
@@ -108,7 +93,10 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Dauntless", "jackal", "dauntless", False),
             New EpicGamesBBDDEntrada("Death Coming", "2333810845fd49a286baf29f9b58f9ae", "death-coming", False),
             New EpicGamesBBDDEntrada("Death Stranding", "boga", "death-stranding", False),
+            New EpicGamesBBDDEntrada("Desperados III", "90f2d13d11e74ef29ac1af5c8b0b7730", "desperados-3", False),
             New EpicGamesBBDDEntrada("Detroit: Become Human", "columbine", "detroit-become-human", True),
+            New EpicGamesBBDDEntrada("Diabotical", "honeycreeper", "diabotical", False),
+            New EpicGamesBBDDEntrada("Disco Elysium", "7334aba246154b63857435cb9c7eecd5", "disco-elysium", False),
             New EpicGamesBBDDEntrada("Donut County", "kestrel", "donut-county", True),
             New EpicGamesBBDDEntrada("Drawful 2", "daisy", "drawful-2", True),
             New EpicGamesBBDDEntrada("Enter the Gungeon", "garlic", "enter-the-gungeon", True),
@@ -142,6 +130,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Hob", "lyrebird", "hob", False),
             New EpicGamesBBDDEntrada("Horace", "palila", "horace", False),
             New EpicGamesBBDDEntrada("Human Resource Machine", "basil", "human-resource-machine", True),
+            New EpicGamesBBDDEntrada("Huntdown", "337ffb9c2d624545be086e6ead40dbbe", "huntdown", False),
             New EpicGamesBBDDEntrada("Hyper Light Drifter", "parakeet", "hyper-light-drifter", True),
             New EpicGamesBBDDEntrada("Industries of Titan", "protea", "industries-of-titan", True),
             New EpicGamesBBDDEntrada("Inside", "marigold", "inside", True),
@@ -179,7 +168,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Metro: Last Light Redux", "speedwell", "metro-last-light-redux", True),
             New EpicGamesBBDDEntrada("Might & Magic Chess Royale", "b141e42965ff431aa0e23bf3d5635942", "might-and-magic-chess-royale", False),
             New EpicGamesBBDDEntrada("Minit", "petrel", "minit", False),
+            New EpicGamesBBDDEntrada("Monopoly PLUS", "hamlet", "monopoly-plus", False),
             New EpicGamesBBDDEntrada("Moonlighter", "eagle", "moonlighter", True),
+            New EpicGamesBBDDEntrada("Mount & Blade II: Bannerlord", "chickadee", "mount-and-blade-2", False),
             New EpicGamesBBDDEntrada("Mutant Year Zero", "falcon", "mutant-year-zero", True),
             New EpicGamesBBDDEntrada("Mutazione", "1fe19232c0f7476a8e99fd8752e800c2", "mutazione", False),
             New EpicGamesBBDDEntrada("My Time At Portia", "cobra", "my-time-at-portia", True),
@@ -187,8 +178,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Nuclear Throne", "turaco", "nuclear-throne", True),
             New EpicGamesBBDDEntrada("Observation", "allium", "observation", True),
             New EpicGamesBBDDEntrada("Offworld Trading Company", "snapper", "offworld-trading-company", False),
+            New EpicGamesBBDDEntrada("Old World", "nightjar", "old-world", False),
             New EpicGamesBBDDEntrada("Omen Of Sorrow", "daffodil", "omen-of-sorrow", False),
-            New EpicGamesBBDDEntrada("Ooblets", "ostrich", "ooblets", True),
+            New EpicGamesBBDDEntrada("Ooblets", "ostrich", "ooblets", False),
             New EpicGamesBBDDEntrada("Operencia", "lily", "operencia", True),
             New EpicGamesBBDDEntrada("Outer Wilds", "starfish", "outerwilds", True),
             New EpicGamesBBDDEntrada("Outward", "viola", "outward", True),
@@ -202,6 +194,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Pathway", "8fceb562623c430db9bb6abf0549c43e", "pathway", False),
             New EpicGamesBBDDEntrada("Phantom Brigade", "chili", "phantom-brigade", True),
             New EpicGamesBBDDEntrada("Phoenix Point", "iris", "phoenix-point", True),
+            New EpicGamesBBDDEntrada("Poly Bridge 2", "03e51fc525b24b2ea873ac13c16b9ed7", "poly-bridge-2", False),
             New EpicGamesBBDDEntrada("Predator: Hunting Grounds", "boxfish", "predator-hunting-grounds", False),
             New EpicGamesBBDDEntrada("Q.U.B.E. 2", "auk", "q-u-b-e-2", False),
             New EpicGamesBBDDEntrada("Rainbow Six Quarantine", "trogon", "rainbow-six-quarantine", True),
@@ -212,6 +205,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Rebel Galaxy Outlaw", "rgo", "rebel-galaxy-outlaw", True),
             New EpicGamesBBDDEntrada("Red Dead Redemption 2", "heather", "red-dead-redemption-2", True),
             New EpicGamesBBDDEntrada("RiME", "hydrangea", "rime", True),
+            New EpicGamesBBDDEntrada("RimWorld", "12915f06bb3442eeb414813e74af7df3", "rimworld", False),
             New EpicGamesBBDDEntrada("Rogue Company", "pewee", "rogue-company", True),
             New EpicGamesBBDDEntrada("RollerCoaster Tycoon Adventures", "canna", "rollercoaster-tycoon-adventures", True),
             New EpicGamesBBDDEntrada("RUINER", "laridae", "ruiner", True),
@@ -232,10 +226,15 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("SMITE", "greenbul", "smite", False),
             New EpicGamesBBDDEntrada("Snowrunner", "mayflower", "snowrunner", False),
             New EpicGamesBBDDEntrada("Spellbreak", "newt", "spellbreak", True),
+            New EpicGamesBBDDEntrada("SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated", "f2304175954d40d2b583542251dda296", "spongebob-squarepants-battle-for-bikini-bottom-rehydrated", False),
             New EpicGamesBBDDEntrada("SOMA", "emu", "soma", False),
+            New EpicGamesBBDDEntrada("South Park: The Fractured But Whole", "alewife", "south-park-the-fractured-but-whole", True),
+            New EpicGamesBBDDEntrada("South Park: The Stick of Truth", "alligator", "south-park-the-stick-of-truth", True),
             New EpicGamesBBDDEntrada("Star Wars Jedi Fallen Order", "shoebill", "star-wars-jedi-fallen-order", False),
+            New EpicGamesBBDDEntrada("State of Decay 2: Juggernaut Edition", "snoek", "state-of-decay-2-juggernaut-edition", False),
             New EpicGamesBBDDEntrada("Steep", "barracuda", "steep", False),
             New EpicGamesBBDDEntrada("Stories Untold", "parsley", "stories-untold", True),
+            New EpicGamesBBDDEntrada("Stranger Things 3: The Game", "0a697c1235fb4706a635cfa33f0306ec", "stranger-things-3-the-game", False),
             New EpicGamesBBDDEntrada("Subnautica", "jaguar", "subnautica", True),
             New EpicGamesBBDDEntrada("Subnautica Below Zero", "foxglove", "subnautica-below-zero", True),
             New EpicGamesBBDDEntrada("Sundered Eldritch Edition", "moa", "sundered-eldritch-edition", False),
@@ -251,6 +250,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Tom Clancy's Ghost Recon Wildlands", "hyacinth", "ghost-recon-wildlands", True),
             New EpicGamesBBDDEntrada("Tom Clancy's The Division 2", "impala", "the-division-2", True),
             New EpicGamesBBDDEntrada("The Bridge", "sunbird", "the-bridge", False),
+            New EpicGamesBBDDEntrada("The Crew 2", "hermit", "the-crew-2", True),
             New EpicGamesBBDDEntrada("The Cycle", "azalea", "thecycle", True),
             New EpicGamesBBDDEntrada("The End is Nigh", "statice", "the-end-is-nigh", True),
             New EpicGamesBBDDEntrada("The Escapists", "peony", "the-escapists", True),
@@ -270,6 +270,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("The Walking Dead: Final Season", "ocelot", "walking-dead-final-season", True),
             New EpicGamesBBDDEntrada("The Walking Dead: Michonne", "fennel", "walking-dead-michonne", True),
             New EpicGamesBBDDEntrada("The Walking Dead: The Telltale Definitive Series", "cuckoo", "walking-dead-definitive-series", True),
+            New EpicGamesBBDDEntrada("The Witcher 3: Wild Hunt - Game of the Year Edition", "725a22e15ed74735bb0d6a19f3cc82d0", "the-witcher-3-wild-hunt", False),
             New EpicGamesBBDDEntrada("The Witness", "magnolia", "the-witness", True),
             New EpicGamesBBDDEntrada("The Wolf Among Us", "cobbler", "the-wolf-among-us", False),
             New EpicGamesBBDDEntrada("This War of Mine", "cardinal", "this-war-of-mine", True),
@@ -280,11 +281,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Totally Accurate Battle Simulator", "driftfish", "totally-accurate-battle-simulator", True),
             New EpicGamesBBDDEntrada("Totally Reliable Delivery Service", "hoatzin", "totally-reliable-delivery-service", False),
             New EpicGamesBBDDEntrada("TowerFall Ascension", "bichir", "towerfall-ascension", False),
+            New EpicGamesBBDDEntrada("Trackmania Turbo", "a18915c48f584670bd236ce3031d63d9", "trackmania-turbo", False),
             New EpicGamesBBDDEntrada("Transistor", "dill", "transistor", True),
             New EpicGamesBBDDEntrada("Trials Rising", "argyle", "trials-rising", True),
             New EpicGamesBBDDEntrada("Trover Saves the Universe", "sweetpea", "trover-saves-the-universe", True),
+            New EpicGamesBBDDEntrada("Uno", "hussar", "uno", False),
             New EpicGamesBBDDEntrada("Unreal Tournament", "ut", "unreal-tournament", True),
             New EpicGamesBBDDEntrada("Untitled Goose Game", "flour", "untitled-goose-game", True),
+            New EpicGamesBBDDEntrada("Valiant Hearts: The Great War", "f6496e154baa437cb4d9cae38a7e3cc5", "valiant-hearts", False),
             New EpicGamesBBDDEntrada("Vampire: The Masquerade - Bloodlines 2", "nemesia", "vampire-the-masquerade-bloodlines-2", False),
             New EpicGamesBBDDEntrada("Vampyr", "Nautilus", "vampyr", True),
             New EpicGamesBBDDEntrada("Watch Dogs", "jasper", "watch-dogs", False),
