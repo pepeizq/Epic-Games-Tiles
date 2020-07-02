@@ -9,13 +9,15 @@ Module EpicGamesBBDD
     'pendientes: a-total-war-saga-troy
     '            bugsnax
     '            chorus
+    '            fuser
     '            godfall
     '            iron-harvest
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
+    '            killing-floor-2
     '            levelhead      
+    '            lifeless-planet-premier-edition
     '            milky-way-prince-the-vampire-star
-    '            missile-command-recharged
     '            mortal-shell
     '            primordials-of-amyrion
     '            saturnalia
@@ -24,7 +26,6 @@ Module EpicGamesBBDD
     '            the-last-campfire
     '            the-outlast-trials
     '            tony-hawks-pro-skater-1-and-2
-    '            trackmania
     '            twin-mirror
     '            unexplored-2
     '            werewolf-the-apocalypse-earthblood
@@ -44,6 +45,8 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Alan Wake: American Nightmare", "condor", "alan-wake-american-nightmare", True),
             New EpicGamesBBDDEntrada("Amnesia: The Dark Descent", "ece4c58603d04bcb97454be9a7492fa6", "amnesia-the-dark-descent", True),
             New EpicGamesBBDDEntrada("Ancestors: The Humankind Odyssey", "amaranth", "ancestors", True),
+            New EpicGamesBBDDEntrada("Anno 1404: History Edition", "f529f5a152014f65821eb900f1c54921", "anno-1404", False),
+            New EpicGamesBBDDEntrada("Anno 1701: History Edition", "190415920d4a4e3f99043e57e8fabe60", "anno-1701", False),
             New EpicGamesBBDDEntrada("Anno 1800", "oregano", "anno-1800", True),
             New EpicGamesBBDDEntrada("Anodyne 2: Return to Dust", "tanzanite", "anodyne-2-return-to-dust", False),
             New EpicGamesBBDDEntrada("Ape Out", "coley", "ape-out", True),
@@ -123,12 +126,13 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Gorogoa", "meerkat", "gorogoa", True),
             New EpicGamesBBDDEntrada("Grand Theft Auto V", "9d2d0eb64d5c44529cece33fe2a46482", "grand-theft-auto-v", False),
             New EpicGamesBBDDEntrada("Griftlands", "phlox", "griftlands", False),
-            New EpicGamesBBDDEntrada("Hades", "min", "hades", True),
+            New EpicGamesBBDDEntrada("Hades", "min", "hades", False),
             New EpicGamesBBDDEntrada("Heavy Rain", "aster", "heavy-rain", True),
             New EpicGamesBBDDEntrada("Hello Neighbor", "ursus", "hello-neighbor", False),
             New EpicGamesBBDDEntrada("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek", True),
             New EpicGamesBBDDEntrada("Hob", "lyrebird", "hob", False),
             New EpicGamesBBDDEntrada("Horace", "palila", "horace", False),
+            New EpicGamesBBDDEntrada("Hue", "herring", "hue", True),
             New EpicGamesBBDDEntrada("Human Resource Machine", "basil", "human-resource-machine", True),
             New EpicGamesBBDDEntrada("Huntdown", "337ffb9c2d624545be086e6ead40dbbe", "huntdown", False),
             New EpicGamesBBDDEntrada("Hyper Light Drifter", "parakeet", "hyper-light-drifter", True),
@@ -168,6 +172,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Metro: Last Light Redux", "speedwell", "metro-last-light-redux", True),
             New EpicGamesBBDDEntrada("Might & Magic Chess Royale", "b141e42965ff431aa0e23bf3d5635942", "might-and-magic-chess-royale", False),
             New EpicGamesBBDDEntrada("Minit", "petrel", "minit", False),
+            New EpicGamesBBDDEntrada("Missile Command: Recharged", "fe014df1aa2c465aae88138c4307b11a", "missile-command-recharged", False),
             New EpicGamesBBDDEntrada("Monopoly PLUS", "hamlet", "monopoly-plus", False),
             New EpicGamesBBDDEntrada("Moonlighter", "eagle", "moonlighter", True),
             New EpicGamesBBDDEntrada("Mount & Blade II: Bannerlord", "chickadee", "mount-and-blade-2", False),
@@ -254,6 +259,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("The Cycle", "azalea", "thecycle", True),
             New EpicGamesBBDDEntrada("The End is Nigh", "statice", "the-end-is-nigh", True),
             New EpicGamesBBDDEntrada("The Escapists", "peony", "the-escapists", True),
+            New EpicGamesBBDDEntrada("The Escapists 2", "fowl", "the-escapists-2", False),
             New EpicGamesBBDDEntrada("The Eternal Cylinder", "oriole", "the-eternal-cylinder", True),
             New EpicGamesBBDDEntrada("The Messenger", "jay", "the-messenger", True),
             New EpicGamesBBDDEntrada("The Outer Worlds", "rosemallow", "the-outer-worlds", True),
@@ -281,6 +287,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Totally Accurate Battle Simulator", "driftfish", "totally-accurate-battle-simulator", True),
             New EpicGamesBBDDEntrada("Totally Reliable Delivery Service", "hoatzin", "totally-reliable-delivery-service", False),
             New EpicGamesBBDDEntrada("TowerFall Ascension", "bichir", "towerfall-ascension", False),
+            New EpicGamesBBDDEntrada("Trackmania", "pigeon", "trackmania", False),
             New EpicGamesBBDDEntrada("Trackmania Turbo", "a18915c48f584670bd236ce3031d63d9", "trackmania-turbo", False),
             New EpicGamesBBDDEntrada("Transistor", "dill", "transistor", True),
             New EpicGamesBBDDEntrada("Trials Rising", "argyle", "trials-rising", True),

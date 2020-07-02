@@ -173,7 +173,13 @@ Module EpicGames
                     If Not html = Nothing Then
                         Dim juegoEpic As EpicGamesJuego = JsonConvert.DeserializeObject(Of EpicGamesJuego)(html)
 
-                        Dim titulo As String = juegoEpic.Titulo.Trim
+                        Dim titulo As String = juegoEpic.Titulo
+
+                        If titulo = Nothing Then
+                            titulo = juegoBBDD.Titulo
+                        End If
+
+                        titulo = titulo.Trim
 
                         Dim urlImagenFondoHorizontal As String = String.Empty
                         Dim urlImagenFondoVertical As String = String.Empty
