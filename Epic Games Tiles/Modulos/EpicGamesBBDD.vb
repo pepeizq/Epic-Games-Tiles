@@ -9,27 +9,33 @@ Module EpicGamesBBDD
     'pendientes: a-total-war-saga-troy
     '            bugsnax
     '            chorus
+    '            demon-turf
     '            fuser
     '            godfall
+    '            hellpoint
+    '            horizon-zero-dawn-complete-edition
     '            iron-harvest
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
-    '            killing-floor-2
     '            levelhead      
-    '            lifeless-planet-premier-edition
     '            milky-way-prince-the-vampire-star
     '            mortal-shell
     '            primordials-of-amyrion
+    '            rogue-legacy-2
     '            saturnalia
     '            sherlock-holmes-chapter-one
     '            star-wars-squadrons
+    '            superhot-mind-control-delete
+    '            the-dungeon-of-naheulbeuk
     '            the-last-campfire
     '            the-outlast-trials
     '            tony-hawks-pro-skater-1-and-2
     '            twin-mirror
     '            unexplored-2
+    '            vampire-the-masquerade-swansong
     '            werewolf-the-apocalypse-earthblood
     '            windbound
+    '            wrc-9
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDEntrada) From {
@@ -70,6 +76,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Battle Breakers", "wex", "battle-breakers", True),
             New EpicGamesBBDDEntrada("Bee Simulator", "spoonbill", "bee-simulator", True),
             New EpicGamesBBDDEntrada("Before We Leave", "salmon", "before-we-leave", True),
+            New EpicGamesBBDDEntrada("Beyond Blue", "3a0cae9455844390ad00505a704d641e", "beyond-blue", False),
             New EpicGamesBBDDEntrada("Beyond: Two Souls", "lavender", "beyond-two-souls", True),
             New EpicGamesBBDDEntrada("Bloodroots", "pochard", "bloodroots", True),
             New EpicGamesBBDDEntrada("Borderlands 2", "dodo", "borderlands-2", False),
@@ -150,6 +157,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Journey", "lemur", "journey", True),
             New EpicGamesBBDDEntrada("Journey to the Savage Planet", "oleander", "journey-to-the-savage-planet", True),
             New EpicGamesBBDDEntrada("Just Cause 4 Reloaded", "kakopo", "just-cause-4", True),
+            New EpicGamesBBDDEntrada("Killing Floor 2", "finch", "killing-floor-2", False),
             New EpicGamesBBDDEntrada("Kine", "rose", "kine", True),
             New EpicGamesBBDDEntrada("Kingdom Come: Deliverance", "eel", "kingdom-come-deliverance", False),
             New EpicGamesBBDDEntrada("Kingdom New Lands", "cacao", "kingdom-new-lands", True),
@@ -158,6 +166,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("LEGO Batman: The Videogame", "goldeneye", "lego-batman", True),
             New EpicGamesBBDDEntrada("LEGO Batman 2: DC Super Heroes", "grackle", "lego-batman-2", True),
             New EpicGamesBBDDEntrada("LEGO Batman 3: Beyond Gotham", "gull", "lego-batman-3", True),
+            New EpicGamesBBDDEntrada("Lifeless Planet: Premier Edition", "860a4feefe2a4f48905ae86c61d5db64", "lifeless-planet-premier-edition", False),
             New EpicGamesBBDDEntrada("Limbo", "hazelnut", "limbo", True),
             New EpicGamesBBDDEntrada("Little Inferno", "clover", "little-inferno", True),
             New EpicGamesBBDDEntrada("Mafia: Definitive Edition", "kunzite", "mafia-definitive-edition", False),
@@ -283,6 +292,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDEntrada("Thimbleweed Park", "tulip", "thimbleweed-park", True),
             New EpicGamesBBDDEntrada("Ticket to Ride", "towhee", "ticket-to-ride", True),
             New EpicGamesBBDDEntrada("Torchlight", "terragon", "torchlight", True),
+            New EpicGamesBBDDEntrada("Torchlight II", "8e425d507bd6473dbb927f0fea8ef4f6", "torchlight-2", False),
             New EpicGamesBBDDEntrada("Tormentor X Punisher", "goby", "tormentor-x-punisher", True),
             New EpicGamesBBDDEntrada("Totally Accurate Battle Simulator", "driftfish", "totally-accurate-battle-simulator", True),
             New EpicGamesBBDDEntrada("Totally Reliable Delivery Service", "hoatzin", "totally-reliable-delivery-service", False),
