@@ -21,15 +21,12 @@
             <TextBlock x:Name="tbTitulo" Margin="15,0,0,0" FontSize="13" Foreground="White" VerticalAlignment="Center"/>
         </Grid>
 
-        <NavigationView x:Name="nvPrincipal" Grid.Row="1" Loaded="Nv_Loaded" ItemInvoked="Nv_ItemInvoked"
+        <NavigationView x:Name="nvPrincipal" Grid.Row="1" Loaded="Nv_Loaded" ItemInvoked="Nv_ItemInvoked" IsPaneOpen="False"
                         AlwaysShowHeader="False" IsSettingsVisible="False" PaneDisplayMode="Top" IsBackButtonVisible="Collapsed">
             <NavigationView.PaneFooter>
-                <StackPanel Orientation="Vertical">
-                    <NavigationViewItem x:Name="itemMasCosas" Tapped="Nv_ItemFlyout" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
-                        <FlyoutBase.AttachedFlyout>
-                            <MenuFlyout x:Name="botonMasCosasMenu"/>
-                        </FlyoutBase.AttachedFlyout>
-                    </NavigationViewItem>
+                <StackPanel x:Name="spBuscador" Orientation="Horizontal" Visibility="Collapsed">
+                    <fa:FontAwesome Icon="Search" Foreground="{StaticResource BrushPrimario}" Margin="0,0,15,0"/>
+                    <TextBox x:Name="tbBuscador" MinWidth="180" Margin="0,4,10,4"/>
                 </StackPanel>
             </NavigationView.PaneFooter>
 
@@ -60,30 +57,9 @@
                             </TransitionCollection>
                         </Grid.ChildrenTransitions>
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Grid Grid.Column="0" Padding="10" Background="IndianRed" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,10,0,0">
+                        <Grid Padding="10" Background="IndianRed" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
                             <TextBlock x:Name="tbSeleccionarJuego" TextWrapping="Wrap" Foreground="White"/>
                         </Grid>
-
-                        <StackPanel Grid.Column="1" Orientation="Horizontal" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
-                            <TextBlock x:Uid="SelectGameContact" TextWrapping="Wrap" Foreground="White" Margin="0,0,20,0" VerticalAlignment="Center"/>
-
-                            <Button x:Name="botonContactoAñadirJuegos" Padding="15,10" Background="{StaticResource BrushPrimario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock x:Uid="SelectGameContact2" TextWrapping="Wrap" Foreground="White"/>
-                                </StackPanel>
-                            </Button>
-                        </StackPanel>
-
-                        <StackPanel Grid.Column="2" Orientation="Horizontal" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
-                            <fa:FontAwesome Icon="Search" Foreground="White" Margin="0,0,15,0"/>
-                            <TextBox x:Name="tbBuscador" MinWidth="120"/>
-                        </StackPanel>
                     </Grid>
 
                     <Grid Grid.Row="1" Margin="0,20,0,0">
@@ -93,7 +69,7 @@
                         </Grid.ColumnDefinitions>
 
                         <controls:AdaptiveGridView x:Name="gvTiles" Grid.Column="0" Padding="5,0,5,0"
-                                       IsItemClickEnabled="True" DesiredWidth="322" ItemHeight="187"
+                                       IsItemClickEnabled="True" DesiredWidth="213" ItemHeight="280"
                                        animations:ReorderGridAnimation.Duration="250">
                         </controls:AdaptiveGridView>
 
@@ -222,7 +198,7 @@
                                     <Button.Content>
                                         <controls:DropShadowPanel ShadowOpacity="0.9" BlurRadius="5">
                                             <Grid x:Name="gridTileAncha" Background="{StaticResource BrushTercero}" Width="310" Height="150">
-                                                <controls:ImageEx x:Name="imagenTileAncha" IsCacheEnabled="True" Stretch="Uniform"/>
+                                                <controls:ImageEx x:Name="imagenTileAncha" IsCacheEnabled="True" Stretch="UniformToFill"/>
                                                 <controls:ImageEx x:Name="imagenTileAnchaLogo" IsCacheEnabled="True" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" MaxHeight="80" MaxWidth="160"/>
                                             </Grid>
                                         </controls:DropShadowPanel>
@@ -245,7 +221,7 @@
                                     <Button.Content>
                                         <controls:DropShadowPanel ShadowOpacity="0.9" BlurRadius="5">
                                             <Grid x:Name="gridTileGrande" Background="{StaticResource BrushTercero}" Width="310" Height="310">
-                                                <controls:ImageEx x:Name="imagenTileGrande" IsCacheEnabled="True" Stretch="Uniform"/>
+                                                <controls:ImageEx x:Name="imagenTileGrande" IsCacheEnabled="True" Stretch="UniformToFill"/>
                                                 <controls:ImageEx x:Name="imagenTileGrandeLogo" IsCacheEnabled="True" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" MaxHeight="160" MaxWidth="160"/>
                                             </Grid>
                                         </controls:DropShadowPanel>
@@ -315,7 +291,7 @@
                                 <Grid x:Name="gridPersonalizacionExterior" Grid.Column="0" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" VerticalAlignment="Top">
                                     <Grid x:Name="gridPersonalizacionInterior" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Grid>
-
+                              
                                 <controls:TabView x:Name="tvPersonalizacion" Grid.Column="1" VerticalAlignment="Top" Margin="20,0,0,0" Background="{StaticResource BrushCuarto}">
                                     <controls:TabViewItem>
                                         <controls:TabViewItem.Header>
@@ -384,37 +360,7 @@
                                                 <Slider x:Name="sliderPersonalizacionImagenMargen" Grid.Column="1" Width="180" Minimum="0" Maximum="200" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
                                             </Grid>
 
-                                            <Grid HorizontalAlignment="Center" Margin="0,20,0,0">
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="Auto"/>
-                                                    <RowDefinition Height="Auto"/>
-                                                    <RowDefinition Height="Auto"/>
-                                                </Grid.RowDefinitions>
-
-                                                <TextBlock x:Uid="OptionsMove" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,5"/>
-
-                                                <Grid Grid.Row="1">
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="Auto"/>
-                                                        <ColumnDefinition Width="Auto"/>
-                                                    </Grid.ColumnDefinitions>
-
-                                                    <TextBlock Text="X" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,15,0"/>
-                                                    <Slider x:Name="sliderPersonalizacionImagenMoverX" Grid.Column="1" Width="200" Minimum="-200" Maximum="200" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
-                                                </Grid>
-
-                                                <Grid Grid.Row="2">
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="Auto"/>
-                                                        <ColumnDefinition Width="Auto"/>
-                                                    </Grid.ColumnDefinitions>
-
-                                                    <TextBlock Text="Y" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,15,0"/>
-                                                    <Slider x:Name="sliderPersonalizacionImagenMoverY" Grid.Column="1" Width="200" Minimum="-200" Maximum="200" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
-                                                </Grid>
-                                            </Grid>
-
-                                            <Grid HorizontalAlignment="Center" Margin="0,20,0,0">
+                                            <Grid x:Name="gridPersonalizacionImagenTitulo" HorizontalAlignment="Center" Margin="0,20,0,0">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="Auto"/>
                                                     <ColumnDefinition Width="Auto"/>
@@ -430,7 +376,7 @@
                                                     </ToolTipService.ToolTip>
                                                 </fa:FontAwesome>
                                             </Grid>
-                                            
+
                                             <Grid x:Name="gridPersonalizacionImagenLogoEpic" HorizontalAlignment="Center" Margin="0,20,0,0">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="Auto"/>
@@ -541,7 +487,18 @@
                                     </Grid>
                                 </StackPanel>
 
-                                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                                <Grid Margin="0,30,0,0">
+                                    <CheckBox x:Name="cbActivarCache" VerticalAlignment="Top" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                        <CheckBox.Content>
+                                            <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                                                <TextBlock x:Uid="CacheMode" Margin="0,0,0,7"/>
+                                                <TextBlock x:Uid="CacheMode2" TextWrapping="Wrap"/>
+                                            </StackPanel>
+                                        </CheckBox.Content>
+                                    </CheckBox>
+                                </Grid>
+
+                                <StackPanel x:Name="spCacheOpciones" Orientation="Horizontal" Margin="0,20,0,0">
                                     <Button x:Name="botonConfigLimpiarCache" Background="{StaticResource BrushSecundario}" Padding="10" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
                                         <StackPanel Orientation="Horizontal">
                                             <fa:FontAwesome Icon="Trash" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
@@ -568,18 +525,11 @@
 
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Button x:Name="botonVolverGridTiles" Grid.Column="0" Padding="15,10" Background="{StaticResource BrushPrimario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock x:Uid="Back" TextWrapping="Wrap" Foreground="White"/>
-                                    </StackPanel>
-                                </Button>
-
-                                <Button x:Name="botonContactarAñadirJuegos" Grid.Column="2" Padding="15,10" Background="{StaticResource BrushPrimario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
+                                <Button x:Name="botonContactarAñadirJuegos" Grid.Column="1" Padding="15,10" Background="{StaticResource BrushPrimario}" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock x:Uid="Contact" TextWrapping="Wrap" Foreground="White"/>
                                     </StackPanel>

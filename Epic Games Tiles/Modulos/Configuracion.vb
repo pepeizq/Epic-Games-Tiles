@@ -5,7 +5,7 @@ Module Configuracion
     Public Sub Iniciar()
 
         If ApplicationData.Current.LocalSettings.Values("modo_tiles") Is Nothing Then
-            ModoTiles(0, True)
+            ModoTiles(1, True)
         Else
             ModoTiles(ApplicationData.Current.LocalSettings.Values("modo_tiles"), True)
         End If

@@ -300,4 +300,16 @@
   <data name="SelectGameContact2.Text" xml:space="preserve">
     <value>Abrir</value>
   </data>
+  <data name="CacheMode.Text" xml:space="preserve">
+    <value>Modo Cache</value>
+  </data>
+  <data name="CacheMode2.Text" xml:space="preserve">
+    <value>Si activas este modo, la app descarga en tu disco duro cada imagen necesaria del juego para añadir Tiles.</value>
+  </data>
+  <data name="ConfigAddFolder.Text" xml:space="preserve">
+    <value>Añadir Carpeta</value>
+  </data>
+  <data name="MissingGames" xml:space="preserve">
+    <value>Juegos que Faltan</value>
+  </data>
 </root>

@@ -144,7 +144,7 @@
   <data name="MoreThings_ReportBug" xml:space="preserve">
     <value>Reportar um Bug</value>
   </data>
-  <data name="SelectGame.Text" xml:space="preserve">
+  <data name="SelectGame0" xml:space="preserve">
     <value>Selecionar um jogo</value>
   </data>
   <data name="MoreThings_SourceCode" xml:space="preserve">
@@ -175,7 +175,7 @@
     <value>Mais coisas</value>
   </data>
   <data name="StoreTags" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="Back.Text" xml:space="preserve">
     <value>Voltar</value>
@@ -214,75 +214,75 @@
     <value>Localização da imagem:</value>
   </data>
   <data name="OptionsSourceUbication1.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsSourceUbication2.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsSourceInternet.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsBackground.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsSourceStretch.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsSourceStretch1.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsSourceStretch2.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsSourceStretch3.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsSourceStretch4.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsDetails.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsMargin.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsTitle.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsTitleInfo.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsMove.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsPlatform.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsPlatformIcon.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsPlatformPosition.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsPlatformPosition1.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsPlatformPosition2.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsPlatformPosition3.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsPlatformPosition4.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="GamePersonalizationInfo.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsLogoEpic.Content" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="OptionsLogoEpicInfo.Text" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
 </root>
