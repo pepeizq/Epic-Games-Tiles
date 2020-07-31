@@ -271,8 +271,8 @@
     <Import Include="Windows.UI.Xaml.Navigation" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FontAwesome.UWP">
-      <Version>4.7.0.9</Version>
+    <PackageReference Include="FontAwesome5">
+      <Version>2.0.8</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.10</Version>

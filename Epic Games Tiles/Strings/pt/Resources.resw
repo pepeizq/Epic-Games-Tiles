@@ -183,7 +183,7 @@
   <data name="Reset.Text" xml:space="preserve">
     <value>Reiniciar</value>
   </data>
-  <data name="ConfigFolderHowAdd.Content" xml:space="preserve">
+  <data name="ConfigFolderHowAdd.Text" xml:space="preserve">
     <value>Como desbloquear</value>
   </data>
   <data name="ConfigFolderWarning.Text" xml:space="preserve">

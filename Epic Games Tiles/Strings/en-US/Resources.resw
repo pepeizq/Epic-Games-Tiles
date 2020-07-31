@@ -139,7 +139,7 @@
     <value>None</value>
   </data>
   <data name="NoGamesDetected.Text" xml:space="preserve">
-    <value>No games detected, go to Configuration</value>
+    <value>No games detected, go to Configuration so the app can load the games.</value>
   </data>
   <data name="MoreThings_ReportBug" xml:space="preserve">
     <value>Report a Bug</value>
@@ -175,7 +175,7 @@
     <value>More Things</value>
   </data>
   <data name="StoreTags" xml:space="preserve">
-    <value>Epic;Tiles;Games;Fortnite</value>
+    <value>Epic;Tiles;Games;Fortnite;Start Menu</value>
   </data>
   <data name="Back.Text" xml:space="preserve">
     <value>Back</value>
@@ -183,7 +183,7 @@
   <data name="Reset.Text" xml:space="preserve">
     <value>Reset</value>
   </data>
-  <data name="ConfigFolderHowAdd.Content" xml:space="preserve">
+  <data name="ConfigFolderHowAdd.Text" xml:space="preserve">
     <value>How to unlock</value>
   </data>
   <data name="ConfigFolderWarning.Text" xml:space="preserve">
@@ -311,5 +311,11 @@
   </data>
   <data name="MissingGames" xml:space="preserve">
     <value>Missing Games</value>
+  </data>
+  <data name="NoGamesDetectedOpenConfig.Text" xml:space="preserve">
+    <value>Open Configuration</value>
+  </data>
+  <data name="NoGamesDetectedOpenYoutube.Text" xml:space="preserve">
+    <value>Tutorial on YouTube</value>
   </data>
 </root>

@@ -139,7 +139,7 @@
     <value>Ninguna</value>
   </data>
   <data name="NoGamesDetected.Text" xml:space="preserve">
-    <value>No se han detectado juegos, ve a Configuración</value>
+    <value>No se han detectado juegos, ve a Configuración para que la app pueda cargar los juegos.</value>
   </data>
   <data name="MoreThings" xml:space="preserve">
     <value>Más Cosas</value>
@@ -169,7 +169,7 @@
     <value>Añade Tiles para tus juegos de la aplicación de Epic Games Store en el menú de Inicio de Windows 10.</value>
   </data>
   <data name="StoreTags" xml:space="preserve">
-    <value>Epic;Tiles;Juegos;Fortnite</value>
+    <value>Epic;Tiles;Juegos;Fortnite;Menu Inicio</value>
   </data>
   <data name="GameSelectedTiles.Text" xml:space="preserve">
     <value>Imágenes para incluir en la Tile de este juego:</value>
@@ -183,7 +183,7 @@
   <data name="Reset.Text" xml:space="preserve">
     <value>Reset</value>
   </data>
-  <data name="ConfigFolderHowAdd.Content" xml:space="preserve">
+  <data name="ConfigFolderHowAdd.Text" xml:space="preserve">
     <value>Como desbloquear</value>
   </data>
   <data name="ConfigFolderWarning.Text" xml:space="preserve">
@@ -311,5 +311,11 @@
   </data>
   <data name="MissingGames" xml:space="preserve">
     <value>Juegos que Faltan</value>
+  </data>
+  <data name="NoGamesDetectedOpenConfig.Text" xml:space="preserve">
+    <value>Abrir Configuración</value>
+  </data>
+  <data name="NoGamesDetectedOpenYoutube.Text" xml:space="preserve">
+    <value>Tutorial en YouTube</value>
   </data>
 </root>

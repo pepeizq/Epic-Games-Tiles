@@ -13,7 +13,6 @@ Module EpicGamesBBDD
     '            far-cry-6
     '            fuser
     '            godfall
-    '            hellpoint
     '            horizon-zero-dawn-complete-edition
     '            iron-harvest
     '            jett-the-far-shore
@@ -43,12 +42,14 @@ Module EpicGamesBBDD
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDJuego) From {
             New EpicGamesBBDDJuego(">observer_", "tumeric", "observer", True),
+            New EpicGamesBBDDJuego("20XX", "quail", "20xx", False),
             New EpicGamesBBDDJuego("7 Billion Humans", "holly", "7-billion-humans", True),
             New EpicGamesBBDDJuego("A Knights Quest", "cockatoo", "a-knights-quest", True),
             New EpicGamesBBDDJuego("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "a-short-hike", False),
             New EpicGamesBBDDJuego("ABZU", "curry", "abzu", True),
             New EpicGamesBBDDJuego("AER Memories of Old", "26b63c46de9e4dcc856b3c6b106b6777", "aer-memories-of-old", False),
             New EpicGamesBBDDJuego("Afterparty", "adenium", "afterparty", True),
+            New EpicGamesBBDDJuego("Ageless", "de18a33d6e1f4001b9a3f4a50ef7d760", "ageless", False),
             New EpicGamesBBDDJuego("Airborne Kingdom", "macaw", "airborne-kingdom", False),
             New EpicGamesBBDDJuego("Alan Wake", "heron", "alan-wake", True),
             New EpicGamesBBDDJuego("Alan Wake: American Nightmare", "condor", "alan-wake-american-nightmare", True),
@@ -108,6 +109,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Death Coming", "2333810845fd49a286baf29f9b58f9ae", "death-coming", False),
             New EpicGamesBBDDJuego("Death Stranding", "boga", "death-stranding", False),
             New EpicGamesBBDDJuego("Desperados III", "90f2d13d11e74ef29ac1af5c8b0b7730", "desperados-3", False),
+            New EpicGamesBBDDJuego("Destroy All Humans!", "94232f38800f41b79b49243ada60ff24", "destroy-all-humans", False),
             New EpicGamesBBDDJuego("Detroit: Become Human", "columbine", "detroit-become-human", True),
             New EpicGamesBBDDJuego("Diabotical", "honeycreeper", "diabotical", False),
             New EpicGamesBBDDJuego("Disco Elysium", "7334aba246154b63857435cb9c7eecd5", "disco-elysium", False),
@@ -141,6 +143,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Heavy Rain", "aster", "heavy-rain", True),
             New EpicGamesBBDDJuego("Hello Neighbor", "ursus", "hello-neighbor", False),
             New EpicGamesBBDDJuego("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek", True),
+            New EpicGamesBBDDJuego("Hellpoint", "210733411fa44d5f8454a1bb435db3a9", "hellpoint", False),
             New EpicGamesBBDDJuego("Hob", "lyrebird", "hob", False),
             New EpicGamesBBDDJuego("Horace", "palila", "horace", False),
             New EpicGamesBBDDJuego("Hue", "herring", "hue", True),
@@ -260,6 +263,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Sundered Eldritch Edition", "moa", "sundered-eldritch-edition", False),
             New EpicGamesBBDDJuego("Super Meat Boy", "buffalo", "super-meat-boy", False),
             New EpicGamesBBDDJuego("Super Meat Boy Forever", "moose", "super-meat-boy-forever", True),
+            New EpicGamesBBDDJuego("Superbrothers: Sword & Sworcery EP", "f6d328ca5be24fd585478d1477e1ea4d", "superbrothers-sword-and-sworcery-ep", False),
             New EpicGamesBBDDJuego("SUPERHOT: Mind Control Delete", "7c9f2b7aa5a549e381b4e6aeff3779a1", "superhot-mind-control-delete", False),
             New EpicGamesBBDDJuego("Superliminal", "wigeon", "superliminal", False),
             New EpicGamesBBDDJuego("SuperMash", "nutmeg", "supermash", True),
@@ -297,6 +301,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Thimbleweed Park", "tulip", "thimbleweed-park", True),
             New EpicGamesBBDDJuego("Ticket to Ride", "towhee", "ticket-to-ride", True),
             New EpicGamesBBDDJuego("Tom Clancy's Ghost Recon Breakpoint", "saffron", "ghost-recon-breakpoint", True),
+            New EpicGamesBBDDJuego("Tom Clancy's Ghost Recon Future Soldier Ultimate Edition", "e7471b6a7335415db9819ef7e7e77c29", "ghost-recon-future-soldier", False),
             New EpicGamesBBDDJuego("Tom Clancy's Ghost Recon Wildlands", "hyacinth", "ghost-recon-wildlands", True),
             New EpicGamesBBDDJuego("Tom Clancy's The Division", "e4eb21a09dc049e982359b1e133ccebf", "the-division", False),
             New EpicGamesBBDDJuego("Tom Clancy's The Division 2", "impala", "the-division-2", True),
@@ -324,6 +329,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("What Remains of Edith Finch", "badger", "what-remains-of-edith-finch", True),
             New EpicGamesBBDDJuego("What the Golf?", "stork", "what-the-golf", True),
             New EpicGamesBBDDJuego("Wheels of Aurelia", "escolar", "wheels-of-aurelia", False),
+            New EpicGamesBBDDJuego("Wilmot's Warehouse", "9b40e3ffb4074f22a856a521be5ce858", "wilmots-warehouse", False),
             New EpicGamesBBDDJuego("World of Goo", "anemone", "world-of-goo", True),
             New EpicGamesBBDDJuego("World War Z", "wombat", "world-war-z", False),
             New EpicGamesBBDDJuego("WRC 8", "woodpecker", "wrc-8", True),
@@ -342,6 +348,8 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuegoImagenVertical("far-cry-primal", "https://i.imgur.com/xhHKaI0.png"),
             New EpicGamesBBDDJuegoImagenVertical("fez", "https://i.imgur.com/sPcLPob.png"),
             New EpicGamesBBDDJuegoImagenVertical("for-honor", "https://i.imgur.com/cDjpz8u.png"),
+            New EpicGamesBBDDJuegoImagenVertical("ghost-recon-future-soldier", "https://i.imgur.com/ymk3jhm.jpg"),
+            New EpicGamesBBDDJuegoImagenVertical("gods-and-monsters", "https://i.imgur.com/iEfHJZE.png"),
             New EpicGamesBBDDJuegoImagenVertical("inside", "https://i.imgur.com/JGF2BoU.png"),
             New EpicGamesBBDDJuegoImagenVertical("limbo", "https://i.imgur.com/VeIVNNp.png"),
             New EpicGamesBBDDJuegoImagenVertical("mtg-arena", "https://i.imgur.com/rr1ve2N.png"),

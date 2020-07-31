@@ -2,7 +2,6 @@
     x:Class="Epic_Games_Tiles.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Epic_Games_Tiles"
     RequestedTheme="Light">
 
     <Application.Resources>
@@ -18,6 +17,11 @@
         <Color x:Key="ColorSecundario">#202020</Color>
         <Color x:Key="ColorTerciario">#2b2b2b</Color>
         <Color x:Key="ColorCuarto">#979797</Color>
+
+        <Color x:Key="ColorCajaRojaFondo">#cd5c5c</Color>
+        <Color x:Key="ColorCajaRojaSombra">#6b2121</Color>
+        <Color x:Key="ColorCajaRojaBoton">#c84d4d</Color>
+        <Color x:Key="ColorCajaRojaBotonHover">#892a2a</Color>
 
         <SolidColorBrush x:Key="ListViewItemBackgroundSelected" Color="Transparent"/>
         <SolidColorBrush x:Key="ListViewItemBackgroundPointerOver" Color="{StaticResource ColorPrimario}"/>

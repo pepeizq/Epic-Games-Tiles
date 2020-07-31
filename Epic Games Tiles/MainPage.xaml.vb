@@ -1,5 +1,4 @@
-﻿Imports FontAwesome.UWP
-Imports Microsoft.Toolkit.Uwp.Helpers
+﻿Imports Microsoft.Toolkit.Uwp.Helpers
 Imports Windows.ApplicationModel.Core
 Imports Windows.Storage
 Imports Windows.System
@@ -13,9 +12,9 @@ Public NotInheritable Class MainPage
 
         Dim recursos As New Resources.ResourceLoader()
 
-        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Tiles"), FontAwesomeIcon.Home, 0))
-        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Config"), FontAwesomeIcon.Cog, 1))
-        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("MissingGames"), FontAwesomeIcon.Gamepad, 2))
+        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Tiles"), FontAwesome5.EFontAwesomeIcon.Solid_Home, 0))
+        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Config"), FontAwesome5.EFontAwesomeIcon.Solid_Cog, 1))
+        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("MissingGames"), FontAwesome5.EFontAwesomeIcon.Solid_Gamepad, 2))
         nvPrincipal.MenuItems.Add(New NavigationViewItemSeparator)
         nvPrincipal.MenuItems.Add(MasCosas.Generar("https://github.com/pepeizq/Epic-Games-Tiles", "https://poeditor.com/join/project/C7iESiyyRJ"))
 
@@ -99,11 +98,13 @@ Public NotInheritable Class MainPage
                                                                        gridPersonalizarTiles.Background = App.Current.Resources("GridAcrilico")
                                                                        gridConfig.Background = App.Current.Resources("GridAcrilico")
                                                                        gridConfigTiles.Background = App.Current.Resources("GridTituloBackground")
+                                                                       gridConfigCache.Background = App.Current.Resources("GridTituloBackground")
                                                                        gridContactarAñadirJuegos.Background = App.Current.Resources("GridAcrilico")
                                                                    Else
                                                                        gridPersonalizarTiles.Background = New SolidColorBrush(Colors.LightGray)
                                                                        gridConfig.Background = New SolidColorBrush(Colors.LightGray)
                                                                        gridConfigTiles.Background = New SolidColorBrush(App.Current.Resources("ColorPrimario"))
+                                                                       gridConfigCache.Background = New SolidColorBrush(App.Current.Resources("ColorPrimario"))
                                                                        gridContactarAñadirJuegos.Background = New SolidColorBrush(Colors.LightGray)
                                                                    End If
                                                                End Sub)
@@ -190,6 +191,43 @@ Public NotInheritable Class MainPage
     End Sub
 
     Private Sub UsuarioSaleBoton(sender As Object, e As PointerRoutedEventArgs)
+
+        Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Arrow, 1)
+
+    End Sub
+
+    'BOTONES-ROJO-----------------------------------------------------------------------
+
+    Private Sub BotonAbrirConfig_Click(sender As Object, e As RoutedEventArgs) Handles botonAbrirConfig.Click
+
+        Dim recursos As New Resources.ResourceLoader()
+        GridVisibilidad(gridConfig, recursos.GetString("Config"))
+
+    End Sub
+
+    Private Async Sub BotonAbrirYoutube_Click(sender As Object, e As RoutedEventArgs) Handles botonAbrirYoutube.Click
+
+        Await Launcher.LaunchUriAsync(New Uri("https://www.youtube.com/watch?v=_vxdnZ7kWuU"))
+
+    End Sub
+
+    Private Sub UsuarioEntraBotonRojo(sender As Object, e As PointerRoutedEventArgs)
+
+        Dim boton As Button = sender
+        Dim sp As StackPanel = boton.Content
+
+        sp.Background = New SolidColorBrush(App.Current.Resources("ColorCajaRojaBotonHover"))
+
+        Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Hand, 1)
+
+    End Sub
+
+    Private Sub UsuarioSaleBotonRojo(sender As Object, e As PointerRoutedEventArgs)
+
+        Dim boton As Button = sender
+        Dim sp As StackPanel = boton.Content
+
+        sp.Background = New SolidColorBrush(App.Current.Resources("ColorCajaRojaBoton"))
 
         Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Arrow, 1)
 
