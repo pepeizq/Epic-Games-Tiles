@@ -7,15 +7,18 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
     'pendientes: a-total-war-saga-troy
+    '            as-far-as-the-eye
     '            bugsnax
     '            chorus
+    '            claire-de-lune
     '            demon-turf
     '            far-cry-6
     '            fuser
     '            godfall
-    '            horizon-zero-dawn-complete-edition
+    '            gravewood-high
     '            iron-harvest
     '            jett-the-far-shore
+    '            kill-it-with-fire
     '            kena-bridge-of-spirits
     '            levelhead      
     '            milky-way-prince-the-vampire-star
@@ -25,6 +28,7 @@ Module EpicGamesBBDD
     '            samurai-jack-battle-through-time
     '            saturnalia
     '            sherlock-holmes-chapter-one
+    '            spiritfarer
     '            star-wars-squadrons
     '            superbrothers-sword-and-sworcery-ep
     '            the-dungeon-of-naheulbeuk
@@ -37,12 +41,12 @@ Module EpicGamesBBDD
     '            werewolf-the-apocalypse-earthblood
     '            windbound
     '            wrc-9
-    '            20xx
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDJuego) From {
             New EpicGamesBBDDJuego(">observer_", "tumeric", "observer", True),
             New EpicGamesBBDDJuego("20XX", "quail", "20xx", False),
+            New EpicGamesBBDDJuego("3 Out of 10 Ep 1 Welcome to Shovelworks", "flounder", "3-out-of-10-ep-1", False),
             New EpicGamesBBDDJuego("7 Billion Humans", "holly", "7-billion-humans", True),
             New EpicGamesBBDDJuego("A Knights Quest", "cockatoo", "a-knights-quest", True),
             New EpicGamesBBDDJuego("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "a-short-hike", False),
@@ -146,6 +150,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Hellpoint", "210733411fa44d5f8454a1bb435db3a9", "hellpoint", False),
             New EpicGamesBBDDJuego("Hob", "lyrebird", "hob", False),
             New EpicGamesBBDDJuego("Horace", "palila", "horace", False),
+            New EpicGamesBBDDJuego("Horizon Zero Dawn Complete Edition", "grunion", "horizon-zero-dawn-complete-edition", False),
             New EpicGamesBBDDJuego("Hue", "herring", "hue", True),
             New EpicGamesBBDDJuego("Human Resource Machine", "basil", "human-resource-machine", True),
             New EpicGamesBBDDJuego("Huntdown", "337ffb9c2d624545be086e6ead40dbbe", "huntdown", False),
@@ -227,6 +232,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Rebel Galaxy", "weaver", "rebel-galaxy", True),
             New EpicGamesBBDDJuego("Rebel Galaxy Outlaw", "rgo", "rebel-galaxy-outlaw", True),
             New EpicGamesBBDDJuego("Red Dead Redemption 2", "heather", "red-dead-redemption-2", True),
+            New EpicGamesBBDDJuego("Remnant: From the Ashes", "b4a0d2d15acb4db894a599b810297543", "remnant-from-the-ashes", False),
             New EpicGamesBBDDJuego("RiME", "hydrangea", "rime", True),
             New EpicGamesBBDDJuego("RimWorld", "12915f06bb3442eeb414813e74af7df3", "rimworld", False),
             New EpicGamesBBDDJuego("Rogue Company", "pewee", "rogue-company", False),
@@ -272,6 +278,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Surviving the Aftermath", "muscovy", "surviving-the-aftermath", True),
             New EpicGamesBBDDJuego("Tacoma", "flagfin", "tacoma", False),
             New EpicGamesBBDDJuego("Tetris Effect", "kiwi", "tetris-effect", True),
+            New EpicGamesBBDDJuego("The Alto Collection", "hornbill", "the-alto-collection", False),
             New EpicGamesBBDDJuego("The Bridge", "sunbird", "the-bridge", False),
             New EpicGamesBBDDJuego("The Crew 2", "hermit", "the-crew-2", True),
             New EpicGamesBBDDJuego("The Cycle", "azalea", "thecycle", False),
@@ -330,6 +337,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("What the Golf?", "stork", "what-the-golf", True),
             New EpicGamesBBDDJuego("Wheels of Aurelia", "escolar", "wheels-of-aurelia", False),
             New EpicGamesBBDDJuego("Wilmot's Warehouse", "9b40e3ffb4074f22a856a521be5ce858", "wilmots-warehouse", False),
+            New EpicGamesBBDDJuego("Wizards: Wand of Epicosity", "a19c886dab804ef0a0e095874c7e0d00", "wizards-wand-of-epicosity", False),
             New EpicGamesBBDDJuego("World of Goo", "anemone", "world-of-goo", True),
             New EpicGamesBBDDJuego("World War Z", "wombat", "world-war-z", False),
             New EpicGamesBBDDJuego("WRC 8", "woodpecker", "wrc-8", True),
