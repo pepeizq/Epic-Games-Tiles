@@ -6,7 +6,7 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'pendientes: a-total-war-saga-troy
+    'pendientes: 
     '            as-far-as-the-eye
     '            bugsnax
     '            chorus
@@ -21,7 +21,6 @@ Module EpicGamesBBDD
     '            kill-it-with-fire
     '            kena-bridge-of-spirits
     '            levelhead      
-    '            milky-way-prince-the-vampire-star
     '            mortal-shell
     '            primordials-of-amyrion
     '            rogue-legacy-2
@@ -30,7 +29,6 @@ Module EpicGamesBBDD
     '            sherlock-holmes-chapter-one
     '            spiritfarer
     '            star-wars-squadrons
-    '            superbrothers-sword-and-sworcery-ep
     '            the-dungeon-of-naheulbeuk
     '            the-last-campfire
     '            the-outlast-trials
@@ -46,10 +44,12 @@ Module EpicGamesBBDD
         Dim lista As New List(Of EpicGamesBBDDJuego) From {
             New EpicGamesBBDDJuego(">observer_", "tumeric", "observer", True),
             New EpicGamesBBDDJuego("20XX", "quail", "20xx", False),
-            New EpicGamesBBDDJuego("3 Out of 10 Ep 1 Welcome to Shovelworks", "flounder", "3-out-of-10-ep-1", False),
+            New EpicGamesBBDDJuego("3 Out of 10 Episode 1 Welcome to Shovelworks", "flounder", "3-out-of-10-ep-1", False),
+            New EpicGamesBBDDJuego("3 Out of 10 Episode 2 Foundation 101", "1317e4e3b3ed40c289dde85b194347d3", "3-out-of-10-ep-2", False),
             New EpicGamesBBDDJuego("7 Billion Humans", "holly", "7-billion-humans", True),
             New EpicGamesBBDDJuego("A Knights Quest", "cockatoo", "a-knights-quest", True),
             New EpicGamesBBDDJuego("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "a-short-hike", False),
+            New EpicGamesBBDDJuego("A Total War Saga: TROY", "11e598b192324994abce05bad4f81b50", "a-total-war-saga-troy", False),
             New EpicGamesBBDDJuego("ABZU", "curry", "abzu", True),
             New EpicGamesBBDDJuego("AER Memories of Old", "26b63c46de9e4dcc856b3c6b106b6777", "aer-memories-of-old", False),
             New EpicGamesBBDDJuego("Afterparty", "adenium", "afterparty", True),
@@ -139,6 +139,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Ghostbusters: The Video Game Remastered", "mint", "ghostbusters-the-video-game-remastered", True),
             New EpicGamesBBDDJuego("GNOG", "penguin", "gnog", True),
             New EpicGamesBBDDJuego("Gods and Monsters", "pheasant", "gods-and-monsters", True),
+            New EpicGamesBBDDJuego("God's Trigger", "9bc4423d873845739cc99ab69b6bfbe9", "gods-trigger", False),
             New EpicGamesBBDDJuego("Gone Home", "flier", "gone-home", False),
             New EpicGamesBBDDJuego("Gorogoa", "meerkat", "gorogoa", True),
             New EpicGamesBBDDJuego("Grand Theft Auto V", "9d2d0eb64d5c44529cece33fe2a46482", "grand-theft-auto-v", False),
@@ -169,6 +170,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Journey", "lemur", "journey", True),
             New EpicGamesBBDDJuego("Journey to the Savage Planet", "oleander", "journey-to-the-savage-planet", True),
             New EpicGamesBBDDJuego("Just Cause 4 Reloaded", "kakopo", "just-cause-4", True),
+            New EpicGamesBBDDJuego("Kill it With Fire", "123be6a3d02647df8f09a7da3eab7568", "kill-it-with-fire", False),
             New EpicGamesBBDDJuego("Killing Floor 2", "finch", "killing-floor-2", False),
             New EpicGamesBBDDJuego("Kine", "rose", "kine", True),
             New EpicGamesBBDDJuego("Kingdom Come: Deliverance", "eel", "kingdom-come-deliverance", False),
@@ -192,6 +194,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Metro Exodus", "snapdragon", "metro-exodus", True),
             New EpicGamesBBDDJuego("Metro: Last Light Redux", "speedwell", "metro-last-light-redux", True),
             New EpicGamesBBDDJuego("Might & Magic Chess Royale", "b141e42965ff431aa0e23bf3d5635942", "might-and-magic-chess-royale", False),
+            New EpicGamesBBDDJuego("Milky Way Prince – The Vampire Star", "97d90ab4704344e9b6f255994fee639c", "milky-way-prince-the-vampire-star", False),
             New EpicGamesBBDDJuego("Minit", "petrel", "minit", False),
             New EpicGamesBBDDJuego("Missile Command: Recharged", "fe014df1aa2c465aae88138c4307b11a", "missile-command-recharged", False),
             New EpicGamesBBDDJuego("Monopoly PLUS", "hamlet", "monopoly-plus", False),
