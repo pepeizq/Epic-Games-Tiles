@@ -18,16 +18,12 @@ Module EpicGamesBBDD
     '            gravewood-high
     '            iron-harvest
     '            jett-the-far-shore
-    '            kill-it-with-fire
     '            kena-bridge-of-spirits
     '            levelhead      
-    '            mortal-shell
     '            primordials-of-amyrion
-    '            rogue-legacy-2
     '            samurai-jack-battle-through-time
     '            saturnalia
     '            sherlock-holmes-chapter-one
-    '            spiritfarer
     '            star-wars-squadrons
     '            the-dungeon-of-naheulbeuk
     '            the-last-campfire
@@ -46,6 +42,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("20XX", "quail", "20xx", False),
             New EpicGamesBBDDJuego("3 Out of 10 Episode 1 Welcome to Shovelworks", "flounder", "3-out-of-10-ep-1", False),
             New EpicGamesBBDDJuego("3 Out of 10 Episode 2 Foundation 101", "1317e4e3b3ed40c289dde85b194347d3", "3-out-of-10-ep-2", False),
+            New EpicGamesBBDDJuego("3 out of 10 Episode 3 Pivot Like A Champion", "d86f9cb568014746a15f66025dcc5733", "3-out-of-10-ep-3", False),
             New EpicGamesBBDDJuego("7 Billion Humans", "holly", "7-billion-humans", True),
             New EpicGamesBBDDJuego("A Knights Quest", "cockatoo", "a-knights-quest", True),
             New EpicGamesBBDDJuego("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "a-short-hike", False),
@@ -122,6 +119,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Enter the Gungeon", "garlic", "enter-the-gungeon", True),
             New EpicGamesBBDDJuego("Everything", "pelican", "everything", False),
             New EpicGamesBBDDJuego("Falcon Age", "parrot", "falcon-age", True),
+            New EpicGamesBBDDJuego("Far Cry", "c9d31937de5b45efb95b515b35a4960b", "far-cry", False),
+            New EpicGamesBBDDJuego("Far Cry 2: Fortune's Edition", "3b78108a811d497db768899400edd842", "far-cry-2", False),
+            New EpicGamesBBDDJuego("Far Cry 3", "hellebore", "far-cry-3", True),
             New EpicGamesBBDDJuego("Far Cry 4", "tautog", "far-cry-4", True),
             New EpicGamesBBDDJuego("Far Cry 5", "coriander", "far-cry-5", True),
             New EpicGamesBBDDJuego("Far Cry New Dawn", "cumin", "far-cry-new-dawn", True),
@@ -149,6 +149,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Hello Neighbor", "ursus", "hello-neighbor", False),
             New EpicGamesBBDDJuego("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek", True),
             New EpicGamesBBDDJuego("Hellpoint", "210733411fa44d5f8454a1bb435db3a9", "hellpoint", False),
+            New EpicGamesBBDDJuego("HITMAN", "barbet", "hitman", False),
             New EpicGamesBBDDJuego("Hob", "lyrebird", "hob", False),
             New EpicGamesBBDDJuego("Horace", "palila", "horace", False),
             New EpicGamesBBDDJuego("Horizon Zero Dawn Complete Edition", "grunion", "horizon-zero-dawn-complete-edition", False),
@@ -191,7 +192,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Manifold Garden", "lorikeet", "manifold-garden", False),
             New EpicGamesBBDDJuego("Mechwarrior 5", "hoopoe", "mechwarrior-5", True),
             New EpicGamesBBDDJuego("Metro: 2033 Redux", "petunia", "metro-2033-redux", True),
-            New EpicGamesBBDDJuego("Metro Exodus", "snapdragon", "metro-exodus", True),
+            New EpicGamesBBDDJuego("Metro Exodus", "b4a0d2d15acb4db894a599b810297543", "metro-exodus", True),
             New EpicGamesBBDDJuego("Metro: Last Light Redux", "speedwell", "metro-last-light-redux", True),
             New EpicGamesBBDDJuego("Might & Magic Chess Royale", "b141e42965ff431aa0e23bf3d5635942", "might-and-magic-chess-royale", False),
             New EpicGamesBBDDJuego("Milky Way Prince – The Vampire Star", "97d90ab4704344e9b6f255994fee639c", "milky-way-prince-the-vampire-star", False),
@@ -199,12 +200,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Missile Command: Recharged", "fe014df1aa2c465aae88138c4307b11a", "missile-command-recharged", False),
             New EpicGamesBBDDJuego("Monopoly PLUS", "hamlet", "monopoly-plus", False),
             New EpicGamesBBDDJuego("Moonlighter", "eagle", "moonlighter", True),
+            New EpicGamesBBDDJuego("Mortal Shell", "0055e45ce7654c55aade646467349e83", "mortal-shell", False),
             New EpicGamesBBDDJuego("Mount & Blade II: Bannerlord", "chickadee", "mount-and-blade-2", False),
             New EpicGamesBBDDJuego("Mutant Year Zero", "falcon", "mutant-year-zero", True),
             New EpicGamesBBDDJuego("Mutazione", "1fe19232c0f7476a8e99fd8752e800c2", "mutazione", False),
             New EpicGamesBBDDJuego("My Time At Portia", "cobra", "my-time-at-portia", True),
             New EpicGamesBBDDJuego("Neon Abyss", "a26f991a5e6c4e9c9572fc200cbea47f", "neon-abyss", False),
             New EpicGamesBBDDJuego("Next Up Hero", "sumac", "next-up-hero", False),
+            New EpicGamesBBDDJuego("New Super Lucky's Tale", "f7af594eebf542fc91dfc911f5f1e1d2", "new-super-luckys-tale", False),
             New EpicGamesBBDDJuego("No Straight Roads", "raven", "no-straight-roads", True),
             New EpicGamesBBDDJuego("Nuclear Throne", "turaco", "nuclear-throne", True),
             New EpicGamesBBDDJuego("Observation", "allium", "observation", True),
@@ -239,15 +242,18 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("RiME", "hydrangea", "rime", True),
             New EpicGamesBBDDJuego("RimWorld", "12915f06bb3442eeb414813e74af7df3", "rimworld", False),
             New EpicGamesBBDDJuego("Rogue Company", "pewee", "rogue-company", False),
+            New EpicGamesBBDDJuego("Rogue Legacy 2", "bd35425c9548494082d002f36601ff45", "rogue-legacy-2", False),
             New EpicGamesBBDDJuego("RollerCoaster Tycoon Adventures", "canna", "rollercoaster-tycoon-adventures", True),
             New EpicGamesBBDDJuego("RUINER", "laridae", "ruiner", True),
             New EpicGamesBBDDJuego("Rune 2", "cosmos", "rune-2", False),
             New EpicGamesBBDDJuego("Saint's Row The Third Remastered", "loon", "saints-row-the-third-remastered", False),
+            New EpicGamesBBDDJuego("Samurai Jack: Battle Through Time", "4fcc58f22bbb42a4a1ee0cc887c0836e", "samurai-jack-battle-through-time", False),
             New EpicGamesBBDDJuego("SAMURAI SHODOWN", "1c78abcd467643f9ad58cc3a7d161983", "samurai-shodown-reboot", False),
             New EpicGamesBBDDJuego("SAMURAI SHODOWN NEOGEO COLLECTION", "75553c71fa1744a4be89f71d5b862eae", "samurai-shodown-neogeo-collection", False),
             New EpicGamesBBDDJuego("Satisfactory", "crab", "satisfactory", True),
             New EpicGamesBBDDJuego("Shadow Complex", "vpr", "shadow-complex", False),
             New EpicGamesBBDDJuego("Shadow Tactics: Blades of the Shogun", "fangtooth", "shadow-tactics", False),
+            New EpicGamesBBDDJuego("Shadowrun Returns", "dc29cb42f32e4a17af1d68c715fa459c", "shadowrun-returns", False),
             New EpicGamesBBDDJuego("Shakedown Hawaii", "plumeria", "shakedown-hawaii", True),
             New EpicGamesBBDDJuego("Shenmue 3", "pepper", "shenmue-3", True),
             New EpicGamesBBDDJuego("Sherlock Holmes Crimes and Punishments", "0afb9d54dd3743a582b48b506466d3f8", "sherlock-holmes-crimes-and-punishments", False),
@@ -257,11 +263,12 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Sludge Life", "morganite", "sludge-life", False),
             New EpicGamesBBDDJuego("SMITE", "greenbul", "smite", False),
             New EpicGamesBBDDJuego("Snowrunner", "mayflower", "snowrunner", False),
-            New EpicGamesBBDDJuego("Spellbreak", "newt", "spellbreak", False),
-            New EpicGamesBBDDJuego("SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated", "f2304175954d40d2b583542251dda296", "spongebob-squarepants-battle-for-bikini-bottom-rehydrated", False),
             New EpicGamesBBDDJuego("SOMA", "emu", "soma", False),
             New EpicGamesBBDDJuego("South Park: The Fractured But Whole", "alewife", "south-park-the-fractured-but-whole", True),
             New EpicGamesBBDDJuego("South Park: The Stick of Truth", "alligator", "south-park-the-stick-of-truth", True),
+            New EpicGamesBBDDJuego("Spellbreak", "newt", "spellbreak", False),
+            New EpicGamesBBDDJuego("Spiritfarer", "740bb3cae62142d08e9fdf8262da352f", "spiritfarer", False),
+            New EpicGamesBBDDJuego("SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated", "f2304175954d40d2b583542251dda296", "spongebob-squarepants-battle-for-bikini-bottom-rehydrated", False),
             New EpicGamesBBDDJuego("Star Wars Jedi Fallen Order", "shoebill", "star-wars-jedi-fallen-order", False),
             New EpicGamesBBDDJuego("State of Decay 2: Juggernaut Edition", "snoek", "state-of-decay-2-juggernaut-edition", False),
             New EpicGamesBBDDJuego("Steep", "barracuda", "steep", False),
