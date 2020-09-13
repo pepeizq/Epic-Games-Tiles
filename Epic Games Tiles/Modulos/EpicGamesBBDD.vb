@@ -6,7 +6,7 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'pendientes: 
+    'pendientes: alluris
     '            as-far-as-the-eye
     '            bugsnax
     '            chorus
@@ -16,25 +16,22 @@ Module EpicGamesBBDD
     '            fuser
     '            godfall
     '            gravewood-high
+    '            hitman-3
     '            iron-harvest
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
     '            levelhead      
     '            primordials-of-amyrion
-    '            samurai-jack-battle-through-time
+    '            recompile
     '            saturnalia
     '            sherlock-holmes-chapter-one
     '            star-wars-squadrons
     '            the-dungeon-of-naheulbeuk
-    '            the-last-campfire
     '            the-outlast-trials
-    '            tony-hawks-pro-skater-1-and-2
     '            twin-mirror
     '            unexplored-2
     '            vampire-the-masquerade-swansong
     '            werewolf-the-apocalypse-earthblood
-    '            windbound
-    '            wrc-9
 
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDJuego) From {
@@ -44,6 +41,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("3 Out of 10 Episode 2 Foundation 101", "1317e4e3b3ed40c289dde85b194347d3", "3-out-of-10-ep-2", False),
             New EpicGamesBBDDJuego("3 out of 10 Episode 3 Pivot Like A Champion", "d86f9cb568014746a15f66025dcc5733", "3-out-of-10-ep-3", False),
             New EpicGamesBBDDJuego("3 out of 10 Episode 4 Thank You For Being An Asset", "b2f57e24edcb4537bd76dff8b056a03e", "3-out-of-10-ep-4", False),
+            New EpicGamesBBDDJuego("3 out of 10 Episode 5 The Rig Is Up!", "69c5351eacc540fd8850e12e90726e59", "3-out-of-10-ep-5", False),
             New EpicGamesBBDDJuego("7 Billion Humans", "holly", "7-billion-humans", True),
             New EpicGamesBBDDJuego("A Knights Quest", "cockatoo", "a-knights-quest", True),
             New EpicGamesBBDDJuego("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "a-short-hike", False),
@@ -62,10 +60,10 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Anno 1800", "oregano", "anno-1800", True),
             New EpicGamesBBDDJuego("Anodyne 2: Return to Dust", "tanzanite", "anodyne-2-return-to-dust", False),
             New EpicGamesBBDDJuego("Ape Out", "coley", "ape-out", True),
-            New EpicGamesBBDDJuego("Arise: A Simple Story", "rail", "arise-a-simple-story", True),
+            New EpicGamesBBDDJuego("Arise: A Simple Story", "rail", "arise-a-simple-story", False),
             New EpicGamesBBDDJuego("ARK: Survival Evolved", "aafc587fbf654758802c8e41e4fb3255", "ark", False),
             New EpicGamesBBDDJuego("Ashen", "wren", "ashen", True),
-            New EpicGamesBBDDJuego("Assassin's Creed III: Remastered", "anise", "assassins-creed-3", True),
+            New EpicGamesBBDDJuego("Assassin's Creed III: Remastered", "anise", "assassins-creed-3", False),
             New EpicGamesBBDDJuego("Assassin's Creed Odyssey", "clary", "assassins-creed-odyssey", False),
             New EpicGamesBBDDJuego("Assassin's Creed Origins", "camellia", "assassins-creed-origins", True),
             New EpicGamesBBDDJuego("Assassin's Creed Rogue", "wolffish", "assassins-creed-rogue", False),
@@ -178,6 +176,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Kine", "rose", "kine", True),
             New EpicGamesBBDDJuego("Kingdom Come: Deliverance", "eel", "kingdom-come-deliverance", False),
             New EpicGamesBBDDJuego("Kingdom New Lands", "cacao", "kingdom-new-lands", True),
+            New EpicGamesBBDDJuego("Kingdoms of Amalur Re-Reckoning", "b8aa8afb7da84da3a978425ec4b8e5cd", "kingdoms-of-amalur-re-reckoning", False),
             New EpicGamesBBDDJuego("Last Day of June", "pumpkin", "last-day-of-june", True),
             New EpicGamesBBDDJuego("Layers of Fear", "cilantro", "layers-of-fear", True),
             New EpicGamesBBDDJuego("LEGO Batman: The Videogame", "goldeneye", "lego-batman", True),
@@ -234,6 +233,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Poly Bridge 2", "03e51fc525b24b2ea873ac13c16b9ed7", "poly-bridge-2", False),
             New EpicGamesBBDDJuego("Predator: Hunting Grounds", "boxfish", "predator-hunting-grounds", False),
             New EpicGamesBBDDJuego("Q.U.B.E. 2", "auk", "q-u-b-e-2", False),
+            New EpicGamesBBDDJuego("Railway Empire", "8cf7c6b964514532ad8284a376a517bf", "railway-empire", False),
             New EpicGamesBBDDJuego("Rainbow Six Quarantine", "trogon", "rainbow-six-quarantine", False),
             New EpicGamesBBDDJuego("Rainbow Six Siege", "carnation", "rainbow-six-siege", False),
             New EpicGamesBBDDJuego("Rayman Legends", "anchovy", "rayman-legends", True),
@@ -278,6 +278,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Star Wars Jedi Fallen Order", "shoebill", "star-wars-jedi-fallen-order", False),
             New EpicGamesBBDDJuego("State of Decay 2: Juggernaut Edition", "snoek", "state-of-decay-2-juggernaut-edition", False),
             New EpicGamesBBDDJuego("Steep", "barracuda", "steep", False),
+            New EpicGamesBBDDJuego("Stick It To The Man!", "goldfish", "stick-it-to-the-man", False),
             New EpicGamesBBDDJuego("Stories Untold", "parsley", "stories-untold", True),
             New EpicGamesBBDDJuego("Stranger Things 3: The Game", "0a697c1235fb4706a635cfa33f0306ec", "stranger-things-3-the-game", False),
             New EpicGamesBBDDJuego("Subnautica", "jaguar", "subnautica", True),
@@ -324,11 +325,12 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("This War of Mine", "cardinal", "this-war-of-mine", True),
             New EpicGamesBBDDJuego("Thimbleweed Park", "tulip", "thimbleweed-park", True),
             New EpicGamesBBDDJuego("Ticket to Ride", "towhee", "ticket-to-ride", True),
-            New EpicGamesBBDDJuego("Tom Clancy's Ghost Recon Breakpoint", "saffron", "ghost-recon-breakpoint", True),
+            New EpicGamesBBDDJuego("Tom Clancy's Ghost Recon Breakpoint", "saffron", "ghost-recon-breakpoint", False),
             New EpicGamesBBDDJuego("Tom Clancy's Ghost Recon Future Soldier Ultimate Edition", "e7471b6a7335415db9819ef7e7e77c29", "ghost-recon-future-soldier", False),
             New EpicGamesBBDDJuego("Tom Clancy's Ghost Recon Wildlands", "hyacinth", "ghost-recon-wildlands", True),
             New EpicGamesBBDDJuego("Tom Clancy's The Division", "e4eb21a09dc049e982359b1e133ccebf", "the-division", False),
             New EpicGamesBBDDJuego("Tom Clancy's The Division 2", "impala", "the-division-2", True),
+            New EpicGamesBBDDJuego("Tony Hawk's Pro Skater 1 + 2", "guppy", "tony-hawks-pro-skater-1-and-2", False),
             New EpicGamesBBDDJuego("Torchlight", "terragon", "torchlight", True),
             New EpicGamesBBDDJuego("Torchlight II", "8e425d507bd6473dbb927f0fea8ef4f6", "torchlight-2", False),
             New EpicGamesBBDDJuego("Tormentor X Punisher", "goby", "tormentor-x-punisher", True),
@@ -353,11 +355,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("What Remains of Edith Finch", "badger", "what-remains-of-edith-finch", True),
             New EpicGamesBBDDJuego("What the Golf?", "stork", "what-the-golf", True),
             New EpicGamesBBDDJuego("Wheels of Aurelia", "escolar", "wheels-of-aurelia", False),
+            New EpicGamesBBDDJuego("Where The Water Tastes Like Wine", "e8964b869b6849bea41eefec766cd665", "where-the-water-tastes-like-wine", False),
             New EpicGamesBBDDJuego("Wilmot's Warehouse", "9b40e3ffb4074f22a856a521be5ce858", "wilmots-warehouse", False),
+            New EpicGamesBBDDJuego("Windbound", "a95bf4df6627431ca5baff8173c59635", "windbound", False),
             New EpicGamesBBDDJuego("Wizards: Wand of Epicosity", "a19c886dab804ef0a0e095874c7e0d00", "wizards-wand-of-epicosity", False),
             New EpicGamesBBDDJuego("World of Goo", "anemone", "world-of-goo", True),
             New EpicGamesBBDDJuego("World War Z", "wombat", "world-war-z", False),
             New EpicGamesBBDDJuego("WRC 8", "woodpecker", "wrc-8", True),
+            New EpicGamesBBDDJuego("WRC 9 FIA World Rally Championship", "kagu", "wrc-9", False),
             New EpicGamesBBDDJuego("Yaga", "robin", "yaga", True),
             New EpicGamesBBDDJuego("Yooka-Laylee and the Impossible Lair", "duckbill", "yooka-laylee-and-the-impossible-lair", True),
             New EpicGamesBBDDJuego("Zombie Army 4: Dead War", "sparrow", "zombie-army-4-dead-war", True)
@@ -376,15 +381,16 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuegoImagenVertical("ghost-recon-future-soldier", "https://i.imgur.com/ymk3jhm.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("gods-and-monsters", "https://i.imgur.com/iEfHJZE.png"),
             New EpicGamesBBDDJuegoImagenVertical("inside", "https://i.imgur.com/JGF2BoU.png"),
+            New EpicGamesBBDDJuegoImagenVertical("kingdoms-of-amalur-re-reckoning", "https://i.imgur.com/IDpnNcw.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("limbo", "https://i.imgur.com/VeIVNNp.png"),
             New EpicGamesBBDDJuegoImagenVertical("mtg-arena", "https://i.imgur.com/rr1ve2N.png"),
             New EpicGamesBBDDJuegoImagenVertical("manifold-garden", "https://i.imgur.com/JNOnuUh.png"),
             New EpicGamesBBDDJuegoImagenVertical("q-u-b-e-2", "https://i.imgur.com/ggyYknd.png"),
+            New EpicGamesBBDDJuegoImagenVertical("railway-empire", "https://i.imgur.com/QUNWhbn.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("rainbow-six-quarantine", "https://i.imgur.com/w6qfmVi.png"),
             New EpicGamesBBDDJuegoImagenVertical("rainbow-six-siege", "https://i.imgur.com/la0PQDv.png"),
             New EpicGamesBBDDJuegoImagenVertical("satisfactory", "https://i.imgur.com/EEcVDeD.png"),
             New EpicGamesBBDDJuegoImagenVertical("shadow-complex", "https://i.imgur.com/uRBa2W9.jpg"),
-            New EpicGamesBBDDJuegoImagenVertical("spellbreak", "https://i.imgur.com/LbfAmkf.png"),
             New EpicGamesBBDDJuegoImagenVertical("super-meat-boy", "https://i.imgur.com/7zy5Z9D.png"),
             New EpicGamesBBDDJuegoImagenVertical("superliminal", "https://i.imgur.com/vLSCttq.png"),
             New EpicGamesBBDDJuegoImagenVertical("the-settlers", "https://i.imgur.com/Wq1AfRE.png"),
