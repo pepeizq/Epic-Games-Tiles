@@ -7,7 +7,7 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
     'pendientes: alluris
-    '            as-far-as-the-eye
+    '            amnesia-rebirth
     '            bugsnax
     '            chorus
     '            claire-de-lune
@@ -17,14 +17,20 @@ Module EpicGamesBBDD
     '            godfall
     '            gravewood-high
     '            hitman-3
+    '            immortals-fenyx-rising
     '            iron-harvest
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
     '            levelhead      
+    '            port-royale-4
     '            primordials-of-amyrion
+    '            prince-of-persia-sands-of-time
     '            recompile
+    '            riders-republic
     '            saturnalia
+    '            scott-pilgrim-vs-the-world-the-game
     '            sherlock-holmes-chapter-one
+    '            startup-panic
     '            star-wars-squadrons
     '            the-dungeon-of-naheulbeuk
     '            the-outlast-trials
@@ -62,6 +68,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Ape Out", "coley", "ape-out", True),
             New EpicGamesBBDDJuego("Arise: A Simple Story", "rail", "arise-a-simple-story", False),
             New EpicGamesBBDDJuego("ARK: Survival Evolved", "aafc587fbf654758802c8e41e4fb3255", "ark", False),
+            New EpicGamesBBDDJuego("As Far As The Eye", "09d93e58c5694dc4a709d76887bcd61c", "as-far-as-the-eye", False),
             New EpicGamesBBDDJuego("Ashen", "wren", "ashen", True),
             New EpicGamesBBDDJuego("Assassin's Creed III: Remastered", "anise", "assassins-creed-3", False),
             New EpicGamesBBDDJuego("Assassin's Creed Odyssey", "clary", "assassins-creed-odyssey", False),
@@ -101,6 +108,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Corruption 2029", "betta", "corruption-2029", False),
             New EpicGamesBBDDJuego("Costume Quest", "violetear", "costume-quest", True),
             New EpicGamesBBDDJuego("Crashlands", "afdf59e3dc8f40ec8fd887b5d3fcef23", "crashlands", False),
+            New EpicGamesBBDDJuego("Crysis Remastered", "f1b8986afc9a4256a098cc5a4ebf5871", "crysis-remastered", False),
             New EpicGamesBBDDJuego("Cyberpunk 2077", "ginger", "cyberpunk-2077", True),
             New EpicGamesBBDDJuego("Dangerous Driving", "tansy", "dangerous-driving", True),
             New EpicGamesBBDDJuego("Darksiders II Deathinitive Edition", "hoki", "darksiders2", False),
@@ -131,6 +139,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Fez", "bluebird", "fez", False),
             New EpicGamesBBDDJuego("Figment", "ed5e8d42b2ac461eb6f9176d163b9515", "figment", False),
             New EpicGamesBBDDJuego("Flower", "yarrow", "flower", True),
+            New EpicGamesBBDDJuego("Football Manager 2020", "bf35243e8c3542e082bc7042e0592183", "football-manager-2020", False),
             New EpicGamesBBDDJuego("For Honor", "sundrop", "for-honor", False),
             New EpicGamesBBDDJuego("For The King", "discus", "for-the-king", True),
             New EpicGamesBBDDJuego("Foregone", "dab", "foregone", False),
@@ -227,6 +236,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Paladins", "antbird", "paladins", False),
             New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
             New EpicGamesBBDDJuego("Paranoia: Happiness is Mandatory", "flamingo", "paranoia", True),
+            New EpicGamesBBDDJuego("Path of Exile", "9a05967bb86f48278f8626be42548985", "path-of-exile", False),
             New EpicGamesBBDDJuego("Pathway", "8fceb562623c430db9bb6abf0549c43e", "pathway", False),
             New EpicGamesBBDDJuego("Phantom Brigade", "chili", "phantom-brigade", True),
             New EpicGamesBBDDJuego("Phoenix Point", "iris", "phoenix-point", True),
@@ -247,6 +257,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("RimWorld", "12915f06bb3442eeb414813e74af7df3", "rimworld", False),
             New EpicGamesBBDDJuego("Rogue Company", "pewee", "rogue-company", False),
             New EpicGamesBBDDJuego("Rogue Legacy 2", "bd35425c9548494082d002f36601ff45", "rogue-legacy-2", False),
+            New EpicGamesBBDDJuego("RollerCoaster Tycoon 3: Complete Edition", "281a47e363284108b82bf05c1a612145", "rollercoaster-tycoon-3-complete-edition", False),
             New EpicGamesBBDDJuego("RollerCoaster Tycoon Adventures", "canna", "rollercoaster-tycoon-adventures", True),
             New EpicGamesBBDDJuego("RUINER", "laridae", "ruiner", True),
             New EpicGamesBBDDJuego("Rune 2", "cosmos", "rune-2", False),
@@ -299,6 +310,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("The Bridge", "sunbird", "the-bridge", False),
             New EpicGamesBBDDJuego("The Crew 2", "hermit", "the-crew-2", True),
             New EpicGamesBBDDJuego("The Cycle", "azalea", "thecycle", False),
+            New EpicGamesBBDDJuego("The Dungeon of Naheulbeuk", "02fac38ee2614c8ba276b1ea7c1acd7c", "the-dungeon-of-naheulbeuk", False),
             New EpicGamesBBDDJuego("The End is Nigh", "statice", "the-end-is-nigh", True),
             New EpicGamesBBDDJuego("The Escapists", "peony", "the-escapists", True),
             New EpicGamesBBDDJuego("The Escapists 2", "fowl", "the-escapists-2", False),
@@ -313,6 +325,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("The Sojourn", "shallots", "the-sojourn", True),
             New EpicGamesBBDDJuego("The Stanley Parable", "freesia", "the-stanley-parable", False),
             New EpicGamesBBDDJuego("The Telltale Batman Shadows Edition", "batfish", "the-telltale-batman", False),
+            New EpicGamesBBDDJuego("The Unfinished Swan", "f58bb43636064a0295781853ef8405fb", "the-unfinished-swan", False),
             New EpicGamesBBDDJuego("The Walking Dead: Season One", "bloodroot", "walking-dead-season-one", True),
             New EpicGamesBBDDJuego("The Walking Dead: Season Two", "buttercup", "walking-dead-season-two", False),
             New EpicGamesBBDDJuego("The Walking Dead: A New Frontier", "begonia", "walking-dead-a-new-frontier", False),
@@ -389,6 +402,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuegoImagenVertical("railway-empire", "https://i.imgur.com/QUNWhbn.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("rainbow-six-quarantine", "https://i.imgur.com/w6qfmVi.png"),
             New EpicGamesBBDDJuegoImagenVertical("rainbow-six-siege", "https://i.imgur.com/la0PQDv.png"),
+            New EpicGamesBBDDJuegoImagenVertical("rollercoaster-tycoon-3-complete-edition", "https://i.imgur.com/K0diHdG.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("satisfactory", "https://i.imgur.com/EEcVDeD.png"),
             New EpicGamesBBDDJuegoImagenVertical("shadow-complex", "https://i.imgur.com/uRBa2W9.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("super-meat-boy", "https://i.imgur.com/7zy5Z9D.png"),
