@@ -12,8 +12,10 @@ Module EpicGamesBBDD
     '            chorus
     '            claire-de-lune
     '            demon-turf
+    '            dragon-quest-xi-s-echoes-of-an-elusive-age
     '            far-cry-6
     '            fuser
+    '            ghostrunner
     '            godfall
     '            gravewood-high
     '            hitman-3
@@ -32,8 +34,8 @@ Module EpicGamesBBDD
     '            sherlock-holmes-chapter-one
     '            startup-panic
     '            star-wars-squadrons
-    '            the-dungeon-of-naheulbeuk
     '            the-outlast-trials
+    '            the-solitaire-conspiracy
     '            twin-mirror
     '            unexplored-2
     '            vampire-the-masquerade-swansong
@@ -68,6 +70,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Ape Out", "coley", "ape-out", True),
             New EpicGamesBBDDJuego("Arise: A Simple Story", "rail", "arise-a-simple-story", False),
             New EpicGamesBBDDJuego("ARK: Survival Evolved", "aafc587fbf654758802c8e41e4fb3255", "ark", False),
+            New EpicGamesBBDDJuego("art of rally", "01805192c8074820b1257fcfd97f2648", "art-of-rally", False),
             New EpicGamesBBDDJuego("As Far As The Eye", "09d93e58c5694dc4a709d76887bcd61c", "as-far-as-the-eye", False),
             New EpicGamesBBDDJuego("Ashen", "wren", "ashen", True),
             New EpicGamesBBDDJuego("Assassin's Creed III: Remastered", "anise", "assassins-creed-3", False),
@@ -144,6 +147,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("For The King", "discus", "for-the-king", True),
             New EpicGamesBBDDJuego("Foregone", "dab", "foregone", False),
             New EpicGamesBBDDJuego("Fortnite", "fortnite", "fortnite", True),
+            New EpicGamesBBDDJuego("Freedom Fighters", "0d771750aa9042898ce100dbfb5efb1a", "freedom-fighters", False),
             New EpicGamesBBDDJuego("Genesis Alpha One", "puma", "genesis-alpha-one", False),
             New EpicGamesBBDDJuego("Ghostbusters: The Video Game Remastered", "mint", "ghostbusters-the-video-game-remastered", True),
             New EpicGamesBBDDJuego("GNOG", "penguin", "gnog", True),
@@ -153,11 +157,12 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Gorogoa", "meerkat", "gorogoa", True),
             New EpicGamesBBDDJuego("Grand Theft Auto V", "9d2d0eb64d5c44529cece33fe2a46482", "grand-theft-auto-v", False),
             New EpicGamesBBDDJuego("Griftlands", "phlox", "griftlands", False),
-            New EpicGamesBBDDJuego("Hades", "min", "hades", True),
+            New EpicGamesBBDDJuego("Hades", "min", "hades", False),
             New EpicGamesBBDDJuego("Heavy Rain", "aster", "heavy-rain", True),
             New EpicGamesBBDDJuego("Hello Neighbor", "ursus", "hello-neighbor", False),
             New EpicGamesBBDDJuego("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek", True),
             New EpicGamesBBDDJuego("Hellpoint", "210733411fa44d5f8454a1bb435db3a9", "hellpoint", False),
+            New EpicGamesBBDDJuego("Heroes & Generals WWII", "8836f84a700140bb86103556cd7db0d4", "heroes-and-generals-wwii", False),
             New EpicGamesBBDDJuego("HITMAN", "barbet", "hitman", False),
             New EpicGamesBBDDJuego("Hob", "lyrebird", "hob", False),
             New EpicGamesBBDDJuego("Horace", "palila", "horace", False),
@@ -240,6 +245,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Pathway", "8fceb562623c430db9bb6abf0549c43e", "pathway", False),
             New EpicGamesBBDDJuego("Phantom Brigade", "chili", "phantom-brigade", True),
             New EpicGamesBBDDJuego("Phoenix Point", "iris", "phoenix-point", True),
+            New EpicGamesBBDDJuego("Pikuniku", "48619f5656da446abccb727b78cda644", "pikuniku", False),
             New EpicGamesBBDDJuego("Poly Bridge 2", "03e51fc525b24b2ea873ac13c16b9ed7", "poly-bridge-2", False),
             New EpicGamesBBDDJuego("Predator: Hunting Grounds", "boxfish", "predator-hunting-grounds", False),
             New EpicGamesBBDDJuego("Q.U.B.E. 2", "auk", "q-u-b-e-2", False),
@@ -255,6 +261,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Remnant: From the Ashes", "b4a0d2d15acb4db894a599b810297543", "remnant-from-the-ashes", False),
             New EpicGamesBBDDJuego("RiME", "hydrangea", "rime", True),
             New EpicGamesBBDDJuego("RimWorld", "12915f06bb3442eeb414813e74af7df3", "rimworld", False),
+            New EpicGamesBBDDJuego("Rocket League", "sugar", "rocket-league", False),
             New EpicGamesBBDDJuego("Rogue Company", "pewee", "rogue-company", False),
             New EpicGamesBBDDJuego("Rogue Legacy 2", "bd35425c9548494082d002f36601ff45", "rogue-legacy-2", False),
             New EpicGamesBBDDJuego("RollerCoaster Tycoon 3: Complete Edition", "281a47e363284108b82bf05c1a612145", "rollercoaster-tycoon-3-complete-edition", False),
@@ -357,7 +364,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Trover Saves the Universe", "sweetpea", "trover-saves-the-universe", True),
             New EpicGamesBBDDJuego("Uno", "hussar", "uno", True),
             New EpicGamesBBDDJuego("Unreal Tournament", "ut", "unreal-tournament", True),
-            New EpicGamesBBDDJuego("Untitled Goose Game", "flour", "untitled-goose-game", True),
+            New EpicGamesBBDDJuego("Untitled Goose Game", "flour", "untitled-goose-game", False),
             New EpicGamesBBDDJuego("Valiant Hearts: The Great War", "f6496e154baa437cb4d9cae38a7e3cc5", "valiant-hearts", False),
             New EpicGamesBBDDJuego("Vampire: The Masquerade - Bloodlines 2", "nemesia", "vampire-the-masquerade-bloodlines-2", False),
             New EpicGamesBBDDJuego("Vampyr", "Nautilus", "vampyr", True),
@@ -396,8 +403,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuegoImagenVertical("inside", "https://i.imgur.com/JGF2BoU.png"),
             New EpicGamesBBDDJuegoImagenVertical("kingdoms-of-amalur-re-reckoning", "https://i.imgur.com/IDpnNcw.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("limbo", "https://i.imgur.com/VeIVNNp.png"),
-            New EpicGamesBBDDJuegoImagenVertical("mtg-arena", "https://i.imgur.com/rr1ve2N.png"),
+            New EpicGamesBBDDJuegoImagenVertical("mtg-arena", "https://i.imgur.com/KlUlbGr.png"),
             New EpicGamesBBDDJuegoImagenVertical("manifold-garden", "https://i.imgur.com/JNOnuUh.png"),
+            New EpicGamesBBDDJuegoImagenVertical("pikuniku", "https://i.imgur.com/6CavRNq.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("q-u-b-e-2", "https://i.imgur.com/ggyYknd.png"),
             New EpicGamesBBDDJuegoImagenVertical("railway-empire", "https://i.imgur.com/QUNWhbn.jpg"),
             New EpicGamesBBDDJuegoImagenVertical("rainbow-six-quarantine", "https://i.imgur.com/w6qfmVi.png"),
