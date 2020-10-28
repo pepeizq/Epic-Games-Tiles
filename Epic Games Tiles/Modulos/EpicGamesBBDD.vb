@@ -15,7 +15,6 @@ Module EpicGamesBBDD
     '            dragon-quest-xi-s-echoes-of-an-elusive-age
     '            far-cry-6
     '            fuser
-    '            ghostrunner
     '            godfall
     '            gravewood-high
     '            hitman-3
@@ -109,6 +108,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Borderlands: The Pre-Sequel", "turkey", "borderlands-the-pre-sequel", False),
             New EpicGamesBBDDJuego("Carcassonne", "thrush", "carcassonne", True),
             New EpicGamesBBDDJuego("Cardpocalypse", "duck", "cardpocalypse", True),
+            New EpicGamesBBDDJuego("Carto", "cb37006fed8c47db8bcb8a65a59d0f09", "carto", False),
             New EpicGamesBBDDJuego("Castle Storm 2", "dove", "castlestorm2", False),
             New EpicGamesBBDDJuego("Celeste", "salt", "celeste", False),
             New EpicGamesBBDDJuego("Child of Light: Ultimate Edition", "3b8f18e6780547d9b2ee25fbfa29c913", "child-of-light", False),
@@ -163,6 +163,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Freedom Fighters", "0d771750aa9042898ce100dbfb5efb1a", "freedom-fighters", False),
             New EpicGamesBBDDJuego("Genesis Alpha One", "puma", "genesis-alpha-one", False),
             New EpicGamesBBDDJuego("Ghostbusters: The Video Game Remastered", "mint", "ghostbusters-the-video-game-remastered", True),
+            New EpicGamesBBDDJuego("Ghostrunner", "ea8df71f923649a193ab1c1fded7e1b3", "ghostrunner", False),
             New EpicGamesBBDDJuego("GNOG", "penguin", "gnog", True),
             New EpicGamesBBDDJuego("Gods and Monsters", "pheasant", "gods-and-monsters", True),
             New EpicGamesBBDDJuego("God's Trigger", "9bc4423d873845739cc99ab69b6bfbe9", "gods-trigger", False),
@@ -172,6 +173,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Grand Theft Auto V", "9d2d0eb64d5c44529cece33fe2a46482", "grand-theft-auto-v", False),
             New EpicGamesBBDDJuego("Griftlands", "phlox", "griftlands", False),
             New EpicGamesBBDDJuego("Hades", "min", "hades", False),
+            New EpicGamesBBDDJuego("Hammerting", "60dc80f49cf34a479df2c823df30e9ac", "hammerting", False),
             New EpicGamesBBDDJuego("Heavy Rain", "aster", "heavy-rain", True),
             New EpicGamesBBDDJuego("Hello Neighbor", "ursus", "hello-neighbor", False),
             New EpicGamesBBDDJuego("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek", True),
@@ -267,6 +269,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Port Royale 4", "dd4b77658e5546d882a9315b66d0a192", "port-royale-4", False),
             New EpicGamesBBDDJuego("Predator: Hunting Grounds", "boxfish", "predator-hunting-grounds", False),
             New EpicGamesBBDDJuego("Primordials of Amyrion", "c279ad508db0453fa99f1d1ebb698c80", "primordials-of-amyrion", False),
+            New EpicGamesBBDDJuego("Pumpkin Jack", "9fef3b816031450da8ba85b23820cfbb", "pumpkin-jack", False),
             New EpicGamesBBDDJuego("Q.U.B.E. 2", "auk", "q-u-b-e-2", False),
             New EpicGamesBBDDJuego("Railway Empire", "8cf7c6b964514532ad8284a376a517bf", "railway-empire", False),
             New EpicGamesBBDDJuego("Rainbow Six Quarantine", "trogon", "rainbow-six-quarantine", False),
