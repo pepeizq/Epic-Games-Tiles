@@ -23,7 +23,6 @@ Module EpicGamesBBDD
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
     '            levelhead      
-    '            port-royale-4
     '            primordials-of-amyrion
     '            prince-of-persia-sands-of-time
     '            recompile
@@ -70,7 +69,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Ancestors: The Humankind Odyssey", "amaranth", "ancestors", True),
             New EpicGamesBBDDJuego("Anno 1404: History Edition", "f529f5a152014f65821eb900f1c54921", "anno-1404", False),
             New EpicGamesBBDDJuego("Anno 1701: History Edition", "190415920d4a4e3f99043e57e8fabe60", "anno-1701", False),
-            New EpicGamesBBDDJuego("Anno 1800", "oregano", "anno-1800", True),
+            New EpicGamesBBDDJuego("Anno 1800", "oregano", "anno-1800", False),
             New EpicGamesBBDDJuego("Anodyne 2: Return to Dust", "tanzanite", "anodyne-2-return-to-dust", False),
             New EpicGamesBBDDJuego("Ape Out", "coley", "ape-out", True),
             New EpicGamesBBDDJuego("Aquanox Deep Descent", "c653d74ead8c4940bc121bcccbaf20cf", "aquanox-deep-descent", False),
@@ -108,6 +107,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Borderlands: The Pre-Sequel", "turkey", "borderlands-the-pre-sequel", False),
             New EpicGamesBBDDJuego("Carcassonne", "thrush", "carcassonne", True),
             New EpicGamesBBDDJuego("Cardpocalypse", "duck", "cardpocalypse", True),
+            New EpicGamesBBDDJuego("Carrion", "9faa3b0871e44b639d49a209f9405aab", "carrion", False),
             New EpicGamesBBDDJuego("Carto", "cb37006fed8c47db8bcb8a65a59d0f09", "carto", False),
             New EpicGamesBBDDJuego("Castle Storm 2", "dove", "castlestorm2", False),
             New EpicGamesBBDDJuego("Celeste", "salt", "celeste", False),
@@ -140,6 +140,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Disco Elysium", "7334aba246154b63857435cb9c7eecd5", "disco-elysium", False),
             New EpicGamesBBDDJuego("Donut County", "kestrel", "donut-county", True),
             New EpicGamesBBDDJuego("Drawful 2", "daisy", "drawful-2", True),
+            New EpicGamesBBDDJuego("Empires of the Undergrowth", "c9fa09b072b54443b79d821afd76e767", "empires-of-the-undergrowth", False),
             New EpicGamesBBDDJuego("Enter the Gungeon", "garlic", "enter-the-gungeon", True),
             New EpicGamesBBDDJuego("Everything", "pelican", "everything", False),
             New EpicGamesBBDDJuego("Falcon Age", "parrot", "falcon-age", True),
@@ -314,7 +315,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Snowrunner", "mayflower", "snowrunner", False),
             New EpicGamesBBDDJuego("SOMA", "emu", "soma", False),
             New EpicGamesBBDDJuego("South Park: The Fractured But Whole", "alewife", "south-park-the-fractured-but-whole", True),
-            New EpicGamesBBDDJuego("South Park: The Stick of Truth", "alligator", "south-park-the-stick-of-truth", True),
+            New EpicGamesBBDDJuego("South Park: The Stick of Truth", "alligator", "south-park-the-stick-of-truth", False),
             New EpicGamesBBDDJuego("Spellbreak", "newt", "spellbreak", False),
             New EpicGamesBBDDJuego("Spiritfarer", "740bb3cae62142d08e9fdf8262da352f", "spiritfarer", False),
             New EpicGamesBBDDJuego("SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated", "f2304175954d40d2b583542251dda296", "spongebob-squarepants-battle-for-bikini-bottom-rehydrated", False),
@@ -395,9 +396,10 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Valiant Hearts: The Great War", "f6496e154baa437cb4d9cae38a7e3cc5", "valiant-hearts", False),
             New EpicGamesBBDDJuego("Vampire: The Masquerade - Bloodlines 2", "nemesia", "vampire-the-masquerade-bloodlines-2", False),
             New EpicGamesBBDDJuego("Vampyr", "Nautilus", "vampyr", True),
+            New EpicGamesBBDDJuego("Wargame: Red Dragon", "2cd446792405468e9e87f67649d864c2", "wargame-red-dragon", False),
             New EpicGamesBBDDJuego("Watch Dogs", "jasper", "watch-dogs", False),
             New EpicGamesBBDDJuego("Watch Dogs 2", "angelonia", "watch-dogs-2", True),
-            New EpicGamesBBDDJuego("Watch Dogs Legion", "hawk", "watch-dogs-legion", True),
+            New EpicGamesBBDDJuego("Watch Dogs Legion", "hawk", "watch-dogs-legion", False),
             New EpicGamesBBDDJuego("Wattam", "lupine", "wattam", True),
             New EpicGamesBBDDJuego("What Remains of Edith Finch", "badger", "what-remains-of-edith-finch", True),
             New EpicGamesBBDDJuego("What the Golf?", "stork", "what-the-golf", True),
