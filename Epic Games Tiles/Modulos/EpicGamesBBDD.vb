@@ -6,8 +6,7 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'pendientes: alluris
-    '            amnesia-rebirth
+    'pendientes: 
     '            bugsnax
     '            chorus
     '            claire-de-lune
@@ -22,7 +21,6 @@ Module EpicGamesBBDD
     '            iron-harvest
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
-    '            levelhead      
     '            primordials-of-amyrion
     '            prince-of-persia-sands-of-time
     '            recompile
@@ -63,9 +61,11 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Airborne Kingdom", "macaw", "airborne-kingdom", False),
             New EpicGamesBBDDJuego("Alan Wake", "heron", "alan-wake", True),
             New EpicGamesBBDDJuego("Alan Wake: American Nightmare", "condor", "alan-wake-american-nightmare", True),
+            New EpicGamesBBDDJuego("Alluris", "712a1086c52b413da55f9b38588575d9", "alluris", False),
             New EpicGamesBBDDJuego("Amnesia: A Machine for Pigs", "d7db33dfe7634d6b8a188c708f2caa3c", "amnesia-a-machine-for-pigs", False),
             New EpicGamesBBDDJuego("Amnesia: Rebirth", "f59de18db4dc445f88ffeff24d081234", "amnesia-rebirth", False),
             New EpicGamesBBDDJuego("Amnesia: The Dark Descent", "ece4c58603d04bcb97454be9a7492fa6", "amnesia-the-dark-descent", True),
+            New EpicGamesBBDDJuego("Among Trees", "dorado", "among-trees", True),
             New EpicGamesBBDDJuego("Ancestors: The Humankind Odyssey", "amaranth", "ancestors", True),
             New EpicGamesBBDDJuego("Anno 1404: History Edition", "f529f5a152014f65821eb900f1c54921", "anno-1404", False),
             New EpicGamesBBDDJuego("Anno 1701: History Edition", "190415920d4a4e3f99043e57e8fabe60", "anno-1701", False),
@@ -78,6 +78,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("art of rally", "01805192c8074820b1257fcfd97f2648", "art-of-rally", False),
             New EpicGamesBBDDJuego("As Far As The Eye", "09d93e58c5694dc4a709d76887bcd61c", "as-far-as-the-eye", False),
             New EpicGamesBBDDJuego("Ashen", "wren", "ashen", True),
+            New EpicGamesBBDDJuego("Assassin's Creed: Director's Cut Edition", "0b9d1072cd674b8b91c8e25e9d695ed9", "assassins-creed-1", False),
             New EpicGamesBBDDJuego("Assassin's Creed II Deluxe Edition", "d0ae8ca1b5c8421ca6ab892353d3204d", "assassins-creed-2", False),
             New EpicGamesBBDDJuego("Assassin's Creed III: Remastered", "anise", "assassins-creed-3", False),
             New EpicGamesBBDDJuego("Assassin's Creed Odyssey", "clary", "assassins-creed-odyssey", False),
@@ -140,9 +141,12 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Disco Elysium", "7334aba246154b63857435cb9c7eecd5", "disco-elysium", False),
             New EpicGamesBBDDJuego("Donut County", "kestrel", "donut-county", True),
             New EpicGamesBBDDJuego("Drawful 2", "daisy", "drawful-2", True),
+            New EpicGamesBBDDJuego("Dread Nautical", "opah", "dread-nautical", False),
+            New EpicGamesBBDDJuego("Dungeons 3", "351fe5b32e22412d8fa41f4c7395fed1", "dungeons-3", False),
             New EpicGamesBBDDJuego("Empires of the Undergrowth", "c9fa09b072b54443b79d821afd76e767", "empires-of-the-undergrowth", False),
             New EpicGamesBBDDJuego("Enter the Gungeon", "garlic", "enter-the-gungeon", True),
             New EpicGamesBBDDJuego("Everything", "pelican", "everything", False),
+            New EpicGamesBBDDJuego("Faeria", "vulture", "faeria", True),
             New EpicGamesBBDDJuego("Falcon Age", "parrot", "falcon-age", True),
             New EpicGamesBBDDJuego("Far Cry", "c9d31937de5b45efb95b515b35a4960b", "far-cry", False),
             New EpicGamesBBDDJuego("Far Cry 2: Fortune's Edition", "3b78108a811d497db768899400edd842", "far-cry-2", False),
@@ -170,6 +174,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("God's Trigger", "9bc4423d873845739cc99ab69b6bfbe9", "gods-trigger", False),
             New EpicGamesBBDDJuego("Going Under", "5f4a39950a1d49c3a3ebad181a6c05fa", "going-under", False),
             New EpicGamesBBDDJuego("Gone Home", "flier", "gone-home", False),
+            New EpicGamesBBDDJuego("GoNNER", "emperor", "gonner", True),
             New EpicGamesBBDDJuego("Gorogoa", "meerkat", "gorogoa", True),
             New EpicGamesBBDDJuego("Grand Theft Auto V", "9d2d0eb64d5c44529cece33fe2a46482", "grand-theft-auto-v", False),
             New EpicGamesBBDDJuego("Griftlands", "phlox", "griftlands", False),
@@ -216,6 +221,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("LEGO Batman: The Videogame", "goldeneye", "lego-batman", True),
             New EpicGamesBBDDJuego("LEGO Batman 2: DC Super Heroes", "grackle", "lego-batman-2", True),
             New EpicGamesBBDDJuego("LEGO Batman 3: Beyond Gotham", "gull", "lego-batman-3", True),
+            New EpicGamesBBDDJuego("Levelhead", "196ba0d44d914ef69499877e53fa500d", "levelhead", True),
             New EpicGamesBBDDJuego("Lifeless Planet: Premier Edition", "860a4feefe2a4f48905ae86c61d5db64", "lifeless-planet-premier-edition", False),
             New EpicGamesBBDDJuego("Limbo", "hazelnut", "limbo", False),
             New EpicGamesBBDDJuego("Little Inferno", "clover", "little-inferno", True),
@@ -227,7 +233,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Manifold Garden", "lorikeet", "manifold-garden", False),
             New EpicGamesBBDDJuego("Mechwarrior 5", "hoopoe", "mechwarrior-5", True),
             New EpicGamesBBDDJuego("Metro: 2033 Redux", "petunia", "metro-2033-redux", True),
-            New EpicGamesBBDDJuego("Metro Exodus", "b4a0d2d15acb4db894a599b810297543", "metro-exodus", True),
+            New EpicGamesBBDDJuego("Metro Exodus", "snapdragon", "metro-exodus", True),
             New EpicGamesBBDDJuego("Metro: Last Light Redux", "speedwell", "metro-last-light-redux", True),
             New EpicGamesBBDDJuego("Might & Magic Chess Royale", "b141e42965ff431aa0e23bf3d5635942", "might-and-magic-chess-royale", False),
             New EpicGamesBBDDJuego("Might & Magic Heroes VII: Ultimate Edition", "f324cf34cd1a4a94901e003d14da37b1", "might-and-magic-heroes-7", False),
