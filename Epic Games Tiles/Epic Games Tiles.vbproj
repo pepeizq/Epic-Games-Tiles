@@ -22,7 +22,7 @@
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <AppInstallerUpdateFrequency>0</AppInstallerUpdateFrequency>
     <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
@@ -177,6 +177,36 @@
     <Content Include="Assets\Iconos\1.png" />
     <Content Include="Assets\Iconos\2.png" />
     <Content Include="Assets\Iconos\3.png" />
+    <Content Include="Assets\Juegos\281a47e363284108b82bf05c1a612145_grande.jpg" />
+    <Content Include="Assets\Juegos\48619f5656da446abccb727b78cda644_grande.jpg" />
+    <Content Include="Assets\Juegos\8cf7c6b964514532ad8284a376a517bf_grande.jpg" />
+    <Content Include="Assets\Juegos\auk_grande.png" />
+    <Content Include="Assets\Juegos\b8aa8afb7da84da3a978425ec4b8e5cd_grande.jpg" />
+    <Content Include="Assets\Juegos\begonia_grande.png" />
+    <Content Include="Assets\Juegos\bluebird_grande.png" />
+    <Content Include="Assets\Juegos\bobcat_grande.png" />
+    <Content Include="Assets\Juegos\buffalo_grande.png" />
+    <Content Include="Assets\Juegos\buttercup_grande.jpg" />
+    <Content Include="Assets\Juegos\carnation_grande.png" />
+    <Content Include="Assets\Juegos\crab_grande.png" />
+    <Content Include="Assets\Juegos\e7471b6a7335415db9819ef7e7e77c29_grande.jpg" />
+    <Content Include="Assets\Juegos\fennel_grande.jpg" />
+    <Content Include="Assets\Juegos\hazelnut_grande.png" />
+    <Content Include="Assets\Juegos\larkspur_grande.png" />
+    <Content Include="Assets\Juegos\lorikeet_grande.png" />
+    <Content Include="Assets\Juegos\magpie_grande.png" />
+    <Content Include="Assets\Juegos\marigold_grande.png" />
+    <Content Include="Assets\Juegos\nautilus_grande.png" />
+    <Content Include="Assets\Juegos\peacock_grande.jpg" />
+    <Content Include="Assets\Juegos\pelican_grande.png" />
+    <Content Include="Assets\Juegos\pheasant_grande.png" />
+    <Content Include="Assets\Juegos\salt_grande.jpg" />
+    <Content Include="Assets\Juegos\sparrow_grande.png" />
+    <Content Include="Assets\Juegos\stargazer_grande.png" />
+    <Content Include="Assets\Juegos\sundrop_grande.png" />
+    <Content Include="Assets\Juegos\trogon_grande.png" />
+    <Content Include="Assets\Juegos\vpr_grande.jpg" />
+    <Content Include="Assets\Juegos\wigeon_grande.png" />
     <Content Include="Assets\Logos\BadgeLogo.scale-100.png" />
     <Content Include="Assets\Logos\BadgeLogo.scale-125.png" />
     <Content Include="Assets\Logos\BadgeLogo.scale-150.png" />

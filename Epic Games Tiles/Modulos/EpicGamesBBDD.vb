@@ -7,14 +7,11 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
     'pendientes: 
-    '            bugsnax
     '            chorus
     '            claire-de-lune
     '            demon-turf
     '            dragon-quest-xi-s-echoes-of-an-elusive-age
     '            far-cry-6
-    '            fuser
-    '            godfall
     '            gravewood-high
     '            hitman-3
     '            immortals-fenyx-rising
@@ -106,6 +103,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Borderlands 2", "dodo", "borderlands-2", False),
             New EpicGamesBBDDJuego("Borderlands 3", "catnip", "borderlands-3", True),
             New EpicGamesBBDDJuego("Borderlands: The Pre-Sequel", "turkey", "borderlands-the-pre-sequel", False),
+            New EpicGamesBBDDJuego("Bugsnax", "bonytail", "bugsnax", False),
             New EpicGamesBBDDJuego("Carcassonne", "thrush", "carcassonne", True),
             New EpicGamesBBDDJuego("Cardpocalypse", "duck", "cardpocalypse", True),
             New EpicGamesBBDDJuego("Carrion", "9faa3b0871e44b639d49a209f9405aab", "carrion", False),
@@ -143,6 +141,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Drawful 2", "daisy", "drawful-2", True),
             New EpicGamesBBDDJuego("Dread Nautical", "opah", "dread-nautical", False),
             New EpicGamesBBDDJuego("Dungeons 3", "351fe5b32e22412d8fa41f4c7395fed1", "dungeons-3", False),
+            New EpicGamesBBDDJuego("Elite Dangerous", "9c203b6ed35846e8a4a9ff1e314f6593", "elite-dangerous", False),
             New EpicGamesBBDDJuego("Empires of the Undergrowth", "c9fa09b072b54443b79d821afd76e767", "empires-of-the-undergrowth", False),
             New EpicGamesBBDDJuego("Enter the Gungeon", "garlic", "enter-the-gungeon", True),
             New EpicGamesBBDDJuego("Everything", "pelican", "everything", False),
@@ -166,11 +165,13 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Foregone", "dab", "foregone", False),
             New EpicGamesBBDDJuego("Fortnite", "fortnite", "fortnite", True),
             New EpicGamesBBDDJuego("Freedom Fighters", "0d771750aa9042898ce100dbfb5efb1a", "freedom-fighters", False),
+            New EpicGamesBBDDJuego("Fuser", "2939f4752d4b4ace95a8e1b16e79d3f5", "fuser", False),
             New EpicGamesBBDDJuego("Genesis Alpha One", "puma", "genesis-alpha-one", False),
             New EpicGamesBBDDJuego("Ghostbusters: The Video Game Remastered", "mint", "ghostbusters-the-video-game-remastered", True),
             New EpicGamesBBDDJuego("Ghostrunner", "ea8df71f923649a193ab1c1fded7e1b3", "ghostrunner", False),
             New EpicGamesBBDDJuego("GNOG", "penguin", "gnog", True),
-            New EpicGamesBBDDJuego("Gods and Monsters", "pheasant", "gods-and-monsters", True),
+            New EpicGamesBBDDJuego("Godfall", "carp", "godfall", False),
+            New EpicGamesBBDDJuego("Gods and Monsters", "pheasant", "gods-and-monsters", False),
             New EpicGamesBBDDJuego("God's Trigger", "9bc4423d873845739cc99ab69b6bfbe9", "gods-trigger", False),
             New EpicGamesBBDDJuego("Going Under", "5f4a39950a1d49c3a3ebad181a6c05fa", "going-under", False),
             New EpicGamesBBDDJuego("Gone Home", "flier", "gone-home", False),
@@ -180,7 +181,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Griftlands", "phlox", "griftlands", False),
             New EpicGamesBBDDJuego("Hades", "min", "hades", False),
             New EpicGamesBBDDJuego("Hammerting", "60dc80f49cf34a479df2c823df30e9ac", "hammerting", False),
-            New EpicGamesBBDDJuego("Heavy Rain", "aster", "heavy-rain", True),
+            New EpicGamesBBDDJuego("Heavy Rain", "aster", "heavy-rain", False),
             New EpicGamesBBDDJuego("Hello Neighbor", "ursus", "hello-neighbor", False),
             New EpicGamesBBDDJuego("Hello Neighbor Hide & Seek", "morpho", "hello-neighbor-hide-and-seek", True),
             New EpicGamesBBDDJuego("Hellpoint", "210733411fa44d5f8454a1bb435db3a9", "hellpoint", False),
@@ -249,11 +250,13 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("My Time At Portia", "cobra", "my-time-at-portia", True),
             New EpicGamesBBDDJuego("Neighbours back From Hell", "ada6f617bc3f4042a7f2f7533f3573e8", "neighbours-back-from-hell", False),
             New EpicGamesBBDDJuego("Neon Abyss", "a26f991a5e6c4e9c9572fc200cbea47f", "neon-abyss", False),
+            New EpicGamesBBDDJuego("Neverwinter", "87be9bd6707748888bce1f79b025c5dd", "neverwinter", False),
             New EpicGamesBBDDJuego("Next Up Hero", "sumac", "next-up-hero", False),
             New EpicGamesBBDDJuego("New Super Lucky's Tale", "f7af594eebf542fc91dfc911f5f1e1d2", "new-super-luckys-tale", False),
             New EpicGamesBBDDJuego("No Straight Roads", "raven", "no-straight-roads", True),
             New EpicGamesBBDDJuego("Nuclear Throne", "turaco", "nuclear-throne", True),
             New EpicGamesBBDDJuego("Observation", "allium", "observation", True),
+            New EpicGamesBBDDJuego("Observer: System Redux", "96bd88a871c24768a7cf1b9b9fbc5aa5", "observer-system-redux", False),
             New EpicGamesBBDDJuego("Offworld Trading Company", "snapper", "offworld-trading-company", False),
             New EpicGamesBBDDJuego("Old World", "nightjar", "old-world", False),
             New EpicGamesBBDDJuego("Omen Of Sorrow", "daffodil", "omen-of-sorrow", False),
@@ -359,13 +362,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("The Last Campfire", "c713e12721894fcdbc59ad9ff3fd8a69", "the-last-campfire", False),
             New EpicGamesBBDDJuego("The Messenger", "jay", "the-messenger", True),
             New EpicGamesBBDDJuego("The Outer Worlds", "rosemallow", "the-outer-worlds", True),
-            New EpicGamesBBDDJuego("The Pathless", "geum", "the-pathless", True),
+            New EpicGamesBBDDJuego("The Pathless", "geum", "the-pathless", False),
             New EpicGamesBBDDJuego("The Red Lantern", "guillemot", "the-red-lantern", False),
             New EpicGamesBBDDJuego("The Settlers", "magpie", "the-settlers", False),
             New EpicGamesBBDDJuego("The Sojourn", "shallots", "the-sojourn", True),
             New EpicGamesBBDDJuego("The Solitaire Conspiracy", "162623ee6c524e41919d1efa24ce58ce", "the-solitaire-conspiracy", False),
             New EpicGamesBBDDJuego("The Stanley Parable", "freesia", "the-stanley-parable", False),
             New EpicGamesBBDDJuego("The Telltale Batman Shadows Edition", "batfish", "the-telltale-batman", False),
+            New EpicGamesBBDDJuego("The Textorcist: The Story of Ray Bibbia", "50d8518151d0498b83ff5d18a7bdb68b", "the-textorcist", False),
             New EpicGamesBBDDJuego("The Unfinished Swan", "f58bb43636064a0295781853ef8405fb", "the-unfinished-swan", False),
             New EpicGamesBBDDJuego("The Walking Dead: Season One", "bloodroot", "walking-dead-season-one", True),
             New EpicGamesBBDDJuego("The Walking Dead: Season Two", "buttercup", "walking-dead-season-two", False),
@@ -376,6 +380,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("The Witcher 3: Wild Hunt - Game of the Year Edition", "725a22e15ed74735bb0d6a19f3cc82d0", "the-witcher-3-wild-hunt", False),
             New EpicGamesBBDDJuego("The Witness", "magnolia", "the-witness", True),
             New EpicGamesBBDDJuego("The Wolf Among Us", "cobbler", "the-wolf-among-us", False),
+            New EpicGamesBBDDJuego("The World Next Door", "39a0313492c84cf79b119efb09df90e5", "the-world-next-door", False),
             New EpicGamesBBDDJuego("This War of Mine", "cardinal", "this-war-of-mine", True),
             New EpicGamesBBDDJuego("Thimbleweed Park", "tulip", "thimbleweed-park", True),
             New EpicGamesBBDDJuego("Ticket to Ride", "towhee", "ticket-to-ride", True),
@@ -401,8 +406,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Untitled Goose Game", "flour", "untitled-goose-game", False),
             New EpicGamesBBDDJuego("Valiant Hearts: The Great War", "f6496e154baa437cb4d9cae38a7e3cc5", "valiant-hearts", False),
             New EpicGamesBBDDJuego("Vampire: The Masquerade - Bloodlines 2", "nemesia", "vampire-the-masquerade-bloodlines-2", False),
-            New EpicGamesBBDDJuego("Vampyr", "Nautilus", "vampyr", True),
+            New EpicGamesBBDDJuego("Vampyr", "nautilus", "vampyr", True),
             New EpicGamesBBDDJuego("Wargame: Red Dragon", "2cd446792405468e9e87f67649d864c2", "wargame-red-dragon", False),
+            New EpicGamesBBDDJuego("Warhammer 40,000: Gladius - Relics of War", "da5b18cb1e7a452196c3142f2c1d7dd3", "warhammer-40000-gladius-relics-of-war", False),
             New EpicGamesBBDDJuego("Watch Dogs", "jasper", "watch-dogs", False),
             New EpicGamesBBDDJuego("Watch Dogs 2", "angelonia", "watch-dogs-2", True),
             New EpicGamesBBDDJuego("Watch Dogs Legion", "hawk", "watch-dogs-legion", False),
@@ -427,51 +433,6 @@ Module EpicGamesBBDD
         Return lista
     End Function
 
-    Public Function ImagenesVertical()
-        Dim lista As New List(Of EpicGamesBBDDJuegoImagen) From {
-            New EpicGamesBBDDJuegoImagen("celeste", "https://i.imgur.com/Xq3qslq.jpg"),
-            New EpicGamesBBDDJuegoImagen("everything", "https://i.imgur.com/EB1Df4u.png"),
-            New EpicGamesBBDDJuegoImagen("far-cry-primal", "https://i.imgur.com/xhHKaI0.png"),
-            New EpicGamesBBDDJuegoImagen("fez", "https://i.imgur.com/sPcLPob.png"),
-            New EpicGamesBBDDJuegoImagen("for-honor", "https://i.imgur.com/cDjpz8u.png"),
-            New EpicGamesBBDDJuegoImagen("ghost-recon-future-soldier", "https://i.imgur.com/ymk3jhm.jpg"),
-            New EpicGamesBBDDJuegoImagen("gods-and-monsters", "https://i.imgur.com/iEfHJZE.png"),
-            New EpicGamesBBDDJuegoImagen("inside", "https://i.imgur.com/JGF2BoU.png"),
-            New EpicGamesBBDDJuegoImagen("kingdoms-of-amalur-re-reckoning", "https://i.imgur.com/IDpnNcw.jpg"),
-            New EpicGamesBBDDJuegoImagen("limbo", "https://i.imgur.com/VeIVNNp.png"),
-            New EpicGamesBBDDJuegoImagen("mtg-arena", "https://i.imgur.com/KlUlbGr.png"),
-            New EpicGamesBBDDJuegoImagen("manifold-garden", "https://i.imgur.com/JNOnuUh.png"),
-            New EpicGamesBBDDJuegoImagen("pikuniku", "https://i.imgur.com/6CavRNq.jpg"),
-            New EpicGamesBBDDJuegoImagen("q-u-b-e-2", "https://i.imgur.com/ggyYknd.png"),
-            New EpicGamesBBDDJuegoImagen("railway-empire", "https://i.imgur.com/QUNWhbn.jpg"),
-            New EpicGamesBBDDJuegoImagen("rainbow-six-quarantine", "https://i.imgur.com/w6qfmVi.png"),
-            New EpicGamesBBDDJuegoImagen("rainbow-six-siege", "https://i.imgur.com/la0PQDv.png"),
-            New EpicGamesBBDDJuegoImagen("readyset-heroes", "https://i.imgur.com/6erIk9C.jpg"),
-            New EpicGamesBBDDJuegoImagen("rollercoaster-tycoon-3-complete-edition", "https://i.imgur.com/K0diHdG.jpg"),
-            New EpicGamesBBDDJuegoImagen("satisfactory", "https://i.imgur.com/EEcVDeD.png"),
-            New EpicGamesBBDDJuegoImagen("shadow-complex", "https://i.imgur.com/uRBa2W9.jpg"),
-            New EpicGamesBBDDJuegoImagen("star-wars-squadrons", "https://i.imgur.com/utUs4ah.png"),
-            New EpicGamesBBDDJuegoImagen("super-meat-boy", "https://i.imgur.com/7zy5Z9D.png"),
-            New EpicGamesBBDDJuegoImagen("superliminal", "https://i.imgur.com/vLSCttq.png"),
-            New EpicGamesBBDDJuegoImagen("the-settlers", "https://i.imgur.com/Wq1AfRE.png"),
-            New EpicGamesBBDDJuegoImagen("walking-dead-michonne", "https://i.imgur.com/4u2hReb.jpg"),
-            New EpicGamesBBDDJuegoImagen("walking-dead-a-new-frontier", "https://i.imgur.com/syR6gzh.png"),
-            New EpicGamesBBDDJuegoImagen("walking-dead-season-two", "https://i.imgur.com/vT3iYA3.jpg"),
-            New EpicGamesBBDDJuegoImagen("vampyr", "https://i.imgur.com/th3la9W.png"),
-            New EpicGamesBBDDJuegoImagen("zombie-army-4-dead-war", "https://i.imgur.com/bpL4dRD.png")
-        }
-
-        Return lista
-    End Function
-
-    Public Function ImagenesHorizontal()
-        Dim lista As New List(Of EpicGamesBBDDJuegoImagen) From {
-            New EpicGamesBBDDJuegoImagen("zombie-army-4-dead-war", "https://i.imgur.com/QHAOQIU.png")
-        }
-
-        Return lista
-    End Function
-
 End Module
 
 Public Class EpicGamesBBDDJuego
@@ -486,18 +447,6 @@ Public Class EpicGamesBBDDJuego
         Me.ID = id
         Me.Enlace = enlace
         Me.Logo = logo
-    End Sub
-
-End Class
-
-Public Class EpicGamesBBDDJuegoImagen
-
-    Public ID As String
-    Public Enlace As String
-
-    Public Sub New(ByVal id As String, ByVal enlace As String)
-        Me.ID = id
-        Me.Enlace = enlace
     End Sub
 
 End Class
