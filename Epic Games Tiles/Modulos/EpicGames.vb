@@ -1,19 +1,18 @@
 ﻿Imports Microsoft.Toolkit.Uwp.Helpers
-Imports Microsoft.Toolkit.Uwp.UI.Animations
 Imports Microsoft.Toolkit.Uwp.UI.Controls
 Imports Newtonsoft.Json
 Imports Windows.Storage
 Imports Windows.Storage.AccessCache
 Imports Windows.Storage.Pickers
 Imports Windows.UI
-Imports Windows.UI.Core
-Imports Windows.UI.Xaml.Media.Animation
 
 Module EpicGames
 
-    Public anchoColumna As Integer = 213
+    Public anchoColumna As Integer = 180
+    Dim clave As String = "EpicGamesCarpeta"
+    Dim dominioImagenes As String = "https://cdn.cloudflare.steamstatic.com"
 
-    Public Async Sub Generar(boolBuscarCarpeta As Boolean)
+    Public Async Sub Generar(buscarCarpeta As Boolean)
 
         Dim modo As Integer = ApplicationData.Current.LocalSettings.Values("modo_tiles")
 
@@ -24,27 +23,17 @@ Module EpicGames
         Dim frame As Frame = Window.Current.Content
         Dim pagina As Page = frame.Content
 
-        Cache.Estado(False)
-
-        Dim spProgreso As StackPanel = pagina.FindName("spProgreso")
-        spProgreso.Visibility = Visibility.Visible
-
         Dim pbProgreso As ProgressBar = pagina.FindName("pbProgreso")
         pbProgreso.Value = 0
 
         Dim tbProgreso As TextBlock = pagina.FindName("tbProgreso")
         tbProgreso.Text = String.Empty
 
-        Dim cbTiles As ComboBox = pagina.FindName("cbConfigModosTiles")
-        cbTiles.IsEnabled = False
+        Configuracion.Estado(False)
+        Cache.Estado(False)
 
-        Dim sp1 As StackPanel = pagina.FindName("spModoTile1")
-        sp1.IsHitTestVisible = False
-
-        Dim gridSeleccionarJuego As Grid = pagina.FindName("gridSeleccionarJuego")
-        gridSeleccionarJuego.Visibility = Visibility.Collapsed
-
-        Dim gv As GridView = pagina.FindName("gvTiles")
+        Dim gv As AdaptiveGridView = pagina.FindName("gvTiles")
+        gv.DesiredWidth = anchoColumna
         gv.Items.Clear()
 
         Dim listaJuegos As New List(Of Tile)
@@ -53,14 +42,15 @@ Module EpicGames
             listaJuegos = Await helper.ReadFileAsync(Of List(Of Tile))("juegos" + modo.ToString)
         End If
 
-        If modo = 0 Then
-            Dim botonAñadirCarpetaTexto As TextBlock = pagina.FindName("botonAñadirCarpetaTexto")
-            Dim botonCarpetaTexto As TextBlock = pagina.FindName("tbConfigCarpeta")
+        If listaJuegos Is Nothing Then
+            listaJuegos = New List(Of Tile)
+        End If
 
+        If modo = 0 Then
             Dim carpeta As StorageFolder = Nothing
 
             Try
-                If boolBuscarCarpeta = True Then
+                If buscarCarpeta = True Then
                     Dim carpetapicker As New FolderPicker()
 
                     carpetapicker.FileTypeFilter.Add("*")
@@ -68,13 +58,16 @@ Module EpicGames
 
                     carpeta = Await carpetapicker.PickSingleFolderAsync()
                 Else
-                    carpeta = Await StorageApplicationPermissions.FutureAccessList.GetFolderAsync("EpicGamesCarpeta")
+                    carpeta = Await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(clave)
                 End If
             Catch ex As Exception
 
             End Try
 
             If Not carpeta Is Nothing Then
+                Dim gridProgreso As Grid = pagina.FindName("gridProgreso")
+                Interfaz.Pestañas.Visibilidad_Pestañas(gridProgreso, Nothing)
+
                 Dim listaInstalado As New List(Of String)
 
                 Dim subcarpetas1 As IReadOnlyList(Of StorageFolder) = Await carpeta.GetFoldersAsync()
@@ -103,21 +96,15 @@ Module EpicGames
                     Dim añadir As Boolean = True
 
                     For Each juegoGuardado In listaJuegos
-                        If juegoGuardado.ID = juegoBBDD.ID Then
+                        If juegoGuardado.IDEpic = juegoBBDD.IDEpic Then
                             añadir = False
                         End If
                     Next
 
                     If añadir = True Then
                         For Each juegoInstalado In listaInstalado
-                            If juegoInstalado.ToLower = juegoBBDD.ID.ToLower Then
-                                Dim html As String = Await Decompiladores.HttpClient(New Uri("https://www.epicgames.com/store/en-US/api/content/products/" + juegoBBDD.Enlace))
-
-                                If Not html = Nothing Then
-                                    Dim juegoEpic As EpicGamesJuego = JsonConvert.DeserializeObject(Of EpicGamesJuego)(html)
-
-                                    AñadirJuego(juegoEpic, juegoBBDD, listaJuegos)
-                                End If
+                            If juegoInstalado.ToLower = juegoBBDD.IDEpic.ToLower Then
+                                listaJuegos.Add(Await AñadirJuego(juegoBBDD))
                             End If
 
                             pbProgreso.Value = CInt((100 / listaInstalado.Count) * i)
@@ -128,12 +115,13 @@ Module EpicGames
                 Next
 
                 If listaJuegos.Count > 0 Then
-                    StorageApplicationPermissions.FutureAccessList.AddOrReplace("EpicGamesCarpeta", carpeta)
-                    botonCarpetaTexto.Text = carpeta.Path
-                    botonAñadirCarpetaTexto.Text = recursos.GetString("Change")
+                    StorageApplicationPermissions.FutureAccessList.AddOrReplace(clave, carpeta)
                 End If
             End If
         ElseIf modo = 1 Then
+            Dim gridProgreso As Grid = pagina.FindName("gridProgreso")
+            Interfaz.Pestañas.Visibilidad_Pestañas(gridProgreso, Nothing)
+
             Dim listaBBDD As List(Of EpicGamesBBDDJuego) = EpicGamesBBDD.Listado
 
             Dim i As Integer = 0
@@ -142,20 +130,14 @@ Module EpicGames
 
                 If Not listaJuegos Is Nothing Then
                     For Each juegoGuardado In listaJuegos
-                        If juegoGuardado.ID = juegoBBDD.ID Then
+                        If juegoGuardado.IDEpic = juegoBBDD.IDEpic Then
                             añadir = False
                         End If
                     Next
                 End If
 
                 If añadir = True Then
-                    Dim html As String = Await Decompiladores.HttpClient(New Uri("https://store-content.ak.epicgames.com/api/en-US/content/products/" + juegoBBDD.Enlace))
-
-                    If Not html = Nothing Then
-                        Dim juegoEpic As EpicGamesJuego = JsonConvert.DeserializeObject(Of EpicGamesJuego)(html)
-
-                        AñadirJuego(juegoEpic, juegoBBDD, listaJuegos)
-                    End If
+                    listaJuegos.Add(Await AñadirJuego(juegoBBDD))
                 End If
 
                 pbProgreso.Value = CInt((100 / listaBBDD.Count) * i)
@@ -164,20 +146,16 @@ Module EpicGames
             Next
         End If
 
-        Await helper.SaveFileAsync(Of List(Of Tile))("juegos" + modo.ToString, listaJuegos)
+        Try
+            Await helper.SaveFileAsync(Of List(Of Tile))("juegos" + modo.ToString, listaJuegos)
+        Catch ex As Exception
 
-        spProgreso.Visibility = Visibility.Collapsed
-
-        Dim gridTiles As Grid = pagina.FindName("gridTiles")
-        Dim gridAvisoNoJuegos As Grid = pagina.FindName("gridAvisoNoJuegos")
-        Dim spBuscador As StackPanel = pagina.FindName("spBuscador")
+        End Try
 
         If Not listaJuegos Is Nothing Then
             If listaJuegos.Count > 0 Then
-                gridTiles.Visibility = Visibility.Visible
-                gridAvisoNoJuegos.Visibility = Visibility.Collapsed
-                gridSeleccionarJuego.Visibility = Visibility.Visible
-                spBuscador.Visibility = Visibility.Visible
+                Dim gridJuegos As Grid = pagina.FindName("gridJuegos")
+                Interfaz.Pestañas.Visibilidad_Pestañas(gridJuegos, recursos.GetString("Games"))
 
                 listaJuegos.Sort(Function(x, y) x.Titulo.CompareTo(y.Titulo))
 
@@ -186,132 +164,61 @@ Module EpicGames
                 For Each juego In listaJuegos
                     BotonEstilo(juego, gv)
                 Next
-
-                'If boolBuscarCarpeta = True Then
-                '    Toast(listaJuegos.Count.ToString + " " + recursos.GetString("GamesDetected"), Nothing)
-                'End If
             Else
-                gridTiles.Visibility = Visibility.Collapsed
-                gridAvisoNoJuegos.Visibility = Visibility.Visible
-                gridSeleccionarJuego.Visibility = Visibility.Collapsed
-                spBuscador.Visibility = Visibility.Collapsed
+                Dim gridAvisoNoJuegos As Grid = pagina.FindName("gridAvisoNoJuegos")
+                Interfaz.Pestañas.Visibilidad_Pestañas(gridAvisoNoJuegos, Nothing)
             End If
         Else
-            gridTiles.Visibility = Visibility.Collapsed
-            gridAvisoNoJuegos.Visibility = Visibility.Visible
-            gridSeleccionarJuego.Visibility = Visibility.Collapsed
-            spBuscador.Visibility = Visibility.Collapsed
+            Dim gridAvisoNoJuegos As Grid = pagina.FindName("gridAvisoNoJuegos")
+            Interfaz.Pestañas.Visibilidad_Pestañas(gridAvisoNoJuegos, Nothing)
         End If
 
-        cbTiles.IsEnabled = True
-        sp1.IsHitTestVisible = True
+        Configuracion.Estado(True)
         Cache.Estado(True)
 
     End Sub
 
-    Private Async Sub AñadirJuego(juegoEpic As EpicGamesJuego, juegoBBDD As EpicGamesBBDDJuego, listaJuegos As List(Of Tile))
+    Private Async Function AñadirJuego(juegoBBDD As EpicGamesBBDDJuego) As Task(Of Tile)
 
-        Dim titulo As String = juegoEpic.Titulo
-
-        If titulo = Nothing Then
-            titulo = juegoBBDD.Titulo
-        End If
-
+        Dim titulo As String = juegoBBDD.Titulo
         titulo = titulo.Trim
 
-        Dim urlImagenFondoHorizontal As String = String.Empty
-        Dim urlImagenFondoVertical As String = String.Empty
-        Dim urlImagenLogo As String = String.Empty
+        Dim imagenPequeña As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDEpic, "pequeña")
+        Dim imagenMediana As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDEpic, "mediana")
+        Dim imagenAncha As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDEpic, "ancha")
+        Dim imagenGrande As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDEpic, "grande")
 
-        If juegoEpic.Paginas.Count = 1 Then
-            urlImagenFondoVertical = Await Cache.DescargarImagen(Nothing, juegoBBDD.ID, "grande")
-
-            If urlImagenFondoVertical = String.Empty Then
+        If Not juegoBBDD.IDSteam = Nothing Then
+            If imagenMediana = String.Empty Then
                 Try
-                    urlImagenFondoVertical = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Vertical, juegoBBDD.ID, "fondoV")
+                    imagenMediana = Await Cache.DescargarImagen(dominioImagenes + "/steam/apps/" + juegoBBDD.IDSteam + "/logo.png", juegoBBDD.IDEpic, "mediana")
                 Catch ex As Exception
 
                 End Try
             End If
 
-            '-----------------------------------------------
-
-            If urlImagenFondoHorizontal = Nothing Then
+            If imagenAncha = String.Empty Then
                 Try
-                    urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Horizontal, juegoBBDD.ID, "fondoH")
+                    imagenAncha = Await Cache.DescargarImagen(dominioImagenes + "/steam/apps/" + juegoBBDD.IDSteam + "/header.jpg", juegoBBDD.IDEpic, "ancha")
                 Catch ex As Exception
 
                 End Try
             End If
 
-            If urlImagenFondoHorizontal = Nothing Then
+            If imagenGrande = String.Empty Then
                 Try
-                    urlImagenFondoHorizontal = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Capturas(1), juegoBBDD.ID, "fondoH")
+                    imagenGrande = Await Cache.DescargarImagen(dominioImagenes + "/steam/apps/" + juegoBBDD.IDSteam + "/library_600x900.jpg", juegoBBDD.IDEpic, "grande")
                 Catch ex As Exception
 
                 End Try
             End If
-
-            '-----------------------------------------------
-
-            If juegoBBDD.Logo = True Then
-                Try
-                    urlImagenLogo = Await Cache.DescargarImagen(juegoEpic.Paginas(0).Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
-                Catch ex As Exception
-
-                End Try
-            End If
-        ElseIf juegoEpic.Paginas.Count > 1 Then
-            For Each paginaEpic In juegoEpic.Paginas
-                If paginaEpic.Patron.Contains(juegoBBDD.Enlace + "/home") Then
-                    urlImagenFondoVertical = Await Cache.DescargarImagen(Nothing, juegoBBDD.ID, "grande")
-
-                    If urlImagenFondoVertical = String.Empty Then
-                        Try
-                            urlImagenFondoVertical = Await Cache.DescargarImagen(paginaEpic.Datos.Imagenes.Vertical, juegoBBDD.ID, "fondoV")
-                        Catch ex As Exception
-
-                        End Try
-                    End If
-
-                    '-----------------------------------------------
-
-                    If urlImagenFondoHorizontal = Nothing Then
-                        Try
-                            urlImagenFondoHorizontal = Await Cache.DescargarImagen(paginaEpic.Datos.Imagenes.Horizontal, juegoBBDD.ID, "fondoH")
-                        Catch ex As Exception
-
-                        End Try
-                    End If
-
-                    If urlImagenFondoHorizontal = Nothing Then
-                        Try
-                            urlImagenFondoHorizontal = Await Cache.DescargarImagen(paginaEpic.Capturas(1), juegoBBDD.ID, "fondoH")
-                        Catch ex As Exception
-
-                        End Try
-                    End If
-
-                    '-----------------------------------------------
-
-                    If juegoBBDD.Logo = True Then
-                        Try
-                            urlImagenLogo = Await Cache.DescargarImagen(paginaEpic.Datos.Imagenes.Logo.Url, juegoBBDD.ID, "logo")
-                        Catch ex As Exception
-
-                        End Try
-                    End If
-                End If
-            Next
         End If
 
-        If Not urlImagenFondoHorizontal = Nothing Or Not urlImagenLogo = Nothing Then
-            Dim juego As New Tile(titulo, juegoBBDD.ID, "com.epicgames.launcher://apps/" + juegoBBDD.ID + "?action=launch&silent=true",
-                                  urlImagenFondoHorizontal, urlImagenFondoVertical, urlImagenLogo)
-            listaJuegos.Add(juego)
-        End If
+        Dim juego As New Tile(titulo, juegoBBDD.IDEpic, juegoBBDD.IDSteam, "com.epicgames.launcher://apps/" + juegoBBDD.IDEpic + "?action=launch&silent=true",
+                              imagenPequeña, imagenMediana, imagenAncha, imagenGrande)
+        Return juego
 
-    End Sub
+    End Function
 
     Public Sub BotonEstilo(juego As Tile, gv As GridView)
 
@@ -326,10 +233,8 @@ Module EpicGames
 
         Dim boton As New Button
 
-        Dim grid As New Grid
-
-        Dim imagenFondo As New ImageEx With {
-            .Source = juego.ImagenVertical,
+        Dim imagen As New ImageEx With {
+            .Source = juego.ImagenGrande,
             .IsCacheEnabled = True,
             .Stretch = Stretch.UniformToFill,
             .Padding = New Thickness(0, 0, 0, 0),
@@ -337,24 +242,8 @@ Module EpicGames
             .VerticalAlignment = VerticalAlignment.Center
         }
 
-        grid.Children.Add(imagenFondo)
-
-        If Not juego.ImagenLogo = String.Empty Then
-            Dim imagenLogo As New ImageEx With {
-                .Source = juego.ImagenLogo,
-                .IsCacheEnabled = True,
-                .Stretch = Stretch.Uniform,
-                .Padding = New Thickness(0, 0, 0, 0),
-                .Margin = New Thickness(20, 20, 20, 20),
-                .HorizontalAlignment = HorizontalAlignment.Center,
-                .VerticalAlignment = VerticalAlignment.Center
-            }
-
-            grid.Children.Add(imagenLogo)
-        End If
-
         boton.Tag = juego
-        boton.Content = grid
+        boton.Content = imagen
         boton.Padding = New Thickness(0, 0, 0, 0)
         boton.Background = New SolidColorBrush(Colors.Transparent)
 
@@ -370,8 +259,8 @@ Module EpicGames
         ToolTipService.SetPlacement(boton, PlacementMode.Mouse)
 
         AddHandler boton.Click, AddressOf BotonTile_Click
-        AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
-        AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
+        AddHandler boton.PointerEntered, AddressOf Interfaz.Entra_Boton_Imagen
+        AddHandler boton.PointerExited, AddressOf Interfaz.Sale_Boton_Imagen
 
         gv.Items.Add(panel)
 
@@ -380,12 +269,10 @@ Module EpicGames
     Private Sub BotonTile_Click(sender As Object, e As RoutedEventArgs)
 
         Trial.Detectar()
+        Interfaz.AñadirTile.ResetearValores()
 
         Dim frame As Frame = Window.Current.Content
         Dim pagina As Page = frame.Content
-
-        Dim spBuscador As StackPanel = pagina.FindName("spBuscador")
-        spBuscador.Visibility = Visibility.Collapsed
 
         Dim botonJuego As Button = e.OriginalSource
         Dim juego As Tile = botonJuego.Tag
@@ -394,41 +281,13 @@ Module EpicGames
         botonAñadirTile.Tag = juego
 
         Dim imagenJuegoSeleccionado As ImageEx = pagina.FindName("imagenJuegoSeleccionado")
-
-        If Not juego.ImagenHorizontal = String.Empty Then
-            imagenJuegoSeleccionado.Source = juego.ImagenHorizontal
-        Else
-            imagenJuegoSeleccionado.Source = Nothing
-        End If
+        imagenJuegoSeleccionado.Source = juego.ImagenAncha
 
         Dim tbJuegoSeleccionado As TextBlock = pagina.FindName("tbJuegoSeleccionado")
         tbJuegoSeleccionado.Text = juego.Titulo
 
-        Dim gridSeleccionarJuego As Grid = pagina.FindName("gridSeleccionarJuego")
-        gridSeleccionarJuego.Visibility = Visibility.Collapsed
-
-        Dim gvTiles As GridView = pagina.FindName("gvTiles")
-
-        If gvTiles.ActualWidth > anchoColumna Then
-            ApplicationData.Current.LocalSettings.Values("ancho_grid_tiles") = gvTiles.ActualWidth
-        End If
-
-        gvTiles.Width = anchoColumna
-        gvTiles.Padding = New Thickness(0, 0, 15, 0)
-
-        Dim gridAñadir As Grid = pagina.FindName("gridAñadirTile")
-        gridAñadir.Visibility = Visibility.Visible
-
-        ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("tile", botonJuego)
-
-        Dim animacion As ConnectedAnimation = ConnectedAnimationService.GetForCurrentView().GetAnimation("tile")
-
-        If Not animacion Is Nothing Then
-            animacion.TryStart(gridAñadir)
-        End If
-
-        Dim tbTitulo As TextBlock = pagina.FindName("tbTitulo")
-        tbTitulo.Text = Package.Current.DisplayName + " (" + Package.Current.Id.Version.Major.ToString + "." + Package.Current.Id.Version.Minor.ToString + "." + Package.Current.Id.Version.Build.ToString + "." + Package.Current.Id.Version.Revision.ToString + ") - " + juego.Titulo
+        Dim gridAñadirTile As Grid = pagina.FindName("gridAñadirTile")
+        Interfaz.Pestañas.Visibilidad_Pestañas(gridAñadirTile, juego.Titulo)
 
         '---------------------------------------------
 
@@ -441,69 +300,54 @@ Module EpicGames
         Dim imagenAncha As ImageEx = pagina.FindName("imagenTileAncha")
         imagenAncha.Source = Nothing
 
-        Dim imagenAnchaLogo As ImageEx = pagina.FindName("imagenTileAnchaLogo")
-        imagenAnchaLogo.Source = Nothing
-
         Dim imagenGrande As ImageEx = pagina.FindName("imagenTileGrande")
         imagenGrande.Source = Nothing
 
-        Dim imagenGrandeLogo As ImageEx = pagina.FindName("imagenTileGrandeLogo")
-        imagenGrandeLogo.Source = Nothing
-
-        If Not juego.ImagenLogo = Nothing Then
-            imagenPequeña.Source = juego.ImagenLogo
-            imagenPequeña.Tag = juego.ImagenLogo
+        If Not juego.ImagenPequeña = Nothing Then
+            imagenPequeña.Source = juego.ImagenPequeña
+            imagenPequeña.Tag = juego.ImagenPequeña
         End If
 
-        If Not juego.ImagenHorizontal = Nothing Then
-            If Not juego.ImagenLogo = Nothing Then
-                imagenMediana.Source = juego.ImagenLogo
-                imagenMediana.Tag = juego.ImagenLogo
-            Else
-                imagenMediana.Source = juego.ImagenHorizontal
-                imagenMediana.Tag = juego.ImagenHorizontal
-            End If
-
-            imagenAncha.Source = juego.ImagenHorizontal
-            imagenAncha.Tag = juego.ImagenHorizontal
-
-            imagenAnchaLogo.Source = juego.ImagenLogo
-            imagenAnchaLogo.Tag = juego.ImagenLogo
+        If Not juego.ImagenMediana = Nothing Then
+            imagenMediana.Source = juego.ImagenMediana
+            imagenMediana.Tag = juego.ImagenMediana
         End If
 
-        If Not juego.ImagenVertical = Nothing Then
-            imagenGrande.Source = juego.ImagenVertical
-            imagenGrande.Tag = juego.ImagenVertical
-
-            imagenGrandeLogo.Source = juego.ImagenLogo
-            imagenGrandeLogo.Tag = juego.ImagenLogo
+        If Not juego.ImagenAncha = Nothing Then
+            imagenAncha.Source = juego.ImagenAncha
+            imagenAncha.Tag = juego.ImagenAncha
         End If
 
-        Dim gridPersonalizacionImagenLogoEpic As Grid = pagina.FindName("gridPersonalizacionImagenLogoEpic")
-
-        If imagenAnchaLogo.Source = Nothing And imagenGrandeLogo.Source = Nothing Then
-            gridPersonalizacionImagenLogoEpic.Visibility = Visibility.Collapsed
-        Else
-            gridPersonalizacionImagenLogoEpic.Visibility = Visibility.Visible
+        If Not juego.ImagenGrande = Nothing Then
+            imagenGrande.Source = juego.ImagenGrande
+            imagenGrande.Tag = juego.ImagenGrande
         End If
 
     End Sub
 
-    Private Sub UsuarioEntraBoton(sender As Object, e As PointerRoutedEventArgs)
+    Public Async Sub Borrar()
 
-        Dim boton As Button = sender
-        boton.Saturation(0).Scale(1.05, 1.05, boton.ActualWidth / 2, boton.ActualHeight / 2).Start()
+        StorageApplicationPermissions.FutureAccessList.Clear()
 
-        Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Hand, 1)
+        Dim frame As Frame = Window.Current.Content
+        Dim pagina As Page = frame.Content
 
-    End Sub
+        Dim gv As AdaptiveGridView = pagina.FindName("gvTiles")
+        gv.Items.Clear()
 
-    Private Sub UsuarioSaleBoton(sender As Object, e As PointerRoutedEventArgs)
+        Dim helper As New LocalObjectStorageHelper
 
-        Dim boton As Button = sender
-        boton.Saturation(1).Scale(1, 1, boton.ActualWidth / 2, boton.ActualHeight / 2).Start()
+        If Await helper.FileExistsAsync("juegos0") = True Then
+            Dim listaJuegos As List(Of Tile) = Await helper.ReadFileAsync(Of List(Of Tile))("juegos0")
+            listaJuegos.Clear()
+            Await helper.SaveFileAsync(Of List(Of Tile))("juegos0", listaJuegos)
+        End If
 
-        Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Arrow, 1)
+        If Await helper.FileExistsAsync("juegos1") = True Then
+            Dim listaJuegos As List(Of Tile) = Await helper.ReadFileAsync(Of List(Of Tile))("juegos1")
+            listaJuegos.Clear()
+            Await helper.SaveFileAsync(Of List(Of Tile))("juegos1", listaJuegos)
+        End If
 
     End Sub
 

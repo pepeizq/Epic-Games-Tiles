@@ -3,7 +3,7 @@
   <Identity Name="5078pepeizq.EpicGamesTiles" Publisher="CN=C91088FC-231C-4E13-86D1-5F9658173DA7" Version="2.1.15.0" />
   <mp:PhoneIdentity PhoneProductId="028a52c9-68ac-4a09-8593-dc237e400f9d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Epic Games Tiles</DisplayName>
+    <DisplayName>Tiles for Epic Games</DisplayName>
     <PublisherDisplayName>pepeizq's apps</PublisherDisplayName>
     <Logo>Assets\Logos\StoreLogo.png</Logo>
   </Properties>
@@ -15,16 +15,16 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Epic_Games_Tiles.App">
-      <uap:VisualElements DisplayName="Epic Games Tiles" Square150x150Logo="Assets\Logos\Square150x150Logo.png" Square44x44Logo="Assets\Logos\Square44x44Logo.png" Description="https://pepeizqapps.com/" BackgroundColor="#2a2a2a">
+      <uap:VisualElements DisplayName="Tiles for Epic Games" Square150x150Logo="Assets\Logos\Square150x150Logo.png" Square44x44Logo="Assets\Logos\Square44x44Logo.png" Description="https://pepeizqapps.com/" BackgroundColor="#2a2a2a">
         <uap:LockScreen Notification="badge" BadgeLogo="Assets\Logos\BadgeLogo.png" />
-        <uap:DefaultTile Wide310x150Logo="Assets\Logos\Wide310x150Logo.png" ShortName="Epic Games Tiles" Square310x310Logo="Assets\Logos\LargeTile.png" Square71x71Logo="Assets\Logos\SmallTile.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Logos\Wide310x150Logo.png" ShortName="Tiles for Epic Games" Square310x310Logo="Assets\Logos\LargeTile.png" Square71x71Logo="Assets\Logos\SmallTile.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
             <uap:ShowOn Tile="wide310x150Logo" />
             <uap:ShowOn Tile="square310x310Logo" />
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-        <uap:SplashScreen Image="Assets\Logos\SplashScreen.png" BackgroundColor="#2a2a2a" />
+        <uap:SplashScreen Image="Assets\Logos\SplashScreen.png" a:Optional="true" xmlns:a="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" BackgroundColor="#2a2a2a" />
       </uap:VisualElements>
     </Application>
   </Applications>

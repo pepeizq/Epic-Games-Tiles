@@ -2,50 +2,141 @@
 
 Module Configuracion
 
-    Public Sub Iniciar()
-
-        If ApplicationData.Current.LocalSettings.Values("modo_tiles") Is Nothing Then
-            ModoTiles(1, True)
-        Else
-            ModoTiles(ApplicationData.Current.LocalSettings.Values("modo_tiles"), True)
-        End If
-
-        '------------------------------------------
-
-        Dim frame As Frame = Window.Current.Content
-        Dim pagina As Page = frame.Content
-
-        Dim tbTitulo As TextBlock = pagina.FindName("tbTitulo")
-        tbTitulo.Text = Package.Current.DisplayName + " (" + Package.Current.Id.Version.Major.ToString + "." + Package.Current.Id.Version.Minor.ToString + "." + Package.Current.Id.Version.Build.ToString + "." + Package.Current.Id.Version.Revision.ToString + ")"
-
-    End Sub
-
-    Public Sub ModoTiles(modo As Integer, arranque As Boolean)
+    Public Sub Cargar()
 
         Dim recursos As New Resources.ResourceLoader()
 
         Dim frame As Frame = Window.Current.Content
         Dim pagina As Page = frame.Content
 
-        ApplicationData.Current.LocalSettings.Values("modo_tiles") = modo
+        Dim botonAbrirConfig As Button = pagina.FindName("botonAbrirConfig")
 
-        If arranque = True Then
-            Dim cbTiles As ComboBox = pagina.FindName("cbConfigModosTiles")
-            cbTiles.SelectedIndex = modo
+        AddHandler botonAbrirConfig.Click, AddressOf AbrirConfigClick
+        AddHandler botonAbrirConfig.PointerEntered, AddressOf Interfaz.EfectosHover.Entra_Boton_IconoTexto
+        AddHandler botonAbrirConfig.PointerExited, AddressOf Interfaz.EfectosHover.Sale_Boton_IconoTexto
+
+        Dim cbEpicConfigModosTiles As ComboBox = pagina.FindName("cbEpicConfigModosTiles")
+        cbEpicConfigModosTiles.Items.Add(recursos.GetString("Epic_ConfigImport1"))
+        cbEpicConfigModosTiles.Items.Add(recursos.GetString("Epic_ConfigImport2"))
+
+        If ApplicationData.Current.LocalSettings.Values("modo_tiles") Is Nothing Then
+            ApplicationData.Current.LocalSettings.Values("modo_tiles") = 0
+            cbEpicConfigModosTiles.SelectedIndex = 0
+
+            Dim spEpicConfigModo1 As StackPanel = pagina.FindName("spEpicConfigModo1")
+            spEpicConfigModo1.Visibility = Visibility.Visible
         Else
-            EpicGames.Generar(False)
+            cbEpicConfigModosTiles.SelectedIndex = ApplicationData.Current.LocalSettings.Values("modo_tiles")
+
+            Dim spEpicConfigModo1 As StackPanel = pagina.FindName("spEpicConfigModo1")
+            Dim spEpicConfigModo2 As StackPanel = pagina.FindName("spEpicConfigModo2")
+
+            If cbEpicConfigModosTiles.SelectedIndex = 0 Then
+                spEpicConfigModo1.Visibility = Visibility.Visible
+                spEpicConfigModo2.Visibility = Visibility.Collapsed
+            Else
+                spEpicConfigModo1.Visibility = Visibility.Collapsed
+                spEpicConfigModo2.Visibility = Visibility.Visible
+
+                EpicGames.Generar(True)
+            End If
         End If
 
-        Dim sp1 As StackPanel = pagina.FindName("spModoTile1")
-        Dim tbSeleccionar As TextBlock = pagina.FindName("tbSeleccionarJuego")
+        AddHandler cbEpicConfigModosTiles.SelectionChanged, AddressOf CambiarModoSelect
+        AddHandler cbEpicConfigModosTiles.PointerEntered, AddressOf Interfaz.EfectosHover.Entra_Basico
+        AddHandler cbEpicConfigModosTiles.PointerExited, AddressOf Interfaz.EfectosHover.Sale_Basico
 
-        If modo = 0 Then
-            sp1.Visibility = Visibility.Visible
-            tbSeleccionar.Text = recursos.GetString("SelectGame0")
+        Dim botonConfigImagen As Button = pagina.FindName("botonConfigImagen")
+
+        AddHandler botonConfigImagen.Click, AddressOf AbrirImagenClick
+        AddHandler botonConfigImagen.PointerEntered, AddressOf Interfaz.EfectosHover.Entra_Boton_IconoTexto
+        AddHandler botonConfigImagen.PointerExited, AddressOf Interfaz.EfectosHover.Sale_Boton_IconoTexto
+
+        Dim botonBuscarCarpetaEpic As Button = pagina.FindName("botonBuscarCarpetaEpic")
+
+        AddHandler botonBuscarCarpetaEpic.Click, AddressOf BuscarCarpetaClick
+        AddHandler botonBuscarCarpetaEpic.PointerEntered, AddressOf Interfaz.EfectosHover.Entra_Boton_IconoTexto
+        AddHandler botonBuscarCarpetaEpic.PointerExited, AddressOf Interfaz.EfectosHover.Sale_Boton_IconoTexto
+
+    End Sub
+
+    Private Sub AbrirConfigClick(sender As Object, e As RoutedEventArgs)
+
+        Dim frame As Frame = Window.Current.Content
+        Dim pagina As Page = frame.Content
+
+        Dim gridConfig As Grid = pagina.FindName("gridConfig")
+
+        Dim recursos As New Resources.ResourceLoader()
+        Interfaz.Pestañas.Visibilidad_Pestañas(gridConfig, recursos.GetString("Config"))
+
+    End Sub
+
+    Private Sub CambiarModoSelect(sender As Object, e As SelectionChangedEventArgs)
+
+        EpicGames.Borrar()
+
+        Dim cb As ComboBox = sender
+        ApplicationData.Current.LocalSettings.Values("modo_tiles") = cb.SelectedIndex
+
+        Dim frame As Frame = Window.Current.Content
+        Dim pagina As Page = frame.Content
+
+        Dim spEpicConfigModo1 As StackPanel = pagina.FindName("spEpicConfigModo1")
+        Dim spEpicConfigModo2 As StackPanel = pagina.FindName("spEpicConfigModo2")
+
+        If cb.SelectedIndex = 0 Then
+            spEpicConfigModo1.Visibility = Visibility.Visible
+            spEpicConfigModo2.Visibility = Visibility.Collapsed
         Else
-            sp1.Visibility = Visibility.Collapsed
-            tbSeleccionar.Text = recursos.GetString("SelectGame1")
+            spEpicConfigModo1.Visibility = Visibility.Collapsed
+            spEpicConfigModo2.Visibility = Visibility.Visible
+
+            EpicGames.Generar(True)
         End If
+
+    End Sub
+
+    Private Sub AbrirImagenClick(sender As Object, e As RoutedEventArgs)
+
+        Dim frame As Frame = Window.Current.Content
+        Dim pagina As Page = frame.Content
+
+        Dim grid As Grid = pagina.FindName("gridConfigImagen")
+        Dim icono As FontAwesome5.FontAwesome = pagina.FindName("iconoConfigImagen")
+
+        If grid.Visibility = Visibility.Collapsed Then
+            grid.Visibility = Visibility.Visible
+            icono.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
+        Else
+            grid.Visibility = Visibility.Collapsed
+            icono.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
+        End If
+
+    End Sub
+
+    Private Sub BuscarCarpetaClick(sender As Object, e As RoutedEventArgs)
+
+        EpicGames.Generar(True)
+
+    End Sub
+
+    Public Sub Estado(estado As Boolean)
+
+        Dim frame As Frame = Window.Current.Content
+        Dim pagina As Page = frame.Content
+
+        Dim botonAbrirConfig As Button = pagina.FindName("botonAbrirConfig")
+        botonAbrirConfig.IsEnabled = estado
+
+        Dim cbEpicConfigModosTiles As ComboBox = pagina.FindName("cbEpicConfigModosTiles")
+        cbEpicConfigModosTiles.IsEnabled = estado
+
+        Dim botonConfigImagen As Button = pagina.FindName("botonConfigImagen")
+        botonConfigImagen.IsEnabled = estado
+
+        Dim botonBuscarCarpetaEpic As Button = pagina.FindName("botonBuscarCarpetaEpic")
+        botonBuscarCarpetaEpic.IsEnabled = estado
 
     End Sub
 
