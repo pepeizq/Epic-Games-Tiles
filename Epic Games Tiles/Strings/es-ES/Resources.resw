@@ -138,7 +138,7 @@
   <data name="Bethesda_MissingGames.Text" xml:space="preserve">
     <value>Por restricciones en la API de Bethesda, debo integrar sus juegos manualmente en la app.</value>
   </data>
-  <data name="Bethesda_SelectGame.Text" xml:space="preserve">
+  <data name="Bethesda_SelectGame" xml:space="preserve">
     <value>Selecciona un juego (debes tener el juego en el launcher de Bethesda)</value>
   </data>
   <data name="Bethesda_StoreDescription" xml:space="preserve">
@@ -153,7 +153,7 @@
   <data name="Black" xml:space="preserve">
     <value>Negro</value>
   </data>
-  <data name="Blizzard_SelectGame.Text" xml:space="preserve">
+  <data name="Blizzard_SelectGame" xml:space="preserve">
     <value>Selecciona un juego (debes tener el juego en Blizzard Battle.net)</value>
   </data>
   <data name="Blizzard_StoreDescription" xml:space="preserve">
