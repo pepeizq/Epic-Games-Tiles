@@ -504,7 +504,7 @@
   <data name="Ubi_MissingGames.Text" xml:space="preserve">
     <value>Due to restrictions in the Ubisoft Connect API, I must manually integrate their games into the app.</value>
   </data>
-  <data name="Ubi_SelectGame.Text" xml:space="preserve">
+  <data name="Ubi_SelectGame" xml:space="preserve">
     <value>Select a game (you must have the game on Ubisoft Connect)</value>
   </data>
   <data name="Ubi_StoreDescription" xml:space="preserve">
