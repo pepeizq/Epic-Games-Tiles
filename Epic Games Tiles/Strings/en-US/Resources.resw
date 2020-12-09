@@ -279,6 +279,18 @@
   <data name="Epic_ConfigModeMessage.Text" xml:space="preserve">
     <value>Select the mode:</value>
   </data>
+  <data name="Epic_MissingGames.Text" xml:space="preserve">
+    <value>Due to restrictions in the Epic Games API, I must manually integrate their games into the app.</value>
+  </data>
+  <data name="Epic_SelectGame" xml:space="preserve">
+    <value>Select a game (you must have the game on Epic Games)</value>
+  </data>
+  <data name="Epic_StoreDescription" xml:space="preserve">
+    <value>Pin Tiles of your games from the Epic Games launcher to the Windows 10 Start Menu.</value>
+  </data>
+  <data name="Epic_StoreTags" xml:space="preserve">
+    <value>Epic Games,Fortnite,World War Z,Rocket League,</value>
+  </data>
   <data name="Epic_Title" xml:space="preserve">
     <value>Tiles for Epic Games</value>
   </data>
@@ -429,7 +441,7 @@
   <data name="SearchGame" xml:space="preserve">
     <value>Search for a game</value>
   </data>
-  <data name="SelectGame.Text" xml:space="preserve">
+  <data name="SelectGame" xml:space="preserve">
     <value>Select a game</value>
   </data>
   <data name="Steam_AccountExample" xml:space="preserve">

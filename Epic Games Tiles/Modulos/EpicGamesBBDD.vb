@@ -11,13 +11,10 @@ Module EpicGamesBBDD
     '            chorus
     '            claire-de-lune
     '            demon-turf
-    '            dragon-quest-xi-s-echoes-of-an-elusive-age
     '            far-cry-6
     '            gods-and-monsters
     '            gravewood-high
     '            hitman-3
-    '            immortals-fenyx-rising
-    '            iron-harvest
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
     '            primordials-of-amyrion
@@ -28,13 +25,10 @@ Module EpicGamesBBDD
     '            saturnalia
     '            scott-pilgrim-vs-the-world-the-game
     '            sherlock-holmes-chapter-one
-    '            startup-panic
     '            super-meat-boy-forever
     '            the-eternal-cylinder
     '            the-outlast-trials
     '            the-settlers
-    '            the-solitaire-conspiracy
-    '            twin-mirror
     '            unexplored-2
     '            vampire-the-masquerade-bloodlines-2
     '            vampire-the-masquerade-swansong
@@ -74,6 +68,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Anno 1404: History Edition", "f529f5a152014f65821eb900f1c54921", "1281630"),
             New EpicGamesBBDDJuego("Anno 1701: History Edition", "190415920d4a4e3f99043e57e8fabe60", Nothing),
             New EpicGamesBBDDJuego("Anno 1800", "oregano", Nothing),
+            New EpicGamesBBDDJuego("Anno 2205", "gulper", "375910"),
             New EpicGamesBBDDJuego("Anodyne 2: Return to Dust", "tanzanite", "877810"),
             New EpicGamesBBDDJuego("Ape Out", "coley", "447150"),
             New EpicGamesBBDDJuego("Aquanox Deep Descent", "c653d74ead8c4940bc121bcccbaf20cf", "254370"),
@@ -110,14 +105,18 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Borderlands 2", "dodo", "49520"),
             New EpicGamesBBDDJuego("Borderlands 3", "catnip", "397540"),
             New EpicGamesBBDDJuego("Borderlands: The Pre-Sequel", "turkey", "261640"),
+            New EpicGamesBBDDJuego("Bridge Constructor: The Walking Dead", "998af0ab527c493baefb8049250c9a0e", "1336120"),
             New EpicGamesBBDDJuego("Bugsnax", "bonytail", Nothing),
             New EpicGamesBBDDJuego("Carcassonne: The Official Board Game", "thrush", "598810"),
             New EpicGamesBBDDJuego("Cardpocalypse", "duck", "904400"),
+            New EpicGamesBBDDJuego("Carnival Games", "a45b88c3f65d49e68deb166786bf3670", "1249740"),
             New EpicGamesBBDDJuego("Carrion", "9faa3b0871e44b639d49a209f9405aab", "953490"),
             New EpicGamesBBDDJuego("Carto", "cb37006fed8c47db8bcb8a65a59d0f09", "1172450"),
             New EpicGamesBBDDJuego("CastleStorm 2", "dove", Nothing),
+            New EpicGamesBBDDJuego("Cave Story+", "1dea8a6ddb544842a58e4b5c8675ff58", "200900"),
             New EpicGamesBBDDJuego("Celeste", "salt", "504230"),
             New EpicGamesBBDDJuego("Child of Light: Ultimate Edition", "3b8f18e6780547d9b2ee25fbfa29c913", Nothing),
+            New EpicGamesBBDDJuego("Chronos: Before the Ashes", "8ab5702674e3478583c2c2b50f5b5eff", "967390"),
             New EpicGamesBBDDJuego("City of Brass", "arrowroot", "301840"),
             New EpicGamesBBDDJuego("Close To The Sun", "silene", "968870"),
             New EpicGamesBBDDJuego("Conarium", "canary", "313780"),
@@ -126,6 +125,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Costume Quest", "violetear", "115100"),
             New EpicGamesBBDDJuego("Costume Quest 2", "82a78a4dd6ef4eaa892707791b705073", "275180"),
             New EpicGamesBBDDJuego("Crashlands", "afdf59e3dc8f40ec8fd887b5d3fcef23", "391730"),
+            New EpicGamesBBDDJuego("CRSED: F.O.A.D.", "34eda78a6b24468f9fb70d73793bdaab", "884660"),
             New EpicGamesBBDDJuego("Crysis Remastered", "f1b8986afc9a4256a098cc5a4ebf5871", Nothing),
             New EpicGamesBBDDJuego("Cyberpunk 2077", "ginger", "1091500"),
             New EpicGamesBBDDJuego("Dangerous Driving", "tansy", Nothing),
@@ -144,12 +144,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Disc Room", "bb026ee643614690b3f65f4f341bae4c", "1229580"),
             New EpicGamesBBDDJuego("Disco Elysium", "7334aba246154b63857435cb9c7eecd5", "632470"),
             New EpicGamesBBDDJuego("Donut County", "kestrel", "702670"),
+            New EpicGamesBBDDJuego("DRAGON QUEST XI S: Echoes of an Elusive Age – Definitive Edition", "938603e109ab4b0b9304b2a8aac78280", "1295510"),
             New EpicGamesBBDDJuego("Drawful 2", "daisy", "442070"),
             New EpicGamesBBDDJuego("Dread Nautical", "opah", "1426900"),
             New EpicGamesBBDDJuego("Dungeons 3", "351fe5b32e22412d8fa41f4c7395fed1", "493900"),
             New EpicGamesBBDDJuego("Elite Dangerous", "9c203b6ed35846e8a4a9ff1e314f6593", "359320"),
             New EpicGamesBBDDJuego("Empires of the Undergrowth", "c9fa09b072b54443b79d821afd76e767", "463530"),
             New EpicGamesBBDDJuego("Enter the Gungeon", "garlic", "311690"),
+            New EpicGamesBBDDJuego("Evan's Remains", "177b5daea3844316aea9f86d7fb7b8da", "1110050"),
             New EpicGamesBBDDJuego("Everything", "pelican", "582270"),
             New EpicGamesBBDDJuego("Faeria", "vulture", "397060"),
             New EpicGamesBBDDJuego("Falcon Age", "parrot", "1075080"),
@@ -165,6 +167,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Figment", "ed5e8d42b2ac461eb6f9176d163b9515", "493540"),
             New EpicGamesBBDDJuego("Flower", "yarrow", "966330"),
             New EpicGamesBBDDJuego("Football Manager 2020", "bf35243e8c3542e082bc7042e0592183", "1100600"),
+            New EpicGamesBBDDJuego("Football Manager 2021", "6f5862ba65244cfe86490f253d64feb1", "1263850"),
             New EpicGamesBBDDJuego("For Honor", "sundrop", "304390"),
             New EpicGamesBBDDJuego("For The King", "discus", "527230"),
             New EpicGamesBBDDJuego("Foregone", "dab", "1000760"),
@@ -201,8 +204,11 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Hyper Light Drifter", "parakeet", "257850"),
             New EpicGamesBBDDJuego("I Am Dead", "32d8f5e15ceb425e8d7d980bfa29db39", "951750"),
             New EpicGamesBBDDJuego("Industries of Titan", "protea", "427940"),
+            New EpicGamesBBDDJuego("Immortals Fenyx Rising", "pheasant", Nothing),
+            New EpicGamesBBDDJuego("InnerSpace", "almond", "347000"),
             New EpicGamesBBDDJuego("INSIDE", "marigold", "304430"),
             New EpicGamesBBDDJuego("Into The Breach", "blobfish", "590380"),
+            New EpicGamesBBDDJuego("Iron Harvest", "2877ce04ee7c4c1c8ce4c7245875ed6c", "826630"),
             New EpicGamesBBDDJuego("John Wick Hex", "vanilla", "1405790"),
             New EpicGamesBBDDJuego("Jotun: Valhalla Edition", "grouse", "323580"),
             New EpicGamesBBDDJuego("Journey", "lemur", "638230"),
@@ -243,6 +249,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Moonlighter", "eagle", "606150"),
             New EpicGamesBBDDJuego("Mortal Shell", "0055e45ce7654c55aade646467349e83", "1110910"),
             New EpicGamesBBDDJuego("Mount & Blade II: Bannerlord", "chickadee", "261550"),
+            New EpicGamesBBDDJuego("MudRunner", "bulbul", "675010"),
             New EpicGamesBBDDJuego("Mutant Year Zero: Road to Eden", "falcon", "760060"),
             New EpicGamesBBDDJuego("Mutazione", "1fe19232c0f7476a8e99fd8752e800c2", "1080750"),
             New EpicGamesBBDDJuego("My Time At Portia", "cobra", "666140"),
@@ -273,10 +280,12 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Phantom Brigade", "chili", "553540"),
             New EpicGamesBBDDJuego("Phoenix Point: Year One Edition", "iris", "839770"),
             New EpicGamesBBDDJuego("Pikuniku", "48619f5656da446abccb727b78cda644", "572890"),
+            New EpicGamesBBDDJuego("Pillars of Eternity - Definitive Edition", "bcc75c246fe04e45b0c1f1c3fd52503a", "291650"),
             New EpicGamesBBDDJuego("Poly Bridge 2", "03e51fc525b24b2ea873ac13c16b9ed7", "1062160"),
             New EpicGamesBBDDJuego("Port Royale 4", "dd4b77658e5546d882a9315b66d0a192", "1024650"),
             New EpicGamesBBDDJuego("Predator: Hunting Grounds", "boxfish", Nothing),
             New EpicGamesBBDDJuego("Primordials of Amyrion", "c279ad508db0453fa99f1d1ebb698c80", "1316870"),
+            New EpicGamesBBDDJuego("Production Line: Car factory simulation", "c041feb3a2e74fb9bc520ec93099a081", "591370"),
             New EpicGamesBBDDJuego("Pumpkin Jack", "9fef3b816031450da8ba85b23820cfbb", "1186640"),
             New EpicGamesBBDDJuego("Q.U.B.E. 2", "auk", "359100"),
             New EpicGamesBBDDJuego("Railway Empire", "8cf7c6b964514532ad8284a376a517bf", "503940"),
@@ -327,6 +336,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Star Trek Online", "0fb6e06aacd14e88b1aaea8f54dd8525", "9900"),
             New EpicGamesBBDDJuego("Star Wars Jedi Fallen Order", "shoebill", "1172380"),
             New EpicGamesBBDDJuego("Star Wars Squadrons", "bobcat", "1222730"),
+            New EpicGamesBBDDJuego("Startup Panic", "7003e758ed3a4790a36ad41c2d08f8b6", "1045610"),
             New EpicGamesBBDDJuego("State of Decay 2: Juggernaut Edition", "snoek", "495420"),
             New EpicGamesBBDDJuego("Steep", "barracuda", "460920"),
             New EpicGamesBBDDJuego("Stick It To The Man!", "goldfish", "251830"),
@@ -368,6 +378,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("The Sojourn", "shallots", "794960"),
             New EpicGamesBBDDJuego("The Solitaire Conspiracy", "162623ee6c524e41919d1efa24ce58ce", "1424980"),
             New EpicGamesBBDDJuego("The Stanley Parable", "freesia", "221910"),
+            New EpicGamesBBDDJuego("The Talos Principle", "bustard", "257510"),
             New EpicGamesBBDDJuego("The Telltale Batman Shadows Edition", "batfish", Nothing),
             New EpicGamesBBDDJuego("The Textorcist: The Story of Ray Bibbia", "50d8518151d0498b83ff5d18a7bdb68b", "940680"),
             New EpicGamesBBDDJuego("The Unfinished Swan", "f58bb43636064a0295781853ef8405fb", "1206430"),
@@ -402,6 +413,8 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Transistor", "dill", "237930"),
             New EpicGamesBBDDJuego("Trials Rising", "argyle", "641080"),
             New EpicGamesBBDDJuego("Trover Saves the Universe", "sweetpea", "1051200"),
+            New EpicGamesBBDDJuego("Twin Mirror", "58d0d56cb2f5475cbd89fed5beb44215", Nothing),
+            New EpicGamesBBDDJuego("Tyranny - Gold Edition", "36b0e40890f147fbb1e3965f87369156", "362960"),
             New EpicGamesBBDDJuego("UNO", "hussar", "470220"),
             New EpicGamesBBDDJuego("Unreal Tournament", "ut", Nothing),
             New EpicGamesBBDDJuego("Untitled Goose Game", "flour", "837470"),
@@ -416,6 +429,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("What the Golf?", "stork", "785790"),
             New EpicGamesBBDDJuego("Wheels of Aurelia", "escolar", "508740"),
             New EpicGamesBBDDJuego("Where The Water Tastes Like Wine", "e8964b869b6849bea41eefec766cd665", "447120"),
+            New EpicGamesBBDDJuego("Whispers of a Machine", "f98f2879f12f42bbbe767db90907d1ab", "631570"),
             New EpicGamesBBDDJuego("Wilmot's Warehouse", "9b40e3ffb4074f22a856a521be5ce858", "839870"),
             New EpicGamesBBDDJuego("Windbound", "a95bf4df6627431ca5baff8173c59635", "1162130"),
             New EpicGamesBBDDJuego("Wizards: Wand of Epicosity", "a19c886dab804ef0a0e095874c7e0d00", "772750"),

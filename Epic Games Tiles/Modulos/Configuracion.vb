@@ -19,12 +19,16 @@ Module Configuracion
         cbEpicConfigModosTiles.Items.Add(recursos.GetString("Epic_ConfigImport1"))
         cbEpicConfigModosTiles.Items.Add(recursos.GetString("Epic_ConfigImport2"))
 
+        Dim tbSeleccionarJuego As TextBlock = pagina.FindName("tbSeleccionarJuego")
+
         If ApplicationData.Current.LocalSettings.Values("modo_tiles") Is Nothing Then
             ApplicationData.Current.LocalSettings.Values("modo_tiles") = 0
             cbEpicConfigModosTiles.SelectedIndex = 0
 
             Dim spEpicConfigModo1 As StackPanel = pagina.FindName("spEpicConfigModo1")
             spEpicConfigModo1.Visibility = Visibility.Visible
+
+            tbSeleccionarJuego.Text = recursos.GetString("SelectGame")
         Else
             cbEpicConfigModosTiles.SelectedIndex = ApplicationData.Current.LocalSettings.Values("modo_tiles")
 
@@ -34,11 +38,14 @@ Module Configuracion
             If cbEpicConfigModosTiles.SelectedIndex = 0 Then
                 spEpicConfigModo1.Visibility = Visibility.Visible
                 spEpicConfigModo2.Visibility = Visibility.Collapsed
+
+                tbSeleccionarJuego.Text = recursos.GetString("SelectGame")
             Else
                 spEpicConfigModo1.Visibility = Visibility.Collapsed
                 spEpicConfigModo2.Visibility = Visibility.Visible
 
                 EpicGames.Generar(True)
+                tbSeleccionarJuego.Text = recursos.GetString("Epic_SelectGame")
             End If
         End If
 
@@ -74,6 +81,8 @@ Module Configuracion
 
     Private Sub CambiarModoSelect(sender As Object, e As SelectionChangedEventArgs)
 
+        Dim recursos As New Resources.ResourceLoader()
+
         EpicGames.Borrar()
 
         Dim cb As ComboBox = sender
@@ -85,14 +94,19 @@ Module Configuracion
         Dim spEpicConfigModo1 As StackPanel = pagina.FindName("spEpicConfigModo1")
         Dim spEpicConfigModo2 As StackPanel = pagina.FindName("spEpicConfigModo2")
 
+        Dim tbSeleccionarJuego As TextBlock = pagina.FindName("tbSeleccionarJuego")
+
         If cb.SelectedIndex = 0 Then
             spEpicConfigModo1.Visibility = Visibility.Visible
             spEpicConfigModo2.Visibility = Visibility.Collapsed
+
+            tbSeleccionarJuego.Text = recursos.GetString("SelectGame")
         Else
             spEpicConfigModo1.Visibility = Visibility.Collapsed
             spEpicConfigModo2.Visibility = Visibility.Visible
 
             EpicGames.Generar(True)
+            tbSeleccionarJuego.Text = recursos.GetString("Epic_SelectGame")
         End If
 
     End Sub
