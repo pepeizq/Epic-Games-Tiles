@@ -313,6 +313,7 @@
     <Content Include="Assets\Juegos\allium_pequeña.jpg" />
     <Content Include="Assets\Juegos\almond_pequeña.jpg" />
     <Content Include="Assets\Juegos\amaranth_pequeña.jpg" />
+    <Content Include="Assets\Juegos\amberjack_pequeña.jpg" />
     <Content Include="Assets\Juegos\anchovy_grande.png" />
     <Content Include="Assets\Juegos\anchovy_mediana.png" />
     <Content Include="Assets\Juegos\anchovy_pequeña.jpg" />
@@ -525,6 +526,9 @@
     <Content Include="Assets\Juegos\hamlet_grande.png" />
     <Content Include="Assets\Juegos\hamlet_mediana.png" />
     <Content Include="Assets\Juegos\hamlet_pequeña.jpg" />
+    <Content Include="Assets\Juegos\hapuka_grande.png" />
+    <Content Include="Assets\Juegos\hapuka_mediana.png" />
+    <Content Include="Assets\Juegos\hapuka_pequeña.jpg" />
     <Content Include="Assets\Juegos\hawk_ancha.png" />
     <Content Include="Assets\Juegos\hawk_grande.png" />
     <Content Include="Assets\Juegos\hawk_mediana.png" />

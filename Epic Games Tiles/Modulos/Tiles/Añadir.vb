@@ -150,7 +150,7 @@ Namespace Tiles
 
             End Try
 
-            'MasCosas.CalificarApp(True)
+            MasCosas.CalificarApp(True)
             Interfaz.AñadirTile.ResetearValores()
 
             boton.IsEnabled = True
