@@ -269,6 +269,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Omen Of Sorrow", "daffodil", Nothing),
             New EpicGamesBBDDJuego("Ooblets", "ostrich", Nothing),
             New EpicGamesBBDDJuego("Operencia: The Stolen Sun", "lily", "985950"),
+            New EpicGamesBBDDJuego("Orwell's Animal Farm", "2d2246bc1e8148a1a9afc34983891db4", "1398100"),
             New EpicGamesBBDDJuego("Outer Wilds", "starfish", "753640"),
             New EpicGamesBBDDJuego("Outward", "viola", "794260"),
             New EpicGamesBBDDJuego("Overcooked", "sage", "448510"),
