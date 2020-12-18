@@ -178,6 +178,12 @@
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Juegos\36c9770807354d53a0d96d1b7862f746_pequeña.jpg" />
+    <Content Include="Assets\Juegos\6684d2b2f9764f5c9c1c59de162c8a8e_pequeña.jpg" />
+    <Content Include="Assets\Juegos\77c79ade0d2346d3b2ded21ab645f5bd_ancha.jpg" />
+    <Content Include="Assets\Juegos\77c79ade0d2346d3b2ded21ab645f5bd_grande.jpg" />
+    <Content Include="Assets\Juegos\77c79ade0d2346d3b2ded21ab645f5bd_mediana.png" />
+    <Content Include="Assets\Juegos\7b92cb9582b04a36b629321e848b12a1_pequeña.jpg" />
     <Content Include="Assets\añadirjuegos.png" />
     <Content Include="Assets\Config\config.png" />
     <Content Include="Assets\epic_logo.png" />
@@ -307,6 +313,7 @@
     <Content Include="Assets\Juegos\a26f991a5e6c4e9c9572fc200cbea47f_pequeña.jpg" />
     <Content Include="Assets\Juegos\a45b88c3f65d49e68deb166786bf3670_pequeña.jpg" />
     <Content Include="Assets\Juegos\a95bf4df6627431ca5baff8173c59635_pequeña.jpg" />
+    <Content Include="Assets\Juegos\aa069bf2d1fb439cb44d659eda568c40_pequeña.jpg" />
     <Content Include="Assets\Juegos\aafc587fbf654758802c8e41e4fb3255_pequeña.jpg" />
     <Content Include="Assets\Juegos\ada6f617bc3f4042a7f2f7533f3573e8_pequeña.jpg" />
     <Content Include="Assets\Juegos\adenium_pequeña.jpg" />
@@ -342,6 +349,7 @@
     <Content Include="Assets\Juegos\b4670484aae24db492f0b468a98fe361_pequeña.jpg" />
     <Content Include="Assets\Juegos\b4a0d2d15acb4db894a599b810297543_pequeña.jpg" />
     <Content Include="Assets\Juegos\b8aa8afb7da84da3a978425ec4b8e5cd_pequeña.jpg" />
+    <Content Include="Assets\Juegos\b9787680fb524556be2d4bd05b25257e_pequeña.jpg" />
     <Content Include="Assets\Juegos\badger_pequeña.jpg" />
     <Content Include="Assets\Juegos\barbet_pequeña.jpg" />
     <Content Include="Assets\Juegos\barracuda_pequeña.jpg" />
@@ -350,6 +358,7 @@
     <Content Include="Assets\Juegos\batfish_grande.jpg" />
     <Content Include="Assets\Juegos\batfish_mediana.png" />
     <Content Include="Assets\Juegos\bb026ee643614690b3f65f4f341bae4c_pequeña.jpg" />
+    <Content Include="Assets\Juegos\bcbc03d8812a44c18f41cf7d5f849265_pequeña.jpg" />
     <Content Include="Assets\Juegos\bcc75c246fe04e45b0c1f1c3fd52503a_pequeña.jpg" />
     <Content Include="Assets\Juegos\bd35425c9548494082d002f36601ff45_pequeña.jpg" />
     <Content Include="Assets\Juegos\begonia_pequeña.jpg" />
@@ -428,6 +437,7 @@
     <Content Include="Assets\Juegos\cumin_pequeña.jpg" />
     <Content Include="Assets\Juegos\curry_pequeña.jpg" />
     <Content Include="Assets\Juegos\d0ae8ca1b5c8421ca6ab892353d3204d_pequeña.jpg" />
+    <Content Include="Assets\Juegos\d25a23bc9dd742b7a2c4745a3db7d456_pequeña.jpg" />
     <Content Include="Assets\Juegos\d6407c9e6fd54cb492b8c6635480d792_pequeña.jpg" />
     <Content Include="Assets\Juegos\d7db33dfe7634d6b8a188c708f2caa3c_pequeña.jpg" />
     <Content Include="Assets\Juegos\d86f9cb568014746a15f66025dcc5733_ancha.jpg" />
@@ -473,6 +483,7 @@
     <Content Include="Assets\Juegos\f1b8986afc9a4256a098cc5a4ebf5871_grande.png" />
     <Content Include="Assets\Juegos\f1b8986afc9a4256a098cc5a4ebf5871_mediana.png" />
     <Content Include="Assets\Juegos\f2304175954d40d2b583542251dda296_pequeña.jpg" />
+    <Content Include="Assets\Juegos\f23e1ec714a146648a4b330e777ee3a1_pequeña.jpg" />
     <Content Include="Assets\Juegos\f324cf34cd1a4a94901e003d14da37b1_pequeña.jpg" />
     <Content Include="Assets\Juegos\f529f5a152014f65821eb900f1c54921_pequeña.jpg" />
     <Content Include="Assets\Juegos\f58bb43636064a0295781853ef8405fb_pequeña.jpg" />
@@ -596,6 +607,9 @@
     <Content Include="Assets\Juegos\lotus_pequeña.jpg" />
     <Content Include="Assets\Juegos\lupine_pequeña.jpg" />
     <Content Include="Assets\Juegos\lyrebird_pequeña.jpg" />
+    <Content Include="Assets\Juegos\macaw_ancha.jpg" />
+    <Content Include="Assets\Juegos\macaw_grande.jpg" />
+    <Content Include="Assets\Juegos\macaw_mediana.png" />
     <Content Include="Assets\Juegos\magnolia_pequeña.jpg" />
     <Content Include="Assets\Juegos\marigold_pequeña.jpg" />
     <Content Include="Assets\Juegos\mayflower_ancha.png" />

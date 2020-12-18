@@ -6,7 +6,7 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'pendientes: airborne-kingdom
+    'pendientes: 
     '            chivalry-2
     '            chorus
     '            claire-de-lune
@@ -57,6 +57,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("AER Memories of Old", "26b63c46de9e4dcc856b3c6b106b6777", "331870"),
             New EpicGamesBBDDJuego("Afterparty", "adenium", "762220"),
             New EpicGamesBBDDJuego("Ageless", "de18a33d6e1f4001b9a3f4a50ef7d760", "1210150"),
+            New EpicGamesBBDDJuego("Airborne Kingdom", "macaw", Nothing),
             New EpicGamesBBDDJuego("Alan Wake", "heron", "108710"),
             New EpicGamesBBDDJuego("Alan Wake: American Nightmare", "condor", "202750"),
             New EpicGamesBBDDJuego("Alluris", "712a1086c52b413da55f9b38588575d9", "1078510"),
@@ -101,6 +102,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Beyond Blue", "3a0cae9455844390ad00505a704d641e", "883360"),
             New EpicGamesBBDDJuego("Beyond Good & Evil", "52f83a6af963426aaee2d603030ef7c9", "15130"),
             New EpicGamesBBDDJuego("Beyond: Two Souls", "lavender", "960990"),
+            New EpicGamesBBDDJuego("Big Pharma", "f23e1ec714a146648a4b330e777ee3a1", "344850"),
             New EpicGamesBBDDJuego("Blair Witch", "247a0f0f5803429eb3be2c06f3ea77ff", "1092660"),
             New EpicGamesBBDDJuego("Bloodroots", "pochard", "820540"),
             New EpicGamesBBDDJuego("Borderlands 2", "dodo", "49520"),
@@ -108,6 +110,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Borderlands: The Pre-Sequel", "turkey", "261640"),
             New EpicGamesBBDDJuego("Bridge Constructor: The Walking Dead", "998af0ab527c493baefb8049250c9a0e", "1336120"),
             New EpicGamesBBDDJuego("Bugsnax", "bonytail", Nothing),
+            New EpicGamesBBDDJuego("Calico", "aa069bf2d1fb439cb44d659eda568c40", "1112890"),
             New EpicGamesBBDDJuego("Carcassonne: The Official Board Game", "thrush", "598810"),
             New EpicGamesBBDDJuego("Cardpocalypse", "duck", "904400"),
             New EpicGamesBBDDJuego("Carnival Games", "a45b88c3f65d49e68deb166786bf3670", "1249740"),
@@ -118,6 +121,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Celeste", "salt", "504230"),
             New EpicGamesBBDDJuego("Child of Light: Ultimate Edition", "3b8f18e6780547d9b2ee25fbfa29c913", Nothing),
             New EpicGamesBBDDJuego("Chronos: Before the Ashes", "8ab5702674e3478583c2c2b50f5b5eff", "967390"),
+            New EpicGamesBBDDJuego("Cities: Skylines", "bcbc03d8812a44c18f41cf7d5f849265", "255710"),
             New EpicGamesBBDDJuego("City of Brass", "arrowroot", "301840"),
             New EpicGamesBBDDJuego("Close To The Sun", "silene", "968870"),
             New EpicGamesBBDDJuego("Conarium", "canary", "313780"),
@@ -142,6 +146,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Destroy All Humans!", "94232f38800f41b79b49243ada60ff24", "803330"),
             New EpicGamesBBDDJuego("Detroit: Become Human", "columbine", "1222140"),
             New EpicGamesBBDDJuego("Diabotical", "honeycreeper", Nothing),
+            New EpicGamesBBDDJuego("Disaster Report 4: Summer Memories", "6684d2b2f9764f5c9c1c59de162c8a8e", "1060210"),
             New EpicGamesBBDDJuego("Disc Room", "bb026ee643614690b3f65f4f341bae4c", "1229580"),
             New EpicGamesBBDDJuego("Disco Elysium", "7334aba246154b63857435cb9c7eecd5", "632470"),
             New EpicGamesBBDDJuego("Donut County", "kestrel", "702670"),
@@ -165,6 +170,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Far Cry New Dawn", "cumin", "939960"),
             New EpicGamesBBDDJuego("Far Cry Primal", "larkspur", "371660"),
             New EpicGamesBBDDJuego("Farming Simulator 19", "stellula", "787860"),
+            New EpicGamesBBDDJuego("Fell Seal: Arbiter's Mark", "b9787680fb524556be2d4bd05b25257e", "699170"),
             New EpicGamesBBDDJuego("Fez", "bluebird", "224760"),
             New EpicGamesBBDDJuego("Figment", "ed5e8d42b2ac461eb6f9176d163b9515", "493540"),
             New EpicGamesBBDDJuego("Flower", "yarrow", "966330"),
@@ -204,6 +210,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Human Resource Machine", "basil", "375820"),
             New EpicGamesBBDDJuego("Huntdown", "337ffb9c2d624545be086e6ead40dbbe", "598550"),
             New EpicGamesBBDDJuego("Hyper Light Drifter", "parakeet", "257850"),
+            New EpicGamesBBDDJuego("Hyper Scape", "77c79ade0d2346d3b2ded21ab645f5bd", Nothing),
             New EpicGamesBBDDJuego("I Am Dead", "32d8f5e15ceb425e8d7d980bfa29db39", "951750"),
             New EpicGamesBBDDJuego("Industries of Titan", "protea", "427940"),
             New EpicGamesBBDDJuego("Immortals Fenyx Rising", "pheasant", Nothing),
@@ -239,6 +246,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Maneater", "turtle", "629820"),
             New EpicGamesBBDDJuego("Manifold Garden", "lorikeet", "473950"),
             New EpicGamesBBDDJuego("Mechwarrior 5", "hoopoe", Nothing),
+            New EpicGamesBBDDJuego("Medieval Dynasty", "d25a23bc9dd742b7a2c4745a3db7d456", "1129580"),
             New EpicGamesBBDDJuego("Metro 2033 Redux", "petunia", "286690"),
             New EpicGamesBBDDJuego("Metro Exodus", "snapdragon", "412020"),
             New EpicGamesBBDDJuego("Metro Last Light Redux", "speedwell", "287390"),
@@ -335,6 +343,8 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("South Park: The Fractured But Whole", "alewife", "488790"),
             New EpicGamesBBDDJuego("South Park: The Stick of Truth", "alligator", "213670"),
             New EpicGamesBBDDJuego("Spellbreak", "newt", "1399780"),
+            New EpicGamesBBDDJuego("SpellForce 3: Fallen God", "36c9770807354d53a0d96d1b7862f746", "1154040"),
+            New EpicGamesBBDDJuego("SpellForce 3: Versus Edition", "7b92cb9582b04a36b629321e848b12a1", "1416260"),
             New EpicGamesBBDDJuego("Spiritfarer", "740bb3cae62142d08e9fdf8262da352f", "972660"),
             New EpicGamesBBDDJuego("SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated", "f2304175954d40d2b583542251dda296", "969990"),
             New EpicGamesBBDDJuego("Star Trek Online", "0fb6e06aacd14e88b1aaea8f54dd8525", "9900"),
