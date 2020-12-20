@@ -239,7 +239,8 @@ Module EpicGames
             .Stretch = Stretch.UniformToFill,
             .Padding = New Thickness(0, 0, 0, 0),
             .HorizontalAlignment = HorizontalAlignment.Center,
-            .VerticalAlignment = VerticalAlignment.Center
+            .VerticalAlignment = VerticalAlignment.Center,
+            .EnableLazyLoading = True
         }
 
         boton.Tag = juego
