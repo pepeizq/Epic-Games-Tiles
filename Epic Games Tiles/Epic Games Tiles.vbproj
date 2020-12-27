@@ -180,7 +180,9 @@
   <ItemGroup>
     <Content Include="Assets\Juegos\09f57ff642e54a37b24cd8d0ad94d038_pequeña.jpg" />
     <Content Include="Assets\Juegos\36c9770807354d53a0d96d1b7862f746_pequeña.jpg" />
+    <Content Include="Assets\Juegos\36cbf259e631478eaac6ea244e55a709_pequeña.jpg" />
     <Content Include="Assets\Juegos\6684d2b2f9764f5c9c1c59de162c8a8e_pequeña.jpg" />
+    <Content Include="Assets\Juegos\6f76563847a04e61be4f084717d456e0_pequeña.jpg" />
     <Content Include="Assets\Juegos\77c79ade0d2346d3b2ded21ab645f5bd_ancha.jpg" />
     <Content Include="Assets\Juegos\77c79ade0d2346d3b2ded21ab645f5bd_grande.jpg" />
     <Content Include="Assets\Juegos\77c79ade0d2346d3b2ded21ab645f5bd_mediana.png" />
@@ -417,6 +419,7 @@
     <Content Include="Assets\Juegos\carp_mediana.png" />
     <Content Include="Assets\Juegos\catnip_pequeña.jpg" />
     <Content Include="Assets\Juegos\cb37006fed8c47db8bcb8a65a59d0f09_pequeña.jpg" />
+    <Content Include="Assets\Juegos\cd1b8a6e5b6c47369e2a1e2cf7b7f536_pequeña.jpg" />
     <Content Include="Assets\Juegos\chickadee_pequeña.jpg" />
     <Content Include="Assets\Juegos\chili_grande.png" />
     <Content Include="Assets\Juegos\chili_mediana.png" />
