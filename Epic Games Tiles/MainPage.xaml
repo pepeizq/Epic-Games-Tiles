@@ -25,9 +25,60 @@
                         AlwaysShowHeader="False" IsSettingsVisible="False" PaneDisplayMode="Top" IsBackButtonVisible="Collapsed">
 
             <NavigationView.Resources>
-                <SolidColorBrush x:Key="NavigationViewSelectionIndicatorForeground" Color="{StaticResource ColorPrimario}" />
+                <SolidColorBrush x:Key="NavigationViewSelectionIndicatorForeground" Color="{StaticResource ColorPrimario}"/>
             </NavigationView.Resources>
 
+            <NavigationView.PaneCustomContent>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="botonMasTiles" Margin="0,0,10,0">
+                        <Button.Flyout>
+                            <Flyout>
+                                <Flyout.FlyoutPresenterStyle>
+                                    <Style TargetType="FlyoutPresenter">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="Padding" Value="0"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </Style>
+                                </Flyout.FlyoutPresenterStyle>
+
+                                <Grid Padding="10" MaxHeight="500">
+                                    <Grid.Background>
+                                        <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.9"/>
+                                    </Grid.Background>
+
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <StackPanel x:Name="spMasTiles" Orientation="Vertical" Margin="5" Padding="0,0,15,0"/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                    <Button x:Name="botonMasCosas">
+                        <Button.Flyout>
+                            <Flyout>
+                                <Flyout.FlyoutPresenterStyle>
+                                    <Style TargetType="FlyoutPresenter">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="Padding" Value="0"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </Style>
+                                </Flyout.FlyoutPresenterStyle>
+
+                                <Grid Padding="10" MaxHeight="500">
+                                    <Grid.Background>
+                                        <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.9"/>
+                                    </Grid.Background>
+
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <StackPanel x:Name="spMasCosas" Orientation="Vertical" Margin="5" Padding="0,0,15,0"/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </StackPanel>
+            </NavigationView.PaneCustomContent>
+                   
             <NavigationView.PaneFooter>
                 <StackPanel x:Name="spBuscador" Orientation="Horizontal" Visibility="Collapsed">
                     <iconos:FontAwesome Icon="Solid_Search" Foreground="{StaticResource BrushPrimario}" Margin="0,0,15,0"/>
@@ -364,6 +415,9 @@
                                         <StackPanel x:Name="spImagenTituloTileAncha" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
                                             <TextBlock x:Uid="ImageTitleColor" Foreground="White"/>
                                             <ComboBox x:Name="cbImagenTituloColorTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"/>
+
+                                            <TextBlock x:Uid="ImageTitleText" Margin="0,30,0,0" Foreground="White"/>
+                                            <TextBox x:Name="tbImagenTituloTextoTileAncha" RequestedTheme="Dark" Margin="0,15,0,0" MinWidth="400" MaxWidth="800" HorizontalAlignment="Left"/>
                                         </StackPanel>
 
                                         <TextBlock x:Uid="ImageIcon" Margin="0,30,0,0" Foreground="White" TextWrapping="Wrap"/>
@@ -433,6 +487,9 @@
                                         <StackPanel x:Name="spImagenTituloTileGrande" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
                                             <TextBlock x:Uid="ImageTitleColor" Foreground="White"/>
                                             <ComboBox x:Name="cbImagenTituloColorTileGrande" RequestedTheme="Dark" Margin="0,15,0,0"/>
+
+                                            <TextBlock x:Uid="ImageTitleText" Margin="0,30,0,0" Foreground="White"/>
+                                            <TextBox x:Name="tbImagenTituloTextoTileGrande" RequestedTheme="Dark" Margin="0,15,0,0" MinWidth="400" MaxWidth="800" HorizontalAlignment="Left"/>
                                         </StackPanel>
 
                                         <TextBlock x:Uid="ImageIcon" Margin="0,30,0,0" Foreground="White" TextWrapping="Wrap"/>
@@ -629,10 +686,6 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
-
-                <Grid x:Name="gridMasTiles" Visibility="Collapsed"/>
-
-                <Grid x:Name="gridMasCosas" Visibility="Collapsed"/>
             </Grid>
         </NavigationView>
     </Grid>

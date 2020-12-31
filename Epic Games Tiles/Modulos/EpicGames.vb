@@ -5,6 +5,7 @@ Imports Windows.Storage
 Imports Windows.Storage.AccessCache
 Imports Windows.Storage.Pickers
 Imports Windows.UI
+Imports Windows.UI.Xaml.Media.Animation
 
 Module EpicGames
 
@@ -66,7 +67,7 @@ Module EpicGames
 
             If Not carpeta Is Nothing Then
                 Dim gridProgreso As Grid = pagina.FindName("gridProgreso")
-                Interfaz.Pestañas.Visibilidad_Pestañas(gridProgreso, Nothing)
+                Interfaz.Pestañas.Visibilidad(gridProgreso, Nothing, Nothing)
 
                 Dim listaInstalado As New List(Of String)
 
@@ -120,7 +121,7 @@ Module EpicGames
             End If
         ElseIf modo = 1 Then
             Dim gridProgreso As Grid = pagina.FindName("gridProgreso")
-            Interfaz.Pestañas.Visibilidad_Pestañas(gridProgreso, Nothing)
+            Interfaz.Pestañas.Visibilidad(gridProgreso, Nothing, Nothing)
 
             Dim listaBBDD As List(Of EpicGamesBBDDJuego) = EpicGamesBBDD.Listado
 
@@ -155,7 +156,7 @@ Module EpicGames
         If Not listaJuegos Is Nothing Then
             If listaJuegos.Count > 0 Then
                 Dim gridJuegos As Grid = pagina.FindName("gridJuegos")
-                Interfaz.Pestañas.Visibilidad_Pestañas(gridJuegos, recursos.GetString("Games"))
+                Interfaz.Pestañas.Visibilidad(gridJuegos, recursos.GetString("Games"), Nothing)
 
                 listaJuegos.Sort(Function(x, y) x.Titulo.CompareTo(y.Titulo))
 
@@ -166,11 +167,11 @@ Module EpicGames
                 Next
             Else
                 Dim gridAvisoNoJuegos As Grid = pagina.FindName("gridAvisoNoJuegos")
-                Interfaz.Pestañas.Visibilidad_Pestañas(gridAvisoNoJuegos, Nothing)
+                Interfaz.Pestañas.Visibilidad(gridAvisoNoJuegos, Nothing, Nothing)
             End If
         Else
             Dim gridAvisoNoJuegos As Grid = pagina.FindName("gridAvisoNoJuegos")
-            Interfaz.Pestañas.Visibilidad_Pestañas(gridAvisoNoJuegos, Nothing)
+            Interfaz.Pestañas.Visibilidad(gridAvisoNoJuegos, Nothing, Nothing)
         End If
 
         Configuracion.Estado(True)
@@ -288,7 +289,27 @@ Module EpicGames
         tbJuegoSeleccionado.Text = juego.Titulo
 
         Dim gridAñadirTile As Grid = pagina.FindName("gridAñadirTile")
-        Interfaz.Pestañas.Visibilidad_Pestañas(gridAñadirTile, juego.Titulo)
+        Interfaz.Pestañas.Visibilidad(gridAñadirTile, juego.Titulo, Nothing)
+
+        '---------------------------------------------
+
+        ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("animacionJuego", botonJuego)
+        Dim animacion As ConnectedAnimation = ConnectedAnimationService.GetForCurrentView().GetAnimation("animacionJuego")
+
+        If Not animacion Is Nothing Then
+            animacion.Configuration = New BasicConnectedAnimationConfiguration
+            animacion.TryStart(gridAñadirTile)
+        End If
+
+        '---------------------------------------------
+
+        Dim tbImagenTituloTextoTileAncha As TextBox = pagina.FindName("tbImagenTituloTextoTileAncha")
+        tbImagenTituloTextoTileAncha.Text = juego.Titulo
+        tbImagenTituloTextoTileAncha.Tag = juego.Titulo
+
+        Dim tbImagenTituloTextoTileGrande As TextBox = pagina.FindName("tbImagenTituloTextoTileGrande")
+        tbImagenTituloTextoTileGrande.Text = juego.Titulo
+        tbImagenTituloTextoTileGrande.Tag = juego.Titulo
 
         '---------------------------------------------
 
