@@ -133,6 +133,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Costume Quest 2", "82a78a4dd6ef4eaa892707791b705073", "275180"),
             New EpicGamesBBDDJuego("Crashlands", "afdf59e3dc8f40ec8fd887b5d3fcef23", "391730"),
             New EpicGamesBBDDJuego("CRSED: F.O.A.D.", "34eda78a6b24468f9fb70d73793bdaab", "884660"),
+            New EpicGamesBBDDJuego("Crying Suns", "18fafa2d70d64831ab500a9d65ba9ab8", "873940"),
             New EpicGamesBBDDJuego("Crysis Remastered", "f1b8986afc9a4256a098cc5a4ebf5871", Nothing),
             New EpicGamesBBDDJuego("Cyberpunk 2077", "ginger", "1091500"),
             New EpicGamesBBDDJuego("Dangerous Driving", "tansy", Nothing),
