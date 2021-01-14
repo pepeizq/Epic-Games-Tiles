@@ -181,10 +181,15 @@
     <Content Include="Assets\Juegos\02107cba432c4551a027d25d597adc49_pequeña.jpg" />
     <Content Include="Assets\Juegos\09f57ff642e54a37b24cd8d0ad94d038_pequeña.jpg" />
     <Content Include="Assets\Juegos\18fafa2d70d64831ab500a9d65ba9ab8_pequeña.jpg" />
+    <Content Include="Assets\Juegos\1b3d52e6278749868913aa1cdd12e974_pequeña.jpg" />
     <Content Include="Assets\Juegos\36c9770807354d53a0d96d1b7862f746_pequeña.jpg" />
     <Content Include="Assets\Juegos\36cbf259e631478eaac6ea244e55a709_pequeña.jpg" />
     <Content Include="Assets\Juegos\373a4372c20540aca7fdd880d27fa49a_pequeña.jpg" />
+    <Content Include="Assets\Juegos\37e2b68d76244e3e837ff6477d20b124_ancha.jpg" />
+    <Content Include="Assets\Juegos\37e2b68d76244e3e837ff6477d20b124_grande.jpg" />
+    <Content Include="Assets\Juegos\37e2b68d76244e3e837ff6477d20b124_mediana.png" />
     <Content Include="Assets\Juegos\4c76beac4e8a4156aa8dfb9c6db09746_pequeña.jpg" />
+    <Content Include="Assets\Juegos\5f1c66366b2c4a6496d535d88c56e6cf_pequeña.jpg" />
     <Content Include="Assets\Juegos\6684d2b2f9764f5c9c1c59de162c8a8e_pequeña.jpg" />
     <Content Include="Assets\Juegos\6f76563847a04e61be4f084717d456e0_pequeña.jpg" />
     <Content Include="Assets\Juegos\77c79ade0d2346d3b2ded21ab645f5bd_ancha.jpg" />
@@ -639,6 +644,8 @@
     <Content Include="Assets\Juegos\morganite_grande.png" />
     <Content Include="Assets\Juegos\morganite_mediana.png" />
     <Content Include="Assets\Juegos\morpho_pequeña.jpg" />
+    <Content Include="Assets\Juegos\mtelbert_pequeña.jpg" />
+    <Content Include="Assets\Juegos\mtmassive_pequeña.jpg" />
     <Content Include="Assets\Juegos\muscovy_pequeña.jpg" />
     <Content Include="Assets\Juegos\nautilus_pequeña.jpg" />
     <Content Include="Assets\Juegos\newt_pequeña.jpg" />
