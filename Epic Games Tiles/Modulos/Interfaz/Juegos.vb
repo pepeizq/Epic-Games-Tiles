@@ -8,9 +8,6 @@
             Dim frame As Frame = Window.Current.Content
             Dim pagina As Page = frame.Content
 
-            Dim tbSeleccionarJuego As TextBlock = pagina.FindName("tbSeleccionarJuego")
-            tbSeleccionarJuego.Text = recursos.GetString("SelectGame")
-
             Dim svJuegos As ScrollViewer = pagina.FindName("svJuegos")
 
             AddHandler svJuegos.ViewChanging, AddressOf JuegosScroll
