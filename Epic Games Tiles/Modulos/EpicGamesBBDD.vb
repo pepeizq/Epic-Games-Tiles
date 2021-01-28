@@ -14,7 +14,6 @@ Module EpicGamesBBDD
     '            far-cry-6
     '            gods-and-monsters
     '            gravewood-high
-    '            hitman-3
     '            jett-the-far-shore
     '            kena-bridge-of-spirits
     '            primordials-of-amyrion
@@ -23,7 +22,6 @@ Module EpicGamesBBDD
     '            recompile
     '            riders-republic
     '            saturnalia
-    '            scott-pilgrim-vs-the-world-the-game
     '            sherlock-holmes-chapter-one
     '            super-meat-boy-forever
     '            the-eternal-cylinder
