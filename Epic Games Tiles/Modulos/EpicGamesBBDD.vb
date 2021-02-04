@@ -31,7 +31,6 @@ Module EpicGamesBBDD
     '            vampire-the-masquerade-bloodlines-2
     '            vampire-the-masquerade-swansong
     '            wargame-red-dragon
-    '            werewolf-the-apocalypse-earthblood
 
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
@@ -203,7 +202,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Grand Theft Auto V", "9d2d0eb64d5c44529cece33fe2a46482", "271590"),
             New EpicGamesBBDDJuego("Griftlands", "phlox", "601840"),
             New EpicGamesBBDDJuego("Hades", "min", "1145360"),
+            New EpicGamesBBDDJuego("Halcyon 6: Starbase Commander", "b9e848fc5e844f4285b0624789476664", "371200"),
             New EpicGamesBBDDJuego("Hammerting", "60dc80f49cf34a479df2c823df30e9ac", "760650"),
+            New EpicGamesBBDDJuego("Haven", "271515884ce348a08ce4b7a92f4304d5", "983970"),
             New EpicGamesBBDDJuego("Heavy Rain", "aster", "960910"),
             New EpicGamesBBDDJuego("Hello Neighbor", "ursus", "521890"),
             New EpicGamesBBDDJuego("Hello Neighbor Hide & Seek", "morpho", "960420"),
@@ -315,6 +316,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Railway Empire", "8cf7c6b964514532ad8284a376a517bf", "503940"),
             New EpicGamesBBDDJuego("Raji: An Ancient Epic", "e6dca9926c204374ab209d85a2c1203e", "730390"),
             New EpicGamesBBDDJuego("Rayman Legends", "anchovy", "242550"),
+            New EpicGamesBBDDJuego("Rayman Origins", "5fde4f58b678403199be6ac6762a00db", "207490"),
             New EpicGamesBBDDJuego("ReadySet Heroes", "peacock", Nothing),
             New EpicGamesBBDDJuego("Rebel Galaxy", "weaver", "290300"),
             New EpicGamesBBDDJuego("Rebel Galaxy Outlaw", "rgo", "910830"),
@@ -465,6 +467,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Watch Dogs 2", "angelonia", "447040"),
             New EpicGamesBBDDJuego("Watch Dogs Legion", "hawk", Nothing),
             New EpicGamesBBDDJuego("Wattam", "lupine", "702680"),
+            New EpicGamesBBDDJuego("Werewolf: The Apocalypse – Earthblood", "teal", Nothing),
             New EpicGamesBBDDJuego("What Remains of Edith Finch", "badger", "501300"),
             New EpicGamesBBDDJuego("What the Golf?", "stork", "785790"),
             New EpicGamesBBDDJuego("Wheels of Aurelia", "escolar", "508740"),
