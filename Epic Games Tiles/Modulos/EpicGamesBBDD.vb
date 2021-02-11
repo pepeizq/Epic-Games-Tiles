@@ -23,7 +23,6 @@ Module EpicGamesBBDD
     '            riders-republic
     '            saturnalia
     '            sherlock-holmes-chapter-one
-    '            super-meat-boy-forever
     '            the-eternal-cylinder
     '            the-outlast-trials
     '            the-settlers
@@ -50,10 +49,12 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("A Knights Quest", "cockatoo", Nothing),
             New EpicGamesBBDDJuego("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "1055540"),
             New EpicGamesBBDDJuego("A Total War Saga: TROY", "11e598b192324994abce05bad4f81b50", Nothing),
+            New EpicGamesBBDDJuego("Absolute Drift", "19927295d6e3467887d4e830d8c85963", "320140"),
             New EpicGamesBBDDJuego("ABZU", "curry", "384190"),
             New EpicGamesBBDDJuego("AER Memories of Old", "26b63c46de9e4dcc856b3c6b106b6777", "331870"),
             New EpicGamesBBDDJuego("Afterparty", "adenium", "762220"),
             New EpicGamesBBDDJuego("Ageless", "de18a33d6e1f4001b9a3f4a50ef7d760", "1210150"),
+            New EpicGamesBBDDJuego("Aground", "bde0d8274dc64fe98e2e0867401b1de4", "876650"),
             New EpicGamesBBDDJuego("Airborne Kingdom", "macaw", Nothing),
             New EpicGamesBBDDJuego("Alan Wake", "heron", "108710"),
             New EpicGamesBBDDJuego("Alan Wake: American Nightmare", "condor", "202750"),
@@ -226,6 +227,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("InnerSpace", "almond", "347000"),
             New EpicGamesBBDDJuego("INSIDE", "marigold", "304430"),
             New EpicGamesBBDDJuego("Into The Breach", "blobfish", "590380"),
+            New EpicGamesBBDDJuego("iRacing", "3dda7ecb990341c599d2554bb1783259", "266410"),
             New EpicGamesBBDDJuego("Iron Harvest", "2877ce04ee7c4c1c8ce4c7245875ed6c", "826630"),
             New EpicGamesBBDDJuego("John Wick Hex", "vanilla", "1405790"),
             New EpicGamesBBDDJuego("Jotun: Valhalla Edition", "grouse", "323580"),
@@ -266,6 +268,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Milky Way Prince – The Vampire Star", "97d90ab4704344e9b6f255994fee639c", "1302050"),
             New EpicGamesBBDDJuego("Minit", "petrel", "609490"),
             New EpicGamesBBDDJuego("Missile Command: Recharged", "fe014df1aa2c465aae88138c4307b11a", "1292010"),
+            New EpicGamesBBDDJuego("Monkey Barrels", "82002e1b13b642e4a820623f4d92dda2", Nothing),
             New EpicGamesBBDDJuego("Monopoly PLUS", "hamlet", "562810"),
             New EpicGamesBBDDJuego("Moonlighter", "eagle", "606150"),
             New EpicGamesBBDDJuego("Mortal Shell", "0055e45ce7654c55aade646467349e83", "1110910"),
@@ -313,6 +316,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Production Line: Car factory simulation", "c041feb3a2e74fb9bc520ec93099a081", "591370"),
             New EpicGamesBBDDJuego("Pumpkin Jack", "9fef3b816031450da8ba85b23820cfbb", "1186640"),
             New EpicGamesBBDDJuego("Q.U.B.E. 2", "auk", "359100"),
+            New EpicGamesBBDDJuego("Rage 2", "ad3d0f08dd0841d8a1ba77d94ded4773", "548570"),
             New EpicGamesBBDDJuego("Railway Empire", "8cf7c6b964514532ad8284a376a517bf", "503940"),
             New EpicGamesBBDDJuego("Raji: An Ancient Epic", "e6dca9926c204374ab209d85a2c1203e", "730390"),
             New EpicGamesBBDDJuego("Rayman Legends", "anchovy", "242550"),
@@ -342,6 +346,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Scourgebringer", "bf363d9625a5406f904d925f3e613327", "1037020"),
             New EpicGamesBBDDJuego("Shadow Complex", "vpr", Nothing),
             New EpicGamesBBDDJuego("Shadow Tactics: Blades of the Shogun", "fangtooth", "418240"),
+            New EpicGamesBBDDJuego("Shadowhand", "ef03775556cd46c1af5dcfcb98529455", "427490"),
             New EpicGamesBBDDJuego("Shadowrun Dragonfall - Director’s Cut", "5b41454974be4d5883056ba298e53675", "300550"),
             New EpicGamesBBDDJuego("Shadowrun: Hong Kong - Extended Edition", "41470cb5755440b8b55ec3f94351133a", "346940"),
             New EpicGamesBBDDJuego("Shadowrun Returns", "dc29cb42f32e4a17af1d68c715fa459c", "234650"),
@@ -450,6 +455,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Trackmania", "pigeon", Nothing),
             New EpicGamesBBDDJuego("Trackmania Turbo", "a18915c48f584670bd236ce3031d63d9", "375900"),
             New EpicGamesBBDDJuego("Transistor", "dill", "237930"),
+            New EpicGamesBBDDJuego("Trials Evolution: Gold Edition", "bc24707b365449748339d8c6f86ce7b8", "220160"),
             New EpicGamesBBDDJuego("Trials Rising", "argyle", "641080"),
             New EpicGamesBBDDJuego("Tropico 5", "8b5f1c51be3844bab51e2ee1089839f5", "245620"),
             New EpicGamesBBDDJuego("Tropico 6", "6f76563847a04e61be4f084717d456e0", "492720"),
