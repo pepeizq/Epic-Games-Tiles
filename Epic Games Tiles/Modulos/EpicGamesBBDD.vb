@@ -222,6 +222,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Hyper Light Drifter", "parakeet", "257850"),
             New EpicGamesBBDDJuego("Hyper Scape", "77c79ade0d2346d3b2ded21ab645f5bd", Nothing),
             New EpicGamesBBDDJuego("I Am Dead", "32d8f5e15ceb425e8d7d980bfa29db39", "951750"),
+            New EpicGamesBBDDJuego("Idle Champions de Forgotten Realms", "40cb42e38c0b4a14a1bb133eb3291572", "627690"),
             New EpicGamesBBDDJuego("Industries of Titan", "protea", "427940"),
             New EpicGamesBBDDJuego("Immortals Fenyx Rising", "pheasant", Nothing),
             New EpicGamesBBDDJuego("InnerSpace", "almond", "347000"),
@@ -305,6 +306,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Paper Beast", "06efba7b35c6459cba1919c524c0d7fa", "1232570"),
             New EpicGamesBBDDJuego("Path of Exile", "9a05967bb86f48278f8626be42548985", "238960"),
             New EpicGamesBBDDJuego("Pathway", "8fceb562623c430db9bb6abf0549c43e", "546430"),
+            New EpicGamesBBDDJuego("Phantasy Star Online 2", "6c227b0fac70445aae645f0d601dc5d2", "1056640"),
             New EpicGamesBBDDJuego("Phantom Brigade", "chili", "553540"),
             New EpicGamesBBDDJuego("Phoenix Point: Year One Edition", "iris", "839770"),
             New EpicGamesBBDDJuego("Pikuniku", "48619f5656da446abccb727b78cda644", "572890"),
@@ -327,6 +329,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Red Dead Redemption 2", "heather", "1174180"),
             New EpicGamesBBDDJuego("Relicta", "b4670484aae24db492f0b468a98fe361", "941570"),
             New EpicGamesBBDDJuego("Remnant: From the Ashes", "b4a0d2d15acb4db894a599b810297543", "617290"),
+            New EpicGamesBBDDJuego("RemiLore: Lost Girl in the Lands of Lore", "465208a1b96b4077a938d83f287e6c01", "995240"),
             New EpicGamesBBDDJuego("RiME", "hydrangea", "493200"),
             New EpicGamesBBDDJuego("RimWorld", "12915f06bb3442eeb414813e74af7df3", "294100"),
             New EpicGamesBBDDJuego("Rising Storm 2: Vietnam", "tern", "418460"),
@@ -384,6 +387,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Subnautica", "jaguar", "264710"),
             New EpicGamesBBDDJuego("Subnautica: Below Zero", "foxglove", "848450"),
             New EpicGamesBBDDJuego("Sundered: Eldritch Edition", "moa", "535480"),
+            New EpicGamesBBDDJuego("Sunless Sea", "2420b50453144c07b3b847fff941275d", "304650"),
             New EpicGamesBBDDJuego("Super Meat Boy", "buffalo", "40800"),
             New EpicGamesBBDDJuego("Super Meat Boy Forever", "moose", "581660"),
             New EpicGamesBBDDJuego("Superbrothers: Sword & Sworcery EP", "f6d328ca5be24fd585478d1477e1ea4d", "204060"),
@@ -394,6 +398,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Surviving Mars", "ovenbird", "464920"),
             New EpicGamesBBDDJuego("Surviving the Aftermath", "muscovy", "684450"),
             New EpicGamesBBDDJuego("Tacoma", "flagfin", "343860"),
+            New EpicGamesBBDDJuego("Tales from the Borderlands", "178c9c2b209a409e88a729ddb9aba7d2", "330830"),
             New EpicGamesBBDDJuego("Tetris Effect", "kiwi", Nothing),
             New EpicGamesBBDDJuego("The Alto Collection", "hornbill", Nothing),
             New EpicGamesBBDDJuego("The Bridge", "sunbird", "204240"),
@@ -484,12 +489,13 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Wizards: Wand of Epicosity", "a19c886dab804ef0a0e095874c7e0d00", "772750"),
             New EpicGamesBBDDJuego("World of Goo", "anemone", "22000"),
             New EpicGamesBBDDJuego("World War Z", "wombat", Nothing),
+            New EpicGamesBBDDJuego("Wrath: Aeon of Ruin", "708e4a9716e24bdb846b26bb24aa2fb4", "1000410"),
             New EpicGamesBBDDJuego("WRC 8 FIA World Rally Championship", "woodpecker", "1004750"),
             New EpicGamesBBDDJuego("WRC 9 FIA World Rally Championship", "kagu", Nothing),
             New EpicGamesBBDDJuego("Yaga", "robin", "888530"),
             New EpicGamesBBDDJuego("Yooka-Laylee and the Impossible Lair", "duckbill", "846870"),
             New EpicGamesBBDDJuego("Zombi", "91b23d48ead64764b90a217a11baf209", "339230"),
-            New EpicGamesBBDDJuego("Zombie Army 4: Dead War", "sparrow", Nothing)
+            New EpicGamesBBDDJuego("Zombie Army 4: Dead War", "sparrow", "694280")
         }
 
         Return lista
