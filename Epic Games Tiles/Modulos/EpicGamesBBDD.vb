@@ -29,7 +29,6 @@ Module EpicGamesBBDD
     '            unexplored-2
     '            vampire-the-masquerade-bloodlines-2
     '            vampire-the-masquerade-swansong
-    '            wargame-red-dragon
 
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
@@ -133,6 +132,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("CRSED: F.O.A.D.", "34eda78a6b24468f9fb70d73793bdaab", "884660"),
             New EpicGamesBBDDJuego("Crying Suns", "18fafa2d70d64831ab500a9d65ba9ab8", "873940"),
             New EpicGamesBBDDJuego("Crysis Remastered", "f1b8986afc9a4256a098cc5a4ebf5871", Nothing),
+            New EpicGamesBBDDJuego("Curse of the Dead Gods", "6eefc4ed1f664a47ae398114f4a81a1d", "1123770"),
             New EpicGamesBBDDJuego("Cyberpunk 2077", "ginger", "1091500"),
             New EpicGamesBBDDJuego("Dandara: Trials of Fear Edition", "c35b9699c4e24c56976b5bd8eceba464", "612390"),
             New EpicGamesBBDDJuego("Dangerous Driving", "tansy", Nothing),
@@ -177,6 +177,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Farming Simulator 19", "stellula", "787860"),
             New EpicGamesBBDDJuego("Fell Seal: Arbiter's Mark", "b9787680fb524556be2d4bd05b25257e", "699170"),
             New EpicGamesBBDDJuego("Fez", "bluebird", "224760"),
+            New EpicGamesBBDDJuego("Fights in Tight Spaces", "3e623cce500c49b69dd9a2926f474546", "1265820"),
             New EpicGamesBBDDJuego("Figment", "ed5e8d42b2ac461eb6f9176d163b9515", "493540"),
             New EpicGamesBBDDJuego("Flower", "yarrow", "966330"),
             New EpicGamesBBDDJuego("Football Manager 2020", "bf35243e8c3542e082bc7042e0592183", "1100600"),
@@ -189,6 +190,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("FTL: Faster Than Light", "blowfish", "212680"),
             New EpicGamesBBDDJuego("Fuser", "2939f4752d4b4ace95a8e1b16e79d3f5", "1331440"),
             New EpicGamesBBDDJuego("Galactic Civilizations III", "5f1c66366b2c4a6496d535d88c56e6cf", "226860"),
+            New EpicGamesBBDDJuego("Geneforge 1 - Mutagen", "caa2c69bf2dc40b2b883e4cbbf5b0ab2", "1424710"),
             New EpicGamesBBDDJuego("Genesis Alpha One Deluxe Edition", "puma", "712190"),
             New EpicGamesBBDDJuego("Ghostbusters: The Video Game Remastered", "mint", "1449280"),
             New EpicGamesBBDDJuego("Ghostrunner", "ea8df71f923649a193ab1c1fded7e1b3", "1139900"),
@@ -402,6 +404,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Tetris Effect", "kiwi", Nothing),
             New EpicGamesBBDDJuego("The Alto Collection", "hornbill", Nothing),
             New EpicGamesBBDDJuego("The Bridge", "sunbird", "204240"),
+            New EpicGamesBBDDJuego("The Colonists", "ca22214a89694d94974a83d7e5c112b3", "677340"),
             New EpicGamesBBDDJuego("The Crew 2", "hermit", "646910"),
             New EpicGamesBBDDJuego("The Cycle", "azalea", "868270"),
             New EpicGamesBBDDJuego("The Dungeon Of Naheulbeuk: The Amulet Of Chaos", "02fac38ee2614c8ba276b1ea7c1acd7c", "970830"),
@@ -472,8 +475,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Untitled Goose Game", "flour", "837470"),
             New EpicGamesBBDDJuego("Valiant Hearts: The Great War", "f6496e154baa437cb4d9cae38a7e3cc5", "260230"),
             New EpicGamesBBDDJuego("Vampyr", "nautilus", "427290"),
-            New EpicGamesBBDDJuego("Warhammer 40,000: Gladius - Relics of War", "da5b18cb1e7a452196c3142f2c1d7dd3", "489630"),
             New EpicGamesBBDDJuego("Warframe", "398965b67f314d31b0683b8ea11c93a4", "230410"),
+            New EpicGamesBBDDJuego("Wargame: Red Dragon", "2cd446792405468e9e87f67649d864c2", "251060"),
+            New EpicGamesBBDDJuego("Warhammer 40,000: Gladius - Relics of War", "da5b18cb1e7a452196c3142f2c1d7dd3", "489630"),
             New EpicGamesBBDDJuego("Watch Dogs", "jasper", "243470"),
             New EpicGamesBBDDJuego("Watch Dogs 2", "angelonia", "447040"),
             New EpicGamesBBDDJuego("Watch Dogs Legion", "hawk", Nothing),
