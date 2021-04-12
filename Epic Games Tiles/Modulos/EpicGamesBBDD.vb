@@ -466,6 +466,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("The Jackbox Party Pack 6", "astrapia", "1005300"),
             New EpicGamesBBDDJuego("The Jackbox Party Pack 7", "7fb6ce95c6d04a44a55fef16ea0db4c9", "1211630"),
             New EpicGamesBBDDJuego("The Last Campfire", "c713e12721894fcdbc59ad9ff3fd8a69", "990630"),
+            New EpicGamesBBDDJuego("The Legend of Heroes: Trails of Cold Steel IV", "e8a46db9786f45c9859e8af67e1251a0", "1198090"),
             New EpicGamesBBDDJuego("The Life And Suffering of Sir Brante", "6766ad3d4ba449d08caeb93d6ce3eef0", "1272160"),
             New EpicGamesBBDDJuego("The Long Dark", "ed93b18355a84230938c705121c63661", "305620"),
             New EpicGamesBBDDJuego("The Medium", "bc72e23dc6494fb584a254ada099b362", "1293160"),
