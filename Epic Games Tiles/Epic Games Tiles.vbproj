@@ -226,6 +226,7 @@
     <Content Include="Assets\Juegos\4bef8f2938c74f8597f512de38fc0afd_pequeña.jpg" />
     <Content Include="Assets\Juegos\4c76beac4e8a4156aa8dfb9c6db09746_pequeña.jpg" />
     <Content Include="Assets\Juegos\4d1884fe90f441129722197ba0bb9f8e_pequeña.jpg" />
+    <Content Include="Assets\Juegos\502bae648130454faa79bf1e7e741cbd_pequeña.jpg" />
     <Content Include="Assets\Juegos\54ec19e832aa4013a64ae853c5eb9fb0_pequeña.jpg" />
     <Content Include="Assets\Juegos\5c344710714e42939e96f2e7519d2224_grande.png" />
     <Content Include="Assets\Juegos\5c344710714e42939e96f2e7519d2224_mediana.png" />
@@ -751,9 +752,7 @@
     <Content Include="Assets\Juegos\kakopo_pequeña.jpg" />
     <Content Include="Assets\Juegos\kestrel_pequeña.jpg" />
     <Content Include="Assets\Juegos\kinglet_pequeña.jpg" />
-    <Content Include="Assets\Juegos\kiwi_ancha.png" />
-    <Content Include="Assets\Juegos\kiwi_grande.jpg" />
-    <Content Include="Assets\Juegos\kiwi_mediana.png" />
+    <Content Include="Assets\Juegos\kiwi_pequeña.jpg" />
     <Content Include="Assets\Juegos\kunzite_pequeña.jpg" />
     <Content Include="Assets\Juegos\laridae_pequeña.jpg" />
     <Content Include="Assets\Juegos\larkspur_pequeña.jpg" />
@@ -761,9 +760,7 @@
     <Content Include="Assets\Juegos\lemur_pequeña.jpg" />
     <Content Include="Assets\Juegos\lilac_pequeña.jpg" />
     <Content Include="Assets\Juegos\lily_pequeña.jpg" />
-    <Content Include="Assets\Juegos\loon_ancha.png" />
-    <Content Include="Assets\Juegos\loon_grande.png" />
-    <Content Include="Assets\Juegos\loon_mediana.png" />
+    <Content Include="Assets\Juegos\loon_pequeña.jpg" />
     <Content Include="Assets\Juegos\lorikeet_pequeña.jpg" />
     <Content Include="Assets\Juegos\lotus_pequeña.jpg" />
     <Content Include="Assets\Juegos\lupine_pequeña.jpg" />
@@ -773,9 +770,7 @@
     <Content Include="Assets\Juegos\macaw_mediana.png" />
     <Content Include="Assets\Juegos\magnolia_pequeña.jpg" />
     <Content Include="Assets\Juegos\marigold_pequeña.jpg" />
-    <Content Include="Assets\Juegos\mayflower_ancha.png" />
-    <Content Include="Assets\Juegos\mayflower_grande.png" />
-    <Content Include="Assets\Juegos\mayflower_mediana.png" />
+    <Content Include="Assets\Juegos\mayflower_pequeña.jpg" />
     <Content Include="Assets\Juegos\meerkat_pequeña.jpg" />
     <Content Include="Assets\Juegos\mint_pequeña.jpg" />
     <Content Include="Assets\Juegos\min_pequeña.jpg" />

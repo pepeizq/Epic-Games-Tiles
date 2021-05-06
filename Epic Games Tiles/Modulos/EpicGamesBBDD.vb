@@ -7,28 +7,8 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
     'pendientes: 
-    '            chivalry-2
-    '            chorus
-    '            claire-de-lune
-    '            demon-turf
-    '            far-cry-6
-    '            gods-and-monsters
-    '            gravewood-high
-    '            jett-the-far-shore
-    '            kena-bridge-of-spirits
-    '            primordials-of-amyrion
-    '            prince-of-persia-sands-of-time
-    '            rainbow-six-quarantine
-    '            recompile
-    '            riders-republic
-    '            saturnalia
-    '            sherlock-holmes-chapter-one
-    '            the-eternal-cylinder
-    '            the-outlast-trials
-    '            the-settlers
-    '            unexplored-2
-    '            vampire-the-masquerade-bloodlines-2
-    '            vampire-the-masquerade-swansong
+    '            r-type-final-2
+    '            skate-city
 
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
@@ -359,7 +339,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Phoenix Point: Year One Edition", "iris", "839770"),
             New EpicGamesBBDDJuego("Pikuniku", "48619f5656da446abccb727b78cda644", "572890"),
             New EpicGamesBBDDJuego("Pillars of Eternity - Definitive Edition", "bcc75c246fe04e45b0c1f1c3fd52503a", "291650"),
-            New EpicGamesBBDDJuego("Pine", "6d564ff21f9c45b7b782b7113ad60be8", "839770"),
+            New EpicGamesBBDDJuego("Pine", "6d564ff21f9c45b7b782b7113ad60be8", "1042780"),
             New EpicGamesBBDDJuego("Poly Bridge 2", "03e51fc525b24b2ea873ac13c16b9ed7", "1062160"),
             New EpicGamesBBDDJuego("Port Royale 4", "dd4b77658e5546d882a9315b66d0a192", "1024650"),
             New EpicGamesBBDDJuego("Predator: Hunting Grounds", "boxfish", "1556200"),
@@ -391,13 +371,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("RollerCoaster Tycoon Adventures", "canna", Nothing),
             New EpicGamesBBDDJuego("RUINER", "laridae", "464060"),
             New EpicGamesBBDDJuego("RUNE II: Decapitation Edition", "cosmos", "821290"),
-            New EpicGamesBBDDJuego("Saint's Row The Third Remastered", "loon", Nothing),
+            New EpicGamesBBDDJuego("Saint's Row The Third Remastered", "loon", "978300"),
             New EpicGamesBBDDJuego("Samurai Jack: Battle Through Time", "4fcc58f22bbb42a4a1ee0cc887c0836e", "1150590"),
             New EpicGamesBBDDJuego("SAMURAI SHODOWN", "1c78abcd467643f9ad58cc3a7d161983", Nothing),
             New EpicGamesBBDDJuego("SAMURAI SHODOWN NEOGEO COLLECTION", "75553c71fa1744a4be89f71d5b862eae", "999660"),
             New EpicGamesBBDDJuego("Satisfactory", "crab", "526870"),
             New EpicGamesBBDDJuego("Saviors of Sapphire Wings & Strangers of Sword City Revisited", "6164c4b295bb43fe9e68291a7d14de0c", "1363840"),
             New EpicGamesBBDDJuego("Scarlet Hood and the Wicked Wood", "14f37208219e48c5b9eadbc9f455c77b", "1141120"),
+            New EpicGamesBBDDJuego("Scavengers", "502bae648130454faa79bf1e7e741cbd", "1183940"),
             New EpicGamesBBDDJuego("Scott Pilgrim vs. The World: The Game", "37e2b68d76244e3e837ff6477d20b124", Nothing),
             New EpicGamesBBDDJuego("Scourgebringer", "bf363d9625a5406f904d925f3e613327", "1037020"),
             New EpicGamesBBDDJuego("Scrapnaut", "ab292d6c40d44e15a49cb45e83f19454", "1323900"),
@@ -418,7 +399,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Slime Rancher", "corydalis", "433340"),
             New EpicGamesBBDDJuego("Sludge Life", "morganite", Nothing),
             New EpicGamesBBDDJuego("SMITE", "greenbul", "386360"),
-            New EpicGamesBBDDJuego("Snowrunner", "mayflower", Nothing),
+            New EpicGamesBBDDJuego("Snowrunner", "mayflower", "1465360"),
             New EpicGamesBBDDJuego("Sokobond", "97c2ce083e47436dafa7536fd20162c9", "290260"),
             New EpicGamesBBDDJuego("Solitairica", "4c76beac4e8a4156aa8dfb9c6db09746", "463980"),
             New EpicGamesBBDDJuego("SOMA", "emu", "282140"),
@@ -460,7 +441,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Tacoma", "flagfin", "343860"),
             New EpicGamesBBDDJuego("Tales from the Borderlands", "178c9c2b209a409e88a729ddb9aba7d2", "330830"),
             New EpicGamesBBDDJuego("Tales of the Neon Sea", "0dac2fd1f95240bda133d1f2fb27c705", "828740"),
-            New EpicGamesBBDDJuego("Tetris Effect", "kiwi", Nothing),
+            New EpicGamesBBDDJuego("Tetris Effect", "kiwi", "1003590"),
             New EpicGamesBBDDJuego("The Alto Collection", "hornbill", Nothing),
             New EpicGamesBBDDJuego("The Binding of Isaac: Repentance", "40f364fdf20e48068631043e9dc167eb", Nothing),
             New EpicGamesBBDDJuego("The Bridge", "sunbird", "204240"),
