@@ -7,8 +7,16 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
     'pendientes: 
-    '            r-type-final-2
-    '            skate-city
+    'demons-tilt
+    'hood-outlaws-And-legends
+    'hundred-days-winemaking-simulator
+    'pathfinder-kingmaker
+    'r-type-final-2
+    'realpolitiks-2
+    'skate-city
+    'sockventure
+    'the-architect-paris
+    'the-hand-of-merlin
 
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
@@ -84,7 +92,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Battle Breakers", "wex", Nothing),
             New EpicGamesBBDDJuego("Battle Chasers: Nightwar", "c720c09efeba4597a5c24a98bcf62fa7", "451020"),
             New EpicGamesBBDDJuego("Bee Simulator", "spoonbill", "914750"),
-            New EpicGamesBBDDJuego("Before We Leave", "salmon", Nothing),
+            New EpicGamesBBDDJuego("Before We Leave", "salmon", "1073910"),
             New EpicGamesBBDDJuego("Before Your Eyes", "9a24b9e4c42445f7b739762530127d32", "1082430"),
             New EpicGamesBBDDJuego("Beyond Blue", "3a0cae9455844390ad00505a704d641e", "883360"),
             New EpicGamesBBDDJuego("Beyond Good & Evil", "52f83a6af963426aaee2d603030ef7c9", "15130"),
@@ -468,6 +476,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("The Legend of Heroes: Trails of Cold Steel III", "54ec19e832aa4013a64ae853c5eb9fb0", "991270"),
             New EpicGamesBBDDJuego("The Legend of Heroes: Trails of Cold Steel IV", "e8a46db9786f45c9859e8af67e1251a0", "1198090"),
             New EpicGamesBBDDJuego("The Life And Suffering of Sir Brante", "6766ad3d4ba449d08caeb93d6ce3eef0", "1272160"),
+            New EpicGamesBBDDJuego("The Lion's Song", "ee41ac4954314d18b18b8e7789c4e4eb", "437160"),
             New EpicGamesBBDDJuego("The Long Dark", "ed93b18355a84230938c705121c63661", "305620"),
             New EpicGamesBBDDJuego("The Medium", "bc72e23dc6494fb584a254ada099b362", "1293160"),
             New EpicGamesBBDDJuego("The Messenger", "jay", "764790"),

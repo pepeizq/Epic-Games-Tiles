@@ -620,6 +620,7 @@
     <Content Include="Assets\Juegos\ece4c58603d04bcb97454be9a7492fa6_pequeña.jpg" />
     <Content Include="Assets\Juegos\ed5e8d42b2ac461eb6f9176d163b9515_pequeña.jpg" />
     <Content Include="Assets\Juegos\ed93b18355a84230938c705121c63661_pequeña.jpg" />
+    <Content Include="Assets\Juegos\ee41ac4954314d18b18b8e7789c4e4eb_pequeña.jpg" />
     <Content Include="Assets\Juegos\ee5ef1c5dee24106b6e2b9080d85d088_pequeña.jpg" />
     <Content Include="Assets\Juegos\eel_pequeña.jpg" />
     <Content Include="Assets\Juegos\ef03775556cd46c1af5dcfcb98529455_pequeña.jpg" />
@@ -851,9 +852,7 @@
     <Content Include="Assets\Juegos\saffron_grande.png" />
     <Content Include="Assets\Juegos\saffron_mediana.png" />
     <Content Include="Assets\Juegos\sage_pequeña.jpg" />
-    <Content Include="Assets\Juegos\salmon_ancha.png" />
-    <Content Include="Assets\Juegos\salmon_grande.png" />
-    <Content Include="Assets\Juegos\salmon_mediana.png" />
+    <Content Include="Assets\Juegos\salmon_pequeña.jpg" />
     <Content Include="Assets\Juegos\salt_pequeña.jpg" />
     <Content Include="Assets\Juegos\sandpiper_grande.png" />
     <Content Include="Assets\Juegos\sandpiper_mediana.png" />
