@@ -7,16 +7,34 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
     'pendientes: 
+    'aerial-knights-never-yield
+    'biomutant
+    'chicken-police-paint-it-red
+    'days-gone
     'demons-tilt
+    'graven
+    'grindstone
     'hood-outlaws-And-legends
     'hundred-days-winemaking-simulator
+    'just-die-already
+    'knockout-city
+    'mayhem-in-single-valley
     'pathfinder-kingmaker
     'r-type-final-2
     'realpolitiks-2
+    'siege-survival-gloria-victis
     'skate-city
     'sockventure
+    'suzerain
+    'tennis-manager-2021
     'the-architect-paris
     'the-hand-of-merlin
+    'the-longest-road-on-earth
+    'timelie
+    'truck-driver
+    'unexplored-2
+    'viscerafest
+    'wanna-survive
 
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
@@ -284,7 +302,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Magic The Gathering Arena", "stargazer", Nothing),
             New EpicGamesBBDDJuego("Maneater", "turtle", "629820"),
             New EpicGamesBBDDJuego("Manifold Garden", "lorikeet", "473950"),
-            New EpicGamesBBDDJuego("Mechwarrior 5", "hoopoe", Nothing),
+            New EpicGamesBBDDJuego("MechWarrior 5: Mercenaries", "hoopoe", "784080"),
             New EpicGamesBBDDJuego("Medieval Dynasty", "d25a23bc9dd742b7a2c4745a3db7d456", "1129580"),
             New EpicGamesBBDDJuego("Merchant of the Skies", "0ef46109342d47669b36e5ec7e1c0546", "1040070"),
             New EpicGamesBBDDJuego("Metro 2033 Redux", "petunia", "286690"),
@@ -309,6 +327,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Mutant Year Zero: Road to Eden", "falcon", "760060"),
             New EpicGamesBBDDJuego("Mutazione", "1fe19232c0f7476a8e99fd8752e800c2", "1080750"),
             New EpicGamesBBDDJuego("My Time At Portia", "cobra", "666140"),
+            New EpicGamesBBDDJuego("NBA 2K21", "639977eecfd2497c941b71af949b5067", "1225330"),
             New EpicGamesBBDDJuego("Neighbours back From Hell", "ada6f617bc3f4042a7f2f7533f3573e8", "1283190"),
             New EpicGamesBBDDJuego("Neon Abyss", "a26f991a5e6c4e9c9572fc200cbea47f", "788100"),
             New EpicGamesBBDDJuego("Neurodeck", "4198d26267224b35a2bc45107c902162", "1253860"),

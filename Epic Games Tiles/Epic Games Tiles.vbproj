@@ -236,6 +236,7 @@
     <Content Include="Assets\Juegos\5fde4f58b678403199be6ac6762a00db_mediana.png" />
     <Content Include="Assets\Juegos\5fde4f58b678403199be6ac6762a00db_pequeña.jpg" />
     <Content Include="Assets\Juegos\6164c4b295bb43fe9e68291a7d14de0c_pequeña.jpg" />
+    <Content Include="Assets\Juegos\639977eecfd2497c941b71af949b5067_pequeña.jpg" />
     <Content Include="Assets\Juegos\6684d2b2f9764f5c9c1c59de162c8a8e_pequeña.jpg" />
     <Content Include="Assets\Juegos\6766ad3d4ba449d08caeb93d6ce3eef0_pequeña.jpg" />
     <Content Include="Assets\Juegos\68c214c58f694ae88c2dab6f209b43e4_ancha.jpg" />
@@ -723,9 +724,7 @@
     <Content Include="Assets\Juegos\honeycreeper_ancha.jpg" />
     <Content Include="Assets\Juegos\honeycreeper_grande.png" />
     <Content Include="Assets\Juegos\honeycreeper_mediana.png" />
-    <Content Include="Assets\Juegos\hoopoe_ancha.png" />
-    <Content Include="Assets\Juegos\hoopoe_grande.png" />
-    <Content Include="Assets\Juegos\hoopoe_mediana.png" />
+    <Content Include="Assets\Juegos\hoopoe_pequeña.jpg" />
     <Content Include="Assets\Juegos\hornbill_ancha.png" />
     <Content Include="Assets\Juegos\hornbill_grande.png" />
     <Content Include="Assets\Juegos\hornbill_mediana.png" />
