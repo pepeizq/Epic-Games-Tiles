@@ -488,6 +488,7 @@
     <Content Include="Assets\Juegos\bcc75c246fe04e45b0c1f1c3fd52503a_pequeña.jpg" />
     <Content Include="Assets\Juegos\bd35425c9548494082d002f36601ff45_pequeña.jpg" />
     <Content Include="Assets\Juegos\bde0d8274dc64fe98e2e0867401b1de4_pequeña.jpg" />
+    <Content Include="Assets\Juegos\be886d9db65047a89b24cd4317695f18%253A5729e4a7132e4e078cec459b281dae8e%253Ab2e00fc16632475782a7730d1bd7cb60_pequeña.jpg" />
     <Content Include="Assets\Juegos\bea62ac5091841f8a43bd20c3c7edfd3_pequeña.jpg" />
     <Content Include="Assets\Juegos\begonia_pequeña.jpg" />
     <Content Include="Assets\Juegos\betta_ancha.jpg" />
@@ -776,9 +777,7 @@
     <Content Include="Assets\Juegos\min_pequeña.jpg" />
     <Content Include="Assets\Juegos\moa_pequeña.jpg" />
     <Content Include="Assets\Juegos\moose_pequeña.jpg" />
-    <Content Include="Assets\Juegos\morganite_ancha.png" />
-    <Content Include="Assets\Juegos\morganite_grande.png" />
-    <Content Include="Assets\Juegos\morganite_mediana.png" />
+    <Content Include="Assets\Juegos\morganite_pequeña.jpg" />
     <Content Include="Assets\Juegos\morpho_pequeña.jpg" />
     <Content Include="Assets\Juegos\mtelbert_pequeña.jpg" />
     <Content Include="Assets\Juegos\mtmassive_pequeña.jpg" />

@@ -12,6 +12,7 @@ Module EpicGamesBBDD
     'chicken-police-paint-it-red
     'days-gone
     'demons-tilt
+    'going-medieval
     'graven
     'grindstone
     'hood-outlaws-And-legends
@@ -19,12 +20,15 @@ Module EpicGamesBBDD
     'just-die-already
     'knockout-city
     'mayhem-in-single-valley
+    'necromunda-hired-gun
     'pathfinder-kingmaker
     'r-type-final-2
     'realpolitiks-2
     'siege-survival-gloria-victis
     'skate-city
+    'slipways
     'sockventure
+    'stonefly
     'suzerain
     'tennis-manager-2021
     'the-architect-paris
@@ -211,6 +215,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Foregone", "dab", "1000760"),
             New EpicGamesBBDDJuego("Fortnite", "fortnite", Nothing),
             New EpicGamesBBDDJuego("Freedom Fighters", "0d771750aa9042898ce100dbfb5efb1a", "1347780"),
+            New EpicGamesBBDDJuego("Frostpunk", "be886d9db65047a89b24cd4317695f18%3A5729e4a7132e4e078cec459b281dae8e%3Ab2e00fc16632475782a7730d1bd7cb60", "323190"),
             New EpicGamesBBDDJuego("FTL: Faster Than Light", "blowfish", "212680"),
             New EpicGamesBBDDJuego("Fuser", "2939f4752d4b4ace95a8e1b16e79d3f5", "1331440"),
             New EpicGamesBBDDJuego("Galactic Civilizations III", "5f1c66366b2c4a6496d535d88c56e6cf", "226860"),
@@ -424,7 +429,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Sherlock Holmes: The Devil's Daughter", "cinnamon", "350640"),
             New EpicGamesBBDDJuego("Sid Meier’s Civilization VI", "kinglet", "289070"),
             New EpicGamesBBDDJuego("Slime Rancher", "corydalis", "433340"),
-            New EpicGamesBBDDJuego("Sludge Life", "morganite", Nothing),
+            New EpicGamesBBDDJuego("Sludge Life", "morganite", "1144770"),
             New EpicGamesBBDDJuego("SMITE", "greenbul", "386360"),
             New EpicGamesBBDDJuego("Snowrunner", "mayflower", "1465360"),
             New EpicGamesBBDDJuego("Sokobond", "97c2ce083e47436dafa7536fd20162c9", "290260"),
