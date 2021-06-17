@@ -8,10 +8,15 @@ Module EpicGamesBBDD
 
     'pendientes: 
     'aerial-knights-never-yield
+    'backbone
+    'beasts-of-maravilla-island
     'biomutant
+    'chicory-a-colorful-tale
     'chicken-police-paint-it-red
+    'chivalry-2
     'days-gone
     'demons-tilt
+    'edge-of-eternity
     'going-medieval
     'graven
     'grindstone
@@ -19,8 +24,11 @@ Module EpicGamesBBDD
     'hundred-days-winemaking-simulator
     'just-die-already
     'knockout-city
+    'little-big-workshop
+    'lunas-fishing-garden
     'mayhem-in-single-valley
     'necromunda-hired-gun
+    'open-country
     'pathfinder-kingmaker
     'r-type-final-2
     'realpolitiks-2
@@ -35,10 +43,12 @@ Module EpicGamesBBDD
     'the-hand-of-merlin
     'the-longest-road-on-earth
     'timelie
+    'trials-of-fire
     'truck-driver
     'unexplored-2
     'viscerafest
     'wanna-survive
+    'we-are-football
 
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
@@ -215,13 +225,14 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Foregone", "dab", "1000760"),
             New EpicGamesBBDDJuego("Fortnite", "fortnite", Nothing),
             New EpicGamesBBDDJuego("Freedom Fighters", "0d771750aa9042898ce100dbfb5efb1a", "1347780"),
-            New EpicGamesBBDDJuego("Frostpunk", "be886d9db65047a89b24cd4317695f18%3A5729e4a7132e4e078cec459b281dae8e%3Ab2e00fc16632475782a7730d1bd7cb60", "323190"),
+            New EpicGamesBBDDJuego("Frostpunk", "b2e00fc16632475782a7730d1bd7cb60", "323190"),
             New EpicGamesBBDDJuego("FTL: Faster Than Light", "blowfish", "212680"),
             New EpicGamesBBDDJuego("Fuser", "2939f4752d4b4ace95a8e1b16e79d3f5", "1331440"),
             New EpicGamesBBDDJuego("Galactic Civilizations III", "5f1c66366b2c4a6496d535d88c56e6cf", "226860"),
             New EpicGamesBBDDJuego("Geneforge 1 - Mutagen", "caa2c69bf2dc40b2b883e4cbbf5b0ab2", "1424710"),
             New EpicGamesBBDDJuego("Genesis Alpha One Deluxe Edition", "puma", "712190"),
             New EpicGamesBBDDJuego("Genesis Noir", "7a2c377db40e4b5bb2143c5b220d5e7b", "735290"),
+            New EpicGamesBBDDJuego("Genshin Impact", "41869934302e4b8cafac2d3c0e7c293d", Nothing),
             New EpicGamesBBDDJuego("Ghostbusters: The Video Game Remastered", "mint", "1449280"),
             New EpicGamesBBDDJuego("Ghostrunner", "ea8df71f923649a193ab1c1fded7e1b3", "1139900"),
             New EpicGamesBBDDJuego("GNOG", "penguin", "290510"),
@@ -241,6 +252,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Hand of Fate 2", "808f0dfbf3b84c2680793724d7f207bf", "456670"),
             New EpicGamesBBDDJuego("Haven", "271515884ce348a08ce4b7a92f4304d5", "983970"),
             New EpicGamesBBDDJuego("Heavy Rain", "aster", "960910"),
+            New EpicGamesBBDDJuego("Hell is Other Demons", "5ade01bafec54a148024665ce978b2a4", "595790"),
             New EpicGamesBBDDJuego("Hello Neighbor", "ursus", "521890"),
             New EpicGamesBBDDJuego("Hello Neighbor Hide & Seek", "morpho", "960420"),
             New EpicGamesBBDDJuego("Hellpoint", "210733411fa44d5f8454a1bb435db3a9", "628670"),
@@ -358,6 +370,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Outriders", "bea62ac5091841f8a43bd20c3c7edfd3", "680420"),
             New EpicGamesBBDDJuego("Outward", "viola", "794260"),
             New EpicGamesBBDDJuego("Overcooked", "sage", "448510"),
+            New EpicGamesBBDDJuego("Overcooked! 2", "potoo", "728880"),
             New EpicGamesBBDDJuego("Overpass", "sandpiper", "970840"),
             New EpicGamesBBDDJuego("Oxenfree", "hibiscus", "388880"),
             New EpicGamesBBDDJuego("Oxygen Not Included", "lotus", "457140"),
@@ -405,7 +418,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("RUNE II: Decapitation Edition", "cosmos", "821290"),
             New EpicGamesBBDDJuego("Saint's Row The Third Remastered", "loon", "978300"),
             New EpicGamesBBDDJuego("Samurai Jack: Battle Through Time", "4fcc58f22bbb42a4a1ee0cc887c0836e", "1150590"),
-            New EpicGamesBBDDJuego("SAMURAI SHODOWN", "1c78abcd467643f9ad58cc3a7d161983", Nothing),
+            New EpicGamesBBDDJuego("SAMURAI SHODOWN", "1c78abcd467643f9ad58cc3a7d161983", "1342260"),
             New EpicGamesBBDDJuego("SAMURAI SHODOWN NEOGEO COLLECTION", "75553c71fa1744a4be89f71d5b862eae", "999660"),
             New EpicGamesBBDDJuego("Satisfactory", "crab", "526870"),
             New EpicGamesBBDDJuego("Saviors of Sapphire Wings & Strangers of Sword City Revisited", "6164c4b295bb43fe9e68291a7d14de0c", "1363840"),
