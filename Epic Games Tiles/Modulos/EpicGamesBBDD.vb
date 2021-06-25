@@ -8,6 +8,7 @@ Module EpicGamesBBDD
 
     'pendientes: 
     'aerial-knights-never-yield
+    'alex-kidd-in-miracle-world-dx
     'backbone
     'beasts-of-maravilla-island
     'biomutant
@@ -16,6 +17,7 @@ Module EpicGamesBBDD
     'chivalry-2
     'days-gone
     'demons-tilt
+    'doctor-who-the-lonely-assassins
     'edge-of-eternity
     'going-medieval
     'graven
@@ -24,14 +26,20 @@ Module EpicGamesBBDD
     'hundred-days-winemaking-simulator
     'just-die-already
     'knockout-city
+    'lego-builders-journey
     'little-big-workshop
     'lunas-fishing-garden
+    'mars-horizon
     'mayhem-in-single-valley
     'necromunda-hired-gun
     'open-country
+    'out-of-line-209cbb
+    'pascals-wager
     'pathfinder-kingmaker
     'r-type-final-2
+    'real-farm-gold-edition
     'realpolitiks-2
+    'sakuna-of-rice-and-ruin
     'siege-survival-gloria-victis
     'skate-city
     'slipways
@@ -49,6 +57,7 @@ Module EpicGamesBBDD
     'viscerafest
     'wanna-survive
     'we-are-football
+    'worms-rumble
 
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
@@ -262,6 +271,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("HITMAN 3", "f73a0557f7fc4ca08e3cb2c0e5dfb22b", Nothing),
             New EpicGamesBBDDJuego("Hob", "lyrebird", "404680"),
             New EpicGamesBBDDJuego("Horace", "palila", "629090"),
+            New EpicGamesBBDDJuego("Horizon Chase Turbo", "bb406082b69a47208489d3616b22b5c2", "389140"),
             New EpicGamesBBDDJuego("Horizon Zero Dawn Complete Edition", "grunion", "1151640"),
             New EpicGamesBBDDJuego("Hue", "herring", "383270"),
             New EpicGamesBBDDJuego("Human Resource Machine", "basil", "375820"),
@@ -448,6 +458,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Sokobond", "97c2ce083e47436dafa7536fd20162c9", "290260"),
             New EpicGamesBBDDJuego("Solitairica", "4c76beac4e8a4156aa8dfb9c6db09746", "463980"),
             New EpicGamesBBDDJuego("SOMA", "emu", "282140"),
+            New EpicGamesBBDDJuego("Sonic Mania", "818447bb519b46d48d365d5753362796", "584400"),
             New EpicGamesBBDDJuego("South Park: The Fractured But Whole", "alewife", "488790"),
             New EpicGamesBBDDJuego("South Park: The Stick of Truth", "alligator", "213670"),
             New EpicGamesBBDDJuego("Spacebase Startopia", "cfc5878a838b46148f0cacdfb686256d", "840390"),
