@@ -7,6 +7,7 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
     'pendientes: 
+    'adios-b378b4
     'aerial-knights-never-yield
     'alex-kidd-in-miracle-world-dx
     'backbone
@@ -18,6 +19,7 @@ Module EpicGamesBBDD
     'days-gone
     'demons-tilt
     'doctor-who-the-lonely-assassins
+    'doki-doki-literature-club-plus
     'edge-of-eternity
     'going-medieval
     'graven
@@ -31,6 +33,7 @@ Module EpicGamesBBDD
     'lunas-fishing-garden
     'mars-horizon
     'mayhem-in-single-valley
+    'necroland-undead-corps
     'necromunda-hired-gun
     'open-country
     'out-of-line-209cbb
@@ -48,6 +51,7 @@ Module EpicGamesBBDD
     'suzerain
     'tennis-manager-2021
     'the-architect-paris
+    'the-count-lucanor
     'the-hand-of-merlin
     'the-longest-road-on-earth
     'timelie
@@ -58,6 +62,7 @@ Module EpicGamesBBDD
     'wanna-survive
     'we-are-football
     'worms-rumble
+    'yuppie-psycho
 
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
@@ -487,6 +492,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Sunless Sea", "2420b50453144c07b3b847fff941275d", "304650"),
             New EpicGamesBBDDJuego("Super Meat Boy", "buffalo", "40800"),
             New EpicGamesBBDDJuego("Super Meat Boy Forever", "moose", "581660"),
+            New EpicGamesBBDDJuego("Super Squad", "66a2f64eae0641e0b4da935bb73a576a", "1124940"),
             New EpicGamesBBDDJuego("Superbrothers: Sword & Sworcery EP", "f6d328ca5be24fd585478d1477e1ea4d", "204060"),
             New EpicGamesBBDDJuego("SUPERHOT: Mind Control Delete", "7c9f2b7aa5a549e381b4e6aeff3779a1", "690040"),
             New EpicGamesBBDDJuego("Superliminal", "wigeon", "1049410"),
@@ -534,6 +540,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("The Signifier: Director's Cut", "c666606976c047d2ae2374db6e8971ed", "1082930"),
             New EpicGamesBBDDJuego("The Sojourn", "shallots", "794960"),
             New EpicGamesBBDDJuego("The Solitaire Conspiracy", "162623ee6c524e41919d1efa24ce58ce", "1424980"),
+            New EpicGamesBBDDJuego("The Spectrum Retreat", "7b8fb449c8d3404ba7eda9cd4da1401b", "763250"),
             New EpicGamesBBDDJuego("The Stanley Parable", "freesia", "221910"),
             New EpicGamesBBDDJuego("The Talos Principle", "bustard", "257510"),
             New EpicGamesBBDDJuego("The Telltale Batman Shadows Edition", "batfish", Nothing),
@@ -587,6 +594,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Untitled Goose Game", "flour", "837470"),
             New EpicGamesBBDDJuego("Valiant Hearts: The Great War", "f6496e154baa437cb4d9cae38a7e3cc5", "260230"),
             New EpicGamesBBDDJuego("Vampyr", "nautilus", "427290"),
+            New EpicGamesBBDDJuego("Warface", "8471bbbefe8d410fbee5483d860302fc", "291480"),
             New EpicGamesBBDDJuego("Warframe", "398965b67f314d31b0683b8ea11c93a4", "230410"),
             New EpicGamesBBDDJuego("Wargame: Red Dragon", "2cd446792405468e9e87f67649d864c2", "251060"),
             New EpicGamesBBDDJuego("Warhammer 40,000: Gladius - Relics of War", "da5b18cb1e7a452196c3142f2c1d7dd3", "489630"),
