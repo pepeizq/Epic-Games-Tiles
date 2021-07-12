@@ -10,12 +10,16 @@ Module EpicGamesBBDD
     'adios-b378b4
     'aerial-knights-never-yield
     'alex-kidd-in-miracle-world-dx
+    'arcadegeddon
     'backbone
     'beasts-of-maravilla-island
     'biomutant
+    'black-skylands
     'chicory-a-colorful-tale
     'chicken-police-paint-it-red
     'chivalry-2
+    'crash-drive-3
+    'crystal-crisis
     'days-gone
     'demons-tilt
     'doctor-who-the-lonely-assassins
@@ -48,7 +52,9 @@ Module EpicGamesBBDD
     'slipways
     'sockventure
     'stonefly
+    'supraland
     'suzerain
+    'swords-of-legends-online
     'tennis-manager-2021
     'the-architect-paris
     'the-count-lucanor
@@ -62,6 +68,7 @@ Module EpicGamesBBDD
     'wanna-survive
     'we-are-football
     'worms-rumble
+    'ys-ix-monstrum-nox
     'yuppie-psycho
 
     'retirados
@@ -294,6 +301,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Into The Breach", "blobfish", "590380"),
             New EpicGamesBBDDJuego("iRacing", "3dda7ecb990341c599d2554bb1783259", "266410"),
             New EpicGamesBBDDJuego("Iron Harvest", "2877ce04ee7c4c1c8ce4c7245875ed6c", "826630"),
+            New EpicGamesBBDDJuego("Ironcast", "ac8f20a7931e4d63a1db4dc1267ec3d1", "327670"),
             New EpicGamesBBDDJuego("John Wick Hex", "vanilla", "1405790"),
             New EpicGamesBBDDJuego("Jotun: Valhalla Edition", "grouse", "323580"),
             New EpicGamesBBDDJuego("Journey", "lemur", "638230"),
