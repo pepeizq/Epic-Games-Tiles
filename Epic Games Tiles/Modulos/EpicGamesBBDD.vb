@@ -18,12 +18,14 @@ Module EpicGamesBBDD
     'chicory-a-colorful-tale
     'chicken-police-paint-it-red
     'chivalry-2
+    'claire-de-lune
     'crash-drive-3
     'crystal-crisis
     'days-gone
     'demons-tilt
     'doctor-who-the-lonely-assassins
     'doki-doki-literature-club-plus
+    'dream-engines-nomad-cities
     'edge-of-eternity
     'going-medieval
     'graven
@@ -51,15 +53,19 @@ Module EpicGamesBBDD
     'skate-city
     'slipways
     'sockventure
+    'space-punks--founders-splendor-pack
     'stonefly
+    'suchart-genius-artist-simulator
     'supraland
     'suzerain
     'swords-of-legends-online
     'tennis-manager-2021
     'the-architect-paris
+    'the-chameleon
     'the-count-lucanor
     'the-hand-of-merlin
     'the-longest-road-on-earth
+    'the-uncertain-light-at-the-end
     'timelie
     'trials-of-fire
     'truck-driver
@@ -377,6 +383,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Night in the Woods", "cd1b8a6e5b6c47369e2a1e2cf7b7f536", "481510"),
             New EpicGamesBBDDJuego("No Straight Roads", "raven", Nothing),
             New EpicGamesBBDDJuego("Nuclear Throne", "turaco", "242680"),
+            New EpicGamesBBDDJuego("Obduction", "635e08e4b4824baabd24ef3cf941743c", "306760"),
             New EpicGamesBBDDJuego("Observation", "allium", "906100"),
             New EpicGamesBBDDJuego("Observer: System Redux", "96bd88a871c24768a7cf1b9b9fbc5aa5", "1386900"),
             New EpicGamesBBDDJuego("OCTOPATH TRAVELER", "ee5ef1c5dee24106b6e2b9080d85d088", "921570"),
