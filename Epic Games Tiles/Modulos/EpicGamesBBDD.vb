@@ -17,11 +17,16 @@ Module EpicGamesBBDD
     'black-skylands
     'chicory-a-colorful-tale
     'chicken-police-paint-it-red
-    'chivalry-2
     'claire-de-lune
     'crash-drive-3
+    'cris-tales
     'crystal-crisis
+    'dark-future-blood-red-states
+    'darksiders-genesis
     'days-gone
+    'deaths-door
+    'deepest-chamber-f7085f
+    'deep-sky-derelicts
     'demons-tilt
     'doctor-who-the-lonely-assassins
     'doki-doki-literature-club-plus
@@ -36,11 +41,13 @@ Module EpicGamesBBDD
     'knockout-city
     'lego-builders-journey
     'little-big-workshop
+    'lovecrafts-untold-stories
     'lunas-fishing-garden
     'mars-horizon
     'mayhem-in-single-valley
     'necroland-undead-corps
     'necromunda-hired-gun
+    'northgard
     'open-country
     'out-of-line-209cbb
     'pascals-wager
@@ -53,25 +60,31 @@ Module EpicGamesBBDD
     'skate-city
     'slipways
     'sockventure
+    'song-of-farca-1eb3f2
     'space-punks--founders-splendor-pack
+    'spellforce-3-soul-harvest
     'stonefly
     'suchart-genius-artist-simulator
     'supraland
     'suzerain
     'swords-of-legends-online
+    'tannenberg
     'tennis-manager-2021
     'the-architect-paris
+    'the-banner-saga-epic-trilogy
     'the-chameleon
     'the-count-lucanor
     'the-hand-of-merlin
     'the-longest-road-on-earth
     'the-uncertain-light-at-the-end
     'timelie
+    'tower-of-guns
     'trials-of-fire
     'truck-driver
     'unexplored-2
     'viscerafest
     'wanna-survive
+    'warhammer-40000-battlesector
     'we-are-football
     'worms-rumble
     'ys-ix-monstrum-nox
@@ -176,6 +189,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Cave Story+", "1dea8a6ddb544842a58e4b5c8675ff58", "200900"),
             New EpicGamesBBDDJuego("Celeste", "salt", "504230"),
             New EpicGamesBBDDJuego("Child of Light: Ultimate Edition", "3b8f18e6780547d9b2ee25fbfa29c913", Nothing),
+            New EpicGamesBBDDJuego("Chivalry 2", "peppermint", Nothing),
             New EpicGamesBBDDJuego("Chronos: Before the Ashes", "8ab5702674e3478583c2c2b50f5b5eff", "967390"),
             New EpicGamesBBDDJuego("Cities: Skylines", "bcbc03d8812a44c18f41cf7d5f849265", "255710"),
             New EpicGamesBBDDJuego("City of Brass", "arrowroot", "301840"),
@@ -609,6 +623,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Untitled Goose Game", "flour", "837470"),
             New EpicGamesBBDDJuego("Valiant Hearts: The Great War", "f6496e154baa437cb4d9cae38a7e3cc5", "260230"),
             New EpicGamesBBDDJuego("Vampyr", "nautilus", "427290"),
+            New EpicGamesBBDDJuego("Verdun", "38c0129b680e4843b4807b98bad67027", "242860"),
             New EpicGamesBBDDJuego("Warface", "8471bbbefe8d410fbee5483d860302fc", "291480"),
             New EpicGamesBBDDJuego("Warframe", "398965b67f314d31b0683b8ea11c93a4", "230410"),
             New EpicGamesBBDDJuego("Wargame: Red Dragon", "2cd446792405468e9e87f67649d864c2", "251060"),

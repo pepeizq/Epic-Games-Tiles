@@ -210,6 +210,7 @@
     <Content Include="Assets\Juegos\37e2b68d76244e3e837ff6477d20b124_ancha.jpg" />
     <Content Include="Assets\Juegos\37e2b68d76244e3e837ff6477d20b124_grande.jpg" />
     <Content Include="Assets\Juegos\37e2b68d76244e3e837ff6477d20b124_mediana.png" />
+    <Content Include="Assets\Juegos\38c0129b680e4843b4807b98bad67027_pequeña.jpg" />
     <Content Include="Assets\Juegos\3cfe73c3c7ed41ad99f616a231a74202_ancha.jpg" />
     <Content Include="Assets\Juegos\3cfe73c3c7ed41ad99f616a231a74202_grande.png" />
     <Content Include="Assets\Juegos\3cfe73c3c7ed41ad99f616a231a74202_mediana.png" />
@@ -824,6 +825,9 @@
     <Content Include="Assets\Juegos\pelican_pequeña.jpg" />
     <Content Include="Assets\Juegos\penguin_pequeña.jpg" />
     <Content Include="Assets\Juegos\peony_pequeña.jpg" />
+    <Content Include="Assets\Juegos\peppermint_ancha.png" />
+    <Content Include="Assets\Juegos\peppermint_grande.png" />
+    <Content Include="Assets\Juegos\peppermint_mediana.png" />
     <Content Include="Assets\Juegos\pepper_pequeña.jpg" />
     <Content Include="Assets\Juegos\petrel_pequeña.jpg" />
     <Content Include="Assets\Juegos\petunia_pequeña.jpg" />
