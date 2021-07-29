@@ -12,9 +12,11 @@ Module EpicGamesBBDD
     'alex-kidd-in-miracle-world-dx
     'arcadegeddon
     'backbone
+    'banners-of-ruin
     'beasts-of-maravilla-island
     'biomutant
     'black-skylands
+    'chernobylite
     'chicory-a-colorful-tale
     'chicken-police-paint-it-red
     'claire-de-lune
@@ -32,6 +34,7 @@ Module EpicGamesBBDD
     'doki-doki-literature-club-plus
     'dream-engines-nomad-cities
     'edge-of-eternity
+    'fuga-melodies-of-steel
     'going-medieval
     'graven
     'grindstone
@@ -48,6 +51,7 @@ Module EpicGamesBBDD
     'necroland-undead-corps
     'necromunda-hired-gun
     'northgard
+    'omno
     'open-country
     'out-of-line-209cbb
     'pascals-wager
@@ -74,6 +78,7 @@ Module EpicGamesBBDD
     'the-banner-saga-epic-trilogy
     'the-chameleon
     'the-count-lucanor
+    'the-forgotten-city
     'the-hand-of-merlin
     'the-longest-road-on-earth
     'the-uncertain-light-at-the-end
@@ -81,6 +86,7 @@ Module EpicGamesBBDD
     'tower-of-guns
     'trials-of-fire
     'truck-driver
+    'unbound-worlds-apart
     'unexplored-2
     'viscerafest
     'wanna-survive
@@ -110,7 +116,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("A Knights Quest", "cockatoo", Nothing),
             New EpicGamesBBDDJuego("A Monster's Expedition", "9050026cc16c44b8b4e69f160c4bb5d5", "1052990"),
             New EpicGamesBBDDJuego("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "1055540"),
-            New EpicGamesBBDDJuego("A Total War Saga: TROY", "11e598b192324994abce05bad4f81b50", Nothing),
+            New EpicGamesBBDDJuego("A Total War Saga: TROY", "11e598b192324994abce05bad4f81b50", "1099410"),
             New EpicGamesBBDDJuego("Absolute Drift", "19927295d6e3467887d4e830d8c85963", "320140"),
             New EpicGamesBBDDJuego("ABZU", "curry", "384190"),
             New EpicGamesBBDDJuego("AER Memories of Old", "26b63c46de9e4dcc856b3c6b106b6777", "331870"),
@@ -379,6 +385,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Monster Jam Steel Titans 2", "b1b97045976b4d959467a5cda33a2f5a", "1205480"),
             New EpicGamesBBDDJuego("Moonlighter", "eagle", "606150"),
             New EpicGamesBBDDJuego("Mortal Shell", "0055e45ce7654c55aade646467349e83", "1110910"),
+            New EpicGamesBBDDJuego("Mothergunship", "ee5c6a659d0f478fba0049fa44429a1f", "574090"),
             New EpicGamesBBDDJuego("MotoGP 21", "12aa686d0df0456884a73b976652012f", "1447000"),
             New EpicGamesBBDDJuego("Mount & Blade II: Bannerlord", "chickadee", "261550"),
             New EpicGamesBBDDJuego("MudRunner", "bulbul", "675010"),
@@ -609,6 +616,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("TowerFall Ascension", "bichir", "251470"),
             New EpicGamesBBDDJuego("Trackmania", "pigeon", Nothing),
             New EpicGamesBBDDJuego("Trackmania Turbo", "a18915c48f584670bd236ce3031d63d9", "375900"),
+            New EpicGamesBBDDJuego("Train Sim World 2", "dd75b5c168d546cc869582c0389f0a1d", "1282590"),
             New EpicGamesBBDDJuego("Transistor", "dill", "237930"),
             New EpicGamesBBDDJuego("Trials Evolution: Gold Edition", "bc24707b365449748339d8c6f86ce7b8", "220160"),
             New EpicGamesBBDDJuego("Trials Fusion", "7a61f09916cf4d81a78cf796b182a002", "245490"),
