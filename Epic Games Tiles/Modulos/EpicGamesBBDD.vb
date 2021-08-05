@@ -26,19 +26,24 @@ Module EpicGamesBBDD
     'dark-future-blood-red-states
     'darksiders-genesis
     'days-gone
+    'death-trash
     'deaths-door
     'deepest-chamber-f7085f
     'deep-sky-derelicts
     'demons-tilt
     'doctor-who-the-lonely-assassins
     'doki-doki-literature-club-plus
+    'doomsday-vault-b0ed96
     'dream-engines-nomad-cities
+    'dreamscaper
     'edge-of-eternity
     'fuga-melodies-of-steel
     'going-medieval
     'graven
+    'grime
     'grindstone
     'hood-outlaws-And-legends
+    'horror-tales-the-wine-3ab2b2
     'hundred-days-winemaking-simulator
     'just-die-already
     'knockout-city
@@ -50,6 +55,8 @@ Module EpicGamesBBDD
     'mayhem-in-single-valley
     'necroland-undead-corps
     'necromunda-hired-gun
+    'neon-city-riders
+    'no-longer-home
     'northgard
     'omno
     'open-country
@@ -78,6 +85,8 @@ Module EpicGamesBBDD
     'the-banner-saga-epic-trilogy
     'the-chameleon
     'the-count-lucanor
+    'the-drone-racing-league-simulator
+    'the-falconeer
     'the-forgotten-city
     'the-hand-of-merlin
     'the-longest-road-on-earth
@@ -115,6 +124,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("A Good Snowman is Hard to Build", "8760ffb4aaed4482a97553a7faca8277", "316610"),
             New EpicGamesBBDDJuego("A Knights Quest", "cockatoo", Nothing),
             New EpicGamesBBDDJuego("A Monster's Expedition", "9050026cc16c44b8b4e69f160c4bb5d5", "1052990"),
+            New EpicGamesBBDDJuego("A Plague Tale: Innocence", "e0fa47ae79514345823bff209ae29451", "752590"),
             New EpicGamesBBDDJuego("A Short Hike", "d6407c9e6fd54cb492b8c6635480d792", "1055540"),
             New EpicGamesBBDDJuego("A Total War Saga: TROY", "11e598b192324994abce05bad4f81b50", "1099410"),
             New EpicGamesBBDDJuego("Absolute Drift", "19927295d6e3467887d4e830d8c85963", "320140"),
