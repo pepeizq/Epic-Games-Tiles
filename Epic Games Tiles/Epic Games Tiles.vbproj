@@ -231,6 +231,7 @@
     <Content Include="Assets\Juegos\4d1884fe90f441129722197ba0bb9f8e_pequeña.jpg" />
     <Content Include="Assets\Juegos\502bae648130454faa79bf1e7e741cbd_pequeña.jpg" />
     <Content Include="Assets\Juegos\54ec19e832aa4013a64ae853c5eb9fb0_pequeña.jpg" />
+    <Content Include="Assets\Juegos\595e35287b824902a2f7107139603732_pequeña.jpg" />
     <Content Include="Assets\Juegos\5c344710714e42939e96f2e7519d2224_grande.png" />
     <Content Include="Assets\Juegos\5c344710714e42939e96f2e7519d2224_mediana.png" />
     <Content Include="Assets\Juegos\5c344710714e42939e96f2e7519d2224_pequeña.jpg" />
@@ -512,9 +513,7 @@
     <Content Include="Assets\Juegos\bluebird_pequeña.jpg" />
     <Content Include="Assets\Juegos\bobcat_pequeña.jpg" />
     <Content Include="Assets\Juegos\boga_pequeña.jpg" />
-    <Content Include="Assets\Juegos\bonytail_ancha.png" />
-    <Content Include="Assets\Juegos\bonytail_grande.png" />
-    <Content Include="Assets\Juegos\bonytail_mediana.png" />
+    <Content Include="Assets\Juegos\bonytail_pequeña.jpg" />
     <Content Include="Assets\Juegos\boxfish_pequeña.jpg" />
     <Content Include="Assets\Juegos\buffalo_pequeña.jpg" />
     <Content Include="Assets\Juegos\bulbul_pequeña.jpg" />
@@ -554,6 +553,7 @@
     <Content Include="Assets\Juegos\cb37006fed8c47db8bcb8a65a59d0f09_pequeña.jpg" />
     <Content Include="Assets\Juegos\cd1b8a6e5b6c47369e2a1e2cf7b7f536_pequeña.jpg" />
     <Content Include="Assets\Juegos\cd98b47155654e1f9a9e84e60d0b49e4_pequeña.jpg" />
+    <Content Include="Assets\Juegos\ce2a78bf70b646e9b9f57c46dac99184_pequeña.jpg" />
     <Content Include="Assets\Juegos\cfc5878a838b46148f0cacdfb686256d_pequeña.jpg" />
     <Content Include="Assets\Juegos\chickadee_pequeña.jpg" />
     <Content Include="Assets\Juegos\chili_grande.png" />

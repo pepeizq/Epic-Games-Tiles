@@ -6,105 +6,6 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'pendientes: 
-    'adios-b378b4
-    'aerial-knights-never-yield
-    'alex-kidd-in-miracle-world-dx
-    'arcadegeddon
-    'backbone
-    'banners-of-ruin
-    'beasts-of-maravilla-island
-    'biomutant
-    'black-skylands
-    'chernobylite
-    'chicory-a-colorful-tale
-    'chicken-police-paint-it-red
-    'claire-de-lune
-    'crash-drive-3
-    'cris-tales
-    'crystal-crisis
-    'dark-future-blood-red-states
-    'darksiders-genesis
-    'days-gone
-    'death-trash
-    'deaths-door
-    'deepest-chamber-f7085f
-    'deep-sky-derelicts
-    'demons-tilt
-    'doctor-who-the-lonely-assassins
-    'doki-doki-literature-club-plus
-    'doomsday-vault-b0ed96
-    'dream-engines-nomad-cities
-    'dreamscaper
-    'edge-of-eternity
-    'fuga-melodies-of-steel
-    'going-medieval
-    'graven
-    'grime
-    'grindstone
-    'hood-outlaws-And-legends
-    'horror-tales-the-wine-3ab2b2
-    'hundred-days-winemaking-simulator
-    'just-die-already
-    'knockout-city
-    'lego-builders-journey
-    'little-big-workshop
-    'lovecrafts-untold-stories
-    'lunas-fishing-garden
-    'mars-horizon
-    'mayhem-in-single-valley
-    'necroland-undead-corps
-    'necromunda-hired-gun
-    'neon-city-riders
-    'no-longer-home
-    'northgard
-    'omno
-    'open-country
-    'out-of-line-209cbb
-    'pascals-wager
-    'pathfinder-kingmaker
-    'r-type-final-2
-    'real-farm-gold-edition
-    'realpolitiks-2
-    'sakuna-of-rice-and-ruin
-    'siege-survival-gloria-victis
-    'skate-city
-    'slipways
-    'sockventure
-    'song-of-farca-1eb3f2
-    'space-punks--founders-splendor-pack
-    'spellforce-3-soul-harvest
-    'stonefly
-    'suchart-genius-artist-simulator
-    'supraland
-    'suzerain
-    'swords-of-legends-online
-    'tannenberg
-    'tennis-manager-2021
-    'the-architect-paris
-    'the-banner-saga-epic-trilogy
-    'the-chameleon
-    'the-count-lucanor
-    'the-drone-racing-league-simulator
-    'the-falconeer
-    'the-forgotten-city
-    'the-hand-of-merlin
-    'the-longest-road-on-earth
-    'the-uncertain-light-at-the-end
-    'timelie
-    'tower-of-guns
-    'trials-of-fire
-    'truck-driver
-    'unbound-worlds-apart
-    'unexplored-2
-    'viscerafest
-    'wanna-survive
-    'warhammer-40000-battlesector
-    'we-are-football
-    'worms-rumble
-    'ys-ix-monstrum-nox
-    'yuppie-psycho
-
     'retirados
     'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
     'New EpicGamesBBDDJuego("Paranoia: Happiness is Mandatory", "flamingo", "paranoia", True),
@@ -193,7 +94,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Borderlands: The Pre-Sequel", "turkey", "261640"),
             New EpicGamesBBDDJuego("Breathedge", "0a20ccd3f1b3464da750a4dbf8c80d7c", "738520"),
             New EpicGamesBBDDJuego("Bridge Constructor: The Walking Dead", "998af0ab527c493baefb8049250c9a0e", "1336120"),
-            New EpicGamesBBDDJuego("Bugsnax", "bonytail", Nothing),
+            New EpicGamesBBDDJuego("Bugsnax", "bonytail", "674140"),
             New EpicGamesBBDDJuego("Calico", "aa069bf2d1fb439cb44d659eda568c40", "1112890"),
             New EpicGamesBBDDJuego("Carcassonne: The Official Board Game", "thrush", "598810"),
             New EpicGamesBBDDJuego("Cardpocalypse", "duck", "904400"),
@@ -642,6 +543,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Valiant Hearts: The Great War", "f6496e154baa437cb4d9cae38a7e3cc5", "260230"),
             New EpicGamesBBDDJuego("Vampyr", "nautilus", "427290"),
             New EpicGamesBBDDJuego("Verdun", "38c0129b680e4843b4807b98bad67027", "242860"),
+            New EpicGamesBBDDJuego("Void Bastards", "595e35287b824902a2f7107139603732", "857980"),
             New EpicGamesBBDDJuego("Warface", "8471bbbefe8d410fbee5483d860302fc", "291480"),
             New EpicGamesBBDDJuego("Warframe", "398965b67f314d31b0683b8ea11c93a4", "230410"),
             New EpicGamesBBDDJuego("Wargame: Red Dragon", "2cd446792405468e9e87f67649d864c2", "251060"),
@@ -667,6 +569,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("WRC 9 FIA World Rally Championship", "kagu", Nothing),
             New EpicGamesBBDDJuego("Yaga", "robin", "888530"),
             New EpicGamesBBDDJuego("Yes, Your Grace", "874d8bf57d9b4fef9eff995cee94d223", "1115690"),
+            New EpicGamesBBDDJuego("Yooka-Laylee", "ce2a78bf70b646e9b9f57c46dac99184", "360830"),
             New EpicGamesBBDDJuego("Yooka-Laylee and the Impossible Lair", "duckbill", "846870"),
             New EpicGamesBBDDJuego("Zombi", "91b23d48ead64764b90a217a11baf209", "339230"),
             New EpicGamesBBDDJuego("Zombie Army 4: Dead War", "sparrow", "694280")
