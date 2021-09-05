@@ -182,6 +182,7 @@
     <Content Include="Assets\Juegos\01a7f0655a164c1294df51a94cdec0e7_pequeña.jpg" />
     <Content Include="Assets\Juegos\02107cba432c4551a027d25d597adc49_pequeña.jpg" />
     <Content Include="Assets\Juegos\03b7b25a77024cc0adf44777f791ffc4_pequeña.jpg" />
+    <Content Include="Assets\Juegos\069a60f6b0514a5fbe81b38957c1ddfd_pequeña.jpg" />
     <Content Include="Assets\Juegos\09f57ff642e54a37b24cd8d0ad94d038_pequeña.jpg" />
     <Content Include="Assets\Juegos\0a20ccd3f1b3464da750a4dbf8c80d7c_pequeña.jpg" />
     <Content Include="Assets\Juegos\0dac2fd1f95240bda133d1f2fb27c705_pequeña.jpg" />
@@ -212,6 +213,7 @@
     <Content Include="Assets\Juegos\37e2b68d76244e3e837ff6477d20b124_grande.jpg" />
     <Content Include="Assets\Juegos\37e2b68d76244e3e837ff6477d20b124_mediana.png" />
     <Content Include="Assets\Juegos\38c0129b680e4843b4807b98bad67027_pequeña.jpg" />
+    <Content Include="Assets\Juegos\3acb0920074446e8baaa4c249200d892_pequeña.jpg" />
     <Content Include="Assets\Juegos\3cfe73c3c7ed41ad99f616a231a74202_ancha.jpg" />
     <Content Include="Assets\Juegos\3cfe73c3c7ed41ad99f616a231a74202_grande.png" />
     <Content Include="Assets\Juegos\3cfe73c3c7ed41ad99f616a231a74202_mediana.png" />
@@ -642,9 +644,7 @@
     <Content Include="Assets\Juegos\emu_pequeña.jpg" />
     <Content Include="Assets\Juegos\escolar_pequeña.jpg" />
     <Content Include="Assets\Juegos\f120f1dd840748deacc695d19a9022c5_pequeña.jpg" />
-    <Content Include="Assets\Juegos\f1b8986afc9a4256a098cc5a4ebf5871_ancha.png" />
-    <Content Include="Assets\Juegos\f1b8986afc9a4256a098cc5a4ebf5871_grande.png" />
-    <Content Include="Assets\Juegos\f1b8986afc9a4256a098cc5a4ebf5871_mediana.png" />
+    <Content Include="Assets\Juegos\f1b8986afc9a4256a098cc5a4ebf5871_pequeña.jpg" />
     <Content Include="Assets\Juegos\f2304175954d40d2b583542251dda296_pequeña.jpg" />
     <Content Include="Assets\Juegos\f23e1ec714a146648a4b330e777ee3a1_pequeña.jpg" />
     <Content Include="Assets\Juegos\f324cf34cd1a4a94901e003d14da37b1_pequeña.jpg" />
