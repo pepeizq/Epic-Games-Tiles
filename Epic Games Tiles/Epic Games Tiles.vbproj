@@ -241,6 +241,9 @@
     <Content Include="Assets\Juegos\4bef8f2938c74f8597f512de38fc0afd_pequeña.jpg" />
     <Content Include="Assets\Juegos\4c76beac4e8a4156aa8dfb9c6db09746_pequeña.jpg" />
     <Content Include="Assets\Juegos\4d1884fe90f441129722197ba0bb9f8e_pequeña.jpg" />
+    <Content Include="Assets\Juegos\4f0c34d469bb47b2bcf5b377f47ccfe3_pequeña.jpg" />
+    <Content Include="Assets\Juegos\4f272a49a39742b795d63e1f483a7c7d_pequeña.jpg" />
+    <Content Include="Assets\Juegos\4f50a062a8c34a259e507260a0311163_pequeña.jpg" />
     <Content Include="Assets\Juegos\502bae648130454faa79bf1e7e741cbd_pequeña.jpg" />
     <Content Include="Assets\Juegos\54ec19e832aa4013a64ae853c5eb9fb0_pequeña.jpg" />
     <Content Include="Assets\Juegos\595e35287b824902a2f7107139603732_pequeña.jpg" />
@@ -548,6 +551,7 @@
     <Content Include="Assets\Juegos\boga_pequeña.jpg" />
     <Content Include="Assets\Juegos\bonytail_pequeña.jpg" />
     <Content Include="Assets\Juegos\boxfish_pequeña.jpg" />
+    <Content Include="Assets\Juegos\brill_pequeña.jpg" />
     <Content Include="Assets\Juegos\buffalo_pequeña.jpg" />
     <Content Include="Assets\Juegos\bulbul_pequeña.jpg" />
     <Content Include="Assets\Juegos\bustard_pequeña.jpg" />
