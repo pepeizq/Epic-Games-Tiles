@@ -209,6 +209,7 @@
     <Content Include="Assets\Juegos\272d51db75be476f9ad60c0e7fc24470_pequeña.jpg" />
     <Content Include="Assets\Juegos\2c3dd568cada4c229753f550a44dcf2b_pequeña.jpg" />
     <Content Include="Assets\Juegos\2cd446792405468e9e87f67649d864c2_pequeña.jpg" />
+    <Content Include="Assets\Juegos\30d3a88d29e24716ac5a4720042289f7_pequeña.jpg" />
     <Content Include="Assets\Juegos\31b0ca9025cf4ed3a799947298cacbb1_pequeña.jpg" />
     <Content Include="Assets\Juegos\33411619626243f1859d0b7fb5cc5405_ancha.jpg" />
     <Content Include="Assets\Juegos\33411619626243f1859d0b7fb5cc5405_grande.jpg" />
@@ -690,6 +691,7 @@
     <Content Include="Assets\Juegos\eel_pequeña.jpg" />
     <Content Include="Assets\Juegos\ef03775556cd46c1af5dcfcb98529455_pequeña.jpg" />
     <Content Include="Assets\Juegos\egret_pequeña.jpg" />
+    <Content Include="Assets\Juegos\eider_pequeña.jpg" />
     <Content Include="Assets\Juegos\emperor_pequeña.jpg" />
     <Content Include="Assets\Juegos\emu_pequeña.jpg" />
     <Content Include="Assets\Juegos\escolar_pequeña.jpg" />
@@ -700,6 +702,7 @@
     <Content Include="Assets\Juegos\f324cf34cd1a4a94901e003d14da37b1_pequeña.jpg" />
     <Content Include="Assets\Juegos\f38de9fa4c6d43eabac080942cb394a1_pequeña.jpg" />
     <Content Include="Assets\Juegos\f4e0c1dff48749fa9145c1585699e276_pequeña.jpg" />
+    <Content Include="Assets\Juegos\f4f0d39fbb4640e0be62aa91d9eca87d_pequeña.jpg" />
     <Content Include="Assets\Juegos\f529f5a152014f65821eb900f1c54921_pequeña.jpg" />
     <Content Include="Assets\Juegos\f5739a2aa95841f7b4d2b8152bac5364_pequeña.jpg" />
     <Content Include="Assets\Juegos\f58bb43636064a0295781853ef8405fb_pequeña.jpg" />
@@ -711,9 +714,6 @@
     <Content Include="Assets\Juegos\f65978f976a944bcac6a51c5ba0afbec_grande.jpg" />
     <Content Include="Assets\Juegos\f65978f976a944bcac6a51c5ba0afbec_mediana.png" />
     <Content Include="Assets\Juegos\f6d328ca5be24fd585478d1477e1ea4d_pequeña.jpg" />
-    <Content Include="Assets\Juegos\eider_ancha.png" />
-    <Content Include="Assets\Juegos\eider_grande.jpg" />
-    <Content Include="Assets\Juegos\eider_mediana.png" />
     <Content Include="Assets\Juegos\f7a0ebb44f93430fb1c4388a395eba96_pequeña.jpg" />
     <Content Include="Assets\Juegos\f7af594eebf542fc91dfc911f5f1e1d2_pequeña.jpg" />
     <Content Include="Assets\Juegos\f7cc1c999ac146f39b356f53e3489514_pequeña.jpg" />
