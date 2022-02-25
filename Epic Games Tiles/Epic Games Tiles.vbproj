@@ -677,6 +677,7 @@
     <Content Include="Assets\Juegos\e7471b6a7335415db9819ef7e7e77c29_ancha.jpg" />
     <Content Include="Assets\Juegos\e7471b6a7335415db9819ef7e7e77c29_grande.jpg" />
     <Content Include="Assets\Juegos\e7471b6a7335415db9819ef7e7e77c29_mediana.png" />
+    <Content Include="Assets\Juegos\e7d92786abe54fae9319c1ddb94ae271_pequeña.jpg" />
     <Content Include="Assets\Juegos\e8964b869b6849bea41eefec766cd665_pequeña.jpg" />
     <Content Include="Assets\Juegos\e8a46db9786f45c9859e8af67e1251a0_pequeña.jpg" />
     <Content Include="Assets\Juegos\ea8df71f923649a193ab1c1fded7e1b3_pequeña.jpg" />
@@ -904,6 +905,7 @@
     <Content Include="Assets\Juegos\raven_ancha.jpg" />
     <Content Include="Assets\Juegos\raven_grande.png" />
     <Content Include="Assets\Juegos\raven_mediana.png" />
+    <Content Include="Assets\Juegos\red_pequeña.jpg" />
     <Content Include="Assets\Juegos\rgo_pequeña.jpg" />
     <Content Include="Assets\Juegos\robin_pequeña.jpg" />
     <Content Include="Assets\Juegos\rosemallow_pequeña.jpg" />
@@ -943,6 +945,7 @@
     <Content Include="Assets\Juegos\sundrop_pequeña.jpg" />
     <Content Include="Assets\Juegos\swan_pequeña.jpg" />
     <Content Include="Assets\Juegos\sweetpea_pequeña.jpg" />
+    <Content Include="Assets\Juegos\tamarind_pequeña.jpg" />
     <Content Include="Assets\Juegos\tanager_pequeña.jpg" />
     <Content Include="Assets\Juegos\tansy_ancha.png" />
     <Content Include="Assets\Juegos\tansy_grande.png" />
