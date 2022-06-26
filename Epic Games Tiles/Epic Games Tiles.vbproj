@@ -185,9 +185,14 @@
     <Content Include="Assets\Juegos\03b7b25a77024cc0adf44777f791ffc4_pequeña.jpg" />
     <Content Include="Assets\Juegos\06621054d7d24f44bf13e3c31c9ec05d_pequeña.jpg" />
     <Content Include="Assets\Juegos\069a60f6b0514a5fbe81b38957c1ddfd_pequeña.jpg" />
+    <Content Include="Assets\Juegos\06b8b80d89c24a28a7e91127fcbd9542_pequeña.jpg" />
     <Content Include="Assets\Juegos\087f062df2574091a67fe614a6ec15a4_pequeña.jpg" />
     <Content Include="Assets\Juegos\09f57ff642e54a37b24cd8d0ad94d038_pequeña.jpg" />
     <Content Include="Assets\Juegos\0a20ccd3f1b3464da750a4dbf8c80d7c_pequeña.jpg" />
+    <Content Include="Assets\Juegos\0a2d9f6403244d12969e11da6713137b_ancha.jpg" />
+    <Content Include="Assets\Juegos\0a2d9f6403244d12969e11da6713137b_grande.jpg" />
+    <Content Include="Assets\Juegos\0a2d9f6403244d12969e11da6713137b_mediana.png" />
+    <Content Include="Assets\Juegos\0a2d9f6403244d12969e11da6713137b_pequeña.jpg" />
     <Content Include="Assets\Juegos\0dac2fd1f95240bda133d1f2fb27c705_pequeña.jpg" />
     <Content Include="Assets\Juegos\0ef46109342d47669b36e5ec7e1c0546_pequeña.jpg" />
     <Content Include="Assets\Juegos\0f00530809984268a13089d76f7ecb20_pequeña.jpg" />
@@ -201,6 +206,7 @@
     <Content Include="Assets\Juegos\18a85afedeac4ea885b27fee3e0c81db_pequeña.jpg" />
     <Content Include="Assets\Juegos\18fafa2d70d64831ab500a9d65ba9ab8_pequeña.jpg" />
     <Content Include="Assets\Juegos\19927295d6e3467887d4e830d8c85963_pequeña.jpg" />
+    <Content Include="Assets\Juegos\1b037ad2c1e94e7e996b4a16f741025a_pequeña.jpg" />
     <Content Include="Assets\Juegos\1b3d52e6278749868913aa1cdd12e974_pequeña.jpg" />
     <Content Include="Assets\Juegos\1be5efb848844b1dabf9d67f8017a7ae_pequeña.jpg" />
     <Content Include="Assets\Juegos\1c78abcd467643f9ad58cc3a7d161983_pequeña.jpg" />
@@ -402,6 +408,7 @@
     <Content Include="Assets\Juegos\7c9f2b7aa5a549e381b4e6aeff3779a1_pequeña.jpg" />
     <Content Include="Assets\Juegos\7dd3049c1e4f47d3976b4ef55d07bbcc_pequeña.jpg" />
     <Content Include="Assets\Juegos\7fb6ce95c6d04a44a55fef16ea0db4c9_pequeña.jpg" />
+    <Content Include="Assets\Juegos\8032b75cf0914afa87c78d6914adc165_pequeña.jpg" />
     <Content Include="Assets\Juegos\808f0dfbf3b84c2680793724d7f207bf_pequeña.jpg" />
     <Content Include="Assets\Juegos\80947c7cd1d7480284a66e292b1a559c_pequeña.jpg" />
     <Content Include="Assets\Juegos\818447bb519b46d48d365d5753362796_pequeña.jpg" />
