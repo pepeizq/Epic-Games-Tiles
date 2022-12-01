@@ -6,11 +6,6 @@ Module EpicGamesBBDD
     'https://store-content.ak.epicgames.com/api/en-US/content/products/ + nameurl
     'https://store-content.ak.epicgames.com/api/content/productmapping
 
-    'retirados
-    'New EpicGamesBBDDJuego("Pandemic", "thrasher", "pandemic", True),
-    'New EpicGamesBBDDJuego("Paranoia: Happiness is Mandatory", "flamingo", "paranoia", True),
-    'New EpicGamesBBDDJuego("The Sinking City", "middlemist", "the-sinking-city", False),
-
     Public Function Listado()
         Dim lista As New List(Of EpicGamesBBDDJuego) From {
             New EpicGamesBBDDJuego(">observer_", "tumeric", "514900"),
@@ -39,6 +34,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Airborne Kingdom", "macaw", Nothing),
             New EpicGamesBBDDJuego("Alan Wake", "heron", "108710"),
             New EpicGamesBBDDJuego("Alan Wake: American Nightmare", "condor", "202750"),
+            New EpicGamesBBDDJuego("Alba: A Wildlife Adventure", "8a0173bbe3ac48ac903f5bc7277e7b4e", "1337010"),
             New EpicGamesBBDDJuego("Alien: Isolation", "8935bb3e1420443a9789fe01758039a5", "214490"),
             New EpicGamesBBDDJuego("Alluris", "712a1086c52b413da55f9b38588575d9", "1078510"),
             New EpicGamesBBDDJuego("Amnesia: A Machine for Pigs", "d7db33dfe7634d6b8a188c708f2caa3c", "239200"),
@@ -73,7 +69,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Assassin's Creed Rogue", "wolffish", "311560"),
             New EpicGamesBBDDJuego("Assassin's Creed Syndicate", "albacore", "368500"),
             New EpicGamesBBDDJuego("Assassin's Creed Unity", "amberjack", "289650"),
-            New EpicGamesBBDDJuego("Assassin's Creed Valhalla", "965ccf8b2eba4f9381ef43183c08e205", Nothing),
+            New EpicGamesBBDDJuego("Assassin's Creed Valhalla", "965ccf8b2eba4f9381ef43183c08e205", "2208920"),
             New EpicGamesBBDDJuego("Atomicrops", "swan", "757320"),
             New EpicGamesBBDDJuego("Auto Chess", "owl", Nothing),
             New EpicGamesBBDDJuego("Automachef", "069a60f6b0514a5fbe81b38957c1ddfd", "984800"),
@@ -141,8 +137,8 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("CRSED: F.O.A.D.", "34eda78a6b24468f9fb70d73793bdaab", "884660"),
             New EpicGamesBBDDJuego("Crying Suns", "18fafa2d70d64831ab500a9d65ba9ab8", "873940"),
             New EpicGamesBBDDJuego("Crysis Remastered", "f1b8986afc9a4256a098cc5a4ebf5871", "1715130"),
-            New EpicGamesBBDDJuego("Crysis 2 Remastered", "mallard", Nothing),
-            New EpicGamesBBDDJuego("Crysis 3 Remastered", "warbler", Nothing),
+            New EpicGamesBBDDJuego("Crysis 2 Remastered", "mallard", "2096600"),
+            New EpicGamesBBDDJuego("Crysis 3 Remastered", "warbler", "2096610"),
             New EpicGamesBBDDJuego("Curse of the Dead Gods", "6eefc4ed1f664a47ae398114f4a81a1d", "1123770"),
             New EpicGamesBBDDJuego("Cyanide & Happiness - Freakpocalypse", "a43520ea65e1429b86e49d2ab9a4e4dd", "869880"),
             New EpicGamesBBDDJuego("Cyberpunk 2077", "ginger", "1091500"),
@@ -153,8 +149,9 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Darksiders II Deathinitive Edition", "hoki", "388410"),
             New EpicGamesBBDDJuego("Darksiders III", "springbok", "606280"),
             New EpicGamesBBDDJuego("Darksiders Warmastered Edition", "hake", "462780"),
-            New EpicGamesBBDDJuego("DARQ", "ee96375fac2f47de978170a24398e581", "433550"),
+            New EpicGamesBBDDJuego("Dark Deity", "e21be436768f4add87d4935a180b4932", "1374840"),
             New EpicGamesBBDDJuego("Darkwood", "923130ebb546417b9d3115507f752d34", "274520"),
+            New EpicGamesBBDDJuego("DARQ", "ee96375fac2f47de978170a24398e581", "433550"),
             New EpicGamesBBDDJuego("Dauntless", "jackal", Nothing),
             New EpicGamesBBDDJuego("Dead by Daylight", "brill", "381210"),
             New EpicGamesBBDDJuego("Dead Cells", "ca0e1d19d3b640b39d8d20e966067872", "588650"),
@@ -189,6 +186,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Evan's Remains", "177b5daea3844316aea9f86d7fb7b8da", "1110050"),
             New EpicGamesBBDDJuego("EVE Online", "ab4fa312826b49c0b49a230bc4f5b415", "8500"),
             New EpicGamesBBDDJuego("Everything", "pelican", "582270"),
+            New EpicGamesBBDDJuego("Evil Dead: The Game", "5c147002780d4e6eb292f54edfe73fda", Nothing),
             New EpicGamesBBDDJuego("Evoland Legendary Edition", "530f09c9ac834a7bbc98056c69b44471", "1020470"),
             New EpicGamesBBDDJuego("Faeria", "vulture", "397060"),
             New EpicGamesBBDDJuego("Falcon Age", "parrot", "1075080"),
@@ -208,6 +206,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Fez", "bluebird", "224760"),
             New EpicGamesBBDDJuego("Fights in Tight Spaces", "3e623cce500c49b69dd9a2926f474546", "1265820"),
             New EpicGamesBBDDJuego("Figment", "ed5e8d42b2ac461eb6f9176d163b9515", "493540"),
+            New EpicGamesBBDDJuego("Filament", "14a38161ad3c45adab18425415b5df3d", "1137350"),
             New EpicGamesBBDDJuego("Flower", "yarrow", "966330"),
             New EpicGamesBBDDJuego("Football Manager 2020", "bf35243e8c3542e082bc7042e0592183", "1100600"),
             New EpicGamesBBDDJuego("Football Manager 2021", "6f5862ba65244cfe86490f253d64feb1", "1263850"),
@@ -395,6 +394,7 @@ Module EpicGamesBBDD
             New EpicGamesBBDDJuego("Pathfinder: Kingmaker - Enhanced Plus Edition", "b21f394024ef4b75afc2f09c04f0b9f1", "640820"),
             New EpicGamesBBDDJuego("Pathway", "8fceb562623c430db9bb6abf0549c43e", "546430"),
             New EpicGamesBBDDJuego("PC Building Simulator", "ab277c0995e945d2b2c50c46883627f1", "621060"),
+            New EpicGamesBBDDJuego("PC Building Simulator 2", "0449f415f5404df093b8d67c31940024", Nothing),
             New EpicGamesBBDDJuego("Phantasy Star Online 2", "6c227b0fac70445aae645f0d601dc5d2", "1056640"),
             New EpicGamesBBDDJuego("Phantom Brigade", "chili", "553540"),
             New EpicGamesBBDDJuego("Phoenix Point: Year One Edition", "iris", "839770"),
