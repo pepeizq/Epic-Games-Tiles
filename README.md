@@ -1,3 +1,5 @@
+# [I have retired this app and continued with a new version in this repository](https://github.com/pepeizq/Tiles-Games).
+
 # Tiles for Epic Games
 
 App for Windows 10 written in Visual Basic for Universal Windows Platform (UWP).
